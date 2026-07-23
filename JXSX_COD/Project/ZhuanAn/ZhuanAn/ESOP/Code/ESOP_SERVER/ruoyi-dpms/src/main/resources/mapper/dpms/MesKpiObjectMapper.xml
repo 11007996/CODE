@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiObjectMapper">
+
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiObject" id="MesKpiObjectResult">
+        <result property="id"    column="id"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="userAccount"    column="user_account"    />
+        <!--        <result property="userName"    column="user_name"    />-->
+        <result property="userName"    column="nick_name"    />
+        <result property="deptId"    column="dept_id"    />
+        <result property="deptName"    column="dept_name"    />
+        <result property="groupType"    column="group_type"    />
+    </resultMap>
+
+
+    <select id="selectMesKpiObjectById" parameterType="Long" resultMap="MesKpiObjectResult">
+        SELECT
+        d.assign_id,
+        d.user_account,
+        d.group_type,
+        f.user_id,
+        f.nick_name,
+        h.dept_id,
+        h.dept_name
+        FROM
+        mes_kpi_dept_group D,
+        sys_user F,
+        sys_dept H
+        WHERE
+        d.user_account = f.user_name
+        AND f.dept_id = h.dept_id
+        AND f.del_flag = '0'
+    </select>
+
+
+</mapper>

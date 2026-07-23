@@ -1,0 +1,109 @@
+﻿@page
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container-fluid">
+    <div class="row top-0 p-3">
+        <div class="col-4 fs-2 text-info"> EAM数据看板</div>
+        <div class="col-8 d-flex flex-row justify-content-end">
+            <div class="d-flex flex-row justify-content-end">
+                <label class="">当前厂区：</label>
+                <select id="factorySelect" onchange="handleFactoryChange()" class="form-select">
+                </select>
+            </div>
+            <div class="ms-3">
+                <button class="btn btn-danger" onclick="loginOut()">退出</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <ul id="menuList" class="list-group">
+                @*  动态生成菜单 *@
+            </ul>
+
+        </div>
+        <div class="col-8"></div>
+    </div>
+
+</div>
+
+<script src="~/api/login.js"></script>
+<script src="~/api/user.js"></script>
+<script src="~/store/userStore.js"></script>
+<script src="~/js/permissions.js"></script>
+<script type="text/javascript">
+
+    /**
+     * 退出登入
+     */
+    function loginOut() {
+        api.logout().then((res) => {
+            if (res.code == 200) {
+                userStore.clearUser();
+                removeToken();
+                window.location.href = '/Account/Login'
+            }
+        })
+    }
+
+    /**
+     * 初始化厂区下拉选
+     */
+    function initFactorys() {
+        api.getUserFactorys().then((res) => {
+            let htmlStr = '';
+            if (res.code == 200) {
+                res.data.forEach((it) => {
+                    htmlStr += `<option value='${it.factoryId}'>${it.factoryName}</option>`
+                })
+            }
+            $("#factorySelect").html(htmlStr);
+            initEleValue();
+        });
+    }
+
+    /**
+     * 厂区选择事件处理
+     */
+    function handleFactoryChange() {
+        let factoryId = $("#factorySelect").val();
+
+        api.switchLoginFactory(factoryId).then((res) => {
+            if (res.code == 200) {
+                setToken(res.data);
+                userStore.clearUser()
+                msgSuccess("已切换厂区：" + factoryId);
+                location.reload();
+            }
+        })
+    }
+
+    function initEleValue() {
+        userStore.getUser((userInfo) => {
+            ShowMenu(userInfo.menus, userInfo.factory.factoryId)
+            $("#factorySelect").val(userInfo.factory.factoryId);
+            setLoginFactory(userInfo.factory.factoryId);
+        })
+    }
+
+    //显示可用菜单
+    function ShowMenu(menus, factoryId) {
+        let htmlStr = "";
+        let factory = "";
+        let href = "";
+        if (menus) {
+            menus.forEach(item => {
+                factory = item.perms.split(':')[1];//示例：dashboard:02C1:equipment
+                if (factoryId == factory) {
+                    href = item.path.replace(window.location.origin, '')
+                    htmlStr += `<li class="list-group-item" eam-hasPermi="${item.perms}" eam-loginFactory="${factory}"><a class="btn btn-primary" href="${href}" role="button">${item.menuName}</a></li>`;
+                }
+            });
+        }
+        $("#menuList").html(htmlStr);
+    }
+
+    initFactorys();
+</script>

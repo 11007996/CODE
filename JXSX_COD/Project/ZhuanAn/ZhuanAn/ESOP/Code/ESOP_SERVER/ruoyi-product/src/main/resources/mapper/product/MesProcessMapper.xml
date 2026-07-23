@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesProcessMapper">
+
+    <resultMap type="MesProcess" id="MesProcessResult">
+        <result property="processId"    column="process_id"    />
+        <result property="processName"  column="process_name"    />
+        <result property="processType"  column="process_type"    />
+        <result property="stageId"      column="stage_id"    />
+        <result property="status"       column="status"    />
+        <result property="remark"       column="remark"    />
+        <result property="createBy"     column="create_by"    />
+        <result property="createTime"   column="create_time"    />
+        <result property="updateBy"     column="update_by"    />
+        <result property="updateTime"   column="update_time"    />
+        <result property="stageName"    column="stage_name" />
+    </resultMap>
+
+
+
+    <sql id="selectMesProcessVo">
+        select a.process_id, a.process_name, a.process_type, a.stage_id, b.stage_name, a.status, a.remark, a.create_by, a.create_time, a.update_by, a.update_time
+        from mes_process a
+         left join mes_stage b on a.stage_id = b.stage_id
+    </sql>
+
+    <select id="selectMesProcessList" parameterType="MesProcess" resultMap="MesProcessResult">
+        <include refid="selectMesProcessVo"/>
+        <where>
+            <if test="processName != null  and processName != ''">
+                and a.process_name like concat('%', #{processName}, '%')
+            </if>
+            <if test="processType != null  and processType != ''">
+                and a.process_type = #{processType}
+            </if>
+            <if test="stageId != null ">
+                and a.stage_id = #{stageId}
+            </if>
+            <if test="stageName != null ">
+                and b.stage_name = #{stageName}
+            </if>
+            <if test="status != null  and status != ''">
+                and a.status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectMesProcessByProcessId" parameterType="Long" resultMap="MesProcessResult">
+        <include refid="selectMesProcessVo"/>
+        where a.process_id = #{processId}
+    </select>
+
+    <select id="checkProcessNameUnique" parameterType="String" resultMap="MesProcessResult">
+        <include refid="selectMesProcessVo"/>
+        where a.process_name = #{processName} limit 1
+    </select>
+
+    <insert id="insertMesProcess" parameterType="MesProcess" useGeneratedKeys="true" keyProperty="processId">
+        insert into mes_process
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="processName != null and processName != ''">process_name,</if>
+            <if test="processType != null">process_type,</if>
+            <if test="stageId != null">stage_id,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="processName != null and processName != ''">#{processName},</if>
+            <if test="processType != null">#{processType},</if>
+            <if test="stageId != null">#{stageId},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesProcess" parameterType="MesProcess">
+        update mes_process
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="processName != null and processName != ''">process_name = #{processName},</if>
+            <if test="processType != null">process_type = #{processType},</if>
+            <if test="stageId != null">stage_id = #{stageId},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where process_id = #{processId}
+    </update>
+
+    <delete id="deleteMesProcessByProcessId" parameterType="Long">
+        delete from mes_process where process_id = #{processId}
+    </delete>
+
+    <delete id="deleteMesProcessByProcessIds" parameterType="String">
+        delete from mes_process where process_id in
+        <foreach item="processId" collection="array" open="(" separator="," close=")">
+            #{processId}
+        </foreach>
+    </delete>
+
+    <select id="processInfoByName" parameterType="String" resultMap="MesProcessResult">
+        select * from mes_process where process_name = #{processName}
+    </select>
+</mapper>

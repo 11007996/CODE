@@ -1,0 +1,123 @@
+----------------------------------------------------------- 
+记录时间：2023-06-16 10:38:20 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 UNIQUE KEY 约束“UQ__A_Mainte__7CAD74164872FC79”。不能在对象“dbo.A_MaintenanceItem_T”中插入重复键。重复键值为 (ZX-4100C 64PIN 测试机, M, 检查接点是否松动)。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:2a1f3c15-edda-4c96-9f20-2301e2e03fcc
+Error Number:2627,State:1,Class:14
+
+记录时间：2023-06-16 10:38:37 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceItem 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 UNIQUE KEY 约束“UQ__A_Mainte__7CAD74164872FC79”。不能在对象“dbo.A_MaintenanceItem_T”中插入重复键。重复键值为 (ZX-4100C 64PIN 测试机, M, 检查接点是否松动)。
+语句已终止。
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 256
+   在 Machine.FrmMaintenanceItem.tsmiImport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceItem.cs:行号 212
+ClientConnectionId:2a1f3c15-edda-4c96-9f20-2301e2e03fcc
+Error Number:2627,State:1,Class:14
+----------------------------------------------------------- 
+记录时间：2023-06-16 13:49:18 线程名：[8] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 UNIQUE KEY 约束“uk_report_mark_item”。不能在对象“dbo.A_MaintenanceReportItem_T”中插入重复键。重复键值为 (34129, D, 保养人签名)。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:c0a998fc-7162-4109-bbcb-060569301073
+Error Number:2627,State:1,Class:14
+----------------------------------------------------------- 
+记录时间：2023-06-16 14:58:05 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：给定关键字不在字典中。
+----------------------------------------------------------- 
+记录时间：2023-06-16 15:03:00 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：给定关键字不在字典中。
+----------------------------------------------------------- 
+记录时间：2023-06-16 16:36:10 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): “WHERE”附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Common.Utils.DBUtil.GetDataTable(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 162
+ClientConnectionId:90c72fde-8302-439f-b0ff-858152dacebf
+Error Number:102,State:1,Class:15
+
+记录时间：2023-06-16 16:37:19 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：“WHERE”附近有语法错误。
+
+记录时间：2023-06-16 16:37:29 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 在应使用条件的上下文(在 'TimeValue' 附近)中指定了非布尔类型的表达式。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Common.Utils.DBUtil.GetDataTable(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 162
+ClientConnectionId:90c72fde-8302-439f-b0ff-858152dacebf
+Error Number:4145,State:1,Class:15
+
+记录时间：2023-06-16 16:37:45 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：在应使用条件的上下文(在 'TimeValue' 附近)中指定了非布尔类型的表达式。
+----------------------------------------------------------- 
+记录时间：2023-06-16 18:03:16 线程名：[9] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.ThrowHelper.ThrowKeyNotFoundException()
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Machine.FrmMaintenanceReport.ConvertDataToMode() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 766
+   在 Machine.FrmMaintenanceReport.RefreshDataGrid() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 753
+   在 Machine.FrmMaintenanceReport.FrmBaseInfoMaintenance_Load(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 243
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-06-16 18:41:28 线程名：[9] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.ThrowHelper.ThrowKeyNotFoundException()
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Machine.FrmMaintenanceReport.ConvertDataToMode() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 774
+   在 Machine.FrmMaintenanceReport.RefreshDataGrid() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 753
+   在 Machine.FrmMaintenanceReport.FrmBaseInfoMaintenance_Load(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 243
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

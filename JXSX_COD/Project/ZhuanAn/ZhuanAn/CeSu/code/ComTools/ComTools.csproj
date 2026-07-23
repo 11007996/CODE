@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A39D8030-BF92-4016-B207-275C42626CBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ComTools</RootNamespace>
+    <AssemblyName>ComTools</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.17.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>D:\ProgramData\NuGet\packages\log4net.2.0.17\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>D:\ProgramData\NuGet\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgingTest\AgingTestConfig.cs" />
+    <Compile Include="AgingTest\FrmAgingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgingTest\FrmAgingTest.Designer.cs">
+      <DependentUpon>FrmAgingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgingTest\AgingTestItemEnum.cs" />
+    <Compile Include="AgingTest\FrmAgingTestItemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgingTest\FrmAgingTestItemConfig.Designer.cs">
+      <DependentUpon>FrmAgingTestItemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgingTest\TestResult.cs" />
+    <Compile Include="Automation\AutomationTestConfig.cs" />
+    <Compile Include="Automation\FrmTestItemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automation\FrmTestItemConfig.Designer.cs">
+      <DependentUpon>FrmTestItemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Automation\TestItemConfig.cs" />
+    <Compile Include="Automation\TestResult.cs" />
+    <Compile Include="Automation\FrmAutomationTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automation\FrmAutomationTest.Designer.cs">
+      <DependentUpon>FrmAutomationTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Automation\FrmSelectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automation\FrmSelectWindow.Designer.cs">
+      <DependentUpon>FrmSelectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Automation\FrmExtendOperate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automation\FrmExtendOperate.Designer.cs">
+      <DependentUpon>FrmExtendOperate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Automation\ExtendOperateConfig.cs" />
+    <Compile Include="Automation\TestStartModelEnum.cs" />
+    <Compile Include="DiskCapacity\DiskCapacityConfig.cs" />
+    <Compile Include="DPLineTest\DPLineTestConfig.cs" />
+    <Compile Include="SerialPortService\FrmSerialDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialPortService\FrmSerialDebug.designer.cs">
+      <DependentUpon>FrmSerialDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialPortService\ReceiveHandle.cs" />
+    <Compile Include="SerialPortService\SerialDataReceivedArgs.cs" />
+    <Compile Include="SerialPortService\SerialPortProxy.cs" />
+    <Compile Include="Util\AutomationUtil.cs" />
+    <Compile Include="Automation\OperatorEnum.cs" />
+    <Compile Include="Automation\EventHandle.cs" />
+    <Compile Include="Automation\WindowInfo.cs" />
+    <Compile Include="Automation\ElementInfo.cs" />
+    <Compile Include="Automation\OperateTypeEnum.cs" />
+    <Compile Include="DiskSpeed\DiskSpeedConfig.cs" />
+    <Compile Include="DPLineTest\TestItemEnum.cs" />
+    <Compile Include="ExceptionHandle.cs" />
+    <Compile Include="DiskCapacity\FrmDiskCapacity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiskCapacity\FrmDiskCapacity.Designer.cs">
+      <DependentUpon>FrmDiskCapacity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiskSpeed\FrmDiskSpeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiskSpeed\FrmDiskSpeed.Designer.cs">
+      <DependentUpon>FrmDiskSpeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Automation\FrmModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automation\FrmModal.Designer.cs">
+      <DependentUpon>FrmModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Automation\FrmModelSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automation\FrmModelSelected.Designer.cs">
+      <DependentUpon>FrmModelSelected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlatform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlatform.Designer.cs">
+      <DependentUpon>FrmPlatform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPLineTest\FrmDPLineTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPLineTest\FrmDPLineTest.Designer.cs">
+      <DependentUpon>FrmDPLineTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="Util\DiskHelper.cs" />
+    <Compile Include="Util\ProgressMsg.cs" />
+    <Compile Include="Util\EnumHelper.cs" />
+    <Compile Include="SerialPortService\SerialPortConfig.cs" />
+    <Compile Include="Util\SoftBasic.cs" />
+    <Compile Include="Util\TestStateEnum.cs" />
+    <Compile Include="Util\WindowEnumerator.cs" />
+    <Compile Include="Util\MouseSimulator.cs" />
+    <Compile Include="Util\WinApiFunctions.cs" />
+    <Compile Include="Util\WM.cs" />
+    <EmbeddedResource Include="AgingTest\FrmAgingTest.resx">
+      <DependentUpon>FrmAgingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgingTest\FrmAgingTestItemConfig.resx">
+      <DependentUpon>FrmAgingTestItemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Automation\FrmAutomationTest.resx">
+      <DependentUpon>FrmAutomationTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Automation\FrmSelectWindow.resx">
+      <DependentUpon>FrmSelectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Automation\FrmTestItemConfig.resx">
+      <DependentUpon>FrmTestItemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiskCapacity\FrmDiskCapacity.resx">
+      <DependentUpon>FrmDiskCapacity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiskSpeed\FrmDiskSpeed.resx">
+      <DependentUpon>FrmDiskSpeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Automation\FrmModal.resx">
+      <DependentUpon>FrmModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Automation\FrmModelSelected.resx">
+      <DependentUpon>FrmModelSelected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Automation\FrmExtendOperate.resx">
+      <DependentUpon>FrmExtendOperate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlatform.resx">
+      <DependentUpon>FrmPlatform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPLineTest\FrmDPLineTest.resx">
+      <DependentUpon>FrmDPLineTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SerialPortService\FrmSerialDebug.resx">
+      <DependentUpon>FrmSerialDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <Content Include="说明.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -122,3 +122,22 @@ void UpdateMessage(string message)
       //Dispatcher.BeginInvoke(action)相当于排队把委托发送到UI线程的消息队列里
       Dispatcher.BeginInvoke(action);
 }
+
+
+
+
+
+private delegate string cmbdelegate(ComboBox cmb);
+private string cmvValue(ComboBox cmb)
+{
+    if (cmb.InvokeRequired)
+    {
+        cmbdelegate dt = new cmbdelegate(cmvValue);
+        IAsyncResult ia = cmb.BeginInvoke(dt, new object[] { cmb });
+        return (string)cmb.EndInvoke(ia);
+    }
+    else
+    {
+        return cmb.SelectedValue.ToString();
+    }
+}

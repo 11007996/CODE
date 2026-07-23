@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="LuxVideoDet.Desktop.Views.FloatingPreviewWindow"
+        Title="预览"
+        Width="720" Height="480"
+        MinWidth="320" MinHeight="240"
+        CanResize="True"
+        Background="Black"
+        SystemDecorations="Full"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid RowDefinitions="*,Auto">
+        <!-- Preview Image -->
+        <Viewbox Grid.Row="0" Stretch="Uniform">
+            <Image x:Name="PreviewImage" Stretch="Uniform"/>
+        </Viewbox>
+
+        <!-- Bottom Info Bar -->
+        <Border Grid.Row="1" Padding="10,6" 
+                Background="#CC1E1E1E">
+            <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+                <TextBlock x:Name="ConfigNameText" Grid.Column="0"
+                           Foreground="White" FontSize="13" FontWeight="SemiBold"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="FpsText" Grid.Column="1"
+                           Foreground="#4CAF50" FontSize="12" Margin="12,0"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="StateText" Grid.Column="2"
+                           Foreground="#FFA500" FontSize="12" Margin="12,0"
+                           VerticalAlignment="Center"/>
+                <Button x:Name="FullscreenButton" Grid.Column="3"
+                        Background="Transparent" Padding="6" ToolTip.Tip="切换全屏"
+                        VerticalAlignment="Center">
+                    <PathIcon Data="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z" 
+                              Width="16" Height="16" Foreground="White"/>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

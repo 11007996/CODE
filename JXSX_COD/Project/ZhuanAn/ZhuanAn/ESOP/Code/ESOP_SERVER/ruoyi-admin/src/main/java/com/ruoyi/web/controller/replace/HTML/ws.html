@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS测试</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <label>请输入文本<input type="text" class="urlInput"/></label>
+    <!-- <label>
+        <input type="text"  class="urlInput"/>
+    </label> -->
+    <button onClick="wsConnect()">发起链接</button>
+</div>
+</body>
+<script>
+    // 页面加载完成后的回调
+    window.onload = () => {
+        // 这里可以默认发起连接
+    }
+    // 点击发起链接 获取Input的值。并作为URL,随后发起 ws
+    function wsConnect() {
+        let inputValue=document.getElementsByClassName("urlInput")[0].value;
+        console.log(inputValue)
+        // 如果有url取url,否则使用默认的url
+        let url=inputValue?inputValue:"ws://10.35.225.18:8090/info"
+
+        var ws = new WebSocket(url);
+        console.log(ws)
+        //申请一个WebSocket对象，参数是服务端地址，同http协议使用http://开头一样，WebSocket协议的url使用ws://开头，另外安全的WebSocket协议使用wss://开头
+        ws.onopen = function () {
+            //当WebSocket创建成功时，触发onopen事件
+            console.log("open");
+            ws.send("hello"); //将消息发送到服务端
+        };
+        ws.onmessage = function (e) {
+            //当客户端收到服务端发来的消息时，触发onmessage事件，参数e.data包含server传递过来的数据
+            console.log("msg");
+            console.log(e.data);
+        };
+        ws.onclose = function (e) {
+            //当客户端收到服务端发送的关闭连接请求时，触发onclose事件
+            console.log("close");
+        };
+        ws.onerror = function (e) {
+            //如果出现连接、处理、接收、发送数据失败的时候触发onerror事件
+            console.log(e);
+        };
+
+        //心跳检测  .所谓的心跳检测，就是隔一段时间向服务器仅限一次数据访问，因为长时间不使用会导致ws自动断开，
+        // 一般是间隔90秒内无操作会自动断开，因此，在间隔时间内进行一次数据访问，以防止ws断开即可，
+        //这里选择30秒，倒计时30秒内无操作则进行一次访问，有操作则重置计时器
+        //
+        //封装为键值对的形式，成为js对象，与json很相似
+        var heartCheck = {
+            timeout: 30000, //30秒
+            timeoutObj: null,
+            reset: function () {
+                //接收成功一次推送，就将心跳检测的倒计时重置为30秒
+                clearTimeout(this.timeoutObj); //重置倒计时
+                this.start();
+            },
+            start: function () {
+                //启动心跳检测机制，设置倒计时30秒一次
+                this.timeoutObj = setTimeout(function () {
+                    var message = {
+                        type: "t10010",
+                        service: "发送维持连接消息！",
+                    };
+                    console.log("发送维持连接消息！");
+                    ws.send(JSON.stringify(message)); //启动心跳
+                }, this.timeout);
+            },
+            //onopen连接上，就开始start及时，如果在定时时间范围内，onmessage获取到了服务端消息，
+            // 就重置reset倒计时，距离上次从后端获取消息30秒后，执行心跳检测，看是不是断了。
+        };
+        // ---- ...
+        // socket
+        ws.onopen = function () {
+            //当WebSocket创建成功时，触发onopen事件
+            console.log("open");
+            ws.send("hello"); //将消息发送到服务端
+            heartCheck.start(); //连接成功之后启动心跳检测机制
+        };
+        ws.onmessage = function (e) {
+            //当客户端收到服务端发来的消息时，触发onmessage事件，参数e.data包含server传递过来的数据
+            console.log(e.data);
+            //接收一次后台推送的消息，即进行一次心跳检测重置
+            heartCheck.reset();
+        };
+    }
+</script>
+
+</html>

@@ -1,0 +1,139 @@
+﻿
+异常时间：2024-03-15 16:58:04,939 [9] 
+异常级别：ERROR 
+异常位置：[9] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：Aspose.Cells.CellsException: Error xml namespace http://purl.oclc.org/ooxml/spreadsheetml/main
+   在 ڎ.⳺.⇡(XmlTextReader ൸)
+   在 ڎ.⳺.ⴀ(XmlTextReader ญ)
+   在 ڎ.←.↛()
+   在 ڎ.←.इ()
+   在 Aspose.Cells.Workbook.ԝ(Stream Ԡ, LoadOptions ԟ)
+   在 Aspose.Cells.Workbook.ԝ(String Ԟ, LoadOptions ԟ)
+   在 Asset.BLL.FileManager.ConvertExcelToImgReturnDO(String excelFilePath, Int32 dpi) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 397
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 281
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 150
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 16:58:30,204 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：Aspose.Cells.CellsException: Error xml namespace http://purl.oclc.org/ooxml/spreadsheetml/main
+   在 ڎ.⳺.⇡(XmlTextReader ൸)
+   在 ڎ.⳺.ⴀ(XmlTextReader ญ)
+   在 ڎ.←.↛()
+   在 ڎ.←.इ()
+   在 Aspose.Cells.Workbook.ԝ(Stream Ԡ, LoadOptions ԟ)
+   在 Aspose.Cells.Workbook.ԝ(String Ԟ, LoadOptions ԟ)
+   在 Asset.BLL.FileManager.ConvertExcelToImgReturnDO(String excelFilePath, Int32 dpi) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 397
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 281
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 150
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:00:03,233 [36] 
+异常级别：ERROR 
+异常位置：[36] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:04:18,131 [6] 
+异常级别：ERROR 
+异常位置：[6] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:04:18,162 [44] 
+异常级别：ERROR 
+异常位置：[44] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:05:08,617 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:13:30,418 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 294
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 150
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:19:13,610 [8] 
+异常级别：ERROR 
+异常位置：[8] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:20:37,401 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddPreviewFile(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 85
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-15 17:20:43,542 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: Quality must be between 0 and 100
+   在 Aspose.Cells.Rendering.ImageOrPrintOptions.set_Quality(Int32 value)
+   在 Asset.BLL.FileManager.ConvertExcelToImgReturnDO(String excelFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 

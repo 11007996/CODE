@@ -1,0 +1,1 @@
+import{o as s,c as a,w as t,i as e,b as o,t as r}from"./index-ea994615.js";import{_ as n}from"./_plugin-vue_export-helper.1b428a4d.js";const d=n({data:()=>({msg:""}),onLoad(s){this.msg=s.msg},methods:{}},[["render",function(n,d,m,i,p,u){const c=e;return s(),a(c,null,{default:t((()=>[o(" 求请错误，原因："+r(p.msg),1)])),_:1})}],["__scopeId","data-v-4a688ebc"]]);export{d as default};

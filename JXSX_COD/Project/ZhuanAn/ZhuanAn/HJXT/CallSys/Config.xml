@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!--==========数据库连接==========-->
+  <connectionString>server=172.18.20.82;database=HJDB_New;uid=cs;pwd=iMvyh5JHLzv3uy+vYsrOkw==</connectionString>
+  <!--==========基本设设置==========-->
+  <baseInfo>
+	<!--工厂名称-->
+	<factoryName>协讯二期</factoryName>
+	<!--厂区名称-->
+	<areaName>C</areaName>
+	<!--线别名称-->
+	<lineName>A2-01线</lineName>
+	<!--文件上传位置-->
+	<picPath>\\172.18.20.82\\HandlerPic\\</picPath>
+  </baseInfo>
+  <!--==========看板相关设置==========-->
+  <screenPanel>
+    <!--看板统计图表显示的机台数(1~40,默认40)-->
+    <machineNum>20</machineNum>
+    <!--看板统计图表显示前几周数据（0当前周，1前一周，以此类推，最大5）-->
+    <preWeekNum>5</preWeekNum>
+  </screenPanel>
+</configuration>

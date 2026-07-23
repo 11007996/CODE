@@ -1,0 +1,49 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "资产清册"
+			}
+		},
+		{
+			"path": "pages/asset/detail",
+			"style": {
+				"navigationBarTitleText": "资产详情"
+			}
+		},
+		{
+			"path": "pages/asset/showImg",
+			"style": {
+				"navigationBarTitleText": "文件预览"
+			}
+		},
+		{
+			"path": "pages/asset/maintenance",
+			"style": {
+				"navigationBarTitleText": "资产保养"
+			}
+		},
+		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "用户登入"
+			}
+		}
+	    ,{
+            "path" : "pages/error/wxopen",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "打开方式错误",
+                "enablePullDownRefresh": false
+            }
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "设备系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

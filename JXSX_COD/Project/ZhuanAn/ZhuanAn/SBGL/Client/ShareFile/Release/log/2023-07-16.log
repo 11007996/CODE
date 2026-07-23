@@ -1,0 +1,45 @@
+----------------------------------------------------------- 
+记录时间：2023-07-16 16:25:04 线程名：[9] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.UnauthorizedAccessException: 对路径“D:\Work Projects\设备系统\SBGL\WinForm\ShareFile\Release\LuxMMS.vshost.exe”的访问被拒绝。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   在 Common.Utils.UpdateHelper.ClearObsoleteFiles() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\UpdateHelper.cs:行号 135
+   在 LuxMMS.Program.Main(String[] args) 位置 d:\Work Projects\设备系统\SBGL\WinForm\LuxMMS\Program.cs:行号 97
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+
+记录时间：2023-07-16 16:25:54 线程名：[9] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.UnauthorizedAccessException: 对路径“D:\Work Projects\设备系统\SBGL\WinForm\ShareFile\Release\LuxMMS.vshost.exe”的访问被拒绝。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   在 Common.Utils.UpdateHelper.ClearObsoleteFiles() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\UpdateHelper.cs:行号 135
+   在 LuxMMS.Program.Main(String[] args) 位置 d:\Work Projects\设备系统\SBGL\WinForm\LuxMMS\Program.cs:行号 97
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+
+记录时间：2023-07-16 16:26:02 线程名：[9] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.UnauthorizedAccessException: 对路径“D:\Work Projects\设备系统\SBGL\WinForm\ShareFile\Release\LuxMMS.vshost.exe”的访问被拒绝。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   在 Common.Utils.UpdateHelper.ClearObsoleteFiles() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\UpdateHelper.cs:行号 135
+   在 LuxMMS.Program.Main(String[] args) 位置 d:\Work Projects\设备系统\SBGL\WinForm\LuxMMS\Program.cs:行号 97
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()

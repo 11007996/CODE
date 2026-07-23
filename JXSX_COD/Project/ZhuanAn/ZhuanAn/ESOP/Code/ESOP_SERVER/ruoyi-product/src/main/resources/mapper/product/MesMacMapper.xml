@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesMacMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesMac" id="MesMacResult">
+        <result property="lineId"    column="line_id"    />
+        <result property="lineName"    column="line_name"    />
+        <result property="stageId"    column="stage_id"    />
+        <result property="stageName"    column="stage_name"    />
+        <result property="processId"    column="process_id"    />
+        <result property="processName"    column="process_name"    />
+        <result property="macId"    column="mac_id"    />
+        <result property="macName"    column="mac_name"    />
+        <result property="macArea"    column="mac_area"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectMesMacVo">
+        SELECT A.line_id,B.line_name,A.stage_id,C.stage_name,A.process_id,D.process_name,A.mac_id,A.mac_name,A.mac_area,A.`status`,A.remark,A.create_by,A.create_time,A.update_by,A.update_time
+        FROM mes_mac A
+        LEFT JOIN mes_line B ON B.line_id = A.line_id
+        LEFT JOIN mes_stage C ON C.stage_id = A.stage_id
+        LEFT JOIN mes_process D ON D.process_id = A.process_id
+    </sql>
+
+    <select id="selectMesMacList" parameterType="com.ruoyi.product.domain.MesMac" resultMap="MesMacResult">
+        <include refid="selectMesMacVo"/>
+        <where>
+            A.del_flag = '0'
+            <if test="macName != null  and macName != ''"> and A.mac_name like concat('%', #{macName}, '%')</if>
+            <if test="macArea != null  and macArea != ''"> and A.mac_area like concat('%', #{macArea}, '%')</if>
+            <if test="lineId != null  and lineId != ''"> and A.line_id = #{lineId}</if>
+            <if test="processId != null  and processId != ''"> and A.process_id = #{processId}</if>
+            <if test="stageId != null  and stageId != ''"> and A.stage_id = #{stageId}</if>
+            <if test="macId != null  and macId != ''"> and A.mac_id = #{macId}</if>
+        </where>
+    </select>
+
+    <select id="selectLineByMac" parameterType="com.ruoyi.product.domain.MesMac" resultMap="MesMacResult">
+        SELECT DISTINCT A.line_id,B.line_name,A.mac_name,A.`status` FROM mes_mac A
+        LEFT JOIN mes_line B ON B.line_id = A.line_id
+        <where>
+            A.del_flag = '0'
+            <if test="macName != null  and macName != ''"> and A.mac_name like concat('%', #{macName}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectStageByMac" parameterType="com.ruoyi.product.domain.MesMac" resultMap="MesMacResult">
+        SELECT DISTINCT A.stage_id,C.stage_name,A.mac_name,A.`status` FROM mes_mac A
+        LEFT JOIN mes_line B ON B.line_id = A.line_id
+        LEFT JOIN mes_stage C ON C.stage_id = A.stage_id
+        <where>
+            A.del_flag = '0'
+            <if test="macName != null  and macName != ''"> and A.mac_name like concat('%', #{macName}, '%')</if>
+            <if test="lineId != null  and lineId != ''"> and A.line_id = #{lineId}</if>
+        </where>
+    </select>
+
+    <select id="selectProcessByMac" parameterType="com.ruoyi.product.domain.MesMac" resultMap="MesMacResult">
+        SELECT DISTINCT A.process_id,D.process_name,A.mac_name,A.mac_area,A.`status` FROM mes_mac A
+        LEFT JOIN mes_line B ON B.line_id = A.line_id
+        LEFT JOIN mes_stage C ON C.stage_id = A.stage_id
+        LEFT JOIN mes_process D ON D.process_id = A.process_id
+        <where>
+            A.del_flag = '0'
+            <if test="macName != null  and macName != ''"> and A.mac_name like concat('%', #{macName}, '%')</if>
+            <if test="lineId != null  and lineId != ''"> and A.line_id = #{lineId}</if>
+            <if test="stageId != null  and stageId != ''"> and A.stage_id = #{stageId}</if>
+        </where>
+    </select>
+
+    <select id="selectProcessList" parameterType="com.ruoyi.product.domain.MesMac" resultMap="MesMacResult">
+        SELECT DISTINCT A.line_id,B.line_name,A.stage_id,C.stage_name,A.process_id,D.process_name,A.`status`,A.remark
+        FROM mes_mac A
+        LEFT JOIN mes_line B ON B.line_id = A.line_id
+        LEFT JOIN mes_stage C ON C.stage_id = A.stage_id
+        LEFT JOIN mes_process D ON D.process_id = A.process_id
+        <where>
+            A.del_flag = '0'
+            <if test="lineId != null  and lineId != ''"> and A.line_id = #{lineId}</if>
+<!--            <if test="lineName != null  and lineName != ''"> and B.line_name = #{lineName}</if>-->
+            <if test="processId != null  and processId != ''"> and A.process_id = #{processId}</if>
+<!--            <if test="processName != null  and processName != ''"> and D.process_name = #{processName}</if>-->
+            <if test="stageId != null  and stageId != ''"> and A.stage_id = #{stageId}</if>
+<!--            <if test="stageName != null  and stageName != ''"> and C.stage_name = #{stageName}</if>-->
+        </where>
+    </select>
+
+
+    <select id="selectMesMacByMacId" parameterType="Long" resultMap="MesMacResult">
+        <include refid="selectMesMacVo"/>
+        where mac_id = #{macId}
+    </select>
+
+    <select id="checkMacNameUnique" parameterType="com.ruoyi.product.domain.MesMac" resultMap="MesMacResult">
+        <include refid="selectMesMacVo"/>
+        where A.mac_name = #{macName}
+        and A.line_id = #{lineId}
+        and A.stage_id = #{stageId}
+        and A.process_id = #{processId}
+        and del_flag = '0' limit 1
+    </select>
+
+    <insert id="insertMesMac" parameterType="com.ruoyi.product.domain.MesMac" useGeneratedKeys="true" keyProperty="macId">
+        insert into mes_mac
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="lineId != null and lineId != ''">line_id,</if>
+            <if test="stageId != null and stageId != ''">stage_id,</if>
+            <if test="processId != null and processId != ''">process_id,</if>
+            <if test="macName != null and macName != ''">mac_name,</if>
+            <if test="macArea != null and macArea != ''">mac_area,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="lineId != null and lineId != ''">#{lineId},</if>
+            <if test="stageId != null and stageId != ''">#{stageId},</if>
+            <if test="processId != null and processId != ''">#{processId},</if>
+            <if test="macName != null and macName != ''">#{macName},</if>
+            <if test="macArea != null and macArea != ''">#{macArea},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+
+    <update id="updateMesMac" parameterType="com.ruoyi.product.domain.MesMac">
+        update mes_mac
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="lineId != null and lineId != ''">line_id = #{lineId},</if>
+            <if test="stageId != null and stageId != ''">stage_id = #{stageId},</if>
+            <if test="processId != null and processId != ''">process_id = #{processId},</if>
+            <if test="macName != null and macName != ''">mac_name = #{macName},</if>
+            <if test="macArea != null and macArea != ''">mac_area = #{macArea},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where mac_id = #{macId}
+    </update>
+
+    <delete id="deleteMesMacByMacId" parameterType="Long">
+        update mes_mac set del_flag = '2' where mac_id = #{macId}
+    </delete>
+
+    <delete id="deleteMesMacByMacIds" parameterType="String">
+        update mes_mac set del_flag = '2' where mac_id in
+        <foreach item="macId" collection="array" open="(" separator="," close=")">
+            #{macId}
+        </foreach>
+    </delete>
+
+</mapper>

@@ -1,0 +1,66 @@
+﻿
+日志时间：2024-03-08 10:16:12,913 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 10:18:03,057 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 10:20:39,493 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 10:20:56,098 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:00:47,944 [6] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:00:58,040 [6] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:02:37,604 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:24:26,471 [51] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:25:23,461 [55] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:27:11,364 [55] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:33:06,921 [17] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:35:46,043 [17] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-08 11:46:54,035 [40] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 

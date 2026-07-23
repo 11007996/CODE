@@ -1,0 +1,109 @@
+﻿using Infrastructure.Cache;
+
+namespace EAM.ServiceCore.Services
+{
+    public class CacheService
+    {
+        private static readonly string CK_verifyScan = "verifyScan_";
+        private static readonly string CK_phoneSmsCode = "phone_sms_code_";
+        private static readonly string CK_wxCode = "wxCode_";
+
+        #region 用户权限 缓存
+
+        public static List<string> GetUserPerms(string key)
+        {
+            return (List<string>)CacheHelper.GetCache(key);
+            //return RedisServer.Cache.Get<List<string>>(key).ToList();
+        }
+
+        public static void SetUserPerms(string key, object data)
+        {
+            CacheHelper.SetCache(key, data);
+            //RedisServer.Cache.Set(key, data);
+        }
+
+        public static void RemoveUserPerms(string key)
+        {
+            CacheHelper.Remove(key);
+            //RedisServer.Cache.Del(key);
+        }
+
+        #endregion 用户权限 缓存
+
+        public static object SetScanLogin(string key, Dictionary<string, object> val)
+        {
+            var ck = CK_verifyScan + key;
+
+            return CacheHelper.SetCache(ck, val, 1);
+        }
+
+        public static object GetScanLogin(string key)
+        {
+            var ck = CK_verifyScan + key;
+            return CacheHelper.Get(ck);
+        }
+
+        public static void RemoveScanLogin(string key)
+        {
+            var ck = CK_verifyScan + key;
+            CacheHelper.Remove(ck);
+        }
+
+        public static void SetLockUser(string key, long val, int time)
+        {
+            var CK = "lock_user_" + key;
+
+            CacheHelper.SetCache(CK, val, time);
+        }
+
+        public static long GetLockUser(string key)
+        {
+            var CK = "lock_user_" + key;
+
+            if (CacheHelper.Get(CK) is long t)
+            {
+                return t;
+            }
+            return 0;
+        }
+
+        public static object SetPhoneCode(string key, string val)
+        {
+            var ck = CK_phoneSmsCode + key;
+
+            return CacheHelper.SetCache(ck, val, 10);
+        }
+
+        public static bool CheckPhoneCode(string key, string val)
+        {
+            var ck = CK_phoneSmsCode + key;
+            var save_code = CacheHelper.Get(ck);
+
+            if (save_code != null && save_code.Equals(val))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 设置微信Code获取到的身份缓存
+        /// </summary>
+        /// <param name="key">微信code</param>
+        /// <param name="val">微信用户id</param>
+        /// <returns></returns>
+        public static object SetWxCode(string key, string val)
+        {
+            var ck = CK_wxCode + key;
+
+            return CacheHelper.SetCache(ck, val, 5);
+        }
+
+        public static object GetWxCode(string key)
+        {
+            var ck = CK_wxCode + key;
+
+            return CacheHelper.GetCache(ck);
+        }
+    }
+}

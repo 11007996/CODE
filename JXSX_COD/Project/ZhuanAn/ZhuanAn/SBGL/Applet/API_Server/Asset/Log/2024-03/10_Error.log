@@ -1,0 +1,122 @@
+﻿
+异常时间：2024-03-10 13:35:15,834 [9] 
+异常级别：ERROR 
+异常位置：[9] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddFilePreview(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 74
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 278
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 134
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-10 13:39:32,567 [24] 
+异常级别：ERROR 
+异常位置：[24] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.DAL.FileDAL.AddFilePreview(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 74
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-10 15:41:45,369 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.Data.SqlClient.SqlException (0x80131904): 当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'S_PreviewFileInfo' 中的标识列插入显式值。
+   在 Asset.DAL.Util.DBUtil.ExecSQL(String strSQL) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\Util\DBUtil.cs:行号 220
+   在 Asset.DAL.FileDAL.AddFilePreview(List`1 files) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 77
+   在 Asset.BLL.FileManager.CreatePreviewFile(Int32 sourceFileId, String sourceFile, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 278
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 134
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+ClientConnectionId:637fd150-b88d-4a2b-964d-17cff18ab66c
+Error Number:544,State:1,Class:16
+异常：
+
+ 
+异常时间：2024-03-10 15:55:09,738 [13] 
+异常级别：ERROR 
+异常位置：[13] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:122) 
+消息描述：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Asset.DAL.FileDAL.GetPreviewFileInfo(Int32 fileId)
+   在 Asset.BLL.FileManager.GetPreviewFilePath(Int32 previewFileId, String& fileAliasName) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 61
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 122
+异常：
+
+ 
+异常时间：2024-03-10 15:55:09,771 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:122) 
+消息描述：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Asset.DAL.FileDAL.GetPreviewFileInfo(Int32 fileId)
+   在 Asset.BLL.FileManager.GetPreviewFilePath(Int32 previewFileId, String& fileAliasName) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 61
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 122
+异常：
+
+ 
+异常时间：2024-03-10 15:55:13,540 [6] 
+异常级别：ERROR 
+异常位置：[6] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:122) 
+消息描述：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Asset.DAL.FileDAL.GetPreviewFileInfo(Int32 fileId)
+   在 Asset.BLL.FileManager.GetPreviewFilePath(Int32 previewFileId, String& fileAliasName) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 61
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 122
+异常：
+
+ 
+异常时间：2024-03-10 17:09:44,597 [25] 
+异常级别：ERROR 
+异常位置：[25] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:49) 
+消息描述：System.MissingMethodException: 找不到方法:“Void Asset.DAL.FileDAL.DeletePreviewFile(Int32)”。
+   在 Asset.BLL.FileManager.SaveOrReplaceFile(Nullable`1 fileId, Nullable`1 fileClass, Stream stream, String fileName, String userId, String& msg)
+   在 Asset.Controllers.FileController.UploadFile(Nullable`1 replaceFileId, Nullable`1 fileClass) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 49
+异常：
+
+ 
+异常时间：2024-03-10 19:35:38,614 [8] 
+异常级别：ERROR 
+异常位置：[8] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:122) 
+消息描述：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Asset.DAL.FileDAL.GetPreviewFileInfo(Int32 fileId) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 61
+   在 Asset.BLL.FileManager.GetPreviewFilePath(Int32 previewFileId, String& fileAliasName) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 61
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 122
+异常：
+
+ 
+异常时间：2024-03-10 22:11:57,586 [8] 
+异常级别：ERROR 
+异常位置：[8] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:160) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.Controllers.FileController.GetPreviewFiles(Nullable`1 sourceFileId, Nullable`1 previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 160
+异常：
+
+ 
+异常时间：2024-03-10 22:12:01,796 [6] 
+异常级别：ERROR 
+异常位置：[6] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:160) 
+消息描述：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 Asset.Controllers.FileController.GetPreviewFiles(Nullable`1 sourceFileId, Nullable`1 previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 160
+异常：
+
+ 

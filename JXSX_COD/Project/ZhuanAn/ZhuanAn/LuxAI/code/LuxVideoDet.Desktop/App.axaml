@@ -1,0 +1,126 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="LuxVideoDet.Desktop.App"
+             xmlns:local="using:LuxVideoDet.Desktop"
+             Name="LuxVideoDet"
+             RequestedThemeVariant="Light">
+
+    <!-- macOS 应用菜单在 App.axaml.cs 中于主窗口 Opened 之后挂载，避免 .app 启动阶段 XAML 绑定原生菜单导致闪退 -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
+
+        <!-- Toolbar ToggleButton: unchecked = subtle, checked = accent -->
+        <Style Selector="ToggleButton.toolbar">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="Opacity" Value="0.7"/>
+        </Style>
+        <Style Selector="ToggleButton.toolbar:pointerover">
+            <Setter Property="Background" Value="{DynamicResource SystemControlBackgroundListLowBrush}"/>
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+        <Style Selector="ToggleButton.toolbar:checked">
+            <Setter Property="Background" Value="{DynamicResource SystemAccentColor}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="ToggleButton.toolbar:checked /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="ToggleButton.toolbar:checked PathIcon">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="ToggleButton.toolbar:checked:pointerover">
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+
+        <!-- Log filter ToggleButton -->
+        <Style Selector="ToggleButton.logfilter">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Opacity" Value="0.6"/>
+        </Style>
+        <Style Selector="ToggleButton.logfilter:pointerover">
+            <Setter Property="Background" Value="{DynamicResource SystemControlBackgroundListLowBrush}"/>
+            <Setter Property="Opacity" Value="0.8"/>
+        </Style>
+        <Style Selector="ToggleButton.logfilter:checked">
+            <Setter Property="Background" Value="{DynamicResource SystemAccentColor}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="ToggleButton.logfilter:checked:pointerover">
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+
+        <!--
+          实时预览/全屏：PLC 等圆形按钮 — 白底黑字实色。
+          Fluent Button 的 ControlTheme 会在 ContentPresenter 上用 ButtonBackgroundDisabled 等动态画刷（含半透明），
+          仅设 Button.Background 无法盖住 :disabled/:pointerover；必须写 /template/ ContentPresenter#PART_ContentPresenter。
+        -->
+        <Style Selector="Button.algorithmUiChip">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#9E9E9E"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#9E9E9E"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:pointerover">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#616161"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#616161"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:pressed">
+            <Setter Property="Background" Value="#FFF5F5F5"/>
+            <Setter Property="BorderBrush" Value="#616161"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:pressed /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="#FFF5F5F5"/>
+            <Setter Property="BorderBrush" Value="#616161"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:disabled">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="BorderBrush" Value="#9E9E9E"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#9E9E9E"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style Selector="Button.algorithmUiChip:disabled TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Application.Styles>
+</Application>

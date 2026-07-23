@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesTerminalSopMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesTerminalSop" id="MesTerminalSopResult">
+        <result property="id"    column="id"    />
+        <result property="sopName"    column="sop_name"    />
+        <result property="sopId"    column="sop_id"    />
+        <result property="sopPage"    column="sop_page"    />
+        <result property="modelId"    column="model_id"    />
+        <result property="modelName"    column="model_name"    />
+        <result property="lineId"    column="line_id"    />
+        <result property="lineName"    column="line_name"    />
+        <result property="stageId"    column="stage_id"    />
+        <result property="stageName"    column="stage_name"    />
+        <result property="processId"    column="process_id"    />
+        <result property="processName"    column="process_name"    />
+        <result property="terminalId"    column="terminal_id"    />
+        <result property="terminalName"    column="terminal_name"    />
+        <result property="macId"    column="mac_id"    />
+        <result property="macName"    column="mac_name"    />
+        <result property="materialId"    column="material_id"    />
+        <result property="materialName"    column="material_name"    />
+        <result property="version"    column="version"    />
+        <result property="status"    column="status"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="passWord"    column="pass_word"    />
+    </resultMap>
+
+    <sql id="selectMesTerminalSopVo">
+        select a.id, a.model_id, b.model_name, a.line_id, c.line_name, a.stage_id,d.stage_name, a.process_id, e.process_name,
+               a.terminal_id, f.terminal_name, a.sop_id,a.material_id,  a.status, a.remark
+        from mes_terminal_sop a
+        left join mes_model b on a.model_id = b.model_id
+        left join mes_line c on a.line_id = c.line_id
+        left join mes_stage d on a.stage_id = d.stage_id
+        left join mes_process e on a.process_id = e.process_id
+        left join mes_terminal f on a.terminal_id = f.terminal_id
+    </sql>
+
+    <select id="selectMesTerminalSopList" parameterType="com.ruoyi.product.domain.MesTerminalSop" resultMap="MesTerminalSopResult">
+<!--        select a.id, a.model_id, b.model_name,a.material_id,i.material_name, a.line_id, c.line_name, a.stage_id,d.stage_name, a.process_id, e.process_name,-->
+<!--        a.terminal_id, f.mac_name as terminal_name, h.sop_id,g.sop_name,h.sop_page,g.version,a.`status`, a.remark,h.push_status,j.version_status,g.pass_word-->
+<!--        from mes_terminal_sop a-->
+<!--        left join mes_model b on a.model_id = b.model_id-->
+<!--        left join mes_line c on a.line_id = c.line_id-->
+<!--        left join mes_stage d on a.stage_id = d.stage_id-->
+<!--        left join mes_process e on a.process_id = e.process_id-->
+<!--        left join mes_mac f on a.terminal_id = f.mac_id-->
+<!--&lt;!&ndash;        left join mes_terminal f on a.terminal_id = f.terminal_id&ndash;&gt;-->
+<!--        left join mes_material_info i on i.id = a.material_id-->
+<!--        left join mes_sop_group h on a.id = h.sop_group_id-->
+<!--        left join mes_sop g on h.sop_id = g.sop_id-->
+<!--        LEFT JOIN mes_upload_terminal_page j ON a.model_id = j.model_id-->
+<!--        AND a.material_id = j.material_id-->
+<!--        AND a.line_id = j.line_id-->
+<!--        AND a.stage_id = j.stage_id-->
+<!--        AND a.process_id = j.process_id-->
+<!--        AND a.terminal_id = j.terminal_id-->
+        select a.id, a.line_id, c.line_name, a.stage_id,d.stage_name, a.process_id, e.process_name,
+        a.terminal_id, f.mac_name as terminal_name, h.sop_id,g.sop_name,h.sop_page,g.version,a.`status`, a.remark,h.push_status,
+        j.version_status,g.pass_word
+        from mes_terminal_sop a
+        left join mes_line c on a.line_id = c.line_id
+        left join mes_stage d on a.stage_id = d.stage_id
+        left join mes_process e on a.process_id = e.process_id
+        left join mes_mac f on a.terminal_id = f.mac_id
+        left join mes_sop_group h on a.id = h.sop_group_id
+        left join mes_sop g on h.sop_id = g.sop_id
+        LEFT JOIN mes_upload_terminal_page j ON
+        a.line_id = j.line_id
+        AND a.stage_id = j.stage_id
+        AND a.process_id = j.process_id
+<!--        AND a.terminal_id = j.terminal_id-->
+        <where>
+<!--            <if test="modelId != null "> and a.model_id = #{modelId}</if>-->
+<!--            <if test="materialId != null "> and a.material_id = #{materialId}</if>-->
+            <if test="lineId != null "> and a.line_id = #{lineId}</if>
+            <if test="stageId != null "> and a.stage_id = #{stageId}</if>
+            <if test="processId != null "> and a.process_id = #{processId}</if>
+            <if test="terminalId != null "> and a.terminal_id = #{terminalId}</if>
+            <if test="version != null "> and a.version = #{terminalId}</if>
+            <if test="status != null  and status != ''"> and a.status = #{status}</if>
+            <if test="lineName != null "> and c.line_name like concat('%', #{lineName}, '%')</if>
+            <if test="sopName != null "> and g.sop_name like concat('%', #{sopName}, '%')</if>
+<!--            <if test="materialName != null "> and i.material_name like concat('%', #{materialName}, '%')</if>-->
+<!--            <if test="modelName != null "> and b.model_name like concat('%', #{modelName}, '%')</if>-->
+        </where>
+    </select>
+
+
+    <select id="selectMesTerminalSopList1" parameterType="com.ruoyi.product.domain.MesTerminalSop" resultMap="MesTerminalSopResult">
+<!--        select a.id,-->
+<!--        a.model_id, b.model_name,a.material_id,i.material_name, a.line_id, c.line_name, a.stage_id,d.stage_name, a.process_id, e.process_name,-->
+<!--        a.terminal_id, f.terminal_name, h.sop_id,g.sop_name,h.sop_page,g.version,a.`status`, a.remark-->
+<!--        from mes_terminal_sop a-->
+<!--        left join mes_model b on a.model_id = b.model_id-->
+<!--        left join mes_line c on a.line_id = c.line_id-->
+<!--        left join mes_stage d on a.stage_id = d.stage_id-->
+<!--        left join mes_process e on a.process_id = e.process_id-->
+<!--        left join mes_terminal f on a.terminal_id = f.terminal_id-->
+<!--        left join mes_material_info i on i.id = a.material_id-->
+<!--        left join mes_sop_group h on a.id = h.sop_group_id-->
+<!--        left join mes_sop g on h.sop_id = g.sop_id-->
+        select a.id, a.line_id, c.line_name, a.stage_id,d.stage_name, a.process_id, e.process_name,
+        a.terminal_id, f.terminal_name, h.sop_id,g.sop_name,h.sop_page,g.version,a.`status`, a.remark
+        from mes_terminal_sop a
+        left join mes_line c on a.line_id = c.line_id
+        left join mes_stage d on a.stage_id = d.stage_id
+        left join mes_process e on a.process_id = e.process_id
+        left join mes_terminal f on a.terminal_id = f.terminal_id
+        left join mes_sop_group h on a.id = h.sop_group_id
+        left join mes_sop g on h.sop_id = g.sop_id
+        <where>
+<!--            <if test="modelId != null "> and a.model_id = #{modelId}</if>-->
+<!--            <if test="materialId != null "> and a.material_id = #{materialId}</if>-->
+            <if test="lineId != null "> and a.line_id = #{lineId}</if>
+            <if test="stageId != null "> and a.stage_id = #{stageId}</if>
+            <if test="processId != null "> and a.process_id = #{processId}</if>
+            <if test="terminalId != null "> and a.terminal_id = #{terminalId}</if>
+            <if test="version != null "> and a.version = #{terminalId}</if>
+            <if test="status != null  and status != ''"> and a.status = #{status}</if>
+            <if test="lineName != null "> and c.line_name like concat('%', #{lineName}, '%')</if>
+            <if test="sopName != null "> and g.sop_name like concat('%', #{sopName}, '%')</if>
+<!--            <if test="materialName != null "> and i.material_name like concat('%', #{materialName}, '%')</if>-->
+<!--            <if test="modelName != null "> and b.model_name like concat('%', #{modelName}, '%')</if>-->
+        </where>
+    </select>
+
+    <select id="selectMesTerminalSopById" parameterType="Long" resultMap="MesTerminalSopResult">
+        <include refid="selectMesTerminalSopVo"/>
+        where a.id = #{id}
+    </select>
+
+
+
+    <insert id="insertHistory" parameterType="com.ruoyi.product.domain.MesTerminalSop" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_terminal_sop_ht
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="modelId != null">model_id,</if>
+            <if test="lineId != null">line_id,</if>
+            <if test="stageId != null">stage_id,</if>
+            <if test="processId != null">process_id,</if>
+            <if test="terminalId != null">terminal_id,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="modelId != null">#{modelId},</if>
+            <if test="lineId != null">#{lineId},</if>
+            <if test="stageId != null">#{stageId},</if>
+            <if test="processId != null">#{processId},</if>
+            <if test="terminalId != null">#{terminalId},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+
+    <insert id="insertMesTerminalSop" parameterType="com.ruoyi.product.domain.MesTerminalSop" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_terminal_sop
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="modelId != null">model_id,</if>
+            <if test="lineId != null">line_id,</if>
+            <if test="stageId != null">stage_id,</if>
+            <if test="processId != null">process_id,</if>
+            <if test="terminalId != null">terminal_id,</if>
+            <if test="materialId != null">material_id,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="modelId != null">#{modelId},</if>
+            <if test="lineId != null">#{lineId},</if>
+            <if test="stageId != null">#{stageId},</if>
+            <if test="processId != null">#{processId},</if>
+            <if test="terminalId != null">#{terminalId},</if>
+            <if test="materialId != null">#{materialId},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesTerminalSop" parameterType="com.ruoyi.product.domain.MesTerminalSop">
+        update mes_terminal_sop
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="modelId != null">model_id = #{modelId},</if>
+            <if test="lineId != null">line_id = #{lineId},</if>
+            <if test="stageId != null">stage_id = #{stageId},</if>
+            <if test="processId != null">process_id = #{processId},</if>
+            <if test="terminalId != null">terminal_id = #{terminalId},</if>
+            <if test="materialId != null">material_id = #{materialId},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <update id="updateMesTerminalSop1" parameterType="com.ruoyi.product.domain.MesTerminalSop">
+        update mes_terminal_sop
+        <trim prefix="SET" suffixOverrides=",">
+<!--            <if test="lineId != null">line_id = #{lineId},</if>-->
+<!--            <if test="stageId != null">stage_id = #{stageId},</if>-->
+<!--            <if test="processId != null">process_id = #{processId},</if>-->
+<!--            <if test="terminalId != null">terminal_id = #{terminalId},</if>-->
+            <if test="materialId != null">material_id = #{materialId},</if>
+            <if test="modelId != null">model_id = #{modelId},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMesTerminalSopById" parameterType="Long">
+        delete from mes_terminal_sop where id = #{id}
+    </delete>
+
+    <delete id="deleteMesTerminalSopByIds" parameterType="String">
+        delete from mes_terminal_sop where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <delete id="deleteMesTerminalSopByMacs" parameterType="String">
+        delete from mes_terminal_sop where terminal_id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectIdByTerminalSopInfo" parameterType="com.ruoyi.product.domain.MesTerminalSop" resultType="Long">
+        select a.id
+        from mes_terminal_sop a
+        <where>
+            <if test="modelId != null "> and a.model_id = #{modelId}</if>
+            <if test="materialId != null "> and a.material_id = #{materialId}</if>
+            <if test="lineId != null "> and a.line_id = #{lineId}</if>
+            <if test="stageId != null "> and a.stage_id = #{stageId}</if>
+            <if test="processId != null "> and a.process_id = #{processId}</if>
+            <if test="terminalId != null "> and a.terminal_id = #{terminalId}</if>
+<!--            <if test="status != null  and status != ''"> and a.status = #{status}</if>-->
+        </where>
+    </select>
+
+
+    <select id="selectTerminalSopInfoByLineId" parameterType="Long" resultMap="MesTerminalSopResult">
+        SELECT a.model_id,a.material_id ,a.stage_id,a.process_id,a.terminal_id,a.line_id
+        FROM
+        mes_terminal_sop a
+        <where>
+            <if test="lineId != null "> and a.line_id = #{lineId}</if>
+        </where>
+    </select>
+    <select id="selectTerminalSopInfoByProcessId" parameterType="com.ruoyi.product.domain.MesTerminalSop" resultMap="MesTerminalSopResult">
+        SELECT a.model_id,a.material_id,a.line_id,a.stage_id,a.process_id,a.terminal_id
+        FROM
+        mes_terminal_sop a
+        where a.line_id = #{lineId}
+        and a.stage_id = #{stageId}
+        and a.process_id = #{processId}
+    </select>
+
+
+<!--&lt;!&ndash;    查询已推送的数据&ndash;&gt;-->
+<!--    <select id="selectMesTerminalSopListPushed" parameterType="com.ruoyi.product.domain.MesTerminalSop" resultMap="MesTerminalSopResult">-->
+<!--        SELECT DISTINCT T.* from (-->
+<!--        SELECT-->
+<!--        a.id,-->
+<!--        a.model_id,-->
+<!--        n.model_name,-->
+<!--        a.material_id,-->
+<!--        m.material_name,-->
+<!--        a.line_id, c.line_name, a.stage_id,d.stage_name, a.process_id, e.process_name,-->
+<!--        f.mac_id, f.mac_name , h.sop_id,g.sop_name,h.sop_page,g.version,a.`status`, a.remark,h.push_status,j.version_status,g.pass_word-->
+<!--        from mes_terminal_sop a-->
+<!--        left join mes_line c on a.line_id = c.line_id-->
+<!--        left join mes_stage d on a.stage_id = d.stage_id-->
+<!--        left join mes_process e on a.process_id = e.process_id-->
+<!--        left join mes_mac f on a.terminal_id = f.mac_id-->
+<!--&lt;!&ndash;        left join mes_material_info i on i.id = a.material_id&ndash;&gt;-->
+<!--        left join mes_sop_group h on a.id = h.sop_group_id-->
+<!--        left join mes_sop g on h.sop_id = g.sop_id-->
+<!--        LEFT JOIN mes_upload_terminal_page j ON a.line_id = j.line_id-->
+<!--        AND a.stage_id = j.stage_id-->
+<!--        AND a.process_id = j.process_id-->
+<!--        LEFT JOIN mes_model n ON a.model_id = n.model_id-->
+<!--        LEFT JOIN mes_material_info m ON a.material_id = m.id-->
+<!--&lt;!&ndash;        AND a.terminal_id = j.terminal_id&ndash;&gt;-->
+<!--        <where>-->
+<!--            <if test="lineId != null "> and a.line_id = #{lineId}</if>-->
+<!--            <if test="stageId != null "> and a.stage_id = #{stageId}</if>-->
+<!--            <if test="processId != null "> and a.process_id = #{processId}</if>-->
+<!--            <if test="terminalId != null "> and a.terminal_id = #{terminalId}</if>-->
+<!--            <if test="version != null "> and a.version = #{terminalId}</if>-->
+<!--            <if test="status != null  and status != ''"> and a.status = #{status}</if>-->
+<!--            <if test="lineName != null "> and c.line_name like concat('%', #{lineName}, '%')</if>-->
+<!--            <if test="sopName != null "> and g.sop_name like concat('%', #{sopName}, '%')</if>-->
+<!--            AND j.version_status = 0-->
+<!--            AND h.push_status = 1-->
+<!--        </where>-->
+<!--        ORDER BY a.create_time DESC-->
+<!--        )T-->
+<!--    </select>-->
+
+        <select id="selectMesTerminalSopListPushed" parameterType="com.ruoyi.product.domain.MesTerminalSop" resultMap="MesTerminalSopResult">
+            SELECT DISTINCT
+            T.*
+            FROM
+            (
+            SELECT
+            a.id,
+            a.model_id,
+            n.model_name,
+            a.material_id,
+            m.material_name,
+            a.line_id,
+            c.line_name,
+            a.stage_id,
+            d.stage_name,
+            a.process_id,
+            e.process_name,
+            f.mac_id,
+            f.mac_name,
+            h.sop_id,
+            g.sop_name,
+            h.sop_page,
+            g.version,
+            g.status,
+            a.remark,
+            h.push_status,
+            g.pass_word
+            FROM
+            mes_terminal_sop a
+            LEFT JOIN mes_line c ON a.line_id = c.line_id
+            LEFT JOIN mes_stage d ON a.stage_id = d.stage_id
+            LEFT JOIN mes_process e ON a.process_id = e.process_id
+            LEFT JOIN mes_mac f ON a.terminal_id = f.mac_id
+            LEFT JOIN mes_sop_group h ON a.id = h.sop_group_id
+            LEFT JOIN mes_sop g ON h.sop_id = g.sop_id
+            LEFT JOIN mes_model n ON a.model_id = n.model_id
+            LEFT JOIN mes_material_info m ON a.material_id = m.id
+            <where>
+                <if test="lineId != null "> and a.line_id = #{lineId}</if>
+                <if test="stageId != null "> and a.stage_id = #{stageId}</if>
+                <if test="processId != null "> and a.process_id = #{processId}</if>
+                <if test="terminalId != null "> and a.terminal_id = #{terminalId}</if>
+                <if test="version != null "> and a.version = #{terminalId}</if>
+                <if test="status != null  and status != ''"> and a.status = #{status}</if>
+                <if test="lineName != null "> and c.line_name like concat('%', #{lineName}, '%')</if>
+                <if test="sopName != null "> and g.sop_name like concat('%', #{sopName}, '%')</if>
+                AND g.status = 0
+                AND h.push_status = 1
+            </where>
+            ORDER BY a.create_time DESC
+            )T
+        </select>
+</mapper>

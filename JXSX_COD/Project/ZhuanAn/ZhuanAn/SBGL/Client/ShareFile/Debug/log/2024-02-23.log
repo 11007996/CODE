@@ -1,0 +1,44 @@
+----------------------------------------------------------- 
+记录时间：2024-02-23 10:40:12 线程名：[1] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.InvalidCastException: 对象不能从 DBNull 转换为其他类型。
+   在 System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   在 Machine.FrmResumeReportNew.dgvMaintenanceMenuSave_Click(Object sender, EventArgs e) 位置 E:\Work Projects\设备系统\SBGL\Client\Machine\FrmResumeReportNew.cs:行号 393
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2024-02-23 10:55:09 线程名：[1] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.FormatException: 该字符串未被识别为有效的 DateTime。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value)
+   在 Machine.FrmResumeReportNew.dgvMaintenanceMenuSave_Click(Object sender, EventArgs e) 位置 E:\Work Projects\设备系统\SBGL\Client\Machine\FrmResumeReportNew.cs:行号 397
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2024-02-23 11:27:08 线程名：[1] 级别：ERROR 类名：Machine.ResumeWord 
+信息：文件“C:\Users\11011692\Desktop\1210-001603000028-0000固定资产履历表[1].docx”正由另一进程使用，因此该进程无法访问此文件。
+
+记录时间：2024-02-23 11:27:08 线程名：[1] 级别：ERROR 类名：Machine.FrmResumeReport 
+信息：
+System.IO.IOException: 文件“C:\Users\11011692\Desktop\1210-001603000028-0000固定资产履历表[1].docx”正由另一进程使用，因此该进程无法访问此文件。
+   在 Machine.ResumeWord.ExportToWordByTemplate(String filePath, Dictionary`2 AssetDic, DataTable resumeDT, DataTable repairDT) 位置 E:\Work Projects\设备系统\SBGL\Client\Machine\Util\ResumeWord.cs:行号 134
+   在 Machine.FrmResumeReportNew.tsmiExport_Click(Object sender, EventArgs e) 位置 E:\Work Projects\设备系统\SBGL\Client\Machine\FrmResumeReportNew.cs:行号 133

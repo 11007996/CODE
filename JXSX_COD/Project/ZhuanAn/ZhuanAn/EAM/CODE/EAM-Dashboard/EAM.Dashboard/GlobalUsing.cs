@@ -1,0 +1,12 @@
+﻿global using EAM.Common;
+global using EAM.ServiceCore.Filters;
+global using EAM.ServiceCore.Middleware;
+global using EAM.ServiceCore.Services;
+global using Infrastructure;
+global using Infrastructure.Attribute;
+global using Infrastructure.Controllers;
+global using Infrastructure.Enums;
+global using Infrastructure.Extensions;
+global using Infrastructure.Model;
+global using Mapster;
+global using Microsoft.AspNetCore.Authorization;

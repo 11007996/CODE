@@ -1,0 +1,160 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LuxVideoDet.Desktop.ViewModels"
+        x:Class="LuxVideoDet.Desktop.Views.NgReplayWindow"
+        x:DataType="vm:NgReplayViewModel"
+        Title="{Binding WindowTitle}"
+        Width="1100" Height="700"
+        MinWidth="800" MinHeight="500"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid ColumnDefinitions="280,*">
+        
+        <!-- Left Panel: Date & Video File Browser -->
+        <Border Grid.Column="0" 
+                Background="{DynamicResource SystemControlBackgroundAltMediumLowBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}" 
+                BorderThickness="0,0,1,0">
+            <Grid RowDefinitions="Auto,Auto,*">
+                
+                <!-- Header -->
+                <Border Grid.Row="0" Padding="12" 
+                        BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}" 
+                        BorderThickness="0,0,0,1">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Grid.Column="0" Text="{Binding LblPanelTitle}" FontWeight="SemiBold" FontSize="14"
+                                   VerticalAlignment="Center"/>
+                        <Button Grid.Column="1" Content="{Binding BtnRefreshText}" Padding="8,4"
+                                Command="{Binding RefreshFilesCommand}"/>
+                    </Grid>
+                </Border>
+
+                <!-- Date Folders -->
+                <Border Grid.Row="1" Padding="8" MaxHeight="200"
+                        BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}" 
+                        BorderThickness="0,0,0,1">
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="{Binding LblDate}" FontSize="12" Opacity="0.7" Margin="4,0"/>
+                        <ListBox ItemsSource="{Binding DateFolders}"
+                                 SelectedItem="{Binding SelectedDateFolder}"
+                                 MaxHeight="160">
+                            <ListBox.Styles>
+                                <Style Selector="ListBoxItem">
+                                    <Setter Property="Padding" Value="8,4"/>
+                                    <Setter Property="MinHeight" Value="0"/>
+                                </Style>
+                            </ListBox.Styles>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Display}" FontSize="12"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
+
+                <!-- Video Files：必须用 Grid 给 ListBox 有限高度，StackPanel 会传无限高导致无法滚动 -->
+                <Border Grid.Row="2" Padding="8">
+                    <Grid RowDefinitions="Auto,*" RowSpacing="4">
+                        <TextBlock Grid.Row="0" Text="{Binding LblVideoFilesColumn}" FontSize="12" Opacity="0.7" Margin="4,0"/>
+                        <ListBox Grid.Row="1"
+                                 ItemsSource="{Binding VideoFiles}"
+                                 SelectedItem="{Binding SelectedVideoFile}"
+                                 VerticalAlignment="Stretch">
+                            <ListBox.Styles>
+                                <Style Selector="ListBoxItem">
+                                    <Setter Property="Padding" Value="8,6"/>
+                                    <Setter Property="MinHeight" Value="0"/>
+                                </Style>
+                            </ListBox.Styles>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Spacing="2">
+                                        <TextBlock Text="{Binding FileName}" FontSize="12" FontWeight="SemiBold"/>
+                                        <StackPanel Orientation="Horizontal" Spacing="12">
+                                            <TextBlock Text="{Binding FileSize}" FontSize="10" Opacity="0.6"/>
+                                            <TextBlock Text="{Binding LastModified}" FontSize="10" Opacity="0.6"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!-- Right Panel: Video Player -->
+        <Grid Grid.Column="1" RowDefinitions="*,Auto">
+            
+            <!-- Video Display -->
+            <Border Grid.Row="0" Background="Black" ClipToBounds="True">
+                <Grid>
+                    <Viewbox Stretch="Uniform">
+                        <Image Source="{Binding CurrentFrame}" Stretch="Uniform"/>
+                    </Viewbox>
+                    
+                    <!-- No Video Overlay -->
+                    <Border IsVisible="{Binding !HasVideo}" Background="#80000000">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="12">
+                            <PathIcon Data="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" 
+                                      Width="64" Height="64" Foreground="White" Opacity="0.5"/>
+                            <TextBlock Text="{Binding PlaceholderSelectVideo}" FontSize="14" Foreground="White" Opacity="0.7"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+            
+            <!-- Player Controls -->
+            <Border Grid.Row="1" Padding="12,8"
+                    Background="{DynamicResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}" 
+                    BorderThickness="0,1,0,0"
+                    IsVisible="{Binding HasVideo}">
+                <StackPanel Spacing="8">
+                    
+                    <!-- Progress Slider -->
+                    <Slider Minimum="0" Maximum="{Binding TotalFrames}" 
+                            Value="{Binding CurrentPosition}"
+                            IsEnabled="{Binding HasVideo}"
+                            x:Name="ProgressSlider"/>
+                    
+                    <!-- Controls Row -->
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        
+                        <!-- Left: Playback buttons -->
+                        <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="4">
+                            <Button Content="⏮" Padding="8,4" FontSize="14"
+                                    Command="{Binding StepBackwardCommand}"
+                                    ToolTip.Tip="{Binding TooltipPrev}"/>
+                            <Button Content="{Binding PlayPauseText}" Padding="16,4" FontSize="13"
+                                    Command="{Binding PlayPauseCommand}"
+                                    Classes="accent" MinWidth="60"/>
+                            <Button Content="⏭" Padding="8,4" FontSize="14"
+                                    Command="{Binding StepForwardCommand}"
+                                    ToolTip.Tip="{Binding TooltipNext}"/>
+                            <Button Content="⏹" Padding="8,4" FontSize="14"
+                                    Command="{Binding StopCommand}"
+                                    ToolTip.Tip="{Binding TooltipStop}"/>
+                        </StackPanel>
+
+                        <!-- Center: Position text -->
+                        <TextBlock Grid.Column="1" Text="{Binding PositionText}" 
+                                   FontSize="12" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" Opacity="0.8"/>
+
+                        <!-- Right: Speed control -->
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding LblSpeed}" FontSize="12" Opacity="0.7"
+                                       VerticalAlignment="Center"/>
+                            <ComboBox ItemsSource="{Binding SpeedOptions}"
+                                      SelectedIndex="{Binding SelectedSpeedIndex}"
+                                      MinWidth="80" Padding="8,4" FontSize="12"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

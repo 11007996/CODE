@@ -1,0 +1,163 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>EAM.Dashboard</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591,8603,8602,8604,8600,8618</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591,8603,8602,8604,8600,8618</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\dashboard\02C1\onlineNotice\js\index.min.js" />
+    <Content Remove="wwwroot\dashboard\1221\call\js\index.min.js" />
+    <Content Remove="wwwroot\dashboard\1616\call\js\index.min.js" />
+    <Content Remove="wwwroot\dashboard\1618\call\js\index.min.js" />
+    <Content Remove="wwwroot\dashboard\Test\call\js\index.min.js" />
+    <Content Remove="wwwroot\dashboard\Test\onlineNotice\js\index.min.js" />
+    <Content Remove="wwwroot\logo.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\dashboard\02C1\call\js\index.min.js" />
+    <None Include="wwwroot\dashboard\02C1\onlineNotice\js\index.min.js" />
+    <None Include="wwwroot\dashboard\1221\call\js\index.min.js" />
+    <None Include="wwwroot\dashboard\1616\call\js\index.min.js" />
+    <None Include="wwwroot\dashboard\1618\call\js\index.min.js" />
+    <None Include="wwwroot\dashboard\Test\call\js\index.min.js" />
+    <None Include="wwwroot\dashboard\Test\onlineNotice\js\index.min.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.common.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.common.js.map" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.common.min.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.esm.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.esm.js.map" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.esm.min.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.esm.min.mjs" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.esm.mjs" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.esm.mjs.map" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.js.map" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.min.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.simple.js" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.simple.js.map" />
+    <None Include="wwwroot\lib\echarts\dist\echarts.simple.min.js" />
+    <None Include="wwwroot\lib\echarts\dist\extension\bmap.js" />
+    <None Include="wwwroot\lib\echarts\dist\extension\bmap.js.map" />
+    <None Include="wwwroot\lib\echarts\dist\extension\bmap.min.js" />
+    <None Include="wwwroot\lib\echarts\dist\extension\dataTool.js" />
+    <None Include="wwwroot\lib\echarts\dist\extension\dataTool.js.map" />
+    <None Include="wwwroot\lib\echarts\dist\extension\dataTool.min.js" />
+    <None Include="wwwroot\lib\jquery-cookie\jquery.cookie.js" />
+    <None Include="wwwroot\logo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\EAM-Admin\EAM-Admin-Api\EAM.ServiceCore\EAM.ServiceCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lazy.Captcha.Core" Version="2.0.7" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.8" />
+    <PackageReference Include="SqlSugar.IOC" Version="2.0.0" />
+    <PackageReference Include="SqlSugarCoreNoDrive" Version="5.1.4.171" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Dashboard\0261\equipment.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\02C1\onlineNotice.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\02F1\equipment.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\css\index.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\images\border.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\images\line.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\images\logo.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\images\lux.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\images\rect.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\0261\equipment\js\index.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02C1\onlineNotice\css\index.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02C1\onlineNotice\js\index.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\css\index.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\images\border.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\images\line.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\images\logo.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\images\lux.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\images\rect.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\02F1\equipment\js\index.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\dashboard\1221\call\js\fontscroll.js">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ip2region.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

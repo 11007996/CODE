@@ -1,0 +1,101 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- ============ 版本集中管理 ============ -->
+    <OnnxRuntimeVersion>1.19.2</OnnxRuntimeVersion>
+    <OpenVinoVersion>2025.4.0</OpenVinoVersion>
+    <OpenCvSharpVersion>4.11.0.20250507</OpenCvSharpVersion>
+    <OpenCvSharpLinuxVersion>4.6.0.20220608</OpenCvSharpLinuxVersion>
+    <SkiaSharpVersion>3.119.2</SkiaSharpVersion>
+  </PropertyGroup>
+
+  <!-- GPU 包（CUDA / TensorRT）启用时编译 TensorRT 分支；否则选择 TensorRT 设备会记录警告并回退 CPU -->
+  <PropertyGroup Condition="'$(UseCUDA)' == 'true' OR '$(UseTensorRT)' == 'true'">
+    <DefineConstants>$(DefineConstants);ORT_GPU</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- ============ 依赖注入和配置 ============ -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+
+    <!-- ============ 日志系统 ============ -->
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Minio" Version="5.0.0" />
+    <PackageReference Include="pythonnet" Version="3.0.5" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="4.0.0" />
+
+    <!-- ============ OpenCvSharp4 — 跨平台 OpenCV 绑定 ============ -->
+    <!-- Windows: 使用最新版本（包含原生库） -->
+    <PackageReference Include="OpenCvSharp4" Version="$(OpenCvSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="$(OpenCvSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="$(OpenCvSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    
+    <!-- Linux: 使用 4.6.0 匹配系统 OpenCV，排除原生库（需要系统安装 libopencv-dev） -->
+    <PackageReference Include="OpenCvSharp4" Version="$(OpenCvSharpLinuxVersion)" Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+      <ExcludeAssets>native</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="$(OpenCvSharpLinuxVersion)" Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+      <ExcludeAssets>native</ExcludeAssets>
+    </PackageReference>
+    
+    <!-- macOS: 使用最新版本 + OneWare 社区维护的完整 ARM64 原生运行时（含 videoio） -->
+    <PackageReference Include="OpenCvSharp4" Version="$(OpenCvSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="$(OpenCvSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <PackageReference Include="OneWare.OpenCvSharp4.runtime.osx-arm64" Version="4.11.0.7" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+
+    <!-- ============ ONNX Runtime — 跨平台推理引擎 ============ -->
+    <!-- 默认 CPU: dotnet build -->
+    <!-- CUDA GPU: dotnet build -p:UseCUDA=true -->
+    <!-- TensorRT（需 NVIDIA + CUDA/TensorRT 运行时）: dotnet build -p:UseTensorRT=true（与 GPU 包相同） -->
+    <!-- QNN NPU: dotnet build -p:UseQNN=true (仅 Linux ARM64) -->
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="$(OnnxRuntimeVersion)" Condition="'$(UseQNN)' != 'true' AND '$(UseCUDA)' != 'true' AND '$(UseTensorRT)' != 'true'" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="$(OnnxRuntimeVersion)" Condition="'$(UseCUDA)' == 'true' OR '$(UseTensorRT)' == 'true'" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.QNN" Version="$(OnnxRuntimeVersion)" Condition="'$(UseQNN)' == 'true'" />
+
+    <!-- ============ OpenVINO — 跨平台推理引擎 ============ -->
+    <PackageReference Include="OpenVINO.CSharp.API" Version="$(OpenVinoVersion)" />
+    <PackageReference Include="OpenVINO.runtime.win" Version="$(OpenVinoVersion)" Condition="$([MSBuild]::IsOSPlatform('Windows'))" NoWarn="NU1701" />
+    <PackageReference Include="OpenVINO.runtime.ubuntu.22-x86_64" Version="$(OpenVinoVersion)" Condition="$([MSBuild]::IsOSPlatform('Linux'))" NoWarn="NU1701" />
+    <!-- macOS: OpenVINO 需要手动安装或使用 Homebrew: brew install openvino -->
+
+    <!-- ============ HTTP Client Factory ============ -->
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+
+    <!-- ============ SkiaSharp — 跨平台中文渲染 ============ -->
+    <PackageReference Include="SkiaSharp" Version="$(SkiaSharpVersion)" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="$(SkiaSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+    <PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="$(SkiaSharpVersion)" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <PackageReference Include="System.Speech" Version="8.0.0" />
+
+    <!-- ============ 序列化 ============ -->
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+
+    <!-- ============ 验证 ============ -->
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+  </ItemGroup>
+
+  <!--
+    插件化模式：Core 仅保留算法接口与运行时骨架，不再内置编译具体业务场景实现。
+    具体场景代码改由 LuxVideoDet.Algorithms 下的独立项目编译为 plugins/*.dll。
+  -->
+  <ItemGroup>
+    <Compile Remove="Algorithm/Implementations/**/*.cs" />
+  </ItemGroup>
+
+</Project>

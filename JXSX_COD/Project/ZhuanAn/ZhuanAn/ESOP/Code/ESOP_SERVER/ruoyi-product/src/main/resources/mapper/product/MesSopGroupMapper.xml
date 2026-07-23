@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesSopGroupMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesSopGroup" id="MesSopGroupResult">
+        <result property="sopGroupId"    column="sop_group_id"    />
+        <result property="sopId"    column="sop_id"    />
+        <result property="sopName"    column="sop_name"    />
+        <result property="sopPage"    column="sop_page"    />
+        <result property="sopInterval"    column="sop_interval"    />
+        <result property="sopUrl"    column="url"    />
+        <result property="filePath"    column="file_path"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="typeNum"    column="typeNum"    />
+        <result property="pdfSopName"    column="pdfSopName"    />
+        <result property="videoSopName"    column="videoSopName"    />
+        <result property="type"    column="type"    />
+        <result property="sopInterval"    column="sop_interval"    />
+        <result property="passWord"    column="pass_word"    />
+        <result property="pushStatus"    column="push_status"    />
+    </resultMap>
+
+    <sql id="selectMesSopGroupVo">
+        select a.sop_group_id, a.sop_id,b.sop_name, a.sop_page, a.create_by, a.create_time, a.update_by, a.update_time, b.url,b.pass_word
+        from mes_sop_group a,
+        mes_sop b
+        where a.sop_id = b.sop_id
+    </sql>
+
+
+    <select id="selectMesSopGroupList" parameterType="com.ruoyi.product.domain.MesSopGroup" resultMap="MesSopGroupResult">
+        <include refid="selectMesSopGroupVo"/>
+            <if test="sopGroupId != null "> and a.sop_group_id = #{sopGroupId}</if>
+            <if test="sopId != null "> and a.sop_id = #{sopId}</if>
+            <if test="type != null  and type != ''"> and a.type = #{type}</if>
+    </select>
+
+    <select id="selectMesSopGroupTypeNum" parameterType="com.ruoyi.product.domain.MesSopGroup" resultType="Long">
+        select COUNT(A.type) AS typeNum
+        from mes_sop_group A
+        where A.sop_group_id = #{sopGroupId}
+        AND A.type = #{type}
+    </select>
+
+    <select id="selectMesSopGroupBySopGroupId" parameterType="String" resultMap="MesSopGroupResult">
+        select a.sop_group_id, a.sop_id,b.sop_name,a.sop_interval, a.sop_page, a.create_by, a.create_time, a.update_by, a.update_time,
+        '' pdfSopName,'' videoSopName, a.type,b.file_path,b.pass_word
+        from mes_sop_group a,
+        mes_sop b
+        where a.sop_id = b.sop_id
+        and a.push_status = '1'
+        and a.sop_group_id = #{sopGroupId}
+    </select>
+
+    <insert id="insertMesSopGroup" parameterType="com.ruoyi.product.domain.MesSopGroup">
+        insert into mes_sop_group
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sopGroupId != null">sop_group_id,</if>
+            <if test="sopId != null">sop_id,</if>
+            <if test="sopPage != null">sop_page,</if>
+            <if test="sopInterval != null">sop_interval,</if>
+            <if test="type != null">type,</if>
+            <if test="pushStatus != null">push_status,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sopGroupId != null">#{sopGroupId},</if>
+            <if test="sopId != null">#{sopId},</if>
+            <if test="sopPage != null">#{sopPage},</if>
+            <if test="sopInterval != null">#{sopInterval},</if>
+            <if test="type != null">#{type},</if>
+            <if test="pushStatus != null">#{pushStatus},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+
+        </trim>
+    </insert>
+
+    <update id="updateMesSopGroup" parameterType="com.ruoyi.product.domain.MesSopGroup">
+        update mes_sop_group
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="sopId != null">sop_id = #{sopId},</if>
+            <if test="sopPage != null">sop_page = #{sopPage},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="pushStatus != null">push_status = #{pushStatus},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where sop_group_id = #{sopGroupId}
+        and sop_id = #{sopId}
+        and type = #{type}
+    </update>
+
+    <delete id="deleteMesSopGroupBySopGroupId" >
+        delete from mes_sop_group
+        where sop_group_id = #{sopGroupId}
+        AND type = #{type}
+    </delete>
+
+    <delete id="deleteMesSopGroupBySopGroupIds" parameterType="String">
+        delete from mes_sop_group where sop_group_id in
+        <foreach item="sopGroupId" collection="array" open="(" separator="," close=")">
+            #{sopGroupId}
+        </foreach>
+    </delete>
+</mapper>

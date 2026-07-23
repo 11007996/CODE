@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesSopMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesSop" id="MesSopResult">
+        <result property="sopId"    column="sop_id"    />
+        <result property="sopName"    column="sop_name"    />
+        <result property="version"    column="version"    />
+        <result property="originalName"    column="original_name"    />
+        <result property="type"    column="type"    />
+        <result property="filePath"    column="file_path"    />
+        <result property="status"    column="status"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="url" column="url" />
+        <result property="passWord" column="pass_word" />
+    </resultMap>
+
+    <sql id="selectMesSopVo">
+        select sop_id, sop_name, version, type, file_path, url, status, remark, create_by, create_time, update_by, update_time,pass_word from mes_sop
+    </sql>
+
+    <select id="selectMesSopList" parameterType="com.ruoyi.product.domain.MesSop" resultMap="MesSopResult">
+        <include refid="selectMesSopVo"/>
+        <where>
+            <if test="sopName != null  and sopName != ''"> and sop_name like concat('%', #{sopName}, '%')</if>
+            <if test="version != null  and version != ''"> and version = #{version}</if>
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="filePath != null  and filePath != ''"> and file_path = #{filePath}</if>
+            <if test="url != null  and url != ''"> and url = #{url}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+
+
+    <select id="selectSopIdByName" parameterType="String" resultMap="MesSopResult">
+        <include refid="selectMesSopVo"/>
+         where sop_name = #{sopName}
+    </select>
+
+    <select id="selectMesSopBySopId" parameterType="Long" resultMap="MesSopResult">
+        <include refid="selectMesSopVo"/>
+        where sop_id = #{sopId}
+    </select>
+
+    <insert id="insertMesSop" parameterType="com.ruoyi.product.domain.MesSop" useGeneratedKeys="true" keyProperty="sopId">
+        insert into mes_sop
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sopName != null and sopName != ''">sop_name,</if>
+            <if test='version != null and version != ""'>version,</if>
+            <if test="type != null">type,</if>
+            <if test="originalName != null">original_name,</if>
+            <if test="filePath != null">file_path,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="url != null">url,</if>
+            <if test="passWord != null">pass_word,</if>
+            <if test="sopInterval != null">sop_interval,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sopName != null and sopName != ''">#{sopName},</if>
+            <if test="version != null and version != ''">#{version},</if>
+            <if test="type != null">#{type},</if>
+            <if test="originalName != null">#{originalName},</if>
+            <if test="filePath != null">#{filePath},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="url != null">#{url},</if>
+            <if test="passWord != null">#{passWord},</if>
+            <if test="sopInterval != null">#{sopInterval},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMesSop" parameterType="com.ruoyi.product.domain.MesSop">
+        update mes_sop
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="sopName != null and sopName != ''">sop_name = #{sopName},</if>
+            <if test="version != null and version != ''">version = #{version},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="filePath != null">file_path = #{filePath},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="url != null">url = #{url},</if>
+            <if test="passWord != null">pass_word = #{passWord},</if>
+        </trim>
+        where sop_id = #{sopId}
+    </update>
+
+    <delete id="deleteMesSopBySopId" parameterType="Long">
+        delete from mes_sop where sop_id = #{sopId}
+    </delete>
+
+    <delete id="deleteMesSopBySopIds" parameterType="String">
+        delete from mes_sop where sop_id in
+        <foreach item="sopId" collection="array" open="(" separator="," close=")">
+            #{sopId}
+        </foreach>
+    </delete>
+</mapper>

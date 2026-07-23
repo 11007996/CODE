@@ -1,0 +1,94 @@
+
+.container.data-v-3513d99f {
+		padding: 10rpx;
+}
+.item.data-v-3513d99f {
+		display: flex;
+		justify-content: space-between;
+		background-color: aliceblue;
+		border-radius: 8rpx;
+		overflow: hidden;
+		margin: 5rpx 0rpx;
+		height: 70rpx;
+		align-items: center;
+}
+.item .title.data-v-3513d99f {
+		display: inline-grid;
+		width: 20%;
+		height: inherit;
+		color: #007aff;
+		background-color: #d5d5d6;
+		padding: 0 10rpx;
+		text-align-last: justify;
+		align-items: center;
+}
+.item .value.data-v-3513d99f {
+		flex: 1;
+		padding: 0 10rpx;
+		color: gray;
+}
+
+	/* 操作相关 */
+.operate-container.data-v-3513d99f {
+		margin-top: 20rpx;
+		display: flex;
+		flex-direction: column;
+}
+.operate-Item.data-v-3513d99f {
+		display: flex;
+		justify-content: space-between;
+		background-color: lavender;
+		height: 80rpx;
+		border-radius: 10rpx;
+		overflow: hidden;
+		border: 1px solid blue;
+		margin-bottom: 15rpx;
+}
+.operate-Item .title.data-v-3513d99f {
+		width: 18%;
+		height: 100%;
+		background-color: #007aff;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align-last: justify;
+		padding: 0rpx 20rpx;
+}
+.operate-Item picker.data-v-3513d99f {
+		padding: 0 40rpx;
+		height: 100%;
+		flex: 1;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+}
+.item-right.data-v-3513d99f {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-right: 15rpx;
+}
+.operate-Item image.data-v-3513d99f {
+		width: 50rpx;
+		height: 50rpx;
+}
+	
+	/******文件按钮****/
+.btn-container.data-v-3513d99f{
+		display: flex;
+		justify-content: center;
+}
+.btn-container .btn-item.data-v-3513d99f{
+		margin: 5rpx;
+		padding: 15rpx 25rpx;
+		font-size:30rpx;
+		color:white;
+		background-color: darkgoldenrod;
+		border-radius: 10rpx;
+		border:1rpx blue solid;
+}

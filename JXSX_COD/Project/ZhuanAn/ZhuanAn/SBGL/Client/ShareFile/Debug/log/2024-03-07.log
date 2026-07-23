@@ -1,0 +1,38 @@
+----------------------------------------------------------- 
+记录时间：2024-03-07 17:10:04 线程名：[1] 级别：ERROR 类名：Common.Util.DBUtil 
+信息：sql操行错误
+System.Data.SqlClient.SqlException (0x80131904): 列名 'AssetNo' 无效。
+列名 'AssetName' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Common.Util.DBUtil.GetDataTable(String strSQL) 位置 E:\Work Projects\设备系统\SBGL\Client\Common\Util\DBUtil.cs:行号 162
+ClientConnectionId:35f30280-3e4c-497a-9494-289360c3cd65
+Error Number:207,State:1,Class:16
+
+记录时间：2024-03-07 17:10:05 线程名：[1] 级别：ERROR 类名：LuxMMS.Base.ExceptionHandle 
+信息：捕获到未处理的异常
+System.Data.SqlClient.SqlException (0x80131904): 列名 'AssetNo' 无效。
+列名 'AssetName' 无效。
+   在 Common.Util.DBUtil.GetDataTable(String strSQL) 位置 E:\Work Projects\设备系统\SBGL\Client\Common\Util\DBUtil.cs:行号 174
+   在 Basic.FrmFileBind.FrmFileBind_Load(Object sender, EventArgs e) 位置 E:\Work Projects\设备系统\SBGL\Client\BaseInfo\FrmFileBind.cs:行号 33
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+ClientConnectionId:35f30280-3e4c-497a-9494-289360c3cd65
+Error Number:207,State:1,Class:16

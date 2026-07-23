@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiIndexMapper">
+    
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiIndex" id="MesKpiIndexResult">
+        <result property="id"    column="id"    />
+        <result property="kpiIndex"    column="kpi_index"    />
+        <result property="kpiType"    column="kpi_type"    />
+        <result property="calculationFormula"    column="calculation_formula"    />
+        <result property="units"    column="units"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectMesKpiIndexVo">
+        select id, kpi_index, kpi_type, calculation_formula, units, remark, create_by, create_time, update_by, update_time from mes_kpi_index
+    </sql>
+
+    <select id="selectMesKpiIndexList" parameterType="com.ruoyi.dpms.domain.MesKpiIndex" resultMap="MesKpiIndexResult">
+<!--        <include refid="selectMesKpiIndexVo"/>-->
+<!--        <where>  -->
+<!--            <if test="kpiIndex != null  and kpiIndex != ''"> and kpi_index = #{kpiIndex}</if>-->
+<!--            <if test="kpiType != null "> and kpi_type = #{kpiType}</if>-->
+<!--            <if test="calculationFormula != null  and calculationFormula != ''"> and calculation_formula = #{calculationFormula}</if>-->
+<!--            <if test="units != null  and units != ''"> and units = #{units}</if>-->
+<!--        </where>-->
+        SELECT
+        a.*
+        FROM
+        mes_kpi_index A
+        <where>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="kpiIndex != null  and kpiIndex != ''"> and kpi_index = #{kpiIndex}</if>
+            <if test="createTime != null  and createTime != ''"> and create_time BETWEEN #{startTime} AND #{endTime}</if>
+        </where>
+        </select>
+
+    <!--    <select id="selectMesKpiIndexListBystatus" parameterType="Long" resultMap="MesKpiIndexResult">-->
+<!--        SELECT-->
+<!--        a.*-->
+<!--        FROM-->
+<!--        mes_kpi_index A-->
+<!--        <where>-->
+<!--            <if test="status != null  and status != ''">-->
+<!--                and status = #{status}</if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--    <select id="selectMesKpiIndexListBystatus1" parameterType="Long" resultMap="MesKpiIndexResult">-->
+<!--        SELECT-->
+<!--        a.*-->
+<!--        FROM-->
+<!--        mes_kpi_index A-->
+<!--        WHERE status = 1-->
+<!--            <if test="status != null  and status != ''"> and status = #{status}</if>-->
+<!--    </select>-->
+    
+    <select id="selectMesKpiIndexById" parameterType="Long" resultMap="MesKpiIndexResult">
+        <include refid="selectMesKpiIndexVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertMesKpiIndex" parameterType="com.ruoyi.dpms.domain.MesKpiIndex" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_kpi_index
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="kpiIndex != null and kpiIndex != ''">kpi_index,</if>
+            <if test="kpiType != null">kpi_type,</if>
+            <if test="calculationFormula != null">calculation_formula,</if>
+            <if test="units != null">units,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="kpiIndex != null and kpiIndex != ''">#{kpiIndex},</if>
+            <if test="kpiType != null">#{kpiType},</if>
+            <if test="calculationFormula != null">#{calculationFormula},</if>
+            <if test="units != null">#{units},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesKpiIndex" parameterType="com.ruoyi.dpms.domain.MesKpiIndex">
+        update mes_kpi_index
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="kpiIndex != null and kpiIndex != ''">kpi_index = #{kpiIndex},</if>
+            <if test="kpiType != null">kpi_type = #{kpiType},</if>
+            <if test="calculationFormula != null">calculation_formula = #{calculationFormula},</if>
+            <if test="units != null">units = #{units},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMesKpiIndexById" parameterType="Long">
+        delete from mes_kpi_index where id = #{id}
+    </delete>
+
+    <delete id="deleteMesKpiIndexByIds" parameterType="String">
+        delete from mes_kpi_index where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

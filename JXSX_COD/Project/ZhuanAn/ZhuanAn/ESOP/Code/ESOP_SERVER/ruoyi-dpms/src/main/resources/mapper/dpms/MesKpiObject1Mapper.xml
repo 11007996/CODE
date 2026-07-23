@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiObject1Mapper">
+
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiObject1" id="MesKpiObject1Result">
+        <result property="id"    column="id"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="targetParam"    column="target_param"    />
+        <result property="targetValue"    column="target_value"    />
+        <result property="actualValue"    column="actual_value"    />
+    </resultMap>
+
+
+    <select id="selectMesKpiObject1ById" parameterType="Long" resultMap="MesKpiObject1Result">
+        SELECT
+        a.target_param,
+        a.target_value,
+        a.actual_value
+        FROM
+        mes_kpi_dept_detail A,
+        mes_kpi_assign B
+        WHERE
+        a.assign_id = b.id
+        AND a.assign_id = #{id}
+    </select>
+
+</mapper>

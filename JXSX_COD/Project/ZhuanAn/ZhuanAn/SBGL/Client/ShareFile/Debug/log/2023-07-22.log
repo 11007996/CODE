@@ -1,0 +1,59 @@
+----------------------------------------------------------- 
+记录时间：2023-07-22 11:22:56 线程名：[9] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentException: MDI 容器窗体必须位于顶层。
+参数名: value
+   在 System.Windows.Forms.Form.set_TopLevel(Boolean value)
+   在 Basic.FrmBasic.tsmiLine_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\BaseInfo\FrmBasic.cs:行号 36
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.MenuStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-07-22 12:11:55 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 UNIQUE KEY 约束“uk_line”。不能在对象“dbo.S_LineInfo_T”中插入重复键。重复键值为 (A1-01线)。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Client\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:563052ca-fa63-416a-a324-c809e4e253f4
+Error Number:2627,State:1,Class:14
+----------------------------------------------------------- 
+记录时间：2023-07-22 12:14:38 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 UNIQUE KEY 约束“uk_line”。不能在对象“dbo.S_LineInfo_T”中插入重复键。重复键值为 (A1-01线)。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Client\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:05e448f7-448e-441a-baa3-f60061db0989
+Error Number:2627,State:1,Class:14
+----------------------------------------------------------- 
+记录时间：2023-07-22 12:16:34 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 UNIQUE KEY 约束“uk_line”。不能在对象“dbo.S_LineInfo_T”中插入重复键。重复键值为 (A1-01线)。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Client\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:5835a92f-4990-432d-9538-08475722bdb5
+Error Number:2627,State:1,Class:14

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+		<ProjectReference Include="..\EAM.Common\EAM.Common.csproj" />
+		<ProjectReference Include="..\EAM.ServiceCore\EAM.ServiceCore.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="JinianNet.JNTemplate" Version="2.4.2" />
+		<PackageReference Include="SqlSugarCoreNoDrive" Version="5.1.4.143" />
+	</ItemGroup>
+	
+</Project>

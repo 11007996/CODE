@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.replace.mapper.MesMaterialInfoMapper">
+
+    <resultMap type="com.ruoyi.replace.domain.MesMaterialInfo" id="MesMaterialInfoResult">
+        <result property="id"    column="id"    />
+        <result property="materialName"    column="material_name"    />
+        <result property="materialDesc"    column="material_desc"    />
+        <result property="modelId"    column="model_id"    />
+        <result property="modelName"    column="model_name"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectMesMaterialInfoVo">
+        select id, material_name, material_desc, model_id, create_by, create_time, update_by, update_time from mes_material_info
+    </sql>
+
+    <select id="selectMesMaterialInfoList" parameterType="com.ruoyi.replace.domain.MesMaterialInfo" resultMap="MesMaterialInfoResult">
+        SELECT
+        A.material_name,
+        A.id,
+        A.model_id,
+        A.material_desc,
+        A.create_by,
+        A.create_time,
+        A.update_by,
+        A.update_time,
+        B.model_name
+        FROM
+        mes_material_info A
+        LEFT JOIN mes_model B ON A.model_id = B.model_id
+        <where>
+            <if test="materialName != null  and materialName != ''"> and A.material_name like concat('%', #{materialName}, '%')</if><!-- 对物料的描述(materialDesc)进行模糊查询-->
+            <if test="id != null  and id != ''"> and A.id like concat('%', #{id}, '%')</if><!-- 对物料的id（id）进行模糊查询-->
+            <if test="materialDesc != null  and materialDesc != ''"> and A.material_desc = #{materialDesc}</if>
+            <if test="modelId != null "> and A.model_id = #{modelId}</if>
+            <if test="modelName != null "> and B.model_name = #{modelName}</if>
+        </where>
+    </select>
+
+    <select id="selectMesMaterialInfoById" parameterType="Long" resultMap="MesMaterialInfoResult">
+        SELECT
+        A.id,
+        A.material_name,
+        A.model_id,
+        A.material_desc,
+        A.create_by,
+        B.model_name
+        FROM
+        mes_material_info A,
+        mes_model B
+        WHERE
+        A.id = #{id}
+        AND A.model_id = B.model_id
+    </select>
+
+    <insert id="insertMesMaterialInfo" parameterType="com.ruoyi.replace.domain.MesMaterialInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_material_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="materialName != null">material_name,</if>
+            <if test="materialDesc != null">material_desc,</if>
+            <if test="modelId != null">model_id,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="materialName != null">#{materialName},</if>
+            <if test="materialDesc != null">#{materialDesc},</if>
+            <if test="modelId != null">#{modelId},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMesMaterialInfo" parameterType="com.ruoyi.replace.domain.MesMaterialInfo">
+        update mes_material_info
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="materialName != null">material_name = #{materialName},</if>
+            <if test="materialDesc != null">material_desc = #{materialDesc},</if>
+            <if test="modelId != null">model_id = #{modelId},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMesMaterialInfoById" parameterType="Long">
+        delete from mes_material_info where id = #{id}
+    </delete>
+
+    <delete id="deleteMesMaterialInfoByIds" parameterType="String">
+        delete from mes_material_info where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectMaterialByModel" parameterType="Long" resultMap="MesMaterialInfoResult">
+        SELECT id,material_name
+        FROM mes_material_info
+        WHERE model_id = #{modelId}
+    </select>
+    <select id="mesMaterialInfoByName" parameterType="String" resultMap="MesMaterialInfoResult">
+        SELECT id,material_name
+        FROM mes_material_info
+        WHERE material_name = #{materialName}
+    </select>
+</mapper>

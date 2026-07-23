@@ -1,0 +1,15 @@
+﻿
+异常时间：2024-03-07 09:55:20,817 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:189) 
+消息描述：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Asset.DAL.FileDAL.GetFileInfo(Int32 fileId) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.DAL\FileDAL.cs:行号 23
+   在 Asset.BLL.FileManager.GetFilePath(Int32 fileId, String& fileAliasName) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 40
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset.BLL\FileManager.cs:行号 61
+   在 Asset.Controllers.FileController.GetPreviewUrl(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 189
+异常：
+
+ 

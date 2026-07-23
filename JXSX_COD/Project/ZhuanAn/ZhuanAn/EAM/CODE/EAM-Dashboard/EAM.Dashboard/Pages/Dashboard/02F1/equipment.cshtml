@@ -1,0 +1,302 @@
+﻿@page
+@{
+    Layout = ""; //禁用默认布局
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数字化设备管理系统</title>
+    @await Html.PartialAsync("_DashboardScriptsPartial")
+    <link rel="stylesheet" href="~/dashboard/02F1/equipment/css/index.css">
+</head>
+
+<body eam-hasPermi="dashboard:02F1:equipment" eam-loginFactory="02F1">
+    <!--背景特效-->
+    <div id="iframe-wrap">
+        <iframe src='/BackAm/ycahc' frameborder='0' width='100%' height="100%"></iframe>
+    </div>
+    <div class="header">
+        <div class="column"><img class="logo" src="~/dashboard/02C1/equipment/images/lux.png" /></div>
+        <div class="column "><div class="tilte">数字化设备管理系统</div><div class="subTitle">Digital Equipment Management System</div></div>
+        <div class="column"><span id="currTime" class="currTime">00-00 00:00:00</span></div>
+    </div>
+    <div class="viewport">
+        <div class="column">
+            <div class="viewport-left-top panel">
+                <div id="equipmentStateStat" class="inner">
+                    <div class="item">
+                        <h4>0</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #006cff"></i>
+                            设备总数
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>0</h4>
+                        <span>
+                            <i class="icon-dot" style="color: green"></i>
+                            正常设备
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>0</h4>
+                        <span>
+                            <i class="icon-dot" style="color: gray"></i>
+                            闲置设备
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>0</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #ed3f35"></i>
+                            故障设备
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!--设备实时上报-->
+            <div class="viewport-left-center panel">
+                <div class="inner">
+                    <div class="report">
+                        <h3>设备上报<i class="date">实时 //</i><i class="date">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</i><i class="date">//产量</i></h3>
+                        <div class="data">
+                            <ul id="equipmentReports" class="sup">
+                            </ul>
+                            <ul class="sub">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--平均OEE统计-->
+            <div class="viewport-left-bottom panel">
+                <div class="inner">
+                    <h3>平均OEE统计</h3>
+                    <div class="chart">
+                        <div id="avgOEEChart" class="pie"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4 id="AvgOEE">0%</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                    平均OEE
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4 id="AvgOEECount">0</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                    统计个数
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div  class="viewport-center-top panel">
+                <div class="inner">
+                    <!-- 24H故障次数 -->
+                    <h3>
+                        <span class="icon-cube"></span>
+                        24H呼叫次数
+                    </h3>
+                    <div id="callOneDayChart" class="chart">
+                        @* <div  class="bar"></div> *@
+                    </div>
+                    <!-- 最新监听状态 -->
+                    <div id="equipmentCurrState" class="equipmentRunState">
+                        <div class="data">
+                            <h3>
+                                <i class="icon-dot" style="color: blue"></i>
+                                全部
+                            </h3>
+                            <h3>0</h3>
+                            <h3></h3>
+                        </div>
+                        <div class="data">
+                            <h3>
+                                <i class="icon-dot" style="color: green"></i>
+                                运行
+                            </h3>
+                            <h3>0</h3>
+                            <h3>0%</h3>
+                        </div>
+                        <div class="data">
+                            <h3>
+                                <i class="icon-dot" style="color: red"></i>
+                                待机
+                            </h3>
+                            <h3>0</h3>
+                            <h3>0%</h3>
+                        </div>
+                        <div class="data">
+                            <h3>
+                                <i class="icon-dot" style="color: yellow"></i>
+                                报警
+                            </h3>
+                            <h3>0</h3>
+                            <h3>0%</h3>
+                        </div>
+                        <div class="data">
+                            <h3>
+                                <i class="icon-dot" style="color: gray"></i>
+                                停机
+                            </h3>
+                            <h3>0</h3>
+                            <h3>0%</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 设备OEE -->
+            <div class="viewport-center-bottom panel">
+                <div class="inner">
+                    <h3>设备综合OEE</h3>
+                    <div id="equipmentOEEChart"  class="chart">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 能耗分析 -->
+            <div class="viewport-right-top panel">
+                <div class="inner">
+                    <!-- 筛选 -->
+                    <div class="filter">
+                        <a href="javascript:;" data-key="day90" class="active">90天</a>
+                        <a href="javascript:;" data-key="day30">30天</a>
+                        <a href="javascript:;" data-key="day1">24小时</a>
+                    </div>
+                    <!-- 数据 -->
+                    <div class="data">
+                        <div class="item">
+                            <h4>0</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #ed3f35;"></i>
+                                开机时数(H)
+                            </span>
+                        </div>
+                        <div class="item">
+                            <h4>0</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #eacf19;"></i>
+                                能耗(KWH)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 呼叫记录 -->
+            <div class="viewport-right-center panel">
+                <div class="inner">
+                    <div class="caption">
+                        <h3>呼叫记录</h3>
+                        <a href="javascript:;" data-type="month">月</a>
+                        <a href="javascript:;" data-type="week">周</a>
+                    </div>
+                    <div id="callStatChart"  class="chart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <!-- 设备 分布 -->
+                <div id="equipmentDistribute" class="viewport-right-center1 panel">
+                    <div class="inner">
+                        <h3>设备分布</h3>
+                        <div class="data">
+                            <div class="item">
+                                <h4>0 <small>%</small></h4>
+                                <span>
+                                    A区
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>0 <small>%</small></h4>
+                                <span>
+                                    B区
+                                </span>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>0 <small>%</small></h4>
+                                <span>
+                                    C区
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>0 <small>%</small></h4>
+                                <span>
+                                    D区
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="viewport-right-center2 panel">
+                    <div class="inner">
+                        <h3>上周同比增长</h3>
+                        <div class="chart">
+                            <div class="box">
+                                <div id="currWeekCallChart" class="gauge"></div>
+                                <div class="label" id="preWeekRate">0<small> %</small></div>
+                            </div>
+                            <div class="data">
+                                <div class="item">
+                                    <h4 id="currWeekCount">0</h4>
+                                    <span>
+                                        <i class="icon-dot" style="color: #6acca3"></i>
+                                        本周故障
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <h4 id="preMonthRate">0<small> %</small></h4>
+                                    <span>
+                                        <i class="icon-dot" style="color: #ed3f35"></i>
+                                        上月同比
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--监控-->
+            <div class="viewport-right-bottom panel">
+                <div class="inner">
+                    <div class="tabs">
+                        <h3>异常设备监控</h3>
+                    </div>
+                    <div class="content" style="display: block;">
+                        <div class="head">
+                            <span class="col">故障时间</span>
+                            <span class="col">设备地址</span>
+                            <span class="col">异常代码</span>
+                        </div>
+                        <div class="marquee-view">
+                            <div id="equipmentWarnReports" class="marquee">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @await Html.PartialAsync("_Copyright")
+
+    <script src="~/api/call.js"></script>
+    <script src="~/api/equipment.js"></script>
+    <script src="~/dashboard/02F1/equipment/js/index.js"></script>
+
+</body>
+</html>

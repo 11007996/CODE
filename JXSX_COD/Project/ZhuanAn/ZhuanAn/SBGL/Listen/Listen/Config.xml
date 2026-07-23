@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!--==========数据库设置==========-->
+  <database>
+    <!--数据库连接-->
+    <connectionString>server=127.0.0.1;database=HJDB;uid=cs;pwd=iMvyh5JHLzv3uy+vYsrOkw==</connectionString>
+	<!--<connectionString>server=127.0.0.1;database=HJDB;uid=cs;pwd=iMvyh5JHLzv3uy+vYsrOkw==</connectionString>-->
+  </database>
+  <!--==========TCP监听==========-->
+  <tcpListen>
+    <!--监听开关（Y:开启，N:关闭）-->
+    <tcpListenFlag>Y</tcpListenFlag>
+    <!--监听端口-->
+    <listenPort>10409</listenPort>
+    <!--接收超时（秒）-->
+    <receiveTimeout>5</receiveTimeout>
+  </tcpListen>
+  <!--==========串口监听==========-->
+  <serialListen>
+    <!--监听开关（Y:开启，N:关闭）-->
+    <serialListenFlag>N</serialListenFlag>
+    <!--串口名称-->
+    <listenPortName>COM3</listenPortName>
+    <!--波特率-->
+    <baudRate>9600</baudRate>
+    <!--数据位-->
+    <dataBits>8</dataBits>
+    <!--停止位[0,1,2,3]-->
+    <stopBits>1</stopBits>
+    <!--奇偶校验[0,1,2,3,4]-->
+    <parity>1</parity>
+  </serialListen>
+  <!--==========操作==========-->
+  <operate>
+    <!--保养检查开关（Y:开启，N:关闭）-->
+    <maintenanceCheckFlag>Y</maintenanceCheckFlag>
+  </operate>
+</configuration>

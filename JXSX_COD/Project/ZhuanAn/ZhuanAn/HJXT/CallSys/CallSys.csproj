@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19F5421C-62B4-408F-BA18-A82A2A88F45D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CallSys</RootNamespace>
+    <AssemblyName>CallSys</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\发布\CallSys\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\ShareFile\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\ShareFile\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C4D1564342CD988D17BB05C8102F53552600551F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Help_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\呼叫系统最新版\Release\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auxiliary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auxiliary.Designer.cs">
+      <DependentUpon>Auxiliary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ErrorInfo.cs" />
+    <Compile Include="Base\ErrorStatus.cs" />
+    <Compile Include="FrmBaseInfoSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseInfoSolution.designer.cs">
+      <DependentUpon>FrmBaseInfoSolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseInfoHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseInfoHandler.designer.cs">
+      <DependentUpon>FrmBaseInfoHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseInfoError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseInfoError.designer.cs">
+      <DependentUpon>FrmBaseInfoError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMasterError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMasterError.Designer.cs">
+      <DependentUpon>FrmMasterError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMsgDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMsgDialog.Designer.cs">
+      <DependentUpon>FrmMsgDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMsgPushSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMsgPushSet.Designer.cs">
+      <DependentUpon>FrmMsgPushSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSystemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSystemConfig.designer.cs">
+      <DependentUpon>FrmSystemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckRight.designer.cs">
+      <DependentUpon>FrmCheckRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInputDialog.Designer.cs">
+      <DependentUpon>FrmInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLineInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLineInfo.Designer.cs">
+      <DependentUpon>FrmLineInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalData.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKanBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKanBan.designer.cs">
+      <DependentUpon>FrmKanBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBarScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBarScan.designer.cs">
+      <DependentUpon>FrmBarScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLineMac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLineMac.Designer.cs">
+      <DependentUpon>FrmLineMac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaster.Designer.cs">
+      <DependentUpon>FrmMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseInfo.designer.cs">
+      <DependentUpon>FrmBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmFaultSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFaultSolution.Designer.cs">
+      <DependentUpon>FrmFaultSolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ExceptionHandle.cs" />
+    <Compile Include="Utils\FileUtil.cs" />
+    <Compile Include="Utils\UpdateHelper.cs" />
+    <EmbeddedResource Include="Auxiliary.resx">
+      <DependentUpon>Auxiliary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseInfoSolution.resx">
+      <DependentUpon>FrmBaseInfoSolution.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseInfoHandler.resx">
+      <DependentUpon>FrmBaseInfoHandler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseInfoError.resx">
+      <DependentUpon>FrmBaseInfoError.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMasterError.resx">
+      <DependentUpon>FrmMasterError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMsgDialog.resx">
+      <DependentUpon>FrmMsgDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMsgPushSet.resx">
+      <DependentUpon>FrmMsgPushSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSystemConfig.resx">
+      <DependentUpon>FrmSystemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckRight.resx">
+      <DependentUpon>FrmCheckRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKanBan.resx">
+      <DependentUpon>FrmKanBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBarScan.resx">
+      <DependentUpon>FrmBarScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLineInfo.resx">
+      <DependentUpon>FrmLineInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLineMac.resx">
+      <DependentUpon>FrmLineMac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInputDialog.resx">
+      <DependentUpon>FrmInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaster.resx">
+      <DependentUpon>FrmMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseInfo.resx">
+      <DependentUpon>FrmBaseInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFaultSolution.resx">
+      <DependentUpon>FrmFaultSolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <Content Include="Resources\Image\bg-repeat-x.png" />
+    <Content Include="Resources\Image\bg.png" />
+    <Content Include="Resources\Image\blue.png" />
+    <None Include="Resources\Image\call_enter.jpg" />
+    <None Include="Resources\Image\call_leave.jpg" />
+    <Content Include="Resources\Image\clock_01.jpg" />
+    <Content Include="Resources\Image\clock_02.jpg" />
+    <Content Include="Resources\Image\clock_03.jpg" />
+    <Content Include="Resources\Image\clock_04.jpg" />
+    <Content Include="Resources\Image\clock_05.jpg" />
+    <Content Include="Resources\Image\clock_06.jpg" />
+    <Content Include="Resources\Image\clock_07.jpg" />
+    <Content Include="Resources\Image\clock_08.jpg" />
+    <Content Include="Resources\Image\clock_09.jpg" />
+    <Content Include="Resources\Image\clock_10.jpg" />
+    <Content Include="Resources\Image\clock_11.jpg" />
+    <Content Include="Resources\Image\clock_12.jpg" />
+    <Content Include="Resources\Image\defualt-face.jpg" />
+    <Content Include="Resources\Image\logo.ico" />
+    <Content Include="Resources\Image\purple.png" />
+    <Content Include="Resources\Image\top-bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{96a23b23-4a87-4756-a836-eb5b6d83e7f8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

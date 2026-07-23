@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesStageMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesStage" id="MesStageResult">
+        <result property="stageId"    column="stage_id"    />
+        <result property="stageName"    column="stage_name"    />
+        <result property="status"    column="status"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectMesStageVo">
+        select stage_id, stage_name, status, remark, create_by, create_time, update_by, update_time from mes_stage
+    </sql>
+
+    <select id="selectMesStageList" parameterType="MesStage" resultMap="MesStageResult">
+        <include refid="selectMesStageVo"/>
+        <where>
+            <if test="stageName != null  and stageName != ''"> and stage_name like concat('%', #{stageName}, '%')</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+
+    <select id="selectMesStageByStageId" parameterType="Long" resultMap="MesStageResult">
+        <include refid="selectMesStageVo"/>
+        where stage_id = #{stageId}
+    </select>
+
+    <select id="checkStageNameUnique" parameterType="String" resultMap="MesStageResult">
+        <include refid="selectMesStageVo"/>
+        where stage_name = #{stageName} limit 1
+    </select>
+
+    <insert id="insertMesStage" parameterType="MesStage" useGeneratedKeys="true" keyProperty="stageId">
+        insert into mes_stage
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="stageName != null and stageName != ''">stage_name,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="stageName != null and stageName != ''">#{stageName},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesStage" parameterType="MesStage">
+        update mes_stage
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="stageName != null and stageName != ''">stage_name = #{stageName},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where stage_id = #{stageId}
+    </update>
+
+    <delete id="deleteMesStageByStageId" parameterType="Long">
+        delete from mes_stage where stage_id = #{stageId}
+    </delete>
+
+    <delete id="deleteMesStageByStageIds" parameterType="String">
+        delete from mes_stage where stage_id in
+        <foreach item="stageId" collection="array" open="(" separator="," close=")">
+            #{stageId}
+        </foreach>
+    </delete>
+
+    <select id="stageInfoByName" parameterType="String" resultMap="MesStageResult">
+        select * from mes_stage where stage_name = #{stageName}
+    </select>
+</mapper>

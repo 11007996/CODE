@@ -1,0 +1,181 @@
+﻿
+异常时间：2024-03-08 11:35:49,768 [7] 
+异常级别：ERROR 
+异常位置：[7] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:151) 
+消息描述：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 spr┖.ᜀ(XmlTextReader A_0, Boolean A_1)
+   在 spr┖.ᜂ(XmlTextReader A_0)
+   在 spr┖.ᜀ(XmlTextReader A_0, spr▍ A_1, Boolean A_2)
+   在 spr┥.᜗(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜛(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜝(XmlElement A_0, spr╥ A_1)
+   在 spr┥.ᜀ(XmlElement A_0, spr╥ A_1, Int32 A_2, Boolean A_3)
+   在 spr┥.ᜀ()
+   在 spr┵.ᜀ(spr╧ A_0)
+   在 spr┵.ᜁ(spr╧ A_0, String A_1, Boolean A_2)
+   在 spr┵.ᜄ()
+   在 spr┵.᜚()
+   在 spr┴.ᜀ(spr  A_0)
+   在 spr .ᜀ(Stream A_0, sprᾧ A_1, Boolean A_2)
+   在 spr .ᜀ(String A_0, sprᾧ A_1)
+   在 spr ..ctor(String A_0, sprᾧ A_1)
+   在 Spire.Xls.Core.Spreadsheet.XlsWorkbook..ctor(Object A_0, String A_1, ExcelVersion A_2)
+   在 Spire.Xls.Workbook.LoadFromFile(String fileName, ExcelVersion version)
+   在 Asset.BLL.FileManager.ConvertExcelToImg(String excelFilePath, String imageFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.GetPreviewImgPath(String sourceFilePath, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType)
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 151
+异常：
+
+ 
+异常时间：2024-03-08 11:35:50,808 [38] 
+异常级别：ERROR 
+异常位置：[38] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:151) 
+消息描述：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 spr┖.ᜀ(XmlTextReader A_0, Boolean A_1)
+   在 spr┖.ᜂ(XmlTextReader A_0)
+   在 spr┖.ᜀ(XmlTextReader A_0, spr▍ A_1, Boolean A_2)
+   在 spr┥.᜗(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜛(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜝(XmlElement A_0, spr╥ A_1)
+   在 spr┥.ᜀ(XmlElement A_0, spr╥ A_1, Int32 A_2, Boolean A_3)
+   在 spr┥.ᜀ()
+   在 spr┵.ᜀ(spr╧ A_0)
+   在 spr┵.ᜁ(spr╧ A_0, String A_1, Boolean A_2)
+   在 spr┵.ᜄ()
+   在 spr┵.᜚()
+   在 spr┴.ᜀ(spr  A_0)
+   在 spr .ᜀ(Stream A_0, sprᾧ A_1, Boolean A_2)
+   在 spr .ᜀ(String A_0, sprᾧ A_1)
+   在 spr ..ctor(String A_0, sprᾧ A_1)
+   在 Spire.Xls.Core.Spreadsheet.XlsWorkbook..ctor(Object A_0, String A_1, ExcelVersion A_2)
+   在 Spire.Xls.Workbook.LoadFromFile(String fileName, ExcelVersion version)
+   在 Asset.BLL.FileManager.ConvertExcelToImg(String excelFilePath, String imageFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.GetPreviewImgPath(String sourceFilePath, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType)
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 151
+异常：
+
+ 
+异常时间：2024-03-08 11:43:31,244 [14] 
+异常级别：ERROR 
+异常位置：[14] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:151) 
+消息描述：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 spr┖.ᜀ(XmlTextReader A_0, Boolean A_1)
+   在 spr┖.ᜂ(XmlTextReader A_0)
+   在 spr┖.ᜀ(XmlTextReader A_0, spr▍ A_1, Boolean A_2)
+   在 spr┥.᜗(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜛(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜝(XmlElement A_0, spr╥ A_1)
+   在 spr┥.ᜀ(XmlElement A_0, spr╥ A_1, Int32 A_2, Boolean A_3)
+   在 spr┥.ᜀ()
+   在 spr┵.ᜀ(spr╧ A_0)
+   在 spr┵.ᜁ(spr╧ A_0, String A_1, Boolean A_2)
+   在 spr┵.ᜄ()
+   在 spr┵.᜚()
+   在 spr┴.ᜀ(spr  A_0)
+   在 spr .ᜀ(Stream A_0, sprᾧ A_1, Boolean A_2)
+   在 spr .ᜀ(String A_0, sprᾧ A_1)
+   在 spr ..ctor(String A_0, sprᾧ A_1)
+   在 Spire.Xls.Core.Spreadsheet.XlsWorkbook..ctor(Object A_0, String A_1, ExcelVersion A_2)
+   在 Spire.Xls.Workbook.LoadFromFile(String fileName, ExcelVersion version)
+   在 Asset.BLL.FileManager.ConvertExcelToImg(String excelFilePath, String imageFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.GetPreviewImgPath(String sourceFilePath, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType)
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 151
+异常：
+
+ 
+异常时间：2024-03-08 11:44:02,858 [14] 
+异常级别：ERROR 
+异常位置：[14] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:151) 
+消息描述：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 spr┖.ᜀ(XmlTextReader A_0, Boolean A_1)
+   在 spr┖.ᜂ(XmlTextReader A_0)
+   在 spr┖.ᜀ(XmlTextReader A_0, spr▍ A_1, Boolean A_2)
+   在 spr┥.᜗(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜛(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜝(XmlElement A_0, spr╥ A_1)
+   在 spr┥.ᜀ(XmlElement A_0, spr╥ A_1, Int32 A_2, Boolean A_3)
+   在 spr┥.ᜀ()
+   在 spr┵.ᜀ(spr╧ A_0)
+   在 spr┵.ᜁ(spr╧ A_0, String A_1, Boolean A_2)
+   在 spr┵.ᜄ()
+   在 spr┵.᜚()
+   在 spr┴.ᜀ(spr  A_0)
+   在 spr .ᜀ(Stream A_0, sprᾧ A_1, Boolean A_2)
+   在 spr .ᜀ(String A_0, sprᾧ A_1)
+   在 spr ..ctor(String A_0, sprᾧ A_1)
+   在 Spire.Xls.Core.Spreadsheet.XlsWorkbook..ctor(Object A_0, String A_1, ExcelVersion A_2)
+   在 Spire.Xls.Workbook.LoadFromFile(String fileName, ExcelVersion version)
+   在 Asset.BLL.FileManager.ConvertExcelToImg(String excelFilePath, String imageFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.GetPreviewImgPath(String sourceFilePath, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType)
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 151
+异常：
+
+ 
+异常时间：2024-03-08 11:44:26,912 [25] 
+异常级别：ERROR 
+异常位置：[25] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:151) 
+消息描述：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 spr┖.ᜀ(XmlTextReader A_0, Boolean A_1)
+   在 spr┖.ᜂ(XmlTextReader A_0)
+   在 spr┖.ᜀ(XmlTextReader A_0, spr▍ A_1, Boolean A_2)
+   在 spr┥.᜗(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜛(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜝(XmlElement A_0, spr╥ A_1)
+   在 spr┥.ᜀ(XmlElement A_0, spr╥ A_1, Int32 A_2, Boolean A_3)
+   在 spr┥.ᜀ()
+   在 spr┵.ᜀ(spr╧ A_0)
+   在 spr┵.ᜁ(spr╧ A_0, String A_1, Boolean A_2)
+   在 spr┵.ᜄ()
+   在 spr┵.᜚()
+   在 spr┴.ᜀ(spr  A_0)
+   在 spr .ᜀ(Stream A_0, sprᾧ A_1, Boolean A_2)
+   在 spr .ᜀ(String A_0, sprᾧ A_1)
+   在 spr ..ctor(String A_0, sprᾧ A_1)
+   在 Spire.Xls.Core.Spreadsheet.XlsWorkbook..ctor(Object A_0, String A_1, ExcelVersion A_2)
+   在 Spire.Xls.Workbook.LoadFromFile(String fileName, ExcelVersion version)
+   在 Asset.BLL.FileManager.ConvertExcelToImg(String excelFilePath, String imageFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.GetPreviewImgPath(String sourceFilePath, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType)
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 151
+异常：
+
+ 
+异常时间：2024-03-08 11:46:35,851 [14] 
+异常级别：ERROR 
+异常位置：[14] (E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:151) 
+消息描述：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 spr┖.ᜀ(XmlTextReader A_0, Boolean A_1)
+   在 spr┖.ᜂ(XmlTextReader A_0)
+   在 spr┖.ᜀ(XmlTextReader A_0, spr▍ A_1, Boolean A_2)
+   在 spr┥.᜗(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜛(XmlElement A_0, spr╥ A_1)
+   在 spr┥.᜝(XmlElement A_0, spr╥ A_1)
+   在 spr┥.ᜀ(XmlElement A_0, spr╥ A_1, Int32 A_2, Boolean A_3)
+   在 spr┥.ᜀ()
+   在 spr┵.ᜀ(spr╧ A_0)
+   在 spr┵.ᜁ(spr╧ A_0, String A_1, Boolean A_2)
+   在 spr┵.ᜄ()
+   在 spr┵.᜚()
+   在 spr┴.ᜀ(spr  A_0)
+   在 spr .ᜀ(Stream A_0, sprᾧ A_1, Boolean A_2)
+   在 spr .ᜀ(String A_0, sprᾧ A_1)
+   在 spr ..ctor(String A_0, sprᾧ A_1)
+   在 Spire.Xls.Core.Spreadsheet.XlsWorkbook..ctor(Object A_0, String A_1, ExcelVersion A_2)
+   在 Spire.Xls.Workbook.LoadFromFile(String fileName, ExcelVersion version)
+   在 Asset.BLL.FileManager.ConvertExcelToImg(String excelFilePath, String imageFilePath, Int32 dpi)
+   在 Asset.BLL.FileManager.GetPreviewImgPath(String sourceFilePath, FilePreviewTypeEnum previewType)
+   在 Asset.BLL.FileManager.GetFilePreviewPath(Int32 fileId, String& fileAliasName, FilePreviewTypeEnum previewType)
+   在 Asset.Controllers.FileController.DownloadPreview(Nullable`1 fileId, FilePreviewTypeEnum previewType) 位置 E:\Work Projects\设备系统\SBGL\Applet\API_Server\Asset\Controllers\FileController.cs:行号 151
+异常：
+
+ 

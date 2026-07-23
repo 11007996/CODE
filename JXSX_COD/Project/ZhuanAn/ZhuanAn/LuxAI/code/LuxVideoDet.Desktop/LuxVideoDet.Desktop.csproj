@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LuxVideoDetCopyPluginsToOutput>true</LuxVideoDetCopyPluginsToOutput>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\luxvideodet.ico</ApplicationIcon>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- macOS 打包用的 plist/icns 放在 Assets/macOS，勿当作 Avalonia 资源嵌入 -->
+    <AvaloniaResource Include="Assets\**" Exclude="Assets\macOS\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.12" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.3.12">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="11.3.12" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LuxVideoDet.Core\LuxVideoDet.Core.csproj" />
+    <ProjectReference Include="..\LuxVideoDet.Localization\LuxVideoDet.Localization.csproj" />
+  </ItemGroup>
+
+  <!-- 占位：保证仓库与编译输出中存在 resources/videos、resources/models 目录（大文件仍由 .gitignore 排除） -->
+  <ItemGroup>
+    <None Include="..\resources\videos\.gitkeep">
+      <Link>resources\videos\.gitkeep</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\resources\models\.gitkeep">
+      <Link>resources\models\.gitkeep</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--
+    macOS：dotnet publish 默认只输出扁平目录，不会生成带程序坞图标的 .app。
+    在发布且 RID 为 osx-* 时，自动复制为 bin/$(Configuration)/LuxVideoDet.app（依赖 Assets/macOS/luxvideodet.icns + Info.plist）。
+    若仅更换 Assets/luxvideodet.ico，需在 macOS 上从 PNG 源重新生成 .icns（sips + iconutil）并覆盖 Assets/macOS/luxvideodet.icns。
+  -->
+  <ItemGroup>
+    <None Include="Assets/macOS/Info.plist" />
+    <None Include="Assets/macOS/luxvideodet.icns" />
+  </ItemGroup>
+
+  <Target Name="CreateMacOSAppBundle" AfterTargets="Publish"
+          Condition="'$(RuntimeIdentifier)' != '' and $([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('osx-'))">
+    <PropertyGroup>
+      <_BundleApp>$(MSBuildProjectDirectory)/bin/$(Configuration)/LuxVideoDet.app</_BundleApp>
+      <_BundleContents>$(_BundleApp)/Contents</_BundleContents>
+      <_BundleMacOS>$(_BundleContents)/MacOS</_BundleMacOS>
+      <_BundleRes>$(_BundleContents)/Resources</_BundleRes>
+      <_MacSrc>$(MSBuildProjectDirectory)/Assets/macOS</_MacSrc>
+      <_PublishRoot>$([MSBuild]::EnsureTrailingSlash($(PublishDir)))</_PublishRoot>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_BundleApp)" Condition="Exists('$(_BundleApp)')" />
+    <MakeDir Directories="$(_BundleMacOS);$(_BundleRes)" />
+    <Copy SourceFiles="$(_MacSrc)/Info.plist" DestinationFolder="$(_BundleContents)" />
+    <Copy SourceFiles="$(_MacSrc)/luxvideodet.icns" DestinationFolder="$(_BundleRes)" />
+    <ItemGroup>
+      <_Pub Include="$(_PublishRoot)**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_Pub)" DestinationFiles="@(_Pub->'$(_BundleMacOS)/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Exec Command="chmod +x &quot;$(_BundleMacOS)/LuxVideoDet.Desktop&quot;" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <!-- 与 Directory.Build.props 中 Version 一致，便于「关于本机」与系统显示正确版本 -->
+    <Exec Command="plutil -replace CFBundleShortVersionString -string $(Version) &quot;$(_BundleContents)/Info.plist&quot;" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <Exec Command="plutil -replace CFBundleVersion -string $(Version) &quot;$(_BundleContents)/Info.plist&quot;" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+  </Target>
+</Project>

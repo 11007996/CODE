@@ -1,0 +1,13 @@
+----------------------------------------------------------- 
+记录时间：2023-05-29 09:47:32 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.FrmAssetQRCode.ChkAll_CheckedChanged(Object sender, EventArgs e)
+   在 System.Windows.Forms.CheckBox.OnCheckedChanged(EventArgs e)
+   在 System.Windows.Forms.CheckBox.set_CheckState(CheckState value)
+   在 System.Windows.Forms.CheckBox.OnClick(EventArgs e)
+   在 System.Windows.Forms.CheckBox.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

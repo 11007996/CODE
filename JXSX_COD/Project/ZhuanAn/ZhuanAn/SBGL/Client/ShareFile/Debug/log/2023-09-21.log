@@ -1,0 +1,57 @@
+----------------------------------------------------------- 
+记录时间：2023-09-21 10:35:43 线程名：[8] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Call.FrmKanBan.RefreshFaultTopChart() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 494
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 180
+
+记录时间：2023-09-21 10:35:54 线程名：[8] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Call.FrmKanBan.RefreshFaultTopChart() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 494
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 180
+
+记录时间：2023-09-21 10:41:52 线程名：[8] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Call.FrmKanBan.RefreshFaultTopChart()
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e)
+----------------------------------------------------------- 
+记录时间：2023-09-21 11:13:38 线程名：[9] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentException: 序列数据点不支持类型为 System.Windows.Forms.DataVisualization.Charting.DataPoint 的值，只能使用以下类型的值: Double、Decimal、Single、 int、long、uint、ulong、String、DateTime、short、ushort。
+   在 System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueY(Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY(IEnumerable xValue, IEnumerable[] yValues)
+   在 Call.FrmKanBan.RefreshFaultTopChart() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 511
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 181
+
+记录时间：2023-09-21 11:16:28 线程名：[9] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentException: 序列数据点不支持类型为 System.Windows.Forms.DataVisualization.Charting.DataPoint 的值，只能使用以下类型的值: Double、Decimal、Single、 int、long、uint、ulong、String、DateTime、short、ushort。
+   在 System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueY(Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY(IEnumerable xValue, IEnumerable[] yValues)
+   在 Call.FrmKanBan.RefreshFaultTopChart()
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e)
+
+记录时间：2023-09-21 11:16:52 线程名：[9] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentException: 序列数据点不支持类型为 System.Windows.Forms.DataVisualization.Charting.DataPoint 的值，只能使用以下类型的值: Double、Decimal、Single、 int、long、uint、ulong、String、DateTime、short、ushort。
+   在 System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueY(Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY(IEnumerable xValue, IEnumerable[] yValues)
+   在 Call.FrmKanBan.RefreshFaultTopChart()
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e)
+
+记录时间：2023-09-21 11:18:43 线程名：[9] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentException: 序列数据点不支持类型为 System.Collections.Generic.List`1[System.Windows.Forms.DataVisualization.Charting.DataPoint] 的值，只能使用以下类型的值: Double、Decimal、Single、 int、long、uint、ulong、String、DateTime、short、ushort。
+   在 System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueY(Object[] yValue)
+   在 System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddY(Object[] yValue)
+   在 Call.FrmKanBan.RefreshFaultTopChart()
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e)

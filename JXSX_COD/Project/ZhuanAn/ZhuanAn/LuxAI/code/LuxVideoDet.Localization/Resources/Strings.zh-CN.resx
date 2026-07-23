@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="App_WindowTitle" xml:space="preserve"><value>LuxVideoDet - 立讯视频识别系统</value></data>
+  <data name="Btn_NewConfig" xml:space="preserve"><value>新建配置</value></data>
+  <data name="Btn_ImportConfig" xml:space="preserve"><value>导入配置</value></data>
+  <data name="Btn_StartAll" xml:space="preserve"><value>全部启动</value></data>
+  <data name="Btn_StopAll" xml:space="preserve"><value>全部停止</value></data>
+  <data name="Tooltip_ToggleTheme" xml:space="preserve"><value>切换主题</value></data>
+  <data name="Tooltip_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_Header" xml:space="preserve"><value>LuxVideoDet - 立讯视频识别系统</value></data>
+  <data name="Settings_RunMode" xml:space="preserve"><value>运行模式</value></data>
+  <data name="Settings_RunModeValue" xml:space="preserve"><value>Desktop (Avalonia)</value></data>
+  <data name="Settings_Framework" xml:space="preserve"><value>框架版本</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>软件版本</value></data>
+  <data name="Settings_OS" xml:space="preserve"><value>操作系统</value></data>
+  <data name="Settings_CPU" xml:space="preserve"><value>处理器核心</value></data>
+  <data name="Settings_Memory" xml:space="preserve"><value>工作内存</value></data>
+  <data name="Settings_GPURow" xml:space="preserve"><value>GPU 加速</value></data>
+  <data name="Settings_GPUAvailable" xml:space="preserve"><value>可用</value></data>
+  <data name="Settings_GPUNotAvailable" xml:space="preserve"><value>不可用</value></data>
+  <data name="Settings_ConfigDir" xml:space="preserve"><value>配置文件目录</value></data>
+  <data name="Settings_Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>语言</value></data>
+  <data name="Lang_zh_CN" xml:space="preserve"><value>中文 (简体)</value></data>
+  <data name="Lang_en_US" xml:space="preserve"><value>English (US)</value></data>
+  <data name="Lang_vi_VN" xml:space="preserve"><value>越南语（越南）</value></data>
+  <data name="Web_PageTitle" xml:space="preserve"><value>LuxVideoDet - 立讯视频识别系统 · Web</value></data>
+  <data name="Web_BrandSub" xml:space="preserve"><value>Web 控制台</value></data>
+  <data name="Web_ImportConfig" xml:space="preserve"><value>导入配置</value></data>
+  <data name="Web_ExportAll" xml:space="preserve"><value>导出全部</value></data>
+  <data name="Web_StartAll" xml:space="preserve"><value>全部启动</value></data>
+  <data name="Web_StopAll" xml:space="preserve"><value>全部停止</value></data>
+  <data name="Web_NewConfig" xml:space="preserve"><value>+ 新建配置</value></data>
+  <data name="Web_StatTotal" xml:space="preserve"><value>配置总数</value></data>
+  <data name="Web_StatRunning" xml:space="preserve"><value>运行中</value></data>
+  <data name="Web_StatStopped" xml:space="preserve"><value>已停止</value></data>
+  <data name="Web_StatAlgos" xml:space="preserve"><value>算法总数</value></data>
+  <data name="Web_PanelConfigs" xml:space="preserve"><value>检测配置</value></data>
+  <data name="Web_Refresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="Web_ThName" xml:space="preserve"><value>名称</value></data>
+  <data name="Web_ThVideoSource" xml:space="preserve"><value>视频源</value></data>
+  <data name="Web_ThAlgorithms" xml:space="preserve"><value>算法</value></data>
+  <data name="Web_ThStatus" xml:space="preserve"><value>状态</value></data>
+  <data name="Web_ThFrameMs" xml:space="preserve"><value>帧耗时</value></data>
+  <data name="Web_ThActions" xml:space="preserve"><value>操作</value></data>
+  <data name="Web_Loading" xml:space="preserve"><value>加载中...</value></data>
+  <data name="Web_LangLabel" xml:space="preserve"><value>语言</value></data>
+  <data name="WebView_Title" xml:space="preserve"><value>LuxVideoDet - 实时监控</value></data>
+  <data name="WebView_LoadingTitle" xml:space="preserve"><value>加载中...</value></data>
+  <data name="WebView_StartDetection" xml:space="preserve"><value>启动检测</value></data>
+  <data name="WebView_StopDetection" xml:space="preserve"><value>停止检测</value></data>
+  <data name="WebView_BrowserTts" xml:space="preserve"><value>浏览器语音播报</value></data>
+  <data name="WebView_TtsUnlock" xml:space="preserve"><value>启用语音权限</value></data>
+  <data name="WebView_Fullscreen" xml:space="preserve"><value>全屏</value></data>
+  <data name="WebView_BackToConsole" xml:space="preserve"><value>返回控制台</value></data>
+  <data name="WebView_Connecting" xml:space="preserve"><value>正在连接视频流...</value></data>
+  <data name="WebView_ErrorTitle" xml:space="preserve"><value>连接失败</value></data>
+  <data name="Main_ToolbarLanguage" xml:space="preserve"><value>语言</value></data>
+  <data name="Main_SearchConfigWatermark" xml:space="preserve"><value>搜索配置...</value></data>
+  <data name="Main_SourcePrefix" xml:space="preserve"><value>源:</value></data>
+  <data name="Main_BtnEdit" xml:space="preserve"><value>编辑</value></data>
+  <data name="Main_BtnDelete" xml:space="preserve"><value>删除</value></data>
+  <data name="Main_BtnNgReplay" xml:space="preserve"><value>NG回放</value></data>
+  <data name="Main_NgReplayTooltip" xml:space="preserve"><value>查看历史 NG 视频回放</value></data>
+  <data name="Main_LivePreview" xml:space="preserve"><value>实时预览</value></data>
+  <data name="Main_PreviewPlaceholder" xml:space="preserve"><value>未选择</value></data>
+  <data name="Main_TooltipShowBoxes" xml:space="preserve"><value>显示检测框</value></data>
+  <data name="Main_TooltipShowRegions" xml:space="preserve"><value>显示区域</value></data>
+  <data name="Main_TooltipShowLabels" xml:space="preserve"><value>显示标签</value></data>
+  <data name="Main_TooltipPopOutPreview" xml:space="preserve"><value>弹出独立窗口（可多开，可调整大小）</value></data>
+  <data name="Main_TooltipFullscreen" xml:space="preserve"><value>全屏</value></data>
+  <data name="Main_TooltipSnapshot" xml:space="preserve"><value>截图</value></data>
+  <data name="Main_YieldLabel" xml:space="preserve"><value>良率</value></data>
+  <data name="Main_PreviewEmptyTitle" xml:space="preserve"><value>暂无预览</value></data>
+  <data name="Main_PreviewEmptySubtitle" xml:space="preserve"><value>启动配置以查看实时检测画面</value></data>
+  <data name="Main_SystemStatusTitle" xml:space="preserve"><value>系统状态</value></data>
+  <data name="Main_StatusHealthy" xml:space="preserve"><value>运行正常</value></data>
+  <data name="Main_LabelRunningConfigs" xml:space="preserve"><value>运行中:</value></data>
+  <data name="Main_LabelTotalConfigs" xml:space="preserve"><value>总配置:</value></data>
+  <data name="Main_LabelUptime" xml:space="preserve"><value>运行时间:</value></data>
+  <data name="Main_Format_RunningConfigsCount" xml:space="preserve"><value>{0} 个配置</value></data>
+  <data name="Main_Format_TotalConfigsCount" xml:space="preserve"><value>{0} 个</value></data>
+  <data name="Main_PerformanceTitle" xml:space="preserve"><value>性能指标</value></data>
+  <data name="Main_CpuUsage" xml:space="preserve"><value>CPU 使用率</value></data>
+  <data name="Main_MemoryUsage" xml:space="preserve"><value>内存使用</value></data>
+  <data name="Main_GpuUsage" xml:space="preserve"><value>GPU 使用率</value></data>
+  <data name="Main_AvgFrameTime" xml:space="preserve"><value>平均帧耗时</value></data>
+  <data name="Main_RecentDetectionsTitle" xml:space="preserve"><value>最近检测</value></data>
+  <data name="Main_ProductionStatsTitle" xml:space="preserve"><value>生产统计</value></data>
+	<data name="Main_StatTotalCaption" xml:space="preserve"><value>总计</value></data>
+	<data name="Main_StatTotalCaption2" xml:space="preserve"><value>产品数</value></data>
+  <data name="Main_LogsTitle" xml:space="preserve"><value>日志</value></data>
+  <data name="Main_LogFilterDebug" xml:space="preserve"><value>调试</value></data>
+  <data name="Main_LogFilterInfo" xml:space="preserve"><value>信息</value></data>
+  <data name="Main_LogFilterWarning" xml:space="preserve"><value>警告</value></data>
+  <data name="Main_LogFilterError" xml:space="preserve"><value>错误</value></data>
+  <data name="Main_LogSearchWatermark" xml:space="preserve"><value>搜索日志...</value></data>
+  <data name="Main_LogBtnClear" xml:space="preserve"><value>清空</value></data>
+  <data name="Main_LogBtnExport" xml:space="preserve"><value>导出</value></data>
+  <data name="Main_TimeJustNow" xml:space="preserve"><value>刚刚</value></data>
+  <data name="Config_Status_Stopped" xml:space="preserve"><value>已停止</value></data>
+  <data name="Config_Status_Running" xml:space="preserve"><value>运行中</value></data>
+  <data name="Config_Status_Error" xml:space="preserve"><value>错误</value></data>
+  <data name="Config_Btn_Start" xml:space="preserve"><value>启动</value></data>
+  <data name="Config_Btn_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Editor_WindowTitleNew" xml:space="preserve"><value>新建配置</value></data>
+  <data name="Editor_WindowTitleEdit" xml:space="preserve"><value>编辑配置 — {0}</value></data>
+  <data name="Editor_SectionBasic" xml:space="preserve"><value>基本信息</value></data>
+  <data name="Editor_LblConfigName" xml:space="preserve"><value>配置名称:</value></data>
+  <data name="Editor_WatermarkConfigName" xml:space="preserve"><value>例如：生产线1检测</value></data>
+  <data name="Editor_SectionVideo" xml:space="preserve"><value>视频源配置</value></data>
+  <data name="Editor_LblVideoType" xml:space="preserve"><value>视频源类型:</value></data>
+  <data name="Editor_LblVideoPath" xml:space="preserve"><value>视频源路径:</value></data>
+  <data name="Editor_WatermarkVideoPath" xml:space="preserve"><value>文件路径、RTSP地址或摄像头索引</value></data>
+  <data name="Editor_BtnBrowseVideo" xml:space="preserve"><value>浏览视频</value></data>
+  <data name="Editor_ChkLoopLocal" xml:space="preserve"><value>循环播放（仅本地视频）</value></data>
+  <data name="Editor_SectionAlgoPool" xml:space="preserve"><value>算法池</value></data>
+  <data name="Editor_LblPickAlgo" xml:space="preserve"><value>选择算法类型以添加:</value></data>
+  <data name="Editor_PlaceholderPickAlgo" xml:space="preserve"><value>点击选择算法...</value></data>
+  <data name="Editor_LblAddedAlgos" xml:space="preserve"><value>已添加的算法:</value></data>
+  <data name="Editor_BtnRemoveSelected" xml:space="preserve"><value>删除选中</value></data>
+  <data name="Editor_SectionInference" xml:space="preserve"><value>推理配置</value></data>
+  <data name="Editor_LblModelPath" xml:space="preserve"><value>模型路径:</value></data>
+  <data name="Editor_WatermarkModelPath" xml:space="preserve"><value>模型文件路径 (.onnx)</value></data>
+  <data name="Editor_BtnBrowseModel" xml:space="preserve"><value>浏览模型</value></data>
+  <data name="Editor_LblInferenceDevice" xml:space="preserve"><value>推理设备:</value></data>
+  <data name="Editor_LblModelType" xml:space="preserve"><value>模型类型:</value></data>
+  <data name="Editor_LblConfidence" xml:space="preserve"><value>置信度阈值:</value></data>
+  <data name="Editor_LblIou" xml:space="preserve"><value>IOU 阈值:</value></data>
+  <data name="Editor_LblInputSize" xml:space="preserve"><value>输入尺寸:</value></data>
+  <data name="Editor_LblClassesReadonly" xml:space="preserve"><value>类别列表（只读）:</value></data>
+  <data name="Editor_WatermarkClasses" xml:space="preserve"><value>由算法描述符提供</value></data>
+  <data name="Editor_ClassesHint" xml:space="preserve"><value>类别由当前算法类型固定，与模型输出类别索引一一对应，不可修改。</value></data>
+  <data name="Editor_SectionRegions" xml:space="preserve"><value>区域配置</value></data>
+  <data name="Editor_BtnVisualRegions" xml:space="preserve"><value>可视化编辑区域</value></data>
+  <data name="Editor_LblRegionsJson" xml:space="preserve"><value>区域数据 (JSON):</value></data>
+  <data name="Editor_SectionAoi" xml:space="preserve"><value>AOI</value></data>
+  <data name="Editor_HintAoiArgs" xml:space="preserve"><value>参数保存在算法 args（JSON）中；可选项留空将不写入配置。</value></data>
+  <data name="Editor_SectionAlgorithmParameters" xml:space="preserve"><value>算法参数</value></data>
+  <data name="Editor_HintAlgorithmParameters" xml:space="preserve"><value>参数写入各算法的 args（JSON）；未声明字段的键可继续在配置文件中维护。可选项留空将不写入。</value></data>
+  <data name="Editor_SectionStorage" xml:space="preserve"><value>存储配置</value></data>
+  <data name="Editor_ChkSaveErrorImage" xml:space="preserve"><value>保存错误图像</value></data>
+  <data name="Editor_ChkSaveVideo" xml:space="preserve"><value>保存视频</value></data>
+  <data name="Editor_ChkNgVideoSourceRes" xml:space="preserve"><value>NG 视频按源分辨率保存（不缩放）</value></data>
+  <data name="Editor_HintRecordingMaxWidth" xml:space="preserve"><value>未勾选时使用自动≤2K；高级用户可在配置 JSON 中设置 recordingMaxWidth。</value></data>
+  <data name="Editor_LblVideoDuration" xml:space="preserve"><value>视频时长(秒):</value></data>
+  <data name="Editor_HintNgFps" xml:space="preserve"><value>NG 录像输出帧率按采集实况自动计算，无需填写。</value></data>
+  <data name="Editor_SectionNotification" xml:space="preserve"><value>通知配置</value></data>
+  <data name="Editor_ChkNotifyEnable" xml:space="preserve"><value>启用通知（按下方渠道发送）</value></data>
+  <data name="Editor_HintNotifyChannels" xml:space="preserve"><value>通知渠道（类型由当前算法描述符允许的范围与系统已注册渠道求交）</value></data>
+  <data name="Editor_BtnAddNotifier" xml:space="preserve"><value>添加通知渠道</value></data>
+  <data name="Editor_NotifierEnableTooltip" xml:space="preserve"><value>启用该渠道</value></data>
+  <data name="Editor_BtnDeleteNotifier" xml:space="preserve"><value>删除</value></data>
+  <data name="Editor_StatusNewHint" xml:space="preserve"><value>请填写配置信息，从下拉框选择算法以添加到算法池</value></data>
+  <data name="Editor_BtnSave" xml:space="preserve"><value>保存</value></data>
+  <data name="Editor_BtnCancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Editor_DefaultConfigName" xml:space="preserve"><value>新配置</value></data>
+  <data name="Editor_SourceLocalVideo" xml:space="preserve"><value>本地视频</value></data>
+  <data name="Editor_SourceRtsp" xml:space="preserve"><value>RTSP 流</value></data>
+  <data name="Editor_SourceCamera" xml:space="preserve"><value>摄像头</value></data>
+  <data name="Editor_ModelType_Auto" xml:space="preserve"><value>自动检测</value></data>
+  <data name="Editor_ModelType_Detection" xml:space="preserve"><value>检测</value></data>
+  <data name="Editor_ModelType_Segmentation" xml:space="preserve"><value>分割</value></data>
+  <data name="Editor_ModelType_Classification" xml:space="preserve"><value>分类</value></data>
+  <data name="Editor_ModelType_Pose" xml:space="preserve"><value>姿态</value></data>
+  <data name="Editor_ModelType_Obb" xml:space="preserve"><value>Rotated（旋转框）</value></data>
+  <data name="Editor_ModelType_Track" xml:space="preserve"><value>原生追踪（预留）</value></data>
+  <data name="Editor_ModelType_SegmentationTracking" xml:space="preserve"><value>实例分割追踪</value></data>
+  <data name="Editor_ModelType_DetectionTracking" xml:space="preserve"><value>追踪（检测+MOT）</value></data>
+  <data name="Editor_StatusSelectAlgoFirst" xml:space="preserve"><value>请先选择一个算法</value></data>
+  <data name="Editor_StatusEnterName" xml:space="preserve"><value>请输入配置名称</value></data>
+  <data name="Editor_StatusSetVideoPath" xml:space="preserve"><value>请设置视频源路径</value></data>
+  <data name="Editor_StatusAddOneAlgo" xml:space="preserve"><value>请至少添加一个算法</value></data>
+  <data name="Editor_StatusAlgoAdded" xml:space="preserve"><value>已添加算法: {0} {1}</value></data>
+  <data name="Editor_StatusAlgoRemoved" xml:space="preserve"><value>已删除算法: {0}</value></data>
+  <data name="Editor_PickerTitleVideo" xml:space="preserve"><value>选择视频文件</value></data>
+  <data name="Editor_PickerFilterVideo" xml:space="preserve"><value>视频文件</value></data>
+  <data name="Editor_PickerTitleModel" xml:space="preserve"><value>选择模型文件</value></data>
+  <data name="Editor_PickerFilterOnnx" xml:space="preserve"><value>ONNX 模型</value></data>
+  <data name="Editor_StatusAlgoAddedSuffixClasses" xml:space="preserve"><value>（类别由算法固定）</value></data>
+  <data name="Editor_StatusAlgoAddedSuffixNoClasses" xml:space="preserve"><value>（该算法未声明默认类别，请检查 Descriptor）</value></data>
+  <data name="Editor_StatusRegionsUpdated" xml:space="preserve"><value>已更新 {0} 个区域</value></data>
+  <data name="WebEditor_TitleNew" xml:space="preserve"><value>新建配置</value></data>
+  <data name="WebEditor_SectionBasic" xml:space="preserve"><value>基本信息</value></data>
+  <data name="WebEditor_LblConfigName" xml:space="preserve"><value>配置名称</value></data>
+  <data name="WebEditor_PlaceholderName" xml:space="preserve"><value>例如：产线1 撕拉片</value></data>
+  <data name="WebEditor_SectionVideo" xml:space="preserve"><value>视频源</value></data>
+  <data name="WebEditor_LblVideoType" xml:space="preserve"><value>视频源类型</value></data>
+  <data name="WebEditor_OptRtsp" xml:space="preserve"><value>RTSP 流</value></data>
+  <data name="WebEditor_OptLocal" xml:space="preserve"><value>本地视频</value></data>
+  <data name="WebEditor_OptCamera" xml:space="preserve"><value>摄像头</value></data>
+  <data name="WebEditor_LblVideoPath" xml:space="preserve"><value>视频源路径</value></data>
+  <data name="WebEditor_PlaceholderVideoPath" xml:space="preserve"><value>rtsp://192.168.1.100:554/stream</value></data>
+  <data name="WebEditor_ChkLoop" xml:space="preserve"><value>循环播放（仅本地视频）</value></data>
+  <data name="WebEditor_SectionAlgo" xml:space="preserve"><value>算法池</value></data>
+  <data name="WebEditor_PlaceholderAlgoSelect" xml:space="preserve"><value>选择要添加的算法…</value></data>
+  <data name="WebEditor_NoAlgoHint1" xml:space="preserve"><value>请从左侧列表选择算法并添加到池中。</value></data>
+  <data name="WebEditor_NoAlgoHint2" xml:space="preserve"><value>然后在右侧编辑参数。</value></data>
+  <data name="WebEditor_BtnCancel" xml:space="preserve"><value>取消</value></data>
+  <data name="WebEditor_BtnSave" xml:space="preserve"><value>保存</value></data>
+  <data name="Ng_WindowTitle" xml:space="preserve"><value>NG 回放 — {0}</value></data>
+  <data name="Ng_PanelVideoFiles" xml:space="preserve"><value>NG 视频文件</value></data>
+  <data name="Ng_BtnRefresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="Ng_LblDate" xml:space="preserve"><value>日期</value></data>
+  <data name="Ng_LblFileList" xml:space="preserve"><value>文件列表</value></data>
+  <data name="Ng_PlaceholderSelect" xml:space="preserve"><value>请在左侧选择文件播放</value></data>
+  <data name="Ng_TooltipPrev" xml:space="preserve"><value>上一帧</value></data>
+  <data name="Ng_TooltipNext" xml:space="preserve"><value>下一帧</value></data>
+  <data name="Ng_TooltipStop" xml:space="preserve"><value>停止</value></data>
+  <data name="Ng_LblSpeed" xml:space="preserve"><value>倍速:</value></data>
+  <data name="Ng_Play" xml:space="preserve"><value>播放</value></data>
+  <data name="Ng_Pause" xml:space="preserve"><value>暂停</value></data>
+  <data name="Region_WindowTitle" xml:space="preserve"><value>区域编辑器</value></data>
+  <data name="Region_SectionTarget" xml:space="preserve"><value>目标区域</value></data>
+  <data name="Region_SectionDraw" xml:space="preserve"><value>绘制工具</value></data>
+  <data name="Region_BtnRect" xml:space="preserve"><value>矩形</value></data>
+  <data name="Region_BtnPolygon" xml:space="preserve"><value>多边形</value></data>
+  <data name="Region_BtnClearCurrent" xml:space="preserve"><value>清空当前</value></data>
+  <data name="Region_BtnDeleteSelected" xml:space="preserve"><value>删除选中</value></data>
+  <data name="Region_LblDrawn" xml:space="preserve"><value>已绘制区域:</value></data>
+  <data name="Region_BtnSave" xml:space="preserve"><value>保存</value></data>
+  <data name="Region_BtnCancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Region_WatermarkCustomName" xml:space="preserve"><value>自定义区域名称</value></data>
+  <data name="Region_CustomDisplayName" xml:space="preserve"><value>自定义区域…</value></data>
+  <data name="Region_CustomDescription" xml:space="preserve"><value>用户自定义命名区域</value></data>
+  <data name="Main_FullscreenTitle" xml:space="preserve"><value>全屏预览</value></data>
+  <data name="Main_FullscreenEscHint" xml:space="preserve"><value>按 ESC 退出</value></data>
+  <data name="Main_FullscreenAvgPipelineFmt" xml:space="preserve"><value>平均帧耗时: {0:F1} ms</value></data>
+  <data name="Main_FloatingTitleFmt" xml:space="preserve"><value>预览 — {0}</value></data>
+  <data name="Main_FloatingFullscreenTooltip" xml:space="preserve"><value>切换全屏</value></data>
+  <data name="Main_FloatingMsPerFrameFmt" xml:space="preserve"><value>{0:F1} ms/帧</value></data>
+  <data name="Ng_DateFolderFmt" xml:space="preserve"><value>{0}（{1} 个视频）</value></data>
+  <data name="Ng_LblVideoFilesColumn" xml:space="preserve"><value>视频文件</value></data>
+  <data name="Region_StatusPickTargetMode" xml:space="preserve"><value>请选择目标区域，然后选择绘制模式</value></data>
+  <data name="Region_StatusTargetRedrawFmt" xml:space="preserve"><value>目标: {0}（已绘制，重新绘制将替换）</value></data>
+  <data name="Region_StatusTargetPickModeFmt" xml:space="preserve"><value>目标: {0} — 请选择绘制模式</value></data>
+  <data name="Region_StatusCustomTargetDesc" xml:space="preserve"><value>输入名称后，选择绘制模式开始绘制</value></data>
+  <data name="Region_StatusCustomEnterName" xml:space="preserve"><value>自定义区域模式 — 请输入区域名称</value></data>
+  <data name="Region_StatusLoadingImage" xml:space="preserve"><value>正在加载图像...</value></data>
+  <data name="Region_StatusCannotOpenVideo" xml:space="preserve"><value>无法打开视频源</value></data>
+  <data name="Region_StatusVideoReadFailed" xml:space="preserve"><value>无法从视频读取有效画面（可能文件损坏或编码异常）</value></data>
+  <data name="Region_StatusInvalidCameraId" xml:space="preserve"><value>无效的摄像头 ID</value></data>
+  <data name="Region_StatusCannotOpenCamera" xml:space="preserve"><value>无法打开摄像头，请查看日志</value></data>
+  <data name="Region_StatusCameraReadFailed" xml:space="preserve"><value>无法从摄像头读取有效画面</value></data>
+  <data name="Region_StatusCannotReadImage" xml:space="preserve"><value>无法读取图像</value></data>
+  <data name="Region_StatusLoadedFmt" xml:space="preserve"><value>已加载 {0}×{1} — 请选择目标区域</value></data>
+  <data name="Region_StatusLoadFailedFmt" xml:space="preserve"><value>加载失败: {0}</value></data>
+  <data name="Region_StatusBitmapFailed" xml:space="preserve"><value>无法将图像转为位图</value></data>
+  <data name="Region_StatusUpdateFailedFmt" xml:space="preserve"><value>更新显示失败: {0}</value></data>
+  <data name="Region_StatusPolygonPointsFmt" xml:space="preserve"><value>多边形: {0} 个点（右键完成）</value></data>
+  <data name="Region_StatusSelectTargetFirst" xml:space="preserve"><value>请先选择目标区域</value></data>
+  <data name="Region_StatusEnterCustomName" xml:space="preserve"><value>请输入自定义区域名称</value></data>
+  <data name="Region_StatusNameConflictFmt" xml:space="preserve"><value>名称「{0}」与预定义区域冲突</value></data>
+  <data name="Region_StatusRectTooSmall" xml:space="preserve"><value>矩形太小，请重新绘制</value></data>
+  <data name="Region_StatusPolygonMinPoints" xml:space="preserve"><value>多边形至少需要 3 个点</value></data>
+  <data name="Region_StatusAddedRectFmt" xml:space="preserve"><value>已添加矩形区域: {0}</value></data>
+  <data name="Region_StatusAddedPolygonFmt" xml:space="preserve"><value>已添加多边形区域: {0}</value></data>
+  <data name="Region_StatusRectModeHint" xml:space="preserve"><value>矩形模式: 点击并拖动绘制</value></data>
+  <data name="Region_StatusPolyModeHint" xml:space="preserve"><value>多边形模式: 左键添加顶点，右键完成</value></data>
+  <data name="Region_StatusClearedDraw" xml:space="preserve"><value>已清除当前绘制</value></data>
+  <data name="Region_StatusSelectDrawnToDelete" xml:space="preserve"><value>请先在已绘制列表中选择要删除的区域</value></data>
+  <data name="Region_StatusDeletedFmt" xml:space="preserve"><value>已删除区域: {0}</value></data>
+  <data name="Region_StatusMissingRequiredFmt" xml:space="preserve"><value>请绘制必需区域: {0}</value></data>
+  <data name="Region_DescRectangle" xml:space="preserve"><value>矩形区域</value></data>
+  <data name="Region_DescPolygon" xml:space="preserve"><value>多边形区域</value></data>
+  <data name="WebEditor_TitleEditFmt" xml:space="preserve"><value>编辑配置 — {0}</value></data>
+  <data name="Web_EmptyNoConfigs" xml:space="preserve"><value>暂无检测配置</value></data>
+  <data name="Web_EmptyHintStart" xml:space="preserve"><value>点击右上角「新建配置」或「导入配置」开始</value></data>
+  <data name="Web_AlgoCountFmt" xml:space="preserve"><value>{0} 个</value></data>
+  <data name="Web_BadgeRunning" xml:space="preserve"><value>运行中</value></data>
+  <data name="Web_BadgeStopped" xml:space="preserve"><value>已停止</value></data>
+  <data name="Web_ActionStop" xml:space="preserve"><value>停止</value></data>
+  <data name="Web_ActionView" xml:space="preserve"><value>查看</value></data>
+  <data name="Web_ActionCopyLink" xml:space="preserve"><value>复制链接</value></data>
+  <data name="Web_ActionStart" xml:space="preserve"><value>启动</value></data>
+  <data name="Web_ActionNgReplay" xml:space="preserve"><value>NG回放</value></data>
+  <data name="Web_ActionEdit" xml:space="preserve"><value>编辑</value></data>
+  <data name="Web_ActionDelete" xml:space="preserve"><value>删除</value></data>
+  <data name="Web_ConfirmDeleteConfig" xml:space="preserve"><value>确定删除此配置？</value></data>
+  <data name="Web_ImportTitle" xml:space="preserve"><value>导入配置</value></data>
+  <data name="Web_ImportDropHint" xml:space="preserve"><value>点击选择或拖拽 JSON 配置文件</value></data>
+  <data name="Web_ImportFormatHint" xml:space="preserve"><value>支持格式：单个配置 / 配置数组 / { "configurations": [...] }</value></data>
+  <data name="Web_ImportOrPaste" xml:space="preserve"><value>—— 或粘贴 JSON ——</value></data>
+  <data name="Web_ImportPlaceholderJson" xml:space="preserve"><value>粘贴 JSON 配置内容...</value></data>
+  <data name="Web_NoAlgoInPool" xml:space="preserve"><value>尚未添加算法</value></data>
+  <data name="Web_EditorPoolAlgoRemoved" xml:space="preserve"><value>算法已从池中移除</value></data>
+  <data name="Web_AlgoDisabledSuffix" xml:space="preserve"><value>（已禁用）</value></data>
+  <data name="Web_RemoveAlgoTitle" xml:space="preserve"><value>删除</value></data>
+  <data name="Web_AdDisplayName" xml:space="preserve"><value>显示名称</value></data>
+  <data name="Web_AdEnableAlgo" xml:space="preserve"><value>启用此算法</value></data>
+  <data name="Web_AdClassesReadonlyTag" xml:space="preserve"><value>（由算法固定，只读）</value></data>
+  <data name="Web_AdClassesFooter" xml:space="preserve"><value>与当前算法类型的描述符一一对应；保存时始终写入上述列表。</value></data>
+  <data name="Web_AdRegionsManualHint" xml:space="preserve"><value>— 可手动编辑或从 Desktop 端复制</value></data>
+  <data name="Web_AdRetentionDays" xml:space="preserve"><value>保留天数</value></data>
+  <data name="Web_AdStorageFpsNote" xml:space="preserve"><value>NG 录像帧率按实况自动计算。</value></data>
+  <data name="Web_AdNotifyFooter" xml:space="preserve"><value>通知渠道与参数不在此页编辑；从 Desktop 保存或导入的配置会保留。关闭仅表示禁用。</value></data>
+  <data name="Web_AdNotifyEnable" xml:space="preserve"><value>启用通知（服务端渠道）</value></data>
+  <data name="Web_MT_Detection" xml:space="preserve"><value>目标检测</value></data>
+  <data name="Web_MT_Segmentation" xml:space="preserve"><value>实例分割</value></data>
+  <data name="Web_MT_Classification" xml:space="preserve"><value>图像分类</value></data>
+  <data name="Web_MT_Pose" xml:space="preserve"><value>姿态估计</value></data>
+  <data name="Web_MT_Obb" xml:space="preserve"><value>Rotated（旋转框）</value></data>
+  <data name="Web_MT_Track" xml:space="preserve"><value>原生追踪（预留）</value></data>
+  <data name="Web_MT_SegmentationTracking" xml:space="preserve"><value>实例分割追踪</value></data>
+  <data name="Web_MT_DetectionTracking" xml:space="preserve"><value>多目标追踪（检测）</value></data>
+  <data name="Web_NgEmptyDates" xml:space="preserve"><value>暂无 NG 记录</value></data>
+  <data name="Web_NgSelectDateHint" xml:space="preserve"><value>选择日期以查看文件</value></data>
+  <data name="Web_NgFileCountFmt" xml:space="preserve"><value>{0} 个文件</value></data>
+  <data name="Web_NgPlaybackRate" xml:space="preserve"><value>播放速率:</value></data>
+  <data name="Web_OpenRegionDrawMode" xml:space="preserve"><value>绘制模式</value></data>
+  <data name="Web_RegionSaveBtn" xml:space="preserve"><value>保存区域</value></data>
+  <data name="WebRegion_LoadingFrame" xml:space="preserve"><value>正在加载视频帧...</value></data>
+  <data name="WebRegion_NoFrame" xml:space="preserve"><value>无法获取视频帧，请确认视频源路径是否正确</value></data>
+  <data name="WebRegion_LoadedFmt" xml:space="preserve"><value>已加载: {0}×{1} — 选择目标区域，然后选择绘制模式</value></data>
+  <data name="WebRegion_PolyPointsFmt" xml:space="preserve"><value>多边形: {0} 个顶点 — 右键完成闭合</value></data>
+  <data name="WebRegion_RectTooSmall" xml:space="preserve"><value>矩形太小，请重新绘制</value></data>
+  <data name="WebRegion_PolyMinPoints" xml:space="preserve"><value>多边形至少需要 3 个顶点</value></data>
+  <data name="WebRegion_SelectTargetFirst" xml:space="preserve"><value>请先选择目标区域</value></data>
+  <data name="WebRegion_EnterCustomName" xml:space="preserve"><value>请输入自定义区域名称</value></data>
+  <data name="WebRegion_AddedFmt" xml:space="preserve"><value>已添加区域: {0}（{1} 个顶点）</value></data>
+  <data name="WebRegion_Deleted" xml:space="preserve"><value>已删除区域</value></data>
+  <data name="WebRegion_ModeRect" xml:space="preserve"><value>矩形模式: 按住拖动绘制</value></data>
+  <data name="WebRegion_ModePoly" xml:space="preserve"><value>多边形模式: 左键添加顶点，右键完成闭合</value></data>
+  <data name="WebRegion_ModeNone" xml:space="preserve"><value>请选择绘制模式</value></data>
+  <data name="WebRegion_Cleared" xml:space="preserve"><value>已清除当前绘制</value></data>
+  <data name="WebRegion_WmCustomName" xml:space="preserve"><value>输入区域名称</value></data>
+  <data name="WebRegion_NoDrawnYet" xml:space="preserve"><value>尚未绘制区域</value></data>
+  <data name="WebRegion_CustomLabel" xml:space="preserve"><value>自定义</value></data>
+  <data name="WebRegion_MissingRequiredFmt" xml:space="preserve"><value>请绘制必需区域: {0}</value></data>
+</root>

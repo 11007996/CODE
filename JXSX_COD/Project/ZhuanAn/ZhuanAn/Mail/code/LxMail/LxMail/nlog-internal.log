@@ -1,0 +1,1194 @@
+2025-05-31 16:15:24.5496 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 16:15:24.5997 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 16:15:24.6408 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.6561 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.6561 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 16:15:24.6708 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.6708 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 16:15:24.6878 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7021 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7021 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 16:15:24.7183 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7183 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 16:15:24.7397 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7547 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7547 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7547 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 16:15:24.7809 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.7809 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 16:15:24.7985 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.8149 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.8331 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 16:15:24.8340 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 16:15:24.8340 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 16:15:24.8340 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 16:15:24.8520 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 16:15:24.8520 Info Configuration initialized.
+2025-05-31 22:11:24.1563 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:11:24.2258 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:11:24.3417 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.3562 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.3562 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:11:24.3774 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.3774 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:11:24.4005 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4179 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4179 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:11:24.4351 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4351 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:11:24.4574 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4710 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4831 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4831 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:11:24.4972 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.4972 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:11:24.5132 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.5132 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.5350 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:11:24.5597 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:11:24.5597 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:11:24.5731 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:11:24.5731 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:11:24.5987 Info Configuration initialized.
+2025-05-31 22:16:28.9931 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:16:29.0540 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:16:29.1966 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.2112 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.2112 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:16:29.2362 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.2362 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:16:29.2623 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.2798 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.2798 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:16:29.2972 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.2972 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:16:29.3278 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.3485 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.3696 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.3696 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:16:29.3836 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.3836 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:16:29.4040 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.4210 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.4485 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:16:29.4689 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:16:29.4689 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:16:29.4820 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:16:29.4820 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:16:29.5124 Info Configuration initialized.
+2025-05-31 22:36:41.2583 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:36:41.3024 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:36:41.4084 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.4321 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.4321 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:36:41.4568 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.4568 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:36:41.4761 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.4953 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.4953 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:36:41.5138 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.5138 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:36:41.5382 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.5520 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.5715 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.5715 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:36:41.5943 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.5943 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:36:41.6202 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.6371 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.6542 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:36:41.6697 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:36:41.6697 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:36:41.6823 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:36:41.6823 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:36:41.7096 Info Configuration initialized.
+2025-05-31 22:42:12.9246 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:42:12.9591 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:42:13.0092 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0219 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0219 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:42:13.0351 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0351 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:42:13.0495 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0616 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0616 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:42:13.0616 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0741 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:42:13.0741 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.0908 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.1204 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.1213 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:42:13.1387 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.1387 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:42:13.1667 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.1854 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.2000 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:42:13.2162 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:42:13.2162 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:42:13.2162 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:42:13.2321 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:42:13.2553 Info Configuration initialized.
+2025-05-31 22:45:58.6792 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:45:59.0237 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:45:59.0958 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.1211 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.1211 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:45:59.1419 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.1419 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:45:59.1647 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.1789 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.1789 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:45:59.1921 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.1921 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:45:59.2086 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.2229 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.2354 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.2354 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:45:59.2491 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.2491 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:45:59.2652 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.2813 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.2813 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:45:59.3020 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:45:59.3020 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:45:59.3020 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:45:59.3147 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:45:59.3273 Info Configuration initialized.
+2025-05-31 22:50:26.2727 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:50:26.3156 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:50:26.3885 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.4070 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.4070 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:50:26.4292 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.4292 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:50:26.4553 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.4784 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.4784 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:50:26.4939 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.5015 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:50:26.5166 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.5166 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.5436 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.5436 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:50:26.5577 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.5577 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:50:26.5741 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.5873 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.6082 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:50:26.6168 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:50:26.6168 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:50:26.6168 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:50:26.6292 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:50:26.6430 Info Configuration initialized.
+2025-05-31 22:55:32.8328 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 22:55:32.8663 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 22:55:32.9119 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:32.9243 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:32.9243 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:55:32.9243 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:32.9391 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 22:55:32.9391 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:32.9612 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:32.9612 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 22:55:32.9730 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:32.9730 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 22:55:32.9924 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0065 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0212 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0212 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 22:55:33.0332 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0332 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 22:55:33.0501 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0501 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0846 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 22:55:33.0958 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 22:55:33.0958 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 22:55:33.0958 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 22:55:33.1113 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 22:55:33.1281 Info Configuration initialized.
+2025-05-31 23:10:06.9576 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 23:10:07.0014 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 23:10:07.0765 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.0935 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.0935 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:10:07.1096 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.1096 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:10:07.1464 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.1822 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.1822 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:10:07.2051 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.2162 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:10:07.2316 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.3025 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.3025 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.3025 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 23:10:07.3183 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.3183 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:10:07.3480 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.3890 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.4046 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:07.4150 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:10:07.4150 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:10:07.4150 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:10:07.4305 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 23:10:07.4461 Info Configuration initialized.
+2025-05-31 23:10:41.5405 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 23:10:41.5726 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 23:10:41.6492 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.6653 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.6653 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:10:41.6836 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.6836 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:10:41.7036 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.7241 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.7255 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:10:41.7426 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.7426 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:10:41.7648 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.7787 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.7921 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.7921 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 23:10:41.8052 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.8052 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:10:41.8214 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.8214 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.8340 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:10:41.8544 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:10:41.8544 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:10:41.8544 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:10:41.8707 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 23:10:41.9471 Info Configuration initialized.
+2025-05-31 23:25:30.7003 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 23:25:30.7365 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 23:25:30.8053 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.8209 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.8209 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:25:30.8366 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.8366 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:25:30.9149 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.9347 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.9347 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:25:30.9561 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.9610 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:25:30.9610 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:30.9923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:31.0084 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:31.0084 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 23:25:31.0283 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:31.0283 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:25:31.0475 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:31.0608 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:31.0733 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:25:31.0733 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:25:31.0733 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:25:31.0891 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:25:31.0891 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 23:25:31.1159 Info Configuration initialized.
+2025-05-31 23:26:42.7841 Info Loading assembly name: NLog.Web.AspNetCore
+2025-05-31 23:26:42.8600 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2025-05-31 23:26:42.9173 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:42.9173 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:42.9306 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:26:42.9306 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:42.9477 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:26:42.9618 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:42.9618 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:42.9618 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-iP} cannot assign unknown property 'CheckForwardedForHeader='
+2025-05-31 23:26:42.9768 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:42.9768 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:26:43.0026 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0129 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0129 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-headers' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0244 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${aspnet-request-headers} cannot assign unknown property 'HeaderNames='
+2025-05-31 23:26:43.0244 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0405 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:26:43.0696 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-iP' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0808 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-connection-id' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0920 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2025-05-31 23:26:43.0920 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:26:43.0920 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:26:43.1064 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:26:43.1064 Info Validating config: Targets=5, ConfigItems=128, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\NLog.config
+2025-05-31 23:26:43.1222 Info Configuration initialized.
+2025-05-31 23:46:19.4634 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:46:19.4634 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:46:19.4634 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:46:19.4812 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:46:19.4812 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:46:19.5001 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:46:19.5001 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-05-31 23:46:19.5180 Info Configuration initialized.
+2025-05-31 23:48:21.3757 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:48:21.3757 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:48:21.3853 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:48:21.3853 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:48:21.3853 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:48:21.4020 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:48:21.4020 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-05-31 23:48:21.4186 Info Configuration initialized.
+2025-05-31 23:54:43.3864 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:54:43.3864 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:54:43.4023 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:54:43.4240 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:54:43.4240 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:54:43.4240 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:54:43.4420 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-05-31 23:54:43.4608 Info Configuration initialized.
+2025-05-31 23:54:57.0317 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-05-31 23:54:57.0438 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-05-31 23:54:57.0438 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-05-31 23:54:57.0438 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-05-31 23:54:57.0438 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-05-31 23:54:57.0604 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-31 23:54:57.0604 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-05-31 23:54:57.0756 Info Configuration initialized.
+2025-06-01 08:09:52.8096 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-01 08:09:52.8096 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-01 08:09:52.8245 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-01 08:09:52.8456 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-01 08:09:52.8456 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-01 08:09:52.8555 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-01 08:09:52.8555 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-01 08:09:52.8785 Info Configuration initialized.
+2025-06-01 08:09:53.7334 Info FileTarget(Name=sqlfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\sql.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\sql\sql20250531.000.txt
+2025-06-01 08:31:24.2678 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-01 08:31:24.2776 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-01 08:31:24.2776 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-01 08:31:24.3003 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-01 08:31:24.3003 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-01 08:31:24.3114 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-01 08:31:24.3114 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-01 08:31:24.3361 Info Configuration initialized.
+2025-06-01 08:40:00.3585 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-01 08:40:00.3585 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-01 08:40:00.3713 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-01 08:40:00.3927 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-01 08:40:00.3927 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-01 08:40:00.4058 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-01 08:40:00.4214 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-01 08:40:00.4431 Info Configuration initialized.
+2025-06-01 08:43:19.7131 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-01 08:43:19.7312 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-01 08:43:19.7430 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-01 08:43:19.7430 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-01 08:43:19.7430 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-01 08:43:19.7777 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-01 08:43:19.7777 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-01 08:43:19.8098 Info Configuration initialized.
+2025-06-01 08:50:04.3913 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-01 08:50:04.3913 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-01 08:50:04.4048 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-01 08:50:04.4048 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-01 08:50:04.4048 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-01 08:50:04.4048 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-01 08:50:04.4250 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-01 08:50:04.4397 Info Configuration initialized.
+2025-06-02 08:06:29.4110 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 08:06:29.4110 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 08:06:29.4110 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 08:06:29.4448 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 08:06:29.4448 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 08:06:29.4448 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 08:06:29.4612 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 08:06:29.4747 Info Configuration initialized.
+2025-06-02 08:06:30.1536 Info FileTarget(Name=sqlfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\sql.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\sql\sql20250601.000.txt
+2025-06-02 08:07:44.4963 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 08:07:44.5071 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 08:07:44.5071 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 08:07:44.5254 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 08:07:44.5254 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 08:07:44.5254 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 08:07:44.5382 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 08:07:44.5382 Info Configuration initialized.
+2025-06-02 08:09:46.3632 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 08:09:46.3632 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 08:09:46.3632 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 08:09:46.3803 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 08:09:46.3803 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 08:09:46.3803 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 08:09:46.3990 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 08:09:46.4108 Info Configuration initialized.
+2025-06-02 08:09:47.9425 Info FileTarget(Name=allfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\all.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\all\all.20250531.000.txt
+2025-06-02 10:06:41.4656 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 10:06:41.4846 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 10:06:41.4846 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 10:06:41.5038 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 10:06:41.5038 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 10:06:41.5135 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 10:06:41.5252 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 10:06:41.5500 Info Configuration initialized.
+2025-06-02 10:14:38.9068 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 10:14:38.9068 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 10:14:38.9213 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 10:14:38.9213 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 10:14:38.9213 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 10:14:38.9384 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 10:14:38.9384 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 10:14:38.9546 Info Configuration initialized.
+2025-06-02 20:40:12.2640 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 20:40:12.2770 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 20:40:12.2770 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 20:40:12.3090 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 20:40:12.3090 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 20:40:12.4212 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 20:40:12.4418 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 20:40:12.4646 Info Configuration initialized.
+2025-06-02 21:35:21.6147 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-02 21:35:21.6324 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-02 21:35:21.6324 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-02 21:35:21.6447 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-02 21:35:21.6447 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-02 21:35:21.6674 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-02 21:35:21.6764 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-02 21:35:21.6908 Info Configuration initialized.
+2025-06-03 08:29:04.7345 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 08:29:04.7345 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 08:29:04.7345 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 08:29:04.7639 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 08:29:04.7639 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 08:29:04.7639 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 08:29:04.7639 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 08:29:04.7910 Info Configuration initialized.
+2025-06-03 08:29:05.6785 Info FileTarget(Name=sqlfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\sql.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\sql\sql20250602.000.txt
+2025-06-03 08:29:07.1104 Info FileTarget(Name=allfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\all.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\all\all.20250602.000.txt
+2025-06-03 08:33:45.4697 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 08:33:45.4697 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 08:33:45.4697 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 08:33:45.4850 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 08:33:45.4850 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 08:33:45.5044 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 08:33:45.5044 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 08:33:45.5226 Info Configuration initialized.
+2025-06-03 08:34:58.6873 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 08:34:58.6873 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 08:34:58.6873 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 08:34:58.7063 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 08:34:58.7063 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 08:34:58.7063 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 08:34:58.7250 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 08:34:58.7385 Info Configuration initialized.
+2025-06-03 08:36:10.0621 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 08:36:10.0775 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 08:36:10.0775 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 08:36:10.0775 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 08:36:10.0928 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 08:36:10.0928 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 08:36:10.1130 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 08:36:10.1292 Info Configuration initialized.
+2025-06-03 08:38:47.5489 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 08:38:47.5625 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 08:38:47.5625 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 08:38:47.5782 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 08:38:47.5782 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 08:38:47.5782 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 08:38:47.5941 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 08:38:47.6086 Info Configuration initialized.
+2025-06-03 14:58:40.9514 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 14:58:40.9675 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 14:58:40.9675 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 14:58:40.9877 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 14:58:40.9877 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 14:58:40.9877 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 14:58:41.0017 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 14:58:41.0182 Info Configuration initialized.
+2025-06-03 15:02:20.5390 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 15:02:20.5516 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 15:02:20.5516 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 15:02:20.5786 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 15:02:20.5786 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 15:02:20.5786 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 15:02:20.6050 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 15:02:20.6274 Info Configuration initialized.
+2025-06-03 15:03:06.7516 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 15:03:06.7516 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 15:03:06.7670 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 15:03:06.7839 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 15:03:06.7839 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 15:03:06.7985 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 15:03:06.7985 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 15:03:06.8291 Info Configuration initialized.
+2025-06-03 15:16:56.1623 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 15:16:56.1623 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 15:16:56.1774 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 15:16:56.1774 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 15:16:56.1774 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 15:16:56.1970 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 15:16:56.1970 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 15:16:56.2161 Info Configuration initialized.
+2025-06-03 15:30:58.0831 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-03 15:30:58.1001 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-03 15:30:58.1001 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-03 15:30:58.1153 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-03 15:30:58.1153 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-03 15:30:58.1153 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-03 15:30:58.1153 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-03 15:30:58.1398 Info Configuration initialized.
+2025-06-04 08:21:10.9423 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:21:10.9423 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:21:10.9423 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:21:10.9563 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:21:10.9563 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:21:10.9789 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:21:10.9789 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:21:11.0923 Info Configuration initialized.
+2025-06-04 08:21:12.1170 Info FileTarget(Name=sqlfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\sql.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\sql\sql20250603.000.txt
+2025-06-04 08:22:19.6796 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:22:19.6917 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:22:19.6917 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:22:19.6917 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:22:19.7045 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:22:19.7045 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:22:19.7045 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:22:19.7256 Info Configuration initialized.
+2025-06-04 08:24:55.1868 Info FileTarget(Name=allfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\all.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\all\all.20250603.000.txt
+2025-06-04 08:26:52.1245 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:26:52.1245 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:26:52.1409 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:26:52.1409 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:26:52.1409 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:26:52.1588 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:26:52.1773 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:26:52.2089 Info Configuration initialized.
+2025-06-04 08:42:08.2680 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:42:08.2807 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:42:08.2807 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:42:08.3140 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:42:08.3140 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:42:08.3140 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:42:08.3378 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:42:08.3598 Info Configuration initialized.
+2025-06-04 08:43:04.5017 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:43:04.5184 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:43:04.5184 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:43:04.5325 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:43:04.5325 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:43:04.5325 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:43:04.5563 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:43:04.5795 Info Configuration initialized.
+2025-06-04 08:44:21.9765 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:44:21.9891 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:44:21.9891 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:44:22.0057 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:44:22.0057 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:44:22.0057 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:44:22.0185 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:44:22.0185 Info Configuration initialized.
+2025-06-04 08:57:51.7262 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 08:57:51.7419 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 08:57:51.7419 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 08:57:51.7573 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 08:57:51.7573 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 08:57:51.7573 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 08:57:51.7750 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 08:57:51.7877 Info Configuration initialized.
+2025-06-04 09:02:58.9468 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 09:02:58.9655 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 09:02:58.9655 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 09:02:58.9775 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 09:02:58.9775 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 09:02:58.9775 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 09:02:59.0073 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 09:02:59.0240 Info Configuration initialized.
+2025-06-04 09:08:20.1811 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 09:08:20.1952 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 09:08:20.1952 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 09:08:20.2299 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 09:08:20.2299 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 09:08:20.2430 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 09:08:20.2430 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 09:08:20.2824 Info Configuration initialized.
+2025-06-04 09:11:58.5392 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 09:11:58.5565 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 09:11:58.5565 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 09:11:58.5724 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 09:11:58.5724 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 09:11:58.5724 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 09:11:58.5880 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 09:11:58.6070 Info Configuration initialized.
+2025-06-04 09:13:01.8657 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 09:13:01.8783 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 09:13:01.8783 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 09:13:01.8854 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 09:13:01.8854 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 09:13:01.9056 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 09:13:01.9159 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 09:13:01.9314 Info Configuration initialized.
+2025-06-04 09:23:24.6524 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 09:23:24.6524 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 09:23:24.6684 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 09:23:24.6684 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 09:23:24.6684 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 09:23:24.6894 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 09:23:24.6996 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 09:23:24.7165 Info Configuration initialized.
+2025-06-04 17:51:09.8819 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 17:51:09.9035 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 17:51:09.9035 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 17:51:09.9256 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 17:51:09.9256 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 17:51:09.9361 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 17:51:09.9361 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 17:51:09.9681 Info Configuration initialized.
+2025-06-04 17:55:08.3076 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 17:55:08.3254 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 17:55:08.3254 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 17:55:08.3411 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 17:55:08.3411 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 17:55:08.3411 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 17:55:08.3551 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 17:55:08.3551 Info Configuration initialized.
+2025-06-04 17:56:58.6720 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 17:56:58.6720 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 17:56:58.6720 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 17:56:58.7035 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 17:56:58.7035 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 17:56:58.7035 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 17:56:58.7222 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 17:56:58.7402 Info Configuration initialized.
+2025-06-04 18:09:17.1586 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 18:09:17.1586 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 18:09:17.1586 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 18:09:17.1824 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 18:09:17.1824 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 18:09:17.1891 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 18:09:17.1891 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 18:09:17.2125 Info Configuration initialized.
+2025-06-04 18:12:32.5692 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 18:12:32.5848 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 18:12:32.5848 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 18:12:32.6040 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 18:12:32.6040 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 18:12:32.6040 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 18:12:32.6188 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 18:12:32.6317 Info Configuration initialized.
+2025-06-04 18:14:06.8832 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 18:14:06.8832 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 18:14:06.9000 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 18:14:06.9213 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 18:14:06.9213 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 18:14:06.9213 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 18:14:06.9383 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 18:14:06.9509 Info Configuration initialized.
+2025-06-04 18:21:00.3503 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 18:21:00.3629 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 18:21:00.3629 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 18:21:00.3922 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 18:21:00.3922 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 18:21:00.3922 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 18:21:00.4215 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 18:21:00.4430 Info Configuration initialized.
+2025-06-04 18:47:25.3886 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 18:47:25.3886 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 18:47:25.3886 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 18:47:25.4200 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 18:47:25.4200 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 18:47:25.4367 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 18:47:25.4367 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 18:47:25.4665 Info Configuration initialized.
+2025-06-04 19:13:54.8132 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 19:13:54.8132 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 19:13:54.8132 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 19:13:55.0046 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 19:13:55.0046 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 19:13:55.0181 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 19:13:55.0181 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 19:13:55.0447 Info Configuration initialized.
+2025-06-04 19:14:36.5983 Info FileTarget(Name=errorfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\error.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\error\error.20250531.000.txt
+2025-06-04 19:19:55.6633 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 19:19:55.6742 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 19:19:55.6742 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 19:19:55.6943 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 19:19:55.6943 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 19:19:55.6943 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 19:19:55.7112 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 19:19:55.7325 Info Configuration initialized.
+2025-06-04 19:25:08.2168 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 19:25:08.2168 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 19:25:08.2318 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 19:25:08.2318 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 19:25:08.2318 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 19:25:08.2502 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 19:25:08.2620 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 19:25:08.3127 Info Configuration initialized.
+2025-06-04 19:27:27.6921 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 19:27:27.6921 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 19:27:27.6921 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 19:27:27.7104 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 19:27:27.7104 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 19:27:27.7104 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 19:27:27.7221 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 19:27:27.7365 Info Configuration initialized.
+2025-06-04 19:31:28.0538 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-04 19:31:28.0538 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-04 19:31:28.0538 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-04 19:31:28.0694 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-04 19:31:28.0694 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-04 19:31:28.0694 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-04 19:31:28.0889 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-04 19:31:28.0999 Info Configuration initialized.
+2025-06-05 08:15:48.9833 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:15:48.9833 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:15:48.9833 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:15:49.1023 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:15:49.1023 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:15:49.1113 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:15:49.1113 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:15:49.1318 Info Configuration initialized.
+2025-06-05 08:15:49.9779 Info FileTarget(Name=sqlfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\sql.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\sql\sql20250604.000.txt
+2025-06-05 08:17:30.7712 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:17:30.7712 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:17:30.7807 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:17:30.8391 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:17:30.8391 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:17:30.8529 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:17:30.8631 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:17:30.8786 Info Configuration initialized.
+2025-06-05 08:19:15.9560 Info FileTarget(Name=allfile_wrapped): Archiving E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\all.txt to E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\bin\Debug\net7.0\adminlogs\bak\all\all.20250604.000.txt
+2025-06-05 08:20:34.5013 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:20:34.5013 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:20:34.5013 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:20:34.5152 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:20:34.5152 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:20:34.5152 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:20:34.5357 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:20:34.5480 Info Configuration initialized.
+2025-06-05 08:38:08.0599 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:38:08.0599 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:38:08.0599 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:38:08.0748 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:38:08.0748 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:38:08.0748 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:38:08.0934 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:38:08.1072 Info Configuration initialized.
+2025-06-05 08:39:33.7262 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:39:33.7307 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:39:33.7307 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:39:33.7658 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:39:33.7658 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:39:33.7658 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:39:33.7856 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:39:33.8045 Info Configuration initialized.
+2025-06-05 08:50:07.7810 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:50:07.7810 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:50:07.7810 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:50:07.7993 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:50:07.7993 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:50:07.7993 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:50:07.8145 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:50:07.8279 Info Configuration initialized.
+2025-06-05 08:54:56.1878 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=allfile)
+2025-06-05 08:54:56.2013 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=errorfile)
+2025-06-05 08:54:56.2013 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=sqlfile)
+2025-06-05 08:54:56.2164 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=consoleSql)
+2025-06-05 08:54:56.2164 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=blackhole)
+2025-06-05 08:54:56.2164 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-06-05 08:54:56.2164 Info Validating config: Targets=5, ConfigItems=162, FilePath=E:\Work Projects\ZhuanAn\Mail\code\LxMail\LxMail\nlog.config
+2025-06-05 08:54:56.2438 Info Configuration initialized.

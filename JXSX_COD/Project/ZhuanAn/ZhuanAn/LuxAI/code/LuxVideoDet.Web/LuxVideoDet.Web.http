@@ -1,0 +1,6 @@
+@LuxVideoDet.Web_HostAddress = http://localhost:5101
+
+GET {{LuxVideoDet.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

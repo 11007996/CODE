@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesLineMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesLine" id="MesLineResult">
+        <result property="lineId"    column="line_id"    />
+        <result property="lineName"    column="line_name"    />
+        <result property="lineType"    column="line_type"    />
+        <result property="workCenter"    column="work_center"    />
+        <result property="status"    column="status"    />
+        <result property="materialId"    column="material_id"    />
+        <result property="materialName"    column="material_name"    />
+        <result property="materialDesc"    column="material_desc"    />
+        <result property="status"    column="status"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="siteId"   column="site_id"/>
+        <result property="siteName" column="site_name"/>
+        <result property="terminalId" column="terminal_id"/>
+        <result property="terminalName" column="terminal_name"/>
+        <result property="userId"    column="user_id"    />
+        <result property="userName"    column="user_name"    />
+    </resultMap>
+
+    <sql id="selectMesLineVo">
+        select a.line_id, a.line_name, a.line_type, a.work_center, a.status, a.remark, a.create_by, a.create_time, a.update_by, a.update_time,
+               b.site_id, b.site_name
+        from mes_line a
+        left join mes_site b on a.site_id = b.site_id
+    </sql>
+
+
+        <select id="selectMesLineList" parameterType="com.ruoyi.product.domain.MesLine" resultMap="MesLineResult">
+            select  DISTINCT a.line_id,
+            a.line_name, a.line_type, a.work_center, a.status, a.remark, a.create_by, a.create_time, a.update_by, a.update_time,
+            a.site_id,b.site_name
+            FROM mes_line a
+            LEFT JOIN mes_site b ON a.site_id = b.site_id
+            LEFT JOIN mes_user_relate_line c on a.line_id = c.line_id
+            LEFT JOIN sys_user d ON c.user_id = d.user_id
+        <where>
+            <if test="lineName != null  and lineName != ''"> and a.line_name like concat('%', #{lineName}, '%')</if>
+            <if test="lineType != null  and lineType != ''"> and a.line_type = #{lineType}</if>
+            <if test="materialId != null  and materialId != ''"> and material_id = #{materialId}</if>
+            <if test="materialId != null  and materialId != ''"> and material_id like concat('%', #{materialId}, '%')</if><!-- 查询线体的时候，可以通过料号的ID筛选-->
+            <if test="materialName != null  and materialName != ''"> and d.material_name like concat('%', #{materialName}, '%')</if><!-- 查询线体的时候，可以通过料号的名称筛选-->
+            <if test="workCenter != null  and workCenter != ''"> and a.work_center = #{workCenter}</if>
+            <if test="siteName != null  and siteName != ''"> and b.site_name = #{siteName}</if>
+            <if test="siteId != null  and siteId != ''"> and a.site_id = #{siteId}</if>
+            <if test="status != null  and status != ''"> and a.status = #{status}</if>
+        </where>
+    </select>
+
+
+
+    <select id="selectMesLineByLineId" parameterType="Long" resultMap="MesLineResult">
+        <include refid="selectMesLineVo"/>
+        where a.line_id = #{lineId}
+    </select>
+
+    <select id="selectMaterialListByLineId" parameterType="Long" resultMap="MesLineResult">
+        SELECT a.material_id,b.material_name,a.line_id
+        from mes_material_relate_line a,
+        mes_material_info b
+        WHERE  a.line_id = #{lineId}
+        AND a.material_id = b.id
+    </select>
+
+    <select id="selectUserListByLineId" parameterType="Long" resultMap="MesLineResult">
+        SELECT a.user_id,b.user_name,a.line_id
+        from mes_user_relate_line a,
+        sys_user b
+        WHERE  a.line_id = #{lineId}
+        AND a.USER_id = b.user_id
+    </select>
+
+    <select id="selectMaterialListByLineIds" parameterType="Long" resultType="map">
+        select c.material_id,c.material_name
+        from (
+        SELECT a.material_id,b.material_name,a.line_id
+        from mes_material_relate_line a,
+        mes_material_info b
+        WHERE  a.line_id = #{lineId}
+        AND a.material_id = b.id
+        ) c
+    </select>
+    <!--        SELECT-->
+    <!--        a.line_id AS lineId,-->
+    <!--        a.terminal_id AS terminalId,-->
+    <!--        a.terminal_name AS terminalName,-->
+    <!--        a.stage_id AS stageId,-->
+    <!--        b.stage_name AS stageName,-->
+    <!--        a.process_id AS processId,-->
+    <!--        c.process_name AS processName,-->
+    <!--        d.line_name AS lineName-->
+    <!--        FROM-->
+    <!--        mes_terminal a,-->
+    <!--        mes_stage b,-->
+    <!--        mes_process c,-->
+    <!--        mes_line d-->
+    <!--        where b.stage_id = a.stage_id-->
+    <!--        AND c.process_id = a.process_id-->
+    <!--        AND d.line_id = a.line_id-->
+    <!--        AND a.line_id = #{lineId}-->
+    <select id="selectTerminalListByLineId" parameterType="Long" resultType="map">
+        SELECT DISTINCT  t.*
+        FROM
+        (
+        SELECT DISTINCT
+        a.line_id AS lineId,
+        d.line_name AS lineName,
+        a.stage_id AS stageId,
+        b.stage_name AS stageName,
+        a.process_id AS processId,
+        c.process_name AS processName,
+        a.terminal_id AS terminalId,
+        a.terminal_name AS terminalName,
+        (
+        SELECT
+        sop_page
+        FROM
+        mes_upload_terminal_page
+        WHERE
+        terminal_id = a.terminal_id
+        AND stage_id = a.stage_id
+        AND process_id = a.process_id
+        AND line_id = #{lineId}
+        AND material_id = #{materialId}
+        AND type = 0
+        AND `status` = 2
+        ORDER BY
+        create_time DESC
+        LIMIT 0,1
+        ) AS sopPage
+        FROM
+        mes_terminal a
+        LEFT JOIN mes_stage b ON b.stage_id = a.stage_id
+        LEFT JOIN mes_process c ON c.process_id = a.process_id
+        LEFT JOIN mes_line d ON d.line_id = a.line_id
+        LEFT JOIN mes_upload_terminal_page k ON (
+        k.line_id = a.line_id
+        AND k.stage_id = a.stage_id
+        AND k.process_id = a.process_id
+        AND k.terminal_id = a.terminal_id
+        )
+        WHERE
+        a.line_id = #{lineId}
+        AND k.material_id = #{materialId}
+        ) AS t
+        WHERE (t.sopPage is not null or t.sopPage &lt;&gt; '')
+    </select>
+
+    <select id="checkLineNameUnique" parameterType="String" resultMap="MesLineResult">
+        <include refid="selectMesLineVo"/>
+        where a.line_name=#{lineName} limit 1
+    </select>
+
+    <insert id="insertMesLine" parameterType="com.ruoyi.product.domain.MesLine" useGeneratedKeys="true" keyProperty="lineId">
+        insert into mes_line
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="lineName != null and lineName != ''">line_name,</if>
+            <if test="lineType != null">line_type,</if>
+            <if test="workCenter != null">work_center,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="siteId != null">site_id</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="lineName != null and lineName != ''">#{lineName},</if>
+            <if test="lineType != null">#{lineType},</if>
+            <if test="workCenter != null">#{workCenter},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="siteId != null">#{siteId}</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesLine" parameterType="com.ruoyi.product.domain.MesLine">
+        update mes_line
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="lineName != null and lineName != ''">line_name = #{lineName},</if>
+            <if test="lineType != null">line_type = #{lineType},</if>
+            <if test="workCenter != null">work_center = #{workCenter},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="siteId != null">site_id = #{siteId}</if>
+        </trim>
+        where line_id = #{lineId}
+    </update>
+
+    <delete id="deleteMesLineByLineId" parameterType="Long">
+        delete from mes_line where line_id = #{lineId}
+    </delete>
+
+    <delete id="deleteMesLineByLineIds" parameterType="String">
+        delete from mes_line where line_id in
+        <foreach item="lineId" collection="array" open="(" separator="," close=")">
+            #{lineId}
+        </foreach>
+    </delete>
+
+    <select id="selectLineIdByTime" parameterType="Date" resultType="Long">
+        SELECT line_id FROM mes_line WHERE create_time = (SELECT MAX(create_time) FROM mes_line)
+    </select>
+    <select id="lineInfoByName" parameterType="String" resultMap="MesLineResult">
+        SELECT * FROM mes_line WHERE line_name = #{lineName}
+    </select>
+</mapper>

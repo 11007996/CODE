@@ -1,0 +1,394 @@
+/*大屏*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*, body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "微软雅黑";
+}
+
+html, body {
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+    line-height: 1.15;
+    font-size: 0.5rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.allnav {
+    width: 100%;
+    height: 100%;
+}
+/*谷哥滚动条样式*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5bc0de
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd
+}
+
+/*
+头部*/
+.header {
+    width: 100%;
+    height: 1.5rem;
+}
+
+    .header .header-left {
+        width: 25%;
+        height: 1.05rem;
+        color: white;
+        text-align: center;
+        line-height: 1.05rem;
+        font-size: .25rem;
+    }
+
+    .header .header-center {
+        width: 50%;
+        height: 1.05rem;
+        position: relative;
+    }
+
+        .header .header-center .header-title {
+            text-align: center;
+            color: #ffffff;
+            font-size: .4rem;
+            text-shadow: 0 0 .3rem #00d8ff;
+            line-height: 1.05rem;
+        }
+
+    .header .header-img {
+        background: url("../images/head.gif") no-repeat center center;
+        background-size: 100%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: .4rem;
+    }
+
+    .header .header-right {
+        width: 25%;
+        height: 1.05rem;
+        color: white;
+        text-align: center;
+        line-height: 1.05rem;
+        font-size: .25rem;
+    }
+
+    .header .header-bottom {
+        width: calc(100% - .4rem);
+        height: .16rem;
+        background: url("../images/header.png") no-repeat;
+        background-size: calc(100% - .2rem) 100%;
+        padding: 0 .2rem;
+        margin-left: .3rem;
+    }
+
+#AreaSelect {
+    color: lightsalmon;
+    border: none;
+    font-size: .25rem;
+    background-color: transparent;
+    /* 去掉三角 */
+    appearance: none;
+    -moz-appearance: none; /* 兼容Firefox */
+    -webkit-appearance: none; /* 兼容Safari 和 Chrome */
+}
+
+#SpeechInterval {
+    width: 0.8rem;
+    color: lightsalmon;
+    border: none;
+    font-size: .25rem;
+    background-color: transparent;
+}
+
+#SpeechStatus {
+    width: 0.4rem;
+    height: 0.4rem;
+    float: right;
+    top: 0.3rem;
+    right: .4rem;
+    position: relative;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.voice-open {
+    background: url("../images/voice-open.png") round;
+}
+
+.voice-close {
+    background: url("../images/voice-close.png") round;
+}
+
+/*通用*/
+
+.title {
+    width: 90%;
+    height: 0.3rem;
+    position: relative;
+    top: .1rem;
+    left: .25rem;
+    color: white;
+    padding-left: 0.12rem;
+    line-height: 0.3rem;
+    font-size:0.20rem;
+}
+
+    .title:before {
+        width: 0.05rem;
+        height: 0.25rem;
+        top: 0.02rem;
+        position: absolute;
+        content: "";
+        background: #59ebe8;
+        border-radius: 0.02rem;
+        left: 0;
+    }
+
+.chat {
+    width: calc(100% - .2rem);
+    height: calc(100% - .4rem);
+    margin-top: .2rem;
+    margin-left: .1rem;
+    padding: .1rem;
+}
+
+/*内容*/
+
+.center {
+    display: flex;
+    padding: .1rem .2rem 0rem .2rem;
+}
+
+    /*左边*/
+    .center .center-left {
+        width: 20%;
+        padding: 0rem .1rem;
+    }
+
+        /*左上*/
+        .center .center-left .left-top {
+            width: 100%;
+            height: 3.2rem;
+            margin-bottom: .2rem;
+            border: 0.01rem solid #217093;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /*左中*/
+        .center .center-left .left-cen {
+            width: 100%;
+            height: 3.2rem;
+            margin-bottom: .2rem;
+            border: 0.01rem solid #217093;
+            position: relative;
+            overflow: hidden;
+        }
+
+    /*中中*/
+    .center .center-cen {
+        width: 60%;
+        padding: 0rem .1rem;
+        height: 6.6rem;
+    }
+
+    /*右边*/
+    .center .center-right {
+        width: 20%;
+        padding: 0rem .1rem;
+    }
+
+        /*右上*/
+        .center .center-right .right-top {
+            width: 100%;
+            height: 3.2rem;
+            margin-bottom: .2rem;
+            border: 0.01rem solid #217093;
+            overflow: hidden;
+        }
+
+        /*右中*/
+        .center .center-right .right-cen {
+            width: 100%;
+            height: 3.2rem;
+            margin-bottom: .2rem;
+            border: 0.01rem solid #217093;
+            overflow: hidden;
+        }
+
+/*底部*/
+.footer {
+    width: 100%;
+    padding: 0rem .2rem .1rem .2rem;
+    display: flex;
+}
+
+    /*下左*/
+    .footer .footer-left {
+        width: 33.3%;
+        height: 3.8rem;
+        margin-bottom: .2rem;
+        margin: 0rem 0.1rem;
+        padding: 0rem 0.1rem;
+        border: 0.01rem solid #217093;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /*下中*/
+    .footer .footer-cen {
+        width: 33.3%;
+        height: 3.8rem;
+        margin-bottom: .2rem;
+        margin: 0rem 0.1rem;
+        padding: 0rem 0.1rem;
+        border: 0.01rem solid #217093;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /*下右*/
+    .footer .footer-right {
+        width: 33.3%;
+        height: 3.8rem;
+        margin-bottom: .2rem;
+        margin: 0rem 0.1rem;
+        padding: 0rem 0.1rem;
+        border: 0.01rem solid #217093;
+        position: relative;
+        overflow: hidden;
+    }
+
+/*其他*/
+.arrow-container {
+    position: absolute;
+    height: 0.6rem;
+    right: 5%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.4rem;
+    color: lightcyan;
+}
+
+    .arrow-container .arrow-up {
+        background: url('../images/arrow-up.png');
+        border: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-repeat: round;
+    }
+
+    .arrow-container .arrow-down {
+        background: url('../images/arrow-down.png');
+        border: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-repeat: round;
+    }
+
+    .arrow-container p {
+        margin: 0;
+    }
+/*呼叫列表*/
+.call-head {
+    display: flex;
+    height: .65rem;
+    font-size: 0.25rem;
+    font-weight: 600;
+    color: #a3d900;
+    background-color: #003472;
+    margin-bottom: .1rem;
+}
+
+    .call-head span {
+        align-content: center;
+        align-self: center;
+        text-align: center;
+        border-left: 1px solid gray;
+        width: 9%;
+        overflow: hidden;
+    }
+
+        .call-head span:nth-child(2) {
+            flex: 1;
+        }
+
+#CallList {
+    width: 100%;
+    height: calc(100% - 0.8rem);
+    overflow: hidden;
+    margin-top: .1rem;
+}
+
+.call-item {
+    display: flex;
+    height: .65rem;
+    font-size: 0.23rem;
+    font-weight: 600;
+    color: #fffbf0;
+    background-color: rgba(0, 153, 255, 0.2);
+    margin-bottom: .1rem;
+    border-bottom: 1px solid rgba(0, 153, 255, 0.8);
+}
+
+    .call-item span {
+        align-content: center;
+        align-self: center;
+        text-align: center;
+        width: 9%;
+        overflow: hidden;
+    }
+
+        .call-item span:nth-child(2) {
+            flex: 1;
+        }
+
+#CallList ul li:nth-child(1) {
+    box-shadow: -10px 0px 15px #034c6a inset, /*左边阴影*/
+    10px 0px 15px #034c6a inset;
+}
+
+#CallList ul li:hover {
+    box-shadow: -10px 0px 15px #034c6a inset, /*左边阴影*/
+    10px 0px 15px #034c6a inset;
+    cursor: pointer;
+}

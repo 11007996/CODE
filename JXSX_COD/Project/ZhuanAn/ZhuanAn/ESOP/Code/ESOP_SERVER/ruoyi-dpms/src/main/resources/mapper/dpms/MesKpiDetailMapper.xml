@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiDetailMapper">
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiDetail" id="MesKpiDetailResult">
+        <result property="id"    column="id"    />
+        <result property="assignId"    column="assign_id"    />
+        <result property="targetParam"    column="target_param"    />
+        <result property="targetValue"    column="target_value"    />
+        <result property="targetStandard"    column="target_standard"    />
+        <result property="actualValue"    column="actual_value"    />
+        <result property="status"    column="status"    />
+        <result property="filledPerson"    column="filled_person"    />
+        <result property="personLiable"    column="person_liable"    />
+        <result property="notifyPerson"    column="notify_person"    />
+        <result property="filledDate"    column="filled_date"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectMesKpiDetailVo">
+        select id, kpi_year, dept_group_id, kpi_id, weight_coefficient, statistical_cycle, remark, status, this_year, this_year_value, last_year, last_year_value, create_by, create_time, update_by, update_time from mes_kpi_assign
+    </sql>
+
+    <select id="selectMesKpiDetailList" parameterType="com.ruoyi.dpms.domain.MesKpiDetail" resultMap="MesKpiDetailResult">
+        <include refid="selectMesKpiDetailVo"/>
+        <where>
+            <if test="assignId != null"> and assign_id</if>
+            <if test="targetParam != null"> and target_param</if>
+            <if test="targetValue != null"> and target_value</if>
+            <if test="targetStandard != null"> and target_standard</if>
+            <if test="actualValue != null"> and actual_value</if>
+            <if test="status != null"> and status</if>
+            <if test="filledPerson != null"> and filled_person</if>
+            <if test="personLiable != null"> and person_liable</if>
+            <if test="notifyPerson != null"> and notify_person</if>
+            <if test="filledDate != null"> and filled_date</if>
+            <if test="remark != null"> and remark</if>
+            <if test="createBy != null"> and create_by</if>
+            <if test="createTime != null"> and create_time</if>
+            <if test="updateBy != null"> and update_by</if>
+            <if test="updateTime != null"> and update_time</if>
+        </where>
+    </select>
+
+    <update id="updateMesKpiDetail" parameterType="com.ruoyi.dpms.domain.MesKpiDetail">
+        update mes_kpi_dept_detail
+        <trim prefix="SET" suffixOverrides=",">
+<!--            <if test="assignId != null">assign_id = #{assignId},</if>-->
+            <if test="targetParam != null">target_param = #{targetParam},</if>
+            <if test="targetValue != null">target_value = #{targetValue},</if>
+            <if test="actualValue != null">actual_value = #{actualValue},</if>
+<!--            <if test="targetStandard != null">target_standard = #{targetStandard},</if>-->
+<!--            <if test="actualValue != null">actual_value = #{actualValue},</if>-->
+<!--            <if test="status != null">status = #{status},</if>-->
+<!--            <if test="filledPerson != null">filled_person = #{filledPerson},</if>-->
+<!--            <if test="personLiable != null">person_liable = #{personLiable},</if>-->
+<!--            <if test="notifyPerson != null">notify_person = #{notifyPerson},</if>-->
+<!--            <if test="filledDate != null">filled_date = #{filledDate},</if>-->
+<!--            <if test="remark != null">remark = #{remark},</if>-->
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        <!--   这个#{id}对应mkd.setId(id)的setId，assign_id对应detail表里面的assign_id字段    -->
+        where assign_id= #{id}
+        <!--   每次指派任务的时候，定好了target_param，所以修改时候只修改了actual_value（根据assign_id和target_param锁定数据）    -->
+        AND target_param = #{targetParam}
+    </update>
+
+
+    <insert id="insertMesKpiDetail" parameterType="com.ruoyi.dpms.domain.MesKpiDetail" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_kpi_dept_detail
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="assignId != null">assign_id,</if>
+            <if test="targetParam != null">target_param,</if>
+            <if test="targetValue != null">target_value,</if>
+            <if test="targetStandard != null">target_standard,</if>
+            <if test="actualValue != null">actual_value,</if>
+            <if test="status != null">status,</if>
+            <if test="filledPerson != null">filled_person,</if>
+            <if test="personLiable != null">person_liable,</if>
+            <if test="notifyPerson != null">notify_person,</if>
+            <if test="filledDate != null">filled_date,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="assignId != null">#{assignId},</if>
+            <if test="targetParam != null">#{targetParam},</if>
+            <if test="targetValue != null">#{targetValue},</if>
+            <if test="targetStandard != null">#{targetStandard},</if>
+            <if test="actualValue != null">#{actualValue},</if>
+            <if test="status != null">#{status},</if>
+            <if test="filledPerson != null">#{filledPerson},</if>
+            <if test="personLiable != null">#{personLiable},</if>
+            <if test="notifyPerson != null">#{notifyPerson},</if>
+            <if test="filledDate != null">#{filledDate},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+    <delete id="deleteMesKpiDetailByAssignId" parameterType="Long">
+        delete from mes_kpi_dept_detail where assign_id = #{mkdAssignId}
+    </delete>
+
+
+    <delete id="deleteMesKpiDetailById" parameterType="Long">
+        delete from mes_kpi_dept_detail where id = #{id}
+    </delete>
+
+</mapper>

@@ -1,0 +1,42 @@
+----------------------------------------------------------- 
+记录时间：2023-04-28 09:02:14 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ComponentModel.Win32Exception (0x80004005): 创建窗口句柄时出错。
+   在 System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   在 System.Windows.Forms.Control.CreateHandle()
+   在 System.Windows.Forms.Control.get_Handle()
+   在 System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawParentBackground(IDeviceContext dc, Rectangle bounds, Control childControl)
+   在 System.Windows.Forms.ButtonRenderer.DrawParentBackground(Graphics g, Rectangle bounds, Control childControl)
+   在 System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintThemedButtonBackground(PaintEventArgs e, Rectangle bounds, Boolean up)
+   在 System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintWorker(PaintEventArgs e, Boolean up, CheckState state)
+   在 System.Windows.Forms.ButtonBase.OnPaint(PaintEventArgs pevent)
+   在 System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   在 System.Windows.Forms.Control.WmPaint(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-04-28 09:16:43 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：开始
+
+记录时间：2023-04-28 09:16:43 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：数据验证
+
+记录时间：2023-04-28 09:16:43 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：控件数据
+
+记录时间：2023-04-28 09:16:43 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：编辑去重
+
+记录时间：2023-04-28 09:16:43 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：新增
+
+记录时间：2023-04-28 09:16:45 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：ReportId=1114
+
+记录时间：2023-04-28 09:16:45 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：遍历所有修改
+
+记录时间：2023-04-28 09:16:45 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：执行更新

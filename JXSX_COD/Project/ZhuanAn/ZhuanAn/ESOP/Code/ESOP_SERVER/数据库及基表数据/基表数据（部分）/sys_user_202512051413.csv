@@ -1,0 +1,8 @@
+"user_id","dept_id","user_name","nick_name","user_type","email","phonenumber","sex","avatar","password","status","del_flag","site_id","login_ip","login_date","create_by","create_time","update_by","update_time","remark"
+1,100,admin,管理员,"00","","","0",/profile/avatar/2025/10/09/blob_20251009175001A0007.jpeg,$2a$10$n6h6.bLJlV91eSTVHNlk1usueQ5J8m5du.PjgB8B6uNzA9P39PIHi,"0","0",,"10.23.152.128","2025-04-11 09:42:15",admin,"2022-10-06 14:18:54","","2025-04-11 09:42:14",管理员
+155,100,test3,工作操作员,"00","","","0","",$2a$10$n6h6.bLJlV91eSTVHNlk1usueQ5J8m5du.PjgB8B6uNzA9P39PIHi,"0","2",,"10.61.121.84","2024-01-12 11:03:13","14310971","2024-01-09 16:36:59","","2024-01-12 11:03:13",
+157,,"12397581",刘艳,"00","","","0","",$2a$10$RazFnRPJ0XJH.Eukn6igD.RhzMjsJDdalDZiQA611hpCoHlLqaGPO,"0","0",,"10.35.224.46","2024-01-12 10:37:08",admin,"2024-01-12 08:18:29","","2024-01-12 10:37:08",
+158,,JK Li,"12385291","00","","","0","",$2a$10$Ux86.2Lyh1sA7OrKoColTO.jxRkh08VfaC6PigtnjbXq/LV083Nyi,"0","2",,"",,admin,"2024-01-12 08:19:03","",,
+159,,"12385291",JK Li,"00","","","0","",$2a$10$c2CYUpcT/EQ3PsNDZOPvWO8diX.KAxOr8QqTCJfJIdJDk/GYL8qiq,"0","0",,"172.24.7.203","2024-01-13 10:01:46",admin,"2024-01-12 08:19:54",admin,"2024-01-13 10:01:46",
+161,,"12416287","12416287","00","","","0","","","0","0",,"",,"",,"",,
+169,100,test3,test3,"00","","","0","",$2a$10$fMaUbO8NzjI06qh3OhKdbuspr8Q54nimYAcAfpWyDUXTWEhF9Jhoe,"0","0",,"",,admin,"2025-04-28 10:01:32",admin,"2025-05-12 11:10:52",

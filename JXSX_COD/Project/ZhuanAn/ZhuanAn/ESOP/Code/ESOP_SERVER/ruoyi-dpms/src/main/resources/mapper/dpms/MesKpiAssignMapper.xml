@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiAssignMapper">
+    
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiAssign" id="MesKpiAssignResult">
+        <result property="id"    column="id"    />
+        <result property="kpiYear"    column="kpi_year"    />
+<!--        <result property="groupId"    column="group_id"    />-->
+        <result property="kpiId"    column="kpi_id"    />
+        <result property="weightCoefficient"    column="weight_coefficient"    />
+        <result property="statisticalCycle"    column="statistical_cycle"    />
+        <result property="remark"    column="remark"    />
+        <result property="status"    column="status"    />
+        <result property="thisYear"    column="this_year"    />
+        <result property="thisYearValue"    column="this_year_value"    />
+        <result property="lastYear"    column="last_year"    />
+        <result property="lastYearValue"    column="last_year_value"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+<!--        <result property="userAccount"    column="user_account"    />-->
+<!--        <result property="userName"    column="nick_name"    />-->
+<!--        <result property="nickName"    column="nick_name"    />-->
+        <result property="deptId"    column="dept_id"    />
+<!--        <result property="deptName"    column="dept_name"    />-->
+        <result property="kpiIndex"    column="kpi_index"    />
+        <result property="units"    column="units"    />
+        <result property="calculationFormula"    column="calculation_formula"    />
+<!--        <result property="targetParam"    column="target_param"    />-->
+<!--        <result property="targetValue"    column="target_value"    />-->
+        <result property="targetStandard" column="target_standard"/>
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+
+    <select id="selectMesKpiAssignList" parameterType="com.ruoyi.dpms.domain.MesKpiAssign" resultMap="MesKpiAssignResult">
+        SELECT distinct a.id,
+        a.kpi_id,
+        a.weight_coefficient,
+        a.statistical_cycle,
+        a.kpi_year,
+        a.status,
+        a.this_year,
+        a.this_year_value,
+        a.last_year,
+        a.last_year_value,
+        a.create_by,
+        a.create_time,
+        a.update_by,
+        a.update_time,
+        b.kpi_index,
+        b.units,
+        b.calculation_formula,
+        c.target_standard
+        FROM
+        mes_kpi_assign A,
+        mes_kpi_index B,
+        mes_kpi_dept_detail C,
+        mes_kpi_dept_group D
+        WHERE
+        a.kpi_id = b.id
+        AND a.id = d.assign_id
+        AND a.id = c.assign_id
+        AND ( a.create_by = #{createBy}  OR d.user_account = #{createBy} )
+
+    </select>
+
+    <update id="updateMesKpiStatus" parameterType="Long">
+        update mes_kpi_index
+        set status = 1
+        where id = #{id}
+    </update>
+
+    <update id="updateMesKpiDetailStatus" parameterType="Long">
+        update mes_kpi_dept_detail
+        set status = 0
+        where assign_id = #{id}
+    </update>
+
+
+    <sql id="selectMesKpiAssignVo">
+        select id, kpi_year, kpi_id, weight_coefficient, statistical_cycle, remark, status, this_year, this_year_value, last_year, last_year_value,
+        create_by, create_time, update_by, update_time , user_account, user_name, dept_id, dept_name, kpi_index, units,
+        calculation_formula, target_param, target_value
+        from mes_kpi_assign
+
+    </sql>
+
+    
+    <select id="selectMesKpiAssignById" parameterType="Long" resultMap="MesKpiAssignResult">
+        <include refid="selectMesKpiAssignVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertMesKpiAssign" parameterType="com.ruoyi.dpms.domain.MesKpiAssign" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_kpi_assign
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="kpiYear != null">kpi_year,</if>
+<!--            <if test="personGroupId != null">person_group_id,</if>-->
+            <if test="kpiId != null">kpi_id,</if>
+            <if test="weightCoefficient != null">weight_coefficient,</if>
+            <if test="statisticalCycle != null">statistical_cycle,</if>
+            <if test="remark != null">remark,</if>
+            <if test="status != null">status,</if>
+            <if test="thisYear != null">this_year,</if>
+            <if test="thisYearValue != null">this_year_value,</if>
+            <if test="lastYear != null">last_year,</if>
+            <if test="lastYearValue != null">last_year_value,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="kpiYear != null">#{kpiYear},</if>
+<!--            <if test="personGroupId != null">#{personGroupId},</if>-->
+            <if test="kpiId != null">#{kpiId},</if>
+            <if test="weightCoefficient != null">#{weightCoefficient},</if>
+            <if test="statisticalCycle != null">#{statisticalCycle},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="status != null">#{status},</if>
+            <if test="thisYear != null">#{thisYear},</if>
+            <if test="thisYearValue != null">#{thisYearValue},</if>
+            <if test="lastYear != null">#{lastYear},</if>
+            <if test="lastYearValue != null">#{lastYearValue},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesKpiAssign" parameterType="com.ruoyi.dpms.domain.MesKpiAssign">
+        update mes_kpi_assign
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="kpiYear != null">kpi_year = #{kpiYear},</if>
+<!--            <if test="personGroupId != null">person_group_id = #{personGroupId},</if>-->
+            <if test="kpiId != null">kpi_id = #{kpiId},</if>
+            <if test="weightCoefficient != null">weight_coefficient = #{weightCoefficient},</if>
+            <if test="statisticalCycle != null">statistical_cycle = #{statisticalCycle},</if>
+<!--            <if test="remark != null">remark = #{remark},</if>-->
+<!--            <if test="status != null">status = #{status},</if>-->
+<!--            <if test="thisYear != null">this_year = #{thisYear},</if>-->
+<!--            <if test="thisYearValue != null">this_year_value = #{thisYearValue},</if>-->
+<!--            <if test="lastYear != null">last_year = #{lastYear},</if>-->
+<!--            <if test="lastYearValue != null">last_year_value = #{lastYearValue},</if>-->
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMesKpiAssignById" parameterType="Long">
+        delete from mes_kpi_assign where id = #{id}
+    </delete>
+
+    <delete id="deleteMesKpiAssignByIds" parameterType="String">
+        delete from mes_kpi_assign where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+    <select id="selectMesKpiAssignId" parameterType="com.ruoyi.dpms.domain.MesKpiAssign" resultType="long">
+        select id from mes_kpi_assign
+        <where>
+            <if test="kpiYear != null"> and kpi_year = #{kpiYear}</if>
+            <if test="kpiId != null"> and kpi_id = #{kpiId}</if>
+            <if test="weightCoefficient != null"> and weight_coefficient = #{weightCoefficient}</if>
+            <if test="statisticalCycle != null"> and statistical_cycle = #{statisticalCycle}</if>
+            <if test="createBy != null"> and create_by = #{createBy}</if>
+        </where>
+        order by create_time desc limit 1
+    </select>
+
+    <select id="selectKpiYear" resultType="Long">
+        SELECT
+        DISTINCT A.kpi_year
+        FROM
+        mes_kpi_assign A
+        WHERE kpi_year = #{kpiYear}
+    </select>
+
+
+    <select id="selectWeightCoefficientSumByItems" resultType="Float">
+        SELECT IFNULL(100-SUM(weight_coefficient),0)
+        FROM
+        mes_kpi_assign A,
+        sys_user C,
+        sys_dept D
+        WHERE
+        a.create_by = c.user_name
+        AND c.dept_id = d.dept_id
+        AND d.dept_id = #{deptId}
+        AND a.kpi_year = #{kpiYear}
+    </select>
+</mapper>

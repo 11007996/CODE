@@ -1,0 +1,115 @@
+----------------------------------------------------------- 
+记录时间：2023-07-02 11:41:56 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Machine.FrmMaintenanceReport.GetMaintenanceRecord(String assetNo, String year, String month)
+   在 Machine.FrmMaintenanceReport.RefreshDataGrid()
+   在 Machine.FrmMaintenanceReport.FrmBaseInfoMaintenance_Load(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-07-02 15:40:19 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentException: 列“”不属于表 DayDT。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 Machine.FrmMaintenanceReport.ConvertDataToMode(DataTable bindDT, DataTable dataDT) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 900
+   在 Machine.FrmMaintenanceReport.GetMaintenanceRecord(String assetNo, String year, String month) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 873
+   在 Machine.FrmMaintenanceReport.RefreshDataGrid() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 787
+   在 Machine.FrmMaintenanceReport.FrmBaseInfoMaintenance_Load(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 302
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-07-02 18:09:13 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 从数据类型 varchar 转换为 numeric 时出错。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:ae6b99a6-e285-42d7-a73c-cf5921943d28
+Error Number:8114,State:5,Class:16
+
+记录时间：2023-07-02 18:09:42 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.Data.SqlClient.SqlException (0x80131904): 从数据类型 varchar 转换为 numeric 时出错。
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 256
+   在 Machine.FrmMaintenanceReport.tsmiDelete_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 571
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.MenuStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+ClientConnectionId:ae6b99a6-e285-42d7-a73c-cf5921943d28
+Error Number:8114,State:5,Class:16
+----------------------------------------------------------- 
+记录时间：2023-07-02 19:50:20 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'TimeMarkValue'，表 'HJDB.dbo.A_MaintenanceReportD_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'MRDId'，表 'HJDB.dbo.A_MaintenanceReportDV_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:ab339f3e-4835-49cd-8c14-aa45f0f05b81
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-02 19:51:33 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：不能将值 NULL 插入列 'TimeMarkValue'，表 'HJDB.dbo.A_MaintenanceReportD_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'MRDId'，表 'HJDB.dbo.A_MaintenanceReportDV_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+----------------------------------------------------------- 
+记录时间：2023-07-02 23:33:38 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 过程或函数 'MaintenanceItemSync' 需要参数 '@RestCode'，但未提供该参数。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:d1851ce5-218f-423d-81fb-4112ae09badc
+Error Number:201,State:4,Class:16
+
+记录时间：2023-07-02 23:34:53 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 过程或函数 'MaintenanceItemSync' 需要参数 '@RestCode'，但未提供该参数。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:d1851ce5-218f-423d-81fb-4112ae09badc
+Error Number:201,State:4,Class:16

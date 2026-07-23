@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.SapEmployeeMapper">
+
+    <resultMap type="SapEmployee" id="SapEmployeeResult">
+        <result property="employeeId"    column="employee_id"    />
+        <result property="employeeNo"    column="employee_no"    />
+        <result property="employeeName"    column="employee_name"    />
+        <result property="orgCode"    column="org_code"    />
+        <result property="orgName"    column="org_name"    />
+        <result property="status"    column="status"    />
+        <result property="mail"    column="mail"    />
+        <result property="directManager"    column="direct_manager"    />
+        <result property="employeeSide"    column="employee_side"    />
+        <result property="delFlag"    column="del_flag"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="property01"    column="property_01"    />
+        <result property="property02"    column="property_02"    />
+        <result property="property03"    column="property_03"    />
+        <result property="property04"    column="property_04"    />
+        <result property="property05"    column="property_05"    />
+        <result property="sex"    column="sex"    />
+    </resultMap>
+
+    <resultMap type="SapEmployee" id="LKEmployeeResult">
+        <result property="employeeNo"    column="employee_no"    />
+        <result property="employeeName"    column="employee_name"    />
+        <result property="orgCode"    column="org_code"    />
+        <result property="orgName"    column="org_name"    />
+        <result property="status"    column="status"    />
+        <result property="mail"    column="mail"    />
+        <result property="directManager"    column="direct_manager"    />
+    </resultMap>
+
+    <sql id="selectSapEmployeeVo">
+        select employee_id, employee_no, employee_name, org_code, org_name, status, mail, direct_manager, employee_side, del_flag, create_by, create_time, update_by, update_time, property_01, property_02, property_03, property_04, property_05 from sap_employee
+    </sql>
+
+    <select id="selectSapEmployeeList" parameterType="SapEmployee" resultMap="SapEmployeeResult">
+        <include refid="selectSapEmployeeVo"/>
+        <where>
+            <if test="employeeNo != null  and employeeNo != ''"> and employee_no like concat(concat('%', #{employeeNo}), '%')</if>
+            <if test="employeeName != null  and employeeName != ''"> and employee_name like concat(concat('%', #{employeeName}), '%')</if>
+            <if test="orgCode != null  and orgCode != ''"> and org_code = #{orgCode}</if>
+            <if test="orgName != null  and orgName != ''"> and org_name like concat(concat('%', #{orgName}), '%')</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="mail != null  and mail != ''"> and mail = #{mail}</if>
+            <if test="directManager != null  and directManager != ''"> and direct_manager = #{directManager}</if>
+            <if test="employeeSide != null  and employeeSide != ''"> and employee_side = #{employeeSide}</if>
+            <if test="property01 != null  and property01 != ''"> and property_01 = #{property01}</if>
+            <if test="property02 != null  and property02 != ''"> and property_02 = #{property02}</if>
+            <if test="property03 != null  and property03 != ''"> and property_03 = #{property03}</if>
+            <if test="property04 != null  and property04 != ''"> and property_04 = #{property04}</if>
+            <if test="property05 != null  and property05 != ''"> and property_05 = #{property05}</if>
+        </where>
+    </select>
+
+    <select id="selectHrEmployeeList" parameterType="SapEmployee" resultMap="SapEmployeeResult">
+        select * from(
+        select cpf01 as employee_no,
+        cpf02 as employee_name,
+        orgeh as org_code,
+        o_stext as org_name,
+        decode(cpf35, null, '0', '1') as status,
+        cpf11 as mail,
+        ta_cpf41 as direct_manager,
+        werks as employee_side
+        from hr_employee)
+        <where>
+            <if test="employeeNo != null  and employeeNo != ''"> and employee_no like concat(concat('%', #{employeeNo}), '%')</if>
+            <if test="employeeName != null  and employeeName != ''"> and employee_name like concat(concat('%', #{employeeName}), '%')</if>
+            <if test="orgCode != null  and orgCode != ''"> and org_code = #{orgCode}</if>
+            <if test="orgName != null  and orgName != ''"> and org_name like concat(concat('%', #{orgName}), '%')</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="mail != null  and mail != ''"> and mail = #{mail}</if>
+            <if test="directManager != null  and directManager != ''"> and direct_manager = #{directManager}</if>
+            <if test="employeeSide != null  and employeeSide != ''"> and employee_side = #{employeeSide}</if>
+        </where>
+        FETCH FIRST 12 ROWS ONLY
+    </select>
+
+    <select id="selectSapEmployeeTempList"  resultMap="SapEmployeeResult">
+        SELECT EMPLOYEE_ID,
+        EMPLOYEE_NO,
+        EMPLOYEE_NAME,
+        ORG_CODE,
+        ORG_NAME,
+        STATUS,
+        MAIL,
+        DIRECT_MANAGER,
+        EMPLOYEE_SIDE,
+        DEL_FLAG,
+        CREATE_BY,
+        CREATE_TIME,
+        UPDATE_BY,
+        UPDATE_TIME,
+        PROPERTY_01,
+        PROPERTY_02,
+        PROPERTY_03,
+        PROPERTY_04,
+        PROPERTY_05
+        FROM SAP_EMPLOYEE_TEMP A
+        WHERE NOT EXISTS (SELECT B.CPF01 AS EMPLOYEE_NO
+        FROM HR_EMPLOYEE B
+        WHERE A.EMPLOYEE_NO = B.CPF01)
+    </select>
+
+    <select id="selectSapEmployeeByNo" parameterType="String" resultMap="SapEmployeeResult">
+        <include refid="selectSapEmployeeVo"/>
+        where employee_no = #{employeeNo}
+    </select>
+
+    <select id="checkSapEmployeeByNo" parameterType="String" resultType="int">
+        select count(1) from sap_employee where employee_no = #{employeeNo}
+    </select>
+
+    <select id="selectHrEmployeeByNo" parameterType="String" resultMap="SapEmployeeResult">
+        select * from(
+        select cpf01 as employee_no,
+        cpf02 as employee_name,
+        orgeh as org_code,
+        o_stext as org_name,
+        decode(cpf35, null, '0', '1') as status,
+        cpf11 as mail,
+        ta_cpf41 as direct_manager,
+        werks as employee_side,
+        decode(cpf03,'F',1,0) as sex
+        from hr_employee)
+        where employee_no = #{employeeNo}
+    </select>
+
+    <select id="selectSapEmployeeById" parameterType="Long" resultMap="SapEmployeeResult">
+        <include refid="selectSapEmployeeVo"/>
+        where employee_id = #{employeeId}
+    </select>
+
+    <insert id="insertSapEmployee" parameterType="SapEmployee">
+        <selectKey keyProperty="employeeId" resultType="long" order="BEFORE">
+            SELECT seq_sap_employee.NEXTVAL as employeeId FROM DUAL
+        </selectKey>
+        insert into sap_employee
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="employeeId != null">employee_id,</if>
+            <if test="employeeNo != null">employee_no,</if>
+            <if test="employeeName != null">employee_name,</if>
+            <if test="orgCode != null">org_code,</if>
+            <if test="orgName != null">org_name,</if>
+            <if test="status != null">status,</if>
+            <if test="mail != null">mail,</if>
+            <if test="directManager != null">direct_manager,</if>
+            <if test="employeeSide != null">employee_side,</if>
+            <if test="delFlag != null">del_flag,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="property01 != null">property_01,</if>
+            <if test="property02 != null">property_02,</if>
+            <if test="property03 != null">property_03,</if>
+            <if test="property04 != null">property_04,</if>
+            <if test="property05 != null">property_05,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="employeeId != null">#{employeeId},</if>
+            <if test="employeeNo != null">#{employeeNo},</if>
+            <if test="employeeName != null">#{employeeName},</if>
+            <if test="orgCode != null">#{orgCode},</if>
+            <if test="orgName != null">#{orgName},</if>
+            <if test="status != null">#{status},</if>
+            <if test="mail != null">#{mail},</if>
+            <if test="directManager != null">#{directManager},</if>
+            <if test="employeeSide != null">#{employeeSide},</if>
+            <if test="delFlag != null">#{delFlag},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="property01 != null">#{property01},</if>
+            <if test="property02 != null">#{property02},</if>
+            <if test="property03 != null">#{property03},</if>
+            <if test="property04 != null">#{property04},</if>
+            <if test="property05 != null">#{property05},</if>
+        </trim>
+    </insert>
+
+    <insert id="insertSapEmployeeList" parameterType="SapEmployee">
+        insert into sap_employee_temp
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="employeeId != null">employee_id,</if>
+            <if test="employeeNo != null">employee_no,</if>
+            <if test="employeeName != null">employee_name,</if>
+            <if test="orgCode != null">org_code,</if>
+            <if test="orgName != null">org_name,</if>
+            <if test="status != null">status,</if>
+            <if test="mail != null">mail,</if>
+            <if test="directManager != null">direct_manager,</if>
+            <if test="employeeSide != null">employee_side,</if>
+            <if test="delFlag != null">del_flag,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="property01 != null">property_01,</if>
+            <if test="property02 != null">property_02,</if>
+            <if test="property03 != null">property_03,</if>
+            <if test="property04 != null">property_04,</if>
+            <if test="property05 != null">property_05,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="employeeId != null">#{employeeId},</if>
+            <if test="employeeNo != null">#{employeeNo},</if>
+            <if test="employeeName != null">#{employeeName},</if>
+            <if test="orgCode != null">#{orgCode},</if>
+            <if test="orgName != null">#{orgName},</if>
+            <if test="status != null">#{status},</if>
+            <if test="mail != null">#{mail},</if>
+            <if test="directManager != null">#{directManager},</if>
+            <if test="employeeSide != null">#{employeeSide},</if>
+            <if test="delFlag != null">#{delFlag},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="property01 != null">#{property01},</if>
+            <if test="property02 != null">#{property02},</if>
+            <if test="property03 != null">#{property03},</if>
+            <if test="property04 != null">#{property04},</if>
+            <if test="property05 != null">#{property05},</if>
+        </trim>
+    </insert>
+
+    <update id="updateSapEmployee" parameterType="SapEmployee">
+        update sap_employee
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="employeeNo != null">employee_no = #{employeeNo},</if>
+            <if test="employeeName != null">employee_name = #{employeeName},</if>
+            <if test="orgCode != null">org_code = #{orgCode},</if>
+            <if test="orgName != null">org_name = #{orgName},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="mail != null">mail = #{mail},</if>
+            <if test="directManager != null">direct_manager = #{directManager},</if>
+            <if test="employeeSide != null">employee_side = #{employeeSide},</if>
+            <if test="delFlag != null">del_flag = #{delFlag},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="property01 != null">property_01 = #{property01},</if>
+            <if test="property02 != null">property_02 = #{property02},</if>
+            <if test="property03 != null">property_03 = #{property03},</if>
+            <if test="property04 != null">property_04 = #{property04},</if>
+            <if test="property05 != null">property_05 = #{property05},</if>
+        </trim>
+        where employee_id = #{employeeId}
+    </update>
+
+    <delete id="deleteSapEmployeeById" parameterType="Long">
+        delete from sap_employee where employee_id = #{employeeId}
+    </delete>
+
+    <delete id="deleteSapEmployeeByIds" parameterType="String">
+        delete from sap_employee where employee_id in
+        <foreach item="employeeId" collection="array" open="(" separator="," close=")">
+            #{employeeId}
+        </foreach>
+    </delete>
+
+    <delete id="deleteSapEmployeeTempByIds">
+        delete from sap_employee_temp
+    </delete>
+
+    <select id="selectOrgCode" parameterType="String" resultMap="SapEmployeeResult">
+        select distinct objid AS ORG_CODE,STEXT AS ORG_NAME from hr_department t
+        where t.objid = #{orgCode} and mandt=#{client}
+    </select>
+
+</mapper>

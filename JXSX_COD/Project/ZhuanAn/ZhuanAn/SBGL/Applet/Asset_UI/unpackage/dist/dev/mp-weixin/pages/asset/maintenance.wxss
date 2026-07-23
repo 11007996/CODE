@@ -1,0 +1,33 @@
+
+.container {
+		padding: 10rpx;
+}
+.mark {
+		color: red;
+}
+.item {
+		height: 80rpx;
+		background-color: aliceblue;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 10rpx;
+		margin-bottom: 10rpx;
+		justify-items: center;
+		align-items: center;
+}
+.item .title {
+		margin-left: 20rpx;
+}
+.item .value {
+		margin-right: 20rpx;
+		text-align: end;
+}
+.submitBtn {
+		margin-top: 30rpx;
+		background-color: green;
+		color: white;
+}
+.submitBtn:active {
+		background-color: bisque;
+		color: white;
+}

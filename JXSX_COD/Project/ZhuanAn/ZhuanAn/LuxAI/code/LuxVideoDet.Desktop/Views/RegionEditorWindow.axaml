@@ -1,0 +1,104 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LuxVideoDet.Desktop.ViewModels"
+        x:Class="LuxVideoDet.Desktop.Views.RegionEditorWindow"
+        x:DataType="vm:RegionEditorViewModel"
+        Title="{Binding WindowTitle}"
+        Width="1200" Height="800"
+        WindowStartupLocation="CenterOwner">
+    
+    <Grid ColumnDefinitions="*,300">
+        <!-- 左侧：图像显示区域 -->
+        <Border Grid.Column="0" Background="Black" Margin="10">
+            <Viewbox Stretch="Uniform">
+                <Canvas x:Name="DrawingCanvas" 
+                        Width="{Binding CanvasWidth}"
+                        Height="{Binding CanvasHeight}"
+                        Background="Transparent"
+                        PointerPressed="Canvas_PointerPressed"
+                        PointerMoved="Canvas_PointerMoved"
+                        PointerReleased="Canvas_PointerReleased">
+                    <Image Source="{Binding DisplayImage}"
+                           Width="{Binding CanvasWidth}"
+                           Height="{Binding CanvasHeight}"/>
+                </Canvas>
+            </Viewbox>
+        </Border>
+        
+        <!-- 右侧：工具面板 -->
+        <Border Grid.Column="1" Padding="16" 
+                Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                BorderThickness="1,0,0,0">
+            <Grid RowDefinitions="Auto,Auto,Auto,*,Auto,Auto">
+                
+                <!-- Row 0: 目标区域选择 -->
+                <StackPanel Grid.Row="0" Spacing="8">
+                    <TextBlock Text="{Binding LblSectionTarget}" FontSize="14" FontWeight="SemiBold"/>
+                    <ComboBox ItemsSource="{Binding TargetRegions}"
+                              SelectedItem="{Binding SelectedTarget}"
+                              HorizontalAlignment="Stretch">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="vm:RegionTargetItem">
+                                <TextBlock Text="{Binding Label}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBox IsVisible="{Binding ShowCustomNameInput}"
+                             Text="{Binding CustomRegionName}"
+                             Watermark="{Binding WmCustomRegionName}"/>
+                    <TextBlock Text="{Binding TargetDescription}"
+                               FontSize="11" Foreground="Gray"
+                               TextWrapping="Wrap"/>
+                    <Separator Margin="0,4"/>
+                </StackPanel>
+
+                <!-- Row 1: 绘制工具 -->
+                <StackPanel Grid.Row="1" Spacing="10">
+                    <TextBlock Text="{Binding LblSectionDraw}" FontSize="14" FontWeight="SemiBold"/>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button Content="{Binding BtnRectText}" Command="{Binding SetRectangleModeCommand}" 
+                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                Width="80"/>
+                        <Button Content="{Binding BtnPolygonText}" Command="{Binding SetPolygonModeCommand}" 
+                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                Width="80"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button Content="{Binding BtnClearCurrentText}" Command="{Binding ClearCurrentCommand}" 
+                                Width="80" HorizontalContentAlignment="Center"/>
+                        <Button Content="{Binding BtnDeleteSelectedText}" Command="{Binding DeleteSelectedCommand}" 
+                                Width="80" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                    <Separator Margin="0,4"/>
+                </StackPanel>
+                
+                <!-- Row 2: 已绘制区域标签 -->
+                <TextBlock Grid.Row="2" Text="{Binding LblDrawnRegions}" FontSize="14" FontWeight="SemiBold" 
+                           Margin="0,4,0,6"/>
+                
+                <!-- Row 3: 已绘制区域列表 -->
+                <ListBox Grid.Row="3" ItemsSource="{Binding DrawnRegions}" 
+                         SelectedItem="{Binding SelectedDrawnRegion}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="vm:DrawnRegionItem">
+                            <TextBlock Text="{Binding Label}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                
+                <!-- Row 4: 状态标签 -->
+                <TextBlock Grid.Row="4" Text="{Binding StatusText}" 
+                           Margin="0,10" TextWrapping="Wrap" FontSize="12"/>
+                
+                <!-- Row 5: 底部按钮 -->
+                <StackPanel Grid.Row="5" Spacing="10">
+                    <Button Content="{Binding BtnSaveText}" Command="{Binding SaveCommand}" 
+                            HorizontalAlignment="Stretch" Classes="accent"/>
+                    <Button Content="{Binding BtnCancelText}" Command="{Binding CancelCommand}" 
+                            HorizontalAlignment="Stretch"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿namespace EAM.Common.Wechat.Model
+{
+    public class WxSendMessageDto : BaseResultDto
+    {
+        /// <summary>
+        ///  不合法的userid，不区分大小写，统一转为小写
+        /// </summary>
+        public string invaliduser { get; set; }
+
+        /// <summary>
+        /// 不合法的partyid
+        /// </summary>
+        public string invalidparty { get; set; }
+
+        /// <summary>
+        /// 不合法的标签id
+        /// </summary>
+        public string invalidtag { get; set; }
+
+        /// <summary>
+        /// 没有基础接口许可(包含已过期)的userid
+        /// </summary>
+        public string unlicenseduser { get; set; }
+
+        /// <summary>
+        /// 消息id，用于撤回应用消息
+        /// </summary>
+        public string msgid { get; set; }
+
+        /// <summary>
+        /// 仅消息类型为“按钮交互型”，“投票选择型”和“多项选择型”的模板卡片消息返回，应用可使用response_code调用更新模版卡片消息接口，72小时内有效，且只能使用一次
+        /// </summary>
+        public string response_code { get; set; }
+    }
+}

@@ -1,0 +1,129 @@
+﻿@page
+@{
+    ViewData["Title"] = "登入";
+}
+@section header {
+    <link href='@Url.Content("~/css/login.css")' rel="stylesheet" />
+    <script>
+        if (window.top !== window.self) { window.top.location = window.location };
+    </script>
+}
+
+<!--背景特效-->
+<div class="bg-am">
+    <iframe src='/BackAm/ywlr' frameborder='0' width='100%' height="100%"></iframe>
+</div>
+
+<!--内容-->
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <section>
+                <form id="loginForm" method="post">
+                    <h4>EAM数据看板</h4>
+                    <hr />
+                    <div class="text-danger"></div>
+                    <div class="form-group">
+                        <label>账号</label>
+                        <input name="username" class="form-control" type="text" placeholder="用户名" />
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input name="password" class="form-control" type="password" data="passworedtype" placeholder="密码" />
+                    </div>
+                    <div>
+                        <input name="useOaAccount" type="checkbox"> <label for="useOaAccount">OA账号</label>
+                    </div>
+                    <button class="btn btn-success btn-block" onclick="loginForm(); return false;">登入</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="~/api/login.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //判断是否登入
+        if (getToken())
+            redirectToIndex();
+
+        //是否使用OA账号
+        if ($.cookie('useOaAccount') == true) {
+            $("#useOaAccount").prop("checked", true);
+        }
+
+        $("#useOaAccount").click(function () {
+            if ($(this).prop("checked")) {
+                $.cookie('useOaAccount', true, { expires: 60 * 24 * 7, path: '/' });
+            } else {
+                $.cookie('useOaAccount', false, { expires: 60 * 24 * 7, path: '/' });
+            }
+        });
+
+        //验证码
+        // $("#imgCaptchaCode").click(function () {
+        //     $(this).attr("src", 'Url.Content("~/Home/GetCaptchaImage")' + '?t=' + new Date().getTime());
+        // });
+
+        //表单验证规则
+        $("#loginForm").validate({
+            rules: {
+                username: { required: true },
+                password: { required: true }
+            },
+            messages: {
+                username: {
+                    required: "请输入用户名",
+                },
+                password: {
+                    required: "请输入密码",
+                }
+            }
+        });
+
+        $.validator.setDefaults({
+            submitHandler: function () {
+                loginForm();
+            }
+        });
+    });
+
+    //登入提交
+    function loginForm() {
+        if ($("#loginForm").validate().form()) {
+            let formData = $("#loginForm").serializeJSON();
+            formData.useOaAccount = $("input[name='useOaAccount']").prop('checked')
+            //登入厂区为上次登入厂区
+            let factoryId = getLoginFactory()
+            formData.factoryId = factoryId;
+            //对密码加密
+            let encryptor = new JSEncrypt()
+            encryptor.setPublicKey(serverRsaPublicKey) // 设置公钥
+            formData.password = encryptor.encrypt(formData.password) // 对数据进行加密
+
+            api.login(formData).then((res) => {
+                if (res.code == 200) {
+                    setToken(res.data);
+                    redirectToIndex();
+                }
+            })
+        }
+    }
+
+    //跳转到首页
+    function redirectToIndex() {
+        location.href = '@Url.Content("~/")';
+    }
+
+    let serverRsaPublicKey;
+    //初始化RSA公钥
+    function initRSAPublicKey() {
+        api.getRSAPublicKey().then((res) => {
+            serverRsaPublicKey = res.data
+        })
+    }
+
+    initRSAPublicKey();
+</script>

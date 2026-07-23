@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesOaSopMapper" >
+
+    <resultMap type="com.ruoyi.product.domain.MesOaSop" id="MesOaSopResult" >
+        <result property="id"           column="id"    />
+        <result property="oaId"         column="oa_id"    />
+        <result property="requestId"    column="request_id"    />
+        <result property="sopId"    column="sop_id"    />
+        <result property="sopName"  column="sop_name"    />
+        <result property="status"   column="status"    />
+        <result property="remark"   column="remark"    />
+        <result property="createBy"     column="create_by"    />
+        <result property="createTime"   column="create_time"    />
+        <result property="updateBy"     column="update_by"    />
+        <result property="updateTime"   column="update_time"    />
+        <result property="modelId"      column="model_id"    />
+        <result property="modelName"    column="model_name"    />
+        <result property="materialId"      column="material_id"    />
+        <result property="materialName"    column="material_name"    />
+        <result property="lineId"   column="line_id"    />
+        <result property="lineName" column="line_name"    />
+        <result property="stageId"  column="stage_id"    />
+        <result property="stageName"    column="stage_name"    />
+        <result property="processId"    column="process_id"    />
+        <result property="processName"  column="process_name"    />
+        <result property="version"      column="version"/>
+        <result property="type"      column="type"/>
+        <result property="filePath"      column="file_path"/>
+        <result property="countersignUser" column="countersign_user"/>
+        <result property="notifyUser" column="notify_user"/>
+        <result property="operateStatus"   column="operateStatus"    />
+        <result property="createByName"   column="createByName"    />
+        <result property="passWord"   column="pass_word"    />
+<!--        <collection   property="terminalPageList" column="terminalPageList" select="terminalPageList" />-->
+    </resultMap>
+
+    <resultMap type="com.ruoyi.product.domain.MesOaSop" id="MesOaSopResultByOaId">
+        <result property="oaId"           column="oa_id"    />
+        <result property="requestId"    column="request_id"    />
+        <result property="sopId"    column="sop_id"    />
+        <result property="sopName"  column="sop_name"    />
+        <result property="status"   column="status"    />
+        <result property="remark"   column="remark"    />
+        <result property="createBy"     column="create_by"    />
+        <result property="createTime"   column="create_time"    />
+        <result property="updateBy"     column="update_by"    />
+        <result property="updateTime"   column="update_time"    />
+        <result property="version"      column="version"/>
+        <result property="countersignUser" column="countersign_user"/>
+        <collection property="terminalPageList" javaType="java.util.List" ofType="com.ruoyi.product.domain.MesUploadTerminalPage">
+            <result property="lineId" column="line_id"/>
+            <result property="stageId" column="stage_id"/>
+            <result property="processId" column="process_id"/>
+            <result property="terminalId" column="terminal_id"/>
+            <result property="sopPage" column="sop_page"/>
+        </collection>
+    </resultMap>
+
+    <sql id="selectMesOaSopVo">
+<!--        SELECT a.oa_id, a.sop_id, b.sop_name, b.version, a.status, a.model_id, c.model_name, a.line_id, d.line_name, a.stage_id, e.stage_name, a.process_id ,f.process_name,g.request_id,g.countersign_user,a.create_time-->
+<!--        FROM mes_upload_terminal_page  a-->
+<!--        left join mes_sop b on a.sop_id = b.sop_id-->
+<!--        left join mes_model c on a.model_id = c.model_id-->
+<!--        left join mes_line d on a.line_id = d.line_id-->
+<!--        left join mes_stage e on a.stage_id = e.stage_id-->
+<!--        left join mes_process f on a.process_id = f.process_id-->
+<!--        left join mes_oa_sop g ON a.oa_id = g.oa_id-->
+
+<!--        SELECT a.oa_id, a.sop_id, b.sop_name, b.version, a.status, a.model_id, c.model_name, a.material_id, h.material_name, a.line_id, d.line_name, a.stage_id, e.stage_name, a.process_id ,f.process_name, a.terminal_id, i.terminal_name, g.remark,g.request_id,g.countersign_user,a.create_time-->
+<!--        FROM mes_upload_terminal_page  a-->
+<!--        left join mes_sop b on a.sop_id = b.sop_id-->
+<!--        left join mes_model c on a.model_id = c.model_id-->
+<!--        left join mes_line d on a.line_id = d.line_id-->
+<!--        left join mes_stage e on a.stage_id = e.stage_id-->
+<!--        left join mes_process f on a.process_id = f.process_id-->
+<!--        left join mes_oa_sop g ON a.oa_id = g.oa_id-->
+<!--        left join mes_material_info h ON a.material_id = h.id-->
+<!--        left join mes_terminal i ON a.terminal_id = i.terminal_id-->
+
+
+        select  a.oa_id,b.sop_id,b.sop_name, b.version,b.type, a.status, a.remark, a.model_id, c.model_name,a.material_id,g.material_name, a.line_id, d.line_name, a.stage_id, e.stage_name, a.process_id ,f.process_name,a.countersign_user,b.pass_word
+        from mes_oa_sop a
+        left join mes_sop b on a.sop_id = b.sop_id
+        left join mes_model c on a.model_id = c.model_id
+        left join mes_line d on a.line_id = d.line_id
+        left join mes_stage e on a.stage_id = e.stage_id
+        left join mes_process f on a.process_id = f.process_id
+        left join mes_material_info g on a.material_id = g.id
+    </sql>
+
+    <sql id="selectMesOaSopVoByOaId">
+        SELECT a.oa_id, a.sop_id, b.sop_name, b.version, a.status, a.model_id, c.model_name, a.material_id, h.material_name, a.line_id, d.line_name, a.stage_id, e.stage_name, a.process_id ,f.process_name, a.terminal_id, i.terminal_name, g.remark,g.request_id,g.countersign_user,a.create_time
+        FROM mes_upload_terminal_page  a
+        left join mes_sop b on a.sop_id = b.sop_id
+        left join mes_model c on a.model_id = c.model_id
+        left join mes_line d on a.line_id = d.line_id
+        left join mes_stage e on a.stage_id = e.stage_id
+        left join mes_process f on a.process_id = f.process_id
+        left join mes_oa_sop g ON a.oa_id = g.oa_id
+        left join mes_material_info h ON a.material_id = h.id
+        left join mes_terminal i ON a.terminal_id = i.terminal_id
+    </sql>
+
+    <select id="selectMesOaSopList" parameterType="com.ruoyi.product.domain.MesOaSop" resultMap="MesOaSopResult">
+        <include refid="selectMesOaSopVo"/>
+        <where>
+<!--            <if test="oaId != null "> and a.oa_id = #{oaId}</if>-->
+            <if test="oaId != null "> and a.oa_id like concat('%', #{oaId}, '%')</if>
+            <if test="requestId != null "> and a.request_id = #{requestId}</if>
+            <if test="sopId != null "> and a.sop_id = #{sopId}</if>
+<!--            <if test="sopName != null "> and b.sop_name = #{sopName}</if>-->
+            <if test="sopName != null "> and b.sop_name like concat('%', #{sopName},'%')</if>
+            <if test="status != null  and status != ''"> and a.status = #{status}</if>
+            <if test="modelId != null "> and a.model_id = #{modelId}</if>
+            <if test="materialId != null "> and a.material_id = #{materialId}</if>
+            <if test="lineId != null "> and a. line_id= #{lineId}</if>
+            <if test="stageId != null "> and a.stage_id = #{stageId}</if>
+            <if test="processId != null "> and a.process_id = #{processId}</if>
+            <if test="terminalId != null "> and a.terminal_id = #{terminalId}</if>
+            <if test='version != null and version != ""' >and b.version = #{version}</if>
+<!--            <if test='type != null and type != ""' >and type = #{type}</if>-->
+        </where>
+        order by a.create_time desc
+    </select>
+
+    <select id="selectMesOaSopVersionNum" parameterType="com.ruoyi.product.domain.MesOaSop" resultMap="MesOaSopResult">
+        select DISTINCT
+        a.sop_id,SUBSTRING(b.sop_name, -3) as type,b.sop_name, b.version,c.stage_id,c.line_id
+        from mes_oa_sop a
+        left join mes_sop b on a.sop_id = b.sop_id
+        left join mes_upload_terminal_page c on a.sop_id = c.sop_id
+        WHERE b.version = #{version}
+        AND c.type = #{type}
+        AND c.line_id = #{lineId}
+        AND c.stage_id = #{stageId}
+        AND c.status = 2
+    </select>
+
+    <select id="selectMesOaSopVersionNum1" parameterType="com.ruoyi.product.domain.MesOaSop" resultMap="MesOaSopResult">
+        SELECT a.sop_id,b.sop_name, b.version,c.material_id,c.process_id,c.type
+        from mes_oa_sop a
+        left join mes_sop b on a.sop_id = b.sop_id
+        left join mes_upload_terminal_page c on a.sop_id = c.sop_id
+        WHERE b.version = #{version}
+        AND c.material_id = #{materialId}
+        AND c.process_id = #{processId}
+        AND c.type = #{type}
+    </select>
+
+    <select id="selectMesOaSopByOaId" parameterType="String" resultMap="MesOaSopResultByOaId">
+<!--        <include refid="selectMesOaSopVoByOaId"/>-->
+        select * from mes_oa_sop
+        where oa_id = #{oaId}
+    </select>
+
+    <select id="selectInfoByOaId" parameterType="String" resultMap="MesOaSopResult">
+        SELECT a.oa_id,a.countersign_user,a.notify_user,a.sop_id FROM mes_oa_sop a
+        where a.oa_id = #{oaId}
+    </select>
+
+    <select id="selectMesOaSopByRequestId" parameterType="String" resultMap="MesOaSopResult">
+        <include refid="selectMesOaSopVo"/>
+        where a.request_id = #{requestId}
+    </select>
+
+    <select id="selectSopIdsByPartNo" parameterType="com.ruoyi.product.domain.MesOaSop" resultType="Long">
+        SELECT A.sop_id FROM mes_oa_sop A
+        left join mes_sop B ON A.sop_id = B.sop_id
+        WHERE A.material_id = #{materialId} AND B.type = #{type}
+    </select>
+
+
+<!--    <select id="GetMaxOaId" resultType="String">-->
+<!--        select ifnull(max(oa_id),1000) from mes_oa_sop where DATE_FORMAT(create_time,"%Y-%m-%d")  = CURRENT_DATE-->
+<!--    </select>-->
+
+    <insert id="insertMesOaSop" parameterType="com.ruoyi.product.domain.MesOaSop">
+        insert into mes_oa_sop
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="oaId != null">oa_id,</if>
+            <if test="requestId != null">request_id,</if>
+            <if test="sopId != null">sop_id,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="modelId != null">model_id,</if>
+            <if test="materialId != null">material_id,</if>
+            <if test="lineId != null">line_id,</if>
+            <if test="stageId != null">stage_id,</if>
+            <if test="processId != null">process_id,</if>
+            <if test="countersignUser != null">countersign_user,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="oaId != null">#{oaId},</if>
+            <if test="requestId != null">#{requestId},</if>
+            <if test="sopId != null">#{sopId},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="modelId != null">#{modelId},</if>
+            <if test="materialId != null">#{materialId},</if>
+            <if test="lineId != null">#{lineId},</if>
+            <if test="stageId != null">#{stageId},</if>
+            <if test="processId != null">#{processId},</if>
+            <if test="countersignUser != null">#{countersignUser},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesOaSop" parameterType="com.ruoyi.product.domain.MesOaSop">
+        update mes_oa_sop
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="requestId != null">request_id = #{requestId},</if>
+            <if test="sopId != null">sop_id = #{sopId},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="modelId != null">model_id = #{modelId},</if>
+            <if test="lineId != null">line_id = #{lineId},</if>
+            <if test="stageId != null">stage_id = #{stageId},</if>
+            <if test="processId != null">process_id = #{processId},</if>
+            <if test="countersignUser != null">countersign_user = #{countersignUser},</if>
+        </trim>
+        where oa_id = #{oaId}
+    </update>
+
+    <update id="updateMesOaSopByRequestId" parameterType="com.ruoyi.product.domain.MesOaSop">
+        update mes_oa_sop set status = #{status}
+        where request_id = #{requestId}
+    </update>
+
+
+    <update id="updateMesOaSopByOaId" parameterType="com.ruoyi.product.domain.MesOaSop">
+        update mes_oa_sop set status = #{status}
+        where oa_id = #{oaId}
+    </update>
+
+
+    <delete id="deleteMesOaSopByOaId" parameterType="String">
+        delete from mes_oa_sop where oa_id = #{oaId}
+    </delete>
+
+    <delete id="deleteMesOaSopByOaIds" parameterType="String">
+        delete from mes_oa_sop where oa_id in
+        <foreach item="oaId" collection="array" open="(" separator="," close=")">
+            #{oaId}
+        </foreach>
+    </delete>
+
+    <select id="selectSignedSopListByIds" parameterType="com.ruoyi.product.domain.MesOaSop" resultMap="MesOaSopResult">
+        SELECT
+        * FROM(SELECT A.sop_id,B.sop_name,A.create_time
+        FROM
+        mes_upload_terminal_page A,
+        mes_sop B
+        WHERE
+        A.sop_id = B.sop_id
+        AND A.model_id = #{modelId}
+        AND A.line_id = #{lineId}
+        AND A.stage_id = #{stageId}
+        AND A.process_id = #{processId}
+        AND A.material_id = #{materialId}
+        AND A.terminal_id = #{terminalId}
+        AND A.`status` = '2'
+        AND A.type = #{type}
+        ORDER BY A.create_time desc
+        LIMIT 1) a
+    </select>
+
+    <select id="terminalPageList" resultType="com.ruoyi.product.domain.MesUploadTerminalPage" >
+        SELECT A.line_id,A.stage_id,A.process_id,A.terminal_id,A.sop_page
+        FROM mes_upload_terminal_page A
+        WHERE A.oa_id = #{oaId}
+    </select>
+
+    <select id="selectSignOffListByUser" parameterType="com.ruoyi.product.domain.MesOaSop"  resultMap="MesOaSopResult" >
+        SELECT T.* from (SELECT DISTINCT
+        mos.oa_id,
+        mos.request_id,
+        mos.countersign_user,
+        mos.remark,
+        mos.create_by,
+        mos.create_time,
+        su.nick_name as createByName,
+        mos.`status`,
+        IF(mos.`status`= 1,'未处理','已处理') AS operateStatus,
+        ms.sop_name,
+        ms.file_path,
+        ms.version,
+        ms.pass_word,
+        ms.type
+<!--        mutp.model_id,-->
+<!--        mutp.material_id,-->
+<!--        mutp.line_id,-->
+<!--        mutp.stage_id,-->
+<!--        mutp.process_id,-->
+<!--        mm.model_name,-->
+<!--        mmi.material_name,-->
+<!--        ml.line_name,-->
+<!--        mst.stage_name,-->
+<!--        mp.process_name-->
+        FROM
+        mes_oa_sop mos,
+        mes_sop ms,
+        mes_upload_terminal_page mutp,
+<!--        mes_model mm,-->
+<!--        mes_material_info mmi,-->
+        mes_line ml,
+        mes_stage mst,
+        mes_process mp,
+        sys_user su
+        WHERE
+        mos.sop_id = ms.sop_id
+        AND mutp.sop_id = mos.sop_id
+<!--        AND mutp.model_id = mm.model_id-->
+<!--        AND mutp.material_id = mmi.id-->
+        AND mutp.line_id = ml.line_id
+        AND mutp.stage_id = mst.stage_id
+        AND mutp.process_id = mp.process_id
+        AND mos.create_by = su.user_name
+        )T
+        <where>
+            <if test="countersignUser != null and countersignUser != ''"> and T.countersign_user like concat('%', #{countersignUser},'%')</if>
+            <if test="status != null and status != ''"> and T.status = #{status}</if>
+            <if test="sopName != null and sopName != ''"> and T.sop_name like concat('%', #{sopName},'%')</if>
+            <if test="operateStatus != null and operateStatus != ''"> and operateStatus = #{operateStatus}</if>
+            <if test="createBy != null and createBy != ''"> and T.create_by = #{createBy}</if>
+            <if test="oaId != null and oaId != ''"> and T.oa_id like concat('%', #{oaId},'%')</if>
+        </where>
+    </select>
+    <select id="selectSignOffDetailByUser" parameterType="com.ruoyi.product.domain.MesOaSop"  resultMap="MesOaSopResult" >
+        SELECT T.* from (SELECT DISTINCT
+        mos.oa_id,
+        mos.request_id,
+        mos.countersign_user,
+        mos.remark,
+        mos.create_by,
+        mos.create_time,
+        su.nick_name as createByName,
+        mos.`status`,
+        IF(mos.`status`= 1,'未处理','已处理') AS operateStatus,
+        ms.sop_name,
+        ms.file_path,
+        ms.version,
+        ms.pass_word,
+        ms.type,
+<!--        mutp.model_id,-->
+<!--        mutp.material_id,-->
+        mutp.line_id,
+        mutp.stage_id,
+        mutp.process_id,
+<!--        mm.model_name,-->
+<!--        mmi.material_name,-->
+        ml.line_name,
+        mst.stage_name,
+        mp.process_name
+        FROM
+        mes_oa_sop mos,
+        mes_sop ms,
+        mes_upload_terminal_page mutp,
+<!--        mes_model mm,-->
+<!--        mes_material_info mmi,-->
+        mes_line ml,
+        mes_stage mst,
+        mes_process mp,
+        sys_user su
+        WHERE
+        mos.sop_id = ms.sop_id
+        AND mutp.sop_id = mos.sop_id
+<!--        AND mutp.model_id = mm.model_id-->
+<!--        AND mutp.material_id = mmi.id-->
+        AND mutp.line_id = ml.line_id
+        AND mutp.stage_id = mst.stage_id
+        AND mutp.process_id = mp.process_id
+        AND mos.create_by = su.user_name
+        )T
+        <where>
+            T.oa_id = #{oaId}
+            <if test="countersignUser != null and countersignUser != ''"> and T.countersign_user like concat('%', #{countersignUser},'%')</if>
+            <if test="status != null and status != ''"> and T.status = #{status}</if>
+            <if test="sopName != null and sopName != ''"> and T.sop_name like concat('%', #{sopName},'%')</if>
+            <if test="operateStatus != null and operateStatus != ''"> and operateStatus = #{operateStatus}</if>
+            <if test="createBy != null and createBy != ''"> and T.create_by = #{createBy}</if>
+        </where>
+    </select>
+
+
+</mapper>

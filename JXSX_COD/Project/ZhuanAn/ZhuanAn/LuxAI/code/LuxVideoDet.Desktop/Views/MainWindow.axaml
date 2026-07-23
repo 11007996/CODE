@@ -1,0 +1,623 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LuxVideoDet.Desktop.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:LuxVideoDet.Desktop.Models"
+        xmlns:controls="using:LuxVideoDet.Desktop.Views.Controls"
+        mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="900"
+        x:Class="LuxVideoDet.Desktop.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/luxvideodet.ico"
+        Title="{Binding WindowTitle}"
+        WindowStartupLocation="CenterScreen"
+		WindowState="Maximized"
+        MinWidth="1200" MinHeight="700">
+
+	<Grid RowDefinitions="Auto,*,Auto">
+
+		<!-- Top Toolbar -->
+		<Border Grid.Row="0" Background="{DynamicResource SystemControlBackgroundAltHighBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                BorderThickness="0,0,0,1" Padding="12,8">
+			<Grid ColumnDefinitions="Auto,*,Auto">
+
+				<!-- Left: Logo and Title -->
+				<StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="12">
+					<Image Source="/Assets/luxvideodet.ico" Width="28" Height="28" VerticalAlignment="Center"/>
+					<TextBlock Text="LuxVideoDet" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"/>
+				</StackPanel>
+
+				<!-- Center: Quick Actions -->
+				<StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8"
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Button Content="{Binding ToolbarNewConfig}" Command="{Binding NewConfigCommand}">
+						<Button.Styles>
+							<Style Selector="Button">
+								<Setter Property="Padding" Value="16,6"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+					<Button Content="{Binding ToolbarImportConfig}" Command="{Binding ImportConfigCommand}">
+						<Button.Styles>
+							<Style Selector="Button">
+								<Setter Property="Padding" Value="16,6"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+					<Button Content="{Binding ToolbarStartAll}" Command="{Binding StartAllCommand}">
+						<Button.Styles>
+							<Style Selector="Button">
+								<Setter Property="Padding" Value="16,6"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+					<Button Content="{Binding ToolbarStopAll}" Command="{Binding StopAllCommand}">
+						<Button.Styles>
+							<Style Selector="Button">
+								<Setter Property="Padding" Value="16,6"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+					<Button Content="插件同步" Command="{Binding OpenMinIOSyncCommand}" ToolTip.Tip="打开插件与资源更新">
+						<Button.Styles>
+							<Style Selector="Button">
+								<Setter Property="Padding" Value="16,6"/>
+							</Style>
+						</Button.Styles>
+					</Button>
+				</StackPanel>
+
+				<!-- Right: Language, Theme, Settings -->
+				<StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8">
+					<TextBlock Text="{Binding ToolbarLanguageLabel}" VerticalAlignment="Center" FontSize="12" Opacity="0.85" Margin="0,0,2,0"/>
+					<ComboBox Width="132" FontSize="12" VerticalAlignment="Center"
+                              ItemsSource="{Binding ToolbarLanguageOptions}"
+                              SelectedIndex="{Binding ToolbarLanguageIndex, Mode=TwoWay}"
+                              ToolTip.Tip="{Binding ToolbarLanguageLabel}"/>
+					<ToggleButton Classes="toolbar" IsChecked="{Binding IsDarkTheme}" ToolTip.Tip="{Binding TooltipToggleTheme}">
+						<PathIcon Data="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z"
+                                  Width="20" Height="20"/>
+					</ToggleButton>
+					<Button Command="{Binding OpenSettingsCommand}" ToolTip.Tip="{Binding TooltipSettings}">
+						<PathIcon Data="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"
+                                  Width="20" Height="20"/>
+					</Button>
+				</StackPanel>
+			</Grid>
+		</Border>
+
+		<!-- Main Content Area -->
+		<Grid Grid.Row="1" ColumnDefinitions="300,*,320">
+
+			<!-- Left Panel: Configuration List -->
+			<Border Grid.Column="0"
+        Background="{DynamicResource SystemControlBackgroundAltMediumLowBrush}"
+        BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+        BorderThickness="0,0,1,0">
+				<ScrollViewer>
+					<Border Padding="12">
+						<StackPanel Spacing="12">
+							<!-- Production Stats (only visible when algorithms provide OK/NG data) -->
+							<Border CornerRadius="8" Padding="12"
+									Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+									BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+									BorderThickness="1"
+									IsVisible="{Binding HasProductionStats}">
+								<StackPanel Spacing="8">
+									<TextBlock Text="{Binding ProductionStatsTitle}" FontWeight="SemiBold" FontSize="14"/>
+
+									<Grid ColumnDefinitions="*,*,*,*" RowSpacing="8" ColumnSpacing="8">
+										<Border Grid.Column="0" Padding="8" CornerRadius="4"
+												Background="{DynamicResource SystemControlBackgroundListLowBrush}">
+											<StackPanel Spacing="2">
+												<TextBlock Text="{Binding TodayOkCount}"
+														   FontSize="20" FontWeight="Bold" Foreground="#4CAF50"
+														   HorizontalAlignment="Center"/>
+												<TextBlock Text="OK" FontSize="11" Opacity="0.7"
+														   HorizontalAlignment="Center"/>
+											</StackPanel>
+										</Border>
+
+										<Border Grid.Column="1" Padding="8" CornerRadius="4"
+												Background="{DynamicResource SystemControlBackgroundListLowBrush}">
+											<StackPanel Spacing="2">
+												<TextBlock Text="{Binding TodayNgCount}"
+														   FontSize="20" FontWeight="Bold" Foreground="#F44336"
+														   HorizontalAlignment="Center"/>
+												<TextBlock Text="NG" FontSize="11" Opacity="0.7"
+														   HorizontalAlignment="Center"/>
+											</StackPanel>
+										</Border>
+
+										<Border Grid.Column="2" Padding="8" CornerRadius="4"
+												Background="{DynamicResource SystemControlBackgroundListLowBrush}">
+											<StackPanel Spacing="2">
+												<TextBlock Text="{Binding TodayTotalCount}"
+														   FontSize="20" FontWeight="Bold"
+														   HorizontalAlignment="Center"/>
+												<TextBlock Text="{Binding ProductionTotalCaption}" FontSize="11" Opacity="0.7"
+														   HorizontalAlignment="Center"/>
+											</StackPanel>
+										</Border>
+
+										<Border Grid.Column="3" Padding="8" CornerRadius="4" Background="{DynamicResource SystemControlBackgroundListLowBrush}">
+											<StackPanel Spacing="2">
+												<TextBlock Text="{Binding ProductTotalSum}"
+														   FontSize="20" FontWeight="Bold"
+														   HorizontalAlignment="Center"/>
+												<TextBlock Text="{Binding ProductionTotalCaption2}" FontSize="11" Opacity="0.7"
+														   HorizontalAlignment="Center"/>
+											</StackPanel>
+										</Border>
+									</Grid>
+								</StackPanel>
+							</Border>
+
+							<!-- 工序步骤面板（置顶，固定显示） -->
+							<Border CornerRadius="8" Padding="12"
+			Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+			BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+			BorderThickness="1">
+								<ItemsControl ItemsSource="{Binding ProcessSteps}">
+									<ItemsControl.ItemsPanel>
+										<ItemsPanelTemplate>
+											<StackPanel Spacing="6"/>
+										</ItemsPanelTemplate>
+									</ItemsControl.ItemsPanel>
+
+									<ItemsControl.ItemTemplate>
+										<DataTemplate x:DataType="local:ProcessStepInfo">
+											<!-- Foreground直接绑定字符串色值，Avalonia自动转换十六进制Color -->
+											<TextBlock FontSize="14" Foreground="{Binding ColorHex}">
+												<Run Text="{Binding Prefix}"/>
+												<Run Text=" "/>
+												<Run Text="{Binding DisplayText}"/>
+											</TextBlock>
+										</DataTemplate>
+									</ItemsControl.ItemTemplate>
+
+								</ItemsControl>
+							</Border>
+
+						</StackPanel>
+					</Border>
+				</ScrollViewer>
+
+			</Border>
+
+			<!-- Center Panel: Real-time Preview -->
+			<Grid Grid.Column="1" RowDefinitions="Auto,Auto,*">
+
+				<!-- Preview Header -->
+				<Border Grid.Row="0" Padding="12"
+                        Background="{DynamicResource SystemControlBackgroundAltMediumLowBrush}"
+                        BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                        BorderThickness="0,0,0,1">
+					<Grid ColumnDefinitions="*,Auto">
+						<StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="8">
+							<TextBlock Text="{Binding LivePreviewTitle}" FontWeight="SemiBold" VerticalAlignment="Center"/>
+							<ComboBox ItemsSource="{Binding PreviewSources}"
+                                      SelectedItem="{Binding SelectedPreviewSource}"
+                                      MinWidth="140" MaxWidth="240"
+                                      VerticalAlignment="Center"
+                                      FontSize="12"
+                                      Padding="8,4"
+                                      PlaceholderText="{Binding PreviewComboPlaceholder}">
+								<ComboBox.ItemTemplate>
+									<DataTemplate>
+										<TextBlock Text="{Binding ConfigName}"/>
+									</DataTemplate>
+								</ComboBox.ItemTemplate>
+							</ComboBox>
+						</StackPanel>
+
+						<StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="4">
+							<ToggleButton Classes="toolbar" IsChecked="{Binding ShowDetectionBoxes}" ToolTip.Tip="{Binding TooltipPreviewBoxes}">
+								<PathIcon Data="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+                                          Width="18" Height="18"/>
+							</ToggleButton>
+							<ToggleButton Classes="toolbar" IsChecked="{Binding ShowRegions}" ToolTip.Tip="{Binding TooltipPreviewRegions}">
+								<PathIcon Data="M2,2V8H4.28L5.57,16H4V22H10V20.06L15,20.05V22H21V16H19.17L20,9H22V3H16V6.53L14.8,8H9.59L8,5.82V2M4,4H6V6H4M18,5H20V7H18M6,10H18L17.11,18H7.6M6,18H8V20H6M17,18H19V20H17"
+                                          Width="18" Height="18"/>
+							</ToggleButton>
+							<ToggleButton Classes="toolbar" IsChecked="{Binding ShowLabels}" ToolTip.Tip="{Binding TooltipPreviewLabels}">
+								<PathIcon Data="M17.63,5.84C17.27,5.33 16.67,5 16,5H5A2,2 0 0,0 3,7V17A2,2 0 0,0 5,19H16C16.67,19 17.27,18.66 17.63,18.15L22,12L17.63,5.84Z"
+                                          Width="18" Height="18"/>
+							</ToggleButton>
+							<Button Command="{Binding PopOutPreviewCommand}" ToolTip.Tip="{Binding TooltipPreviewPopOut}">
+								<PathIcon Data="M14,3H19C20.11,3 21,3.9 21,5V10H19V5H14V3M17,7H22V12H20V8.41L13.41,15L11,12.59L17.59,6H15V4H19V8H17V7M5,5V10H3V5C3,3.9 3.9,3 5,3H10V5H5M15,21H10V19H15V14H17V19C17,20.1 16.1,21 15,21M5,15H3V19C3,20.1 3.9,21 5,21H9V19H5V15Z"
+                                          Width="18" Height="18"/>
+							</Button>
+							<Button Command="{Binding FullscreenCommand}" ToolTip.Tip="{Binding TooltipPreviewFullscreen}">
+								<PathIcon Data="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"
+                                          Width="18" Height="18"/>
+							</Button>
+							<Button Command="{Binding SnapshotCommand}" ToolTip.Tip="{Binding TooltipPreviewSnapshot}">
+								<PathIcon Data="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"
+                                          Width="18" Height="18"/>
+							</Button>
+						</StackPanel>
+					</Grid>
+				</Border>
+
+				<!-- Selected Config Stats Strip -->
+				<Border Grid.Row="1" Padding="8,6"
+                        Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                        BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                        BorderThickness="0,0,0,1"
+                        IsVisible="{Binding HasSelectedConfigStats}">
+					<StackPanel Orientation="Horizontal" Spacing="16" HorizontalAlignment="Center">
+						<StackPanel Orientation="Horizontal" Spacing="4">
+							<TextBlock Text="OK" FontSize="12" Opacity="0.6" VerticalAlignment="Center"/>
+							<TextBlock Text="{Binding SelectedConfigOk}" FontSize="14" FontWeight="Bold"
+                                       Foreground="#4CAF50" VerticalAlignment="Center"/>
+						</StackPanel>
+						<TextBlock Text="|" FontSize="12" Opacity="0.3" VerticalAlignment="Center"/>
+						<StackPanel Orientation="Horizontal" Spacing="4">
+							<TextBlock Text="NG" FontSize="12" Opacity="0.6" VerticalAlignment="Center"/>
+							<TextBlock Text="{Binding SelectedConfigNg}" FontSize="14" FontWeight="Bold"
+                                       Foreground="#F44336" VerticalAlignment="Center"/>
+						</StackPanel>
+						<TextBlock Text="|" FontSize="12" Opacity="0.3" VerticalAlignment="Center"/>
+						<StackPanel Orientation="Horizontal" Spacing="4">
+							<TextBlock Text="{Binding StripYieldLabel}" FontSize="12" Opacity="0.6" VerticalAlignment="Center"/>
+							<TextBlock Text="{Binding SelectedConfigYield}" FontSize="14" FontWeight="Bold"
+                                       Foreground="#2196F3" VerticalAlignment="Center"/>
+						</StackPanel>
+					</StackPanel>
+				</Border>
+
+				<!-- Preview Image -->
+				<Border Grid.Row="2" Background="Black" ClipToBounds="True">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="85*"/>
+							<ColumnDefinition Width="15*"/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="85*"/>
+							<RowDefinition Height="15*"/>
+						</Grid.RowDefinitions>
+
+						<Viewbox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                 Stretch="Uniform">
+							<Image Source="{Binding PreviewImage}"
+                                   Stretch="Uniform"/>
+						</Viewbox>
+
+						<!-- No Preview Overlay -->
+						<Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                ZIndex="0" IsVisible="{Binding !HasPreview}"
+                                Background="#80000000">
+							<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="12">
+								<PathIcon Data="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                                          Width="64" Height="64" Foreground="White" Opacity="0.5"/>
+								<TextBlock Text="{Binding PreviewEmptyTitle}" FontSize="16" Foreground="White" Opacity="0.7"/>
+								<TextBlock Text="{Binding PreviewEmptySubtitle}" FontSize="12" Foreground="White" Opacity="0.5"/>
+							</StackPanel>
+						</Border>
+
+						<!-- 算法圆形按钮：九宫格区域由 Descriptor 的 Placement 决定；白底黑字 -->
+						<controls:AlgorithmUiActionsOverlay Grid.Row="0" Grid.Column="0" ZIndex="10"/>
+					</Grid>
+				</Border>
+			</Grid>
+
+			<!-- Right Panel: Performance Metrics and Status -->
+			<Border Grid.Column="2" Background="{DynamicResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                    BorderThickness="1,0,0,0">
+				<ScrollViewer>
+					<Border Padding="12">
+						<StackPanel Spacing="12">
+
+							<!--  Configuration List -->
+							<Border CornerRadius="8" Padding="12"
+		Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+		BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+		BorderThickness="1">
+								<Grid RowDefinitions="Auto,*">
+									<!-- Search Bar -->
+									<!-- <Border Grid.Row="0" Padding="12"
+											BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+											BorderThickness="0,0,0,1">
+										<TextBox Watermark="{Binding SearchConfigWatermark}"
+												 Text="{Binding SearchText}">
+											<TextBox.InnerLeftContent>
+												<PathIcon Data="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+														  Width="16" Height="16" Margin="8,0,0,0"/>
+											</TextBox.InnerLeftContent>
+										</TextBox>
+									</Border>
+									-->
+
+									<!-- Configuration Cards -->
+									<ScrollViewer Grid.Row="1">
+										<ItemsControl ItemsSource="{Binding FilteredConfigurations}" Padding="8">
+											<ItemsControl.ItemTemplate>
+												<DataTemplate x:DataType="vm:ConfigItemViewModel">
+													<Border Margin="4" Padding="12" CornerRadius="8"
+															Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+															BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+															BorderThickness="1">
+														<Border.Styles>
+															<Style Selector="Border:pointerover">
+																<Setter Property="Background" Value="{DynamicResource SystemControlBackgroundListMediumBrush}"/>
+															</Style>
+														</Border.Styles>
+
+														<Grid RowDefinitions="Auto,Auto,Auto">
+															<!-- Title and Status -->
+															<Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+																<TextBlock Grid.Column="0" Text="{Binding Name}"
+																		   FontWeight="SemiBold" FontSize="14"/>
+																<Border Grid.Column="1" CornerRadius="4" Padding="6,2"
+																		Background="{Binding StatusColor}"
+																		ToolTip.Tip="{Binding StatusErrorDetail}">
+																	<TextBlock Text="{Binding Status}" FontSize="11"
+																			   Foreground="White"/>
+																</Border>
+															</Grid>
+
+															<!-- Info：仅显示视频源类型（算法与 FPS 在右侧/画面展示，避免侧栏重复） -->
+															<StackPanel Grid.Row="1" Spacing="4" Margin="0,8,0,0">
+																<TextBlock FontSize="12" Opacity="0.7">
+																	<Run Text="{Binding SourcePrefixLabel}"/>
+																	<Run Text=" "/>
+																	<Run Text="{Binding SourceType}"/>
+																</TextBlock>
+															</StackPanel>
+
+															<!-- Actions -->
+															<StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="4" Margin="0,8,0,0">
+																<Button Content="{Binding StartStopButtonText}"
+																		Command="{Binding StartStopCommand}"
+																		Classes="accent" Padding="8,4"/>
+																<Button Content="{Binding EditButtonText}"
+																		Command="{Binding EditCommand}"
+																		Padding="8,4"/>
+																<Button Content="{Binding DeleteButtonText}"
+																		Command="{Binding DeleteCommand}"
+																		Padding="8,4"/>
+																<Button Content="{Binding NgReplayButtonText}"
+																		Command="{Binding OpenNgReplayCommand}"
+																		Padding="8,4"
+																		ToolTip.Tip="{Binding NgReplayTooltip}"/>
+															</StackPanel>
+														</Grid>
+													</Border>
+												</DataTemplate>
+											</ItemsControl.ItemTemplate>
+										</ItemsControl>
+									</ScrollViewer>
+
+								</Grid>
+							</Border>
+
+							<!-- System Status -->
+							<Border CornerRadius="8" Padding="12"
+									Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+									BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+									BorderThickness="1">
+								<StackPanel Spacing="8">
+									<TextBlock Text="{Binding SystemStatusTitle}" FontWeight="SemiBold" FontSize="14"/>
+
+									<Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto"
+										  RowSpacing="6" ColumnSpacing="8">
+										<PathIcon Grid.Row="0" Grid.Column="0"
+												  Data="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+												  Width="16" Height="16" Foreground="Green"/>
+										<TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SystemHealthyText}" FontSize="12"/>
+
+										<TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding SystemLabelRunning}" FontSize="12" Opacity="0.7"/>
+										<TextBlock Grid.Row="1" Grid.Column="1"
+												   Text="{Binding RunningConfigsDisplay}"
+												   FontSize="12"/>
+
+										<TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding SystemLabelTotal}" FontSize="12" Opacity="0.7"/>
+										<TextBlock Grid.Row="2" Grid.Column="1"
+												   Text="{Binding TotalConfigsDisplay}"
+												   FontSize="12"/>
+
+										<TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding SystemLabelUptime}" FontSize="12" Opacity="0.7"/>
+										<TextBlock Grid.Row="3" Grid.Column="1"
+												   Text="{Binding Uptime}"
+												   FontSize="12"/>
+									</Grid>
+								</StackPanel>
+							</Border>
+
+							<!-- Performance Metrics -->
+							<Border CornerRadius="8" Padding="12"
+									Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+									BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+									BorderThickness="1">
+								<StackPanel Spacing="8">
+									<TextBlock Text="{Binding PerformanceTitle}" FontWeight="SemiBold" FontSize="14"/>
+
+									<!-- CPU Usage -->
+									<StackPanel Spacing="4">
+										<Grid ColumnDefinitions="*,Auto">
+											<TextBlock Grid.Column="0" Text="{Binding PerfLabelCpu}" FontSize="12" Opacity="0.7"/>
+											<TextBlock Grid.Column="1"
+													   Text="{Binding CpuUsage, StringFormat={}{0:F1}%}"
+													   FontSize="12" FontWeight="SemiBold"/>
+										</Grid>
+										<ProgressBar Value="{Binding CpuUsage}" Maximum="100" Height="6"/>
+									</StackPanel>
+
+									<!-- Memory Usage -->
+									<StackPanel Spacing="4">
+										<Grid ColumnDefinitions="*,Auto">
+											<TextBlock Grid.Column="0" Text="{Binding PerfLabelMemory}" FontSize="12" Opacity="0.7"/>
+											<TextBlock Grid.Column="1"
+													   Text="{Binding MemoryUsage}"
+													   FontSize="12" FontWeight="SemiBold"/>
+										</Grid>
+										<ProgressBar Value="{Binding MemoryUsagePercent}" Maximum="100" Height="6"/>
+									</StackPanel>
+
+									<!-- GPU Usage (if available) -->
+									<StackPanel Spacing="4" IsVisible="{Binding HasGpu}">
+										<Grid ColumnDefinitions="*,Auto">
+											<TextBlock Grid.Column="0" Text="{Binding PerfLabelGpu}" FontSize="12" Opacity="0.7"/>
+											<TextBlock Grid.Column="1"
+													   Text="{Binding GpuUsage, StringFormat={}{0:F1}%}"
+													   FontSize="12" FontWeight="SemiBold"/>
+										</Grid>
+										<ProgressBar Value="{Binding GpuUsage}" Maximum="100" Height="6"/>
+									</StackPanel>
+
+									<!-- 与画面左上角一致：约 60 秒滑动窗口平均每帧管线耗时 -->
+									<Grid ColumnDefinitions="*,Auto">
+										<TextBlock Grid.Column="0" Text="{Binding PerfLabelAvgFrame}" FontSize="12" Opacity="0.7"/>
+										<TextBlock Grid.Column="1"
+												   Text="{Binding AveragePipelineMs, StringFormat={}{0:F1} ms}"
+												   FontSize="12" FontWeight="SemiBold"/>
+									</Grid>
+								</StackPanel>
+							</Border>
+
+							<!-- Recent Detections -->
+							<Border CornerRadius="8" Padding="12"
+									Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+									BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+									BorderThickness="1">
+								<StackPanel Spacing="8">
+									<TextBlock Text="{Binding RecentDetectionsTitle}" FontWeight="SemiBold" FontSize="14"/>
+
+									<ItemsControl ItemsSource="{Binding RecentDetections}">
+										<ItemsControl.ItemTemplate>
+											<DataTemplate>
+												<Border Padding="8,6" Margin="0,2" CornerRadius="4"
+														Background="{DynamicResource SystemControlBackgroundListLowBrush}">
+													<Grid ColumnDefinitions="Auto,*,Auto">
+														<Ellipse Grid.Column="0" Width="8" Height="8"
+																 Fill="{Binding SeverityColor}"
+																 VerticalAlignment="Center"/>
+														<StackPanel Grid.Column="1" Margin="8,0">
+															<TextBlock Text="{Binding ConfigName}"
+																	   FontSize="11" FontWeight="SemiBold"/>
+															<TextBlock Text="{Binding Message}"
+																	   FontSize="10" Opacity="0.7"/>
+														</StackPanel>
+														<TextBlock Grid.Column="2"
+																   Text="{Binding TimeAgo}"
+																   FontSize="10" Opacity="0.5"
+																   VerticalAlignment="Center"/>
+													</Grid>
+												</Border>
+											</DataTemplate>
+										</ItemsControl.ItemTemplate>
+									</ItemsControl>
+								</StackPanel>
+							</Border>
+						</StackPanel>
+					</Border>
+				</ScrollViewer>
+			</Border>
+		</Grid>
+
+		<!-- Bottom Panel: Collapsible Log Viewer -->
+		<Grid Grid.Row="2" RowDefinitions="Auto,*">
+
+			<!-- Log Header (Always Visible) -->
+			<Border Grid.Row="0" Padding="12,8"
+                    Background="{DynamicResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                    BorderThickness="0,1,0,0"
+                    PointerPressed="LogHeader_PointerPressed"
+                    Cursor="Hand">
+				<Grid ColumnDefinitions="Auto,*,Auto">
+					<StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="8"
+                                VerticalAlignment="Center">
+						<PathIcon Data="{Binding LogPanelExpandIcon}" Width="16" Height="16"
+                                  VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding LogsTitle}" FontWeight="SemiBold"
+                                   VerticalAlignment="Center"/>
+						<Border CornerRadius="10" Padding="6,2"
+                                Background="{DynamicResource SystemAccentColor}"
+                                VerticalAlignment="Center">
+							<TextBlock Text="{Binding LogCount}" FontSize="11" Foreground="White"
+                                       VerticalAlignment="Center"/>
+						</Border>
+					</StackPanel>
+
+					<StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="4"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                IsVisible="{Binding IsLogPanelExpanded}">
+						<ToggleButton IsChecked="{Binding ShowDebugLogs}" Content="{Binding LogFilterDebug}"
+                                      Classes="logfilter"/>
+						<ToggleButton IsChecked="{Binding ShowInfoLogs}" Content="{Binding LogFilterInfo}"
+                                      Classes="logfilter"/>
+						<ToggleButton IsChecked="{Binding ShowWarningLogs}" Content="{Binding LogFilterWarning}"
+                                      Classes="logfilter"/>
+						<ToggleButton IsChecked="{Binding ShowErrorLogs}" Content="{Binding LogFilterError}"
+                                      Classes="logfilter"/>
+					</StackPanel>
+
+					<StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="4"
+                                VerticalAlignment="Center"
+                                IsVisible="{Binding IsLogPanelExpanded}">
+						<TextBox Watermark="{Binding LogSearchWatermark}" Width="200"
+                                 Text="{Binding LogSearchText}"
+                                 VerticalAlignment="Center"/>
+						<Button Content="{Binding LogBtnClear}" Command="{Binding ClearLogsCommand}" Padding="8,4"/>
+						<Button Content="{Binding LogBtnExport}" Command="{Binding ExportLogsCommand}" Padding="8,4"/>
+					</StackPanel>
+				</Grid>
+			</Border>
+
+			<!-- Log Content (Collapsible) -->
+			<Border Grid.Row="1"
+                    IsVisible="{Binding IsLogPanelExpanded}"
+                    Background="#1E1E1E"
+                    Height="250">
+				<ListBox ItemsSource="{Binding FilteredLogs}"
+                         Background="Transparent"
+                         SelectionMode="Single"
+                         ScrollViewer.HorizontalScrollBarVisibility="Auto">
+					<ListBox.Styles>
+						<Style Selector="ListBoxItem">
+							<Setter Property="Padding" Value="12,3,12,3"/>
+							<Setter Property="MinHeight" Value="0"/>
+							<Setter Property="Background" Value="Transparent"/>
+						</Style>
+						<Style Selector="ListBoxItem:nth-child(2n)">
+							<Setter Property="Background" Value="#0AFFFFFF"/>
+						</Style>
+						<Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+							<Setter Property="Background" Value="#18FFFFFF"/>
+						</Style>
+						<Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+							<Setter Property="Background" Value="#25FFFFFF"/>
+						</Style>
+					</ListBox.Styles>
+					<ListBox.ItemTemplate>
+						<DataTemplate x:DataType="local:LogEntry">
+							<SelectableTextBlock FontFamily="Consolas, Cascadia Code, monospace"
+                                                 FontSize="12"
+                                                 Foreground="#D4D4D4"
+                                                 TextWrapping="NoWrap">
+								<Run Text="{Binding Timestamp, StringFormat={}{0:HH:mm:ss.fff}}"
+                                     Foreground="#6A9955"/>
+								<Run Text=" "/>
+								<Run Text="{Binding LevelShort}"
+                                     Foreground="{Binding LevelColor}"/>
+								<Run Text=" "/>
+								<Run Text="{Binding Source}"
+                                     Foreground="#569CD6"/>
+								<Run Text=": "
+                                     Foreground="#808080"/>
+								<Run Text="{Binding Message}"
+                                     Foreground="#D4D4D4"/>
+							</SelectableTextBlock>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</Border>
+		</Grid>
+	</Grid>
+</Window>

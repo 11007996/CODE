@@ -1,0 +1,16 @@
+----------------------------------------------------------- 
+记录时间：2023-07-25 10:26:50 线程名：[10] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 Machine.FrmBaseMachine.RefreshGridData() 位置 d:\Work Projects\设备系统\SBGL\Client\Machine\FrmBaseMachine.cs:行号 408
+   在 Machine.FrmBaseMachine.swbtnShow_ValueChanged(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Machine\FrmBaseMachine.cs:行号 584
+   在 DevComponents.DotNetBar.Controls.SwitchButton.OnValueChanged(EventArgs e)
+   在 DevComponents.DotNetBar.Controls.SwitchButton.?(Object ?, EventArgs ?)
+   在 DevComponents.DotNetBar.SwitchButtonItem.OnValueChanged(EventSourceArgs e)
+   在 DevComponents.DotNetBar.SwitchButtonItem.SetValue(Boolean newValue, eEventSource source)
+   在 DevComponents.DotNetBar.SwitchButtonItem.SetValueAndAnimate(Boolean value, eEventSource source)
+   在 DevComponents.DotNetBar.SwitchButtonItem.InternalMouseDown(MouseEventArgs objArg)
+   在 DevComponents.DotNetBar.BaseItemControl.OnMouseDown(MouseEventArgs e)
+   在 System.Windows.Forms.Control.WmMouseDown(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

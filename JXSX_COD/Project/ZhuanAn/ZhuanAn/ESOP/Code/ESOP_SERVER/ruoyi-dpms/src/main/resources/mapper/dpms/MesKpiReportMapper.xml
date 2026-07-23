@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiReportMapper">
+
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiReport" id="MesKpiReportResult">
+        <result property="id"    column="id"    />
+        <result property="kpiYear"    column="kpi_year"    />
+        <result property="userGroupId"    column="group_id"    />
+        <result property="kpiId"    column="kpi_id"    />
+        <result property="weightCoefficient"    column="weight_coefficient"    />
+        <result property="statisticalCycle"    column="statistical_cycle"    />
+        <result property="remark"    column="remark"    />
+        <result property="status"    column="status"    />
+        <result property="thisYear"    column="this_year"    />
+<!--        <result property="userAccount"    column="user_account"    />-->
+<!--        <result property="userName"    column="user_name"    />-->
+<!--        <result property="deptId"    column="dept_id"    />-->
+<!--        <result property="deptName"    column="dept_name"    />-->
+        <result property="kpiIndex"    column="kpi_index"    />
+        <result property="units"    column="units"    />
+        <result property="calculationFormula"    column="calculation_formula"    />
+<!--        <result property="targetParam"    column="target_param"    />-->
+<!--        <result property="targetValue"    column="target_value"    />-->
+    </resultMap>
+
+
+    <select id="selectMesKpiReportList" parameterType="com.ruoyi.dpms.domain.MesKpiReport" resultMap="MesKpiReportResult">
+        SELECT DISTINCT
+        a.id ,
+        a.kpi_id,
+        a.weight_coefficient,
+        a.statistical_cycle,
+        a.kpi_year,
+        b.`status`,
+        b.kpi_index,
+        b.units,
+        b.calculation_formula
+        FROM
+        mes_kpi_assign A,
+        mes_kpi_index B,
+        mes_kpi_dept_detail C
+        WHERE
+        a.kpi_id = b.id
+        AND a.id = c.assign_id
+        AND c.`status` = '1'
+    </select>
+</mapper>

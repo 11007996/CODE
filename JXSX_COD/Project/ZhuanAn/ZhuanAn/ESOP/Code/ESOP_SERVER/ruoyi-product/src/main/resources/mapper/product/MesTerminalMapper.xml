@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesTerminalMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesTerminal" id="MesTerminalResult">
+        <result property="terminalId"   column="terminal_id"    />
+        <result property="terminalName" column="terminal_name"    />
+        <result property="sequence"     column="sequence"    />
+        <result property="lineId"       column="line_id"    />
+        <result property="lineName"     column="line_name"    />
+        <result property="stageId"      column="stage_id"    />
+        <result property="stageName"    column="stage_name"    />
+        <result property="processId"    column="process_id"    />
+        <result property="processName"  column="process_name"    />
+        <result property="status"       column="status"    />
+        <result property="remark"       column="remark"    />
+        <result property="createBy"     column="create_by"    />
+        <result property="createTime"   column="create_time"    />
+        <result property="updateBy"     column="update_by"    />
+        <result property="updateTime"   column="update_time"    />
+    </resultMap>
+
+    <select id="getMaxSequenceByProcessId" parameterType="MesTerminal" resultType="Integer">
+        select MAX(a.sequence)
+        from mes_terminal a
+        where a.line_id = #{lineId} and a.stage_id= #{stageId} and a.process_id = #{processId}
+    </select>
+
+
+    <select id="selectLineList" parameterType="MesTerminal" resultMap="MesTerminalResult">
+        select distinct mm.line_id, ml.line_name
+        from mes_mac mm, mes_line ml
+        <where>
+            <if test="lineName != null and lineName != ''"> and ml.line_name like concat('%',  #{lineName}, '%')</if>
+            and mm.line_id = ml.line_id
+            and ml.status = "0"
+        </where>
+    </select>
+
+<!--    工站版：根据line查询stage-->
+<!--    <select id="selectStageList" parameterType="MesTerminal" resultMap="MesTerminalResult">-->
+<!--        select distinct a.stage_id, c.stage_name-->
+<!--        from mes_terminal a, mes_stage c-->
+<!--        where a.stage_id = c.stage_id and c.status = "0" and a.line_id = #{lineId}-->
+<!--    </select>-->
+
+<!--    MAC版：根据line查询stage-->
+    <select id="selectStageList" parameterType="MesTerminal" resultMap="MesTerminalResult">
+        SELECT DISTINCT
+        a.stage_id as stage_id,
+        c.stage_name as stage_name
+        FROM
+        mes_mac a,
+        mes_stage c
+        WHERE
+        a.stage_id = c.stage_id
+        AND c.STATUS = "0"
+        AND a.line_id = #{lineId}
+    </select>
+
+    <!--工站版：根据line+stage获取process-->
+<!--    <select id="selectProcessList" parameterType="MesTerminal" resultMap="MesTerminalResult">-->
+<!--        select distinct a.process_id, d.process_name-->
+<!--        from mes_terminal a, mes_process d-->
+<!--        where a.line_id = #{lineId} and a.stage_id = #{stageId} and a.process_id = d.process_id and d.status = "0"-->
+<!--    </select>-->
+
+    <!--MAC版：根据line+stage获取process-->
+    <select id="selectProcessList" parameterType="MesTerminal" resultMap="MesTerminalResult">
+        SELECT DISTINCT
+        a.process_id,
+        d.process_name
+        FROM
+        mes_mac a,
+        mes_process d
+        where a.line_id = #{lineId}
+        and a.stage_id = #{stageId}
+        and a.process_id = d.process_id
+        and d.status = "0"
+    </select>
+
+
+    <sql id="selectMesTerminalVo">
+        select a.terminal_id, a.terminal_name, a.sequence, a.line_id, b.line_name, a.stage_id, c.stage_name, a.process_id, d.process_name, a.status, a.remark, a.create_by, a.create_time, a.update_by, a.update_time
+        from mes_terminal a
+        join mes_line b on a.line_id = b.line_id
+        join mes_stage c on a.stage_id = c.stage_id
+        join mes_process d on a.process_id = d.process_id
+    </sql>
+
+
+
+    <select id="selectMesTerminalList" parameterType="MesTerminal" resultMap="MesTerminalResult">
+        <include refid="selectMesTerminalVo"/>
+        <where>
+            <if test="terminalName != null  and terminalName != ''"> and a.terminal_name like concat('%', #{terminalName}, '%')</if>
+            <if test="lineId != null "> and a.line_id = #{lineId}</if>
+            <if test="stageId != null "> and a.stage_id = #{stageId}</if>
+<!--            <if test="processId != null "> and a.process_id like concat('%', #{processId}, '%')</if>-->
+            <if test="processId != null "> and a.process_id = #{processId}</if>
+            <if test="status != null  and status != ''"> and a.status = #{status}</if>
+        </where>
+    </select>
+
+    <select id="selectMesTerminalByTerminalId" parameterType="Long" resultMap="MesTerminalResult">
+        <include refid="selectMesTerminalVo"/>
+        where a.terminal_id = #{terminalId}
+    </select>
+
+    <insert id="insertMesTerminal" parameterType="MesTerminal" useGeneratedKeys="true" keyProperty="terminalId">
+        insert into mes_terminal
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="terminalName != null and terminalName != ''">terminal_name,</if>
+            <if test="lineId != null">line_id,</if>
+            <if test="stageId != null">stage_id,</if>
+            <if test="processId != null">process_id,</if>
+            <if test="status != null">status,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="sequence != null">sequence,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="terminalName != null and terminalName != ''">#{terminalName},</if>
+            <if test="lineId != null">#{lineId},</if>
+            <if test="stageId != null">#{stageId},</if>
+            <if test="processId != null">#{processId},</if>
+            <if test="status != null">#{status},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="sequence != null">#{sequence},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMesTerminal" parameterType="MesTerminal">
+        update mes_terminal
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="terminalName != null and terminalName != ''">terminal_name = #{terminalName},</if>
+            <if test="lineId != null">line_id = #{lineId},</if>
+            <if test="stageId != null">stage_id = #{stageId},</if>
+            <if test="processId != null">process_id = #{processId},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where terminal_id = #{terminalId}
+    </update>
+
+    <delete id="deleteMesTerminalByTerminalId" parameterType="Long">
+        delete from mes_terminal where terminal_id = #{terminalId}
+    </delete>
+
+    <delete id="deleteMesTerminalByTerminalIds" parameterType="String">
+        delete from mes_terminal where terminal_id in
+        <foreach item="terminalId" collection="array" open="(" separator="," close=")">
+            #{terminalId}
+        </foreach>
+    </delete>
+
+
+</mapper>

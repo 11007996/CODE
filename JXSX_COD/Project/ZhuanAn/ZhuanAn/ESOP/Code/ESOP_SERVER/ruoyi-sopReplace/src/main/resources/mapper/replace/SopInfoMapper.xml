@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.replace.mapper.SopInfoMapper">
+    <resultMap type="com.ruoyi.replace.domain.SopInfo" id="InfoResult">
+        <result property="filePath"    column="file_path"    />
+        <result property="sopPage"    column="sop_page"    />
+        <result property="sopInterval"    column="sop_interval"    />
+        <result property="sopId"    column="sop_id"    />
+        <result property="type"    column="type"    />
+        <result property="passWord"    column="pass_word"    />
+    </resultMap>
+
+    <select id="selectProcessIdByIds" parameterType="Long" resultType="Long">
+    SELECT A.process_id FROM mes_terminal_sop A
+    <where>
+        <if test="modelId != null"> and A.model_id = #{modelId}</if>
+        <if test="lineId != null"> and A.line_id = #{lineId}</if>
+        <if test="stageId != null"> and A.stage_id = #{stageId}</if>
+    </where>
+    </select>
+
+    <select id="selectFilePathBySopId" parameterType="Long" resultType="String">
+        SELECT file_path
+        FROM
+        mes_sop
+        <where>
+            <if test="sopId != null"> and sop_id = #{sopId}</if>
+        </where>
+    </select>
+
+<!--    <select id="selectSopIdById" parameterType="Long" resultType="String">-->
+<!--        SELECT B.sop_id-->
+<!--        FROM-->
+<!--        mes_terminal_sop A,-->
+<!--        mes_sop_group B-->
+<!--        WHERE-->
+<!--        A.id = B.sop_group_id-->
+<!--    </select>-->
+
+    <select id="selectSopInfoByIds" parameterType="Long" resultMap="InfoResult">
+        SELECT
+        C.sop_id,
+        B.file_path,
+        C.sop_page,
+        C.sop_interval,
+        B.type,
+        B.pass_word
+        FROM
+        mes_terminal_sop A,
+        mes_sop B,
+        mes_sop_group C
+        <where>
+            <if test="lineId != null"> and A.line_id = #{lineId}</if>
+            <if test="stageId != null"> and A.stage_id = #{stageId}</if>
+            <if test="processId != null"> and A.process_id = #{processId}</if>
+            <if test="terminalId != null"> and A.terminal_id = #{terminalId}</if>
+            and A.id = C.sop_group_id
+            and B.sop_id = C.sop_id
+        </where>
+    </select>
+
+</mapper>

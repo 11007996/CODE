@@ -1,0 +1,65 @@
+----------------------------------------------------------- 
+记录时间：2023-06-29 09:28:49 线程名：[9] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.ThrowHelper.ThrowKeyNotFoundException()
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Machine.FrmMaintenanceReport.ConvertDataToMode() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 761
+   在 Machine.FrmMaintenanceReport.RefreshDataGrid() 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 748
+   在 Machine.FrmMaintenanceReport.FrmBaseInfoMaintenance_Load(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 243
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-06-29 11:41:49 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.Collections.ArrayList.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   在 System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridView.ProcessDeleteKey(Keys keyData)
+   在 System.Windows.Forms.DataGridView.ProcessDataGridViewKey(KeyEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnKeyDown(KeyEventArgs e)
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.DataGridView.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+记录时间：2023-06-29 11:47:21 线程名：[10] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.Collections.ArrayList.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   在 System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridView.ProcessDeleteKey(Keys keyData)
+   在 System.Windows.Forms.DataGridView.ProcessDataGridViewKey(KeyEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnKeyDown(KeyEventArgs e)
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.DataGridView.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-06-29 11:51:50 线程名：[9] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.Collections.ArrayList.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   在 System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridView.ProcessDeleteKey(Keys keyData)
+   在 System.Windows.Forms.DataGridView.ProcessDataGridViewKey(KeyEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnKeyDown(KeyEventArgs e)
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.DataGridView.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

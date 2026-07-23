@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiPersonGroupMapper">
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiPersonGroup" id="MesKpiPersonGroupResult">
+        <result property="id"    column="id"    />
+        <result property="deptId"    column="dept_id"    />
+        <result property="userAccount"    column="user_account"    />
+        <result property="assignId"    column="assign_id"    />
+        <result property="groupType"    column="group_type"    />
+        <result property="remark"    column="remark"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+
+    <update id="updateMesKpiPersonGroup" parameterType="com.ruoyi.dpms.domain.MesKpiPersonGroup">
+        update mes_kpi_dept_group
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="id != null">kpi_year = #{id},</if>
+            <if test="deptGroupId != null">dept_group_id = #{deptGroupId},</if>
+            <if test="userAccount != null">user_account = #{userAccount},</if>
+<!--            <if test="assignId != null">assign_id = #{assignId},</if>-->
+            <if test="groupType != null">group_type = #{groupType},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where assign_Id= #{assignId}
+    </update>
+
+
+    <insert id="insertMesKpiPersonGroup" parameterType="com.ruoyi.dpms.domain.MesKpiPersonGroup" useGeneratedKeys="true" keyProperty="id">
+        insert into mes_kpi_dept_group
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="deptId != null">dept_id,</if>
+            <if test="userAccount != null">user_account,</if>
+            <if test="assignId != null">assign_id,</if>
+            <if test="groupType != null">group_type,</if>
+            <if test="remark != null">remark,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="deptId != null">#{deptId},</if>
+            <if test="userAccount != null">#{userAccount},</if>
+            <if test="assignId != null">#{assignId},</if>
+            <if test="groupType != null">#{groupType},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+
+    <delete id="deleteMesKpiPersonGroupByAssignId" parameterType="Long">
+        delete from mes_kpi_dept_group where assign_id = #{mkpgAssignId}
+    </delete>
+
+</mapper>

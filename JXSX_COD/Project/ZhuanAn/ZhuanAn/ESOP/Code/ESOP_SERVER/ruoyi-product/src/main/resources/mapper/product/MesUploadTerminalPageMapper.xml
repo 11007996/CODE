@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesUploadTerminalPageMapper">
+
+    <resultMap type="com.ruoyi.product.domain.MesUploadTerminalPage" id="MesUploadTerminalPageResult">
+        <result property="oaId"    column="oa_id"    />
+        <result property="sopId"    column="sop_id"    />
+        <result property="materialId"    column="material_id"    />
+        <result property="materialName"    column="material_name"    />
+        <result property="modelId"    column="model_id"    />
+        <result property="modelName"    column="model_name"    />
+        <result property="lineId"    column="line_id"    />
+        <result property="lineName"    column="line_name"    />
+        <result property="stageId"    column="stage_id"    />
+        <result property="stageName"    column="stage_name"    />
+        <result property="processId"    column="process_id"    />
+        <result property="processName"    column="process_name"    />
+        <result property="terminalId"    column="terminal_id"    />
+        <result property="terminalName"    column="terminal_name"    />
+        <result property="sopPage"    column="sop_page"    />
+        <result property="sopInterval"    column="sop_interval"    />
+        <result property="status"    column="status"    />
+        <result property="type"    column="type"    />
+        <result property="sopName"    column="sop_name"    />
+        <result property="version"    column="version"    />
+        <result property="versionStatus"    column="version_status"    />
+    </resultMap>
+
+    <sql id="selectMesUploadTerminalPageVo">
+        select sop_id, material_id, model_id, line_id, stage_id, process_id,terminal_id, sop_page,type, status from mes_upload_terminal_page
+    </sql>
+
+
+
+    <select id="selectMesUploadTerminalPageList" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage" resultMap="MesUploadTerminalPageResult">
+        <include refid="selectMesUploadTerminalPageVo"/>
+        <where>
+            <if test="sopId != null "> and sop_id = #{sopId}</if>
+            <if test="materialId != null "> and material_id = #{materialId}</if>
+            <if test="modelId != null "> and model_id = #{modelId}</if>
+            <if test="lineId != null "> and line_id = #{lineId}</if>
+            <if test="stageId != null "> and stage_id = #{stageId}</if>
+            <if test="processId != null "> and process_id = #{processId}</if>
+            <if test="terminalId != null "> and terminal_id = #{terminalId}</if>
+            <if test="sopPage != null  and sopPage != ''"> and sop_page = #{sopPage}</if>
+        </where>
+    </select>
+
+    <select id="selectMesUploadTerminalPageByOaId" parameterType="String" resultMap="MesUploadTerminalPageResult">
+<!--        select a.sop_id, -->
+<!--        a.material_id, a.model_id, b.model_name,-->
+<!--        a.line_id, a.stage_id, a.process_id, a.sop_page,a.terminal_id,a.type-->
+<!--        from mes_upload_terminal_page a,-->
+<!--        mes_model b-->
+<!--        where a.oa_id = #{oaId}-->
+<!--        AND a.model_id = b.model_id-->
+        select a.sop_id,
+        a.line_id, a.stage_id, a.process_id, a.sop_page,a.terminal_id,a.type
+        from mes_upload_terminal_page a
+        where a.oa_id = #{oaId}
+    </select>
+
+    <insert id="insertMesUploadTerminalPage" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage">
+        insert into mes_upload_terminal_page
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="oaId != null">oa_id,</if>
+            <if test="sopId != null">sop_id,</if>
+            <if test="type != null">type,</if>
+            <if test="materialId != null">material_id,</if>
+            <if test="modelId != null">model_id,</if>
+            <if test="lineId != null">line_id,</if>
+            <if test="stageId != null">stage_id,</if>
+            <if test="processId != null">process_id,</if>
+            <if test="terminalId != null">terminal_id,</if>
+            <if test="sopPage != null">sop_page,</if>
+            <if test="sopInterval != null">sop_interval,</if>
+            <if test="versionStatus != null">version_status,</if>
+            <if test="status != null">status,</if>
+            <if test="project != null">project,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="oaId != null">#{oaId},</if>
+            <if test="sopId != null">#{sopId},</if>
+            <if test="type != null">#{type},</if>
+            <if test="materialId != null">#{materialId},</if>
+            <if test="modelId != null">#{modelId},</if>
+            <if test="lineId != null">#{lineId},</if>
+            <if test="stageId != null">#{stageId},</if>
+            <if test="processId != null">#{processId},</if>
+            <if test="terminalId != null">#{terminalId},</if>
+            <if test="sopPage != null">#{sopPage},</if>
+            <if test="sopInterval != null">#{sopInterval},</if>
+            <if test="versionStatus != null">#{versionStatus},</if>
+            <if test="status != null">#{status},</if>
+            <if test="project != null">#{project},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMesUploadTerminalPage" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage">
+        update mes_upload_terminal_page
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="sopId != null">sop_id = #{sopId},</if>
+<!--            <if test="materialId != null">material_id = #{materialId},</if>-->
+<!--            <if test="modelId != null">model_id = #{modelId},</if>-->
+            <if test="lineId != null">line_id = #{lineId},</if>
+            <if test="stageId != null">stage_id = #{stageId},</if>
+            <if test="processId != null">process_id = #{processId},</if>
+            <if test="terminalId != null">terminal_id = #{terminalId},</if>
+            <if test="sopPage != null">sop_page = #{sopPage},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="versionStatus != null">version_status = #{versionStatus},</if>
+        </trim>
+        where sop_id = #{sopId}
+    </update>
+
+
+<!--    <update id="updateMesUploadTerminalPageVersionStatus" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage">-->
+<!--        update mes_upload_terminal_page-->
+<!--        <trim prefix="SET" suffixOverrides=",">-->
+<!--            <if test="sopId != null">sop_id = #{sopId},</if>-->
+<!--            <if test="terminalId != null">terminal_id = #{macId},</if>-->
+<!--            <if test="versionStatus != null">version_status = #{versionStatus},</if>-->
+<!--        </trim>-->
+<!--        where sop_id = #{sopId}-->
+<!--        AND terminal_id = #{macId}-->
+<!--    </update>-->
+
+
+    <update id="updateMesUploadTerminalPageVersionStatus" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage">
+        update mes_upload_terminal_page
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="versionStatus != null">version_status = #{versionStatus},</if>
+        </trim>
+        where sop_id = #{sopId}
+        <if test="lineId != null">AND line_id = #{lineId}</if>
+        <if test="stageId != null">AND stage_id = #{stageId}</if>
+        <if test="terminalId != null">AND terminal_id = #{terminalId}</if>
+    </update>
+
+    <delete id="deleteMesUploadTerminalPageById" parameterType="Long">
+        delete from mes_upload_terminal_page where id = #{id}
+    </delete>
+
+    <delete id="deleteMesUploadTerminalPageByIds" parameterType="String">
+        delete from mes_upload_terminal_page where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectPageInfoList" parameterType="Long" resultMap="MesUploadTerminalPageResult">
+        SELECT A.sop_page,A.`status`,A.sop_id,A.type,B.sop_name,B.version
+        FROM mes_upload_terminal_page A,
+        mes_sop B
+        WHERE
+<!--        A.model_id = #{modelId}-->
+        A.line_id = #{lineId}
+        AND A.process_id = #{processId}
+        AND A.stage_id = #{stageId}
+<!--        AND A.material_id = #{materialId}-->
+        AND A.sop_id = B.sop_id
+    </select>
+
+    <!--ROW_NUMBER()函数 子查询 筛选出每组最新一笔数据-->
+    <select id="selectPageInfoList1" parameterType="Long" resultMap="MesUploadTerminalPageResult">
+        SELECT *
+        FROM (
+        SELECT m.*,ROW_NUMBER() OVER(PARTITION BY m.sop_id) AS row_num
+        FROM (SELECT A.sop_page,A.sop_interval,A.`status`,A.sop_id,A.type,B.sop_name,B.version
+        FROM mes_upload_terminal_page A,
+        mes_sop B
+        <where>
+            <if test="lineId != null "> AND A.line_id = #{lineId} </if>
+            <if test="stageId != null "> AND A.stage_id = #{stageId} </if>
+            <if test="processId != null "> AND A.process_id = #{processId} </if>
+            <if test="sopId != null">AND B.sop_id = #{sopId}</if>
+            AND A.sop_id = B.sop_id
+            AND A.type = 0
+            AND A.`status` = 2
+        </where>
+        )m
+        ) AS t
+        WHERE t.row_num = 1;
+    </select>
+
+
+    <select id="selectTerminalListBySopId" parameterType="Long" resultMap="MesUploadTerminalPageResult">
+<!--        SELECT A.model_id,A.line_id,A.stage_id,A.process_id,A.material_id-->
+<!--        FROM mes_upload_terminal_page A-->
+<!--        WHERE A.sop_id = #{sopId}-->
+        SELECT A.model_id,c.model_name,A.line_id,d.line_name,A.stage_id,e.stage_name,A.process_id,f.process_name,A.material_id,g.material_name
+        FROM mes_upload_terminal_page A
+        left join mes_model c on a.model_id = c.model_id
+        left join mes_line d on a.line_id = d.line_id
+        left join mes_stage e on a.stage_id = e.stage_id
+        left join mes_process f on a.process_id = f.process_id
+        left join mes_material_info g on a.material_id = g.id
+        WHERE A.sop_id = #{sopId}
+    </select>
+
+    <select id="selectMesUploadTerminalPageListById" parameterType="Long" resultMap="MesUploadTerminalPageResult">
+<!--        SELECT B.model_name,C.material_name,D.line_name,E.stage_name,F.process_name, G.terminal_name-->
+<!--        FROM mes_upload_terminal_page A,-->
+<!--        mes_model B,-->
+<!--        mes_material_info C,-->
+<!--        mes_line D,-->
+<!--        mes_stage E,-->
+<!--        mes_process F,-->
+<!--        mes_terminal G-->
+<!--        WHERE A.model_id = B.model_id-->
+<!--        AND A.material_id = C.id-->
+<!--        AND A.line_id = D.line_id-->
+<!--        AND A.stage_id = E.stage_id-->
+<!--        AND A.process_id = F.process_id-->
+<!--        and A.terminal_id = G.terminal_id-->
+<!--        and A.sop_id = #{sopId}-->
+        SELECT A.sop_id,H.sop_name,A.sop_page,B.model_name,C.material_name,D.line_name,E.stage_name,F.process_name, G.terminal_name,H.version
+        FROM mes_upload_terminal_page A,
+        mes_model B,
+        mes_material_info C,
+        mes_line D,
+        mes_stage E,
+        mes_process F,
+        mes_terminal G,
+        mes_sop H
+        WHERE A.model_id = B.model_id
+        AND A.material_id = C.id
+        AND A.line_id = D.line_id
+        AND A.stage_id = E.stage_id
+        AND A.process_id = F.process_id
+        AND A.terminal_id = G.terminal_id
+        AND A.sop_id = H.sop_id
+        AND A.sop_id = #{sopId}
+    </select>
+
+<!--    <select id="selectTemplateByPartNo" parameterType="Long" resultMap="MesUploadTerminalPageResult">-->
+<!--        SELECT-->
+<!--        A.oa_id,-->
+<!--        A.sop_id,-->
+<!--        A.type,-->
+<!--        A.material_id,-->
+<!--        A.model_id,-->
+<!--        A.line_id,-->
+<!--        A.stage_id,-->
+<!--        A.sop_page,-->
+<!--        A.terminal_id,-->
+<!--        A.`status`,-->
+<!--        A.terminal_id,-->
+<!--        A.create_time-->
+<!--        FROM-->
+<!--        mes_upload_terminal_page A-->
+<!--        WHERE A.material_id = #{materialId}-->
+<!--        AND A.line_id = #{lineId}-->
+<!--        AND A.create_time = (SELECT MAX( create_time ) FROM mes_upload_terminal_page)-->
+<!--    </select>-->
+    <select id="selectTemplateByPartNo" parameterType="Long" resultMap="MesUploadTerminalPageResult">
+        SELECT
+        A.oa_id,
+        A.sop_id,
+        B.sop_name,
+        A.type,
+        A.material_id,
+        H.material_name,
+        A.model_id,
+        C.model_name,
+        A.line_id,
+        D.line_name,
+        A.stage_id,
+        E.stage_name,
+        A.process_id,
+        F.process_name,
+        A.sop_page,
+        A.terminal_id,
+        G.terminal_name,
+        A.`status`,
+        A.create_time
+        FROM
+        mes_upload_terminal_page A
+        left join mes_sop B on A.SOP_ID = B.sop_id
+        left join mes_model C on A.model_id = C.model_id
+        left join mes_line D on A.line_id = D.line_id
+        left join mes_stage E on A.stage_id = E.stage_id
+        left join mes_process F on A.process_id = F.process_id
+        left join mes_terminal G on A.terminal_id = G.terminal_id
+        left join mes_material_info H on A.material_id = H.id
+        WHERE A.material_id = #{materialId}
+        AND A.create_time = (SELECT MAX( create_time ) FROM mes_upload_terminal_page)
+    </select>
+
+
+    <select id="selectTemplateInfoByPartNo" parameterType="MesUploadTerminalPage" resultType="Map">
+        SELECT DISTINCT
+        A.sop_id as sopId,
+        B.sop_name as sopName,
+        B.version,
+        A.version_status as versionStatus,
+        A.type
+        FROM mes_upload_terminal_page A
+        INNER JOIN mes_sop B ON A.sop_id = B.sop_id
+        <where>
+            <if test="modelId != null and modelId != ''">AND model_id = #{modelId}</if>
+            <if test="materialId != null and materialId != ''">AND material_id = #{materialId}</if>
+            <if test="lineId != null and lineId != ''">AND line_id = #{lineId}</if>
+            <if test="stageId != null and stageId != ''">AND stage_id = #{stageId}</if>
+            <if test="processId != null and processId != ''">AND process_id = #{processId}</if>
+            AND A.`status` = '2'
+            AND A.version_status = '0'
+        </where>
+    </select>
+
+    <select id="selectTemplateInfoByStage" parameterType="String" resultType="Map">
+        SELECT DISTINCT
+        A.sop_id as sopId,
+        B.sop_name as sopName,
+        A.version_status as versionStatus,
+        A.type
+        FROM
+        mes_upload_terminal_page A
+        LEFT JOIN mes_sop B ON A.sop_id = B.sop_id
+        <where>
+            A.`status` = '2'
+            AND A.version_status = '0'
+<!--            <if test="lineId != null">AND line_id = #{lineId}</if>-->
+            <if test="stageId != null and stageId != ''">AND stage_id = #{stageId}</if>
+        </where>
+    </select>
+
+
+
+    <select id="selectHistoricalTemplateInfoByPartNo" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage" resultType="Map">
+        SELECT DISTINCT
+        A.sop_id as sopId,
+        B.sop_name as sopName,
+        A.material_id as materialId,
+        D.material_name as materialName,
+        A.model_id as modelId,
+        C.model_name as modelName,
+        A.line_id as lineId,
+        E.line_name as lineName,
+        A.stage_id as stageId,
+        F.stage_name as stageName,
+        A.process_id as processId,
+        G.process_name as processName,
+<!--        A.terminal_id as macId,-->
+<!--        H.mac_name,-->
+<!--        H.mac_area,-->
+        B.version as version,
+        A.version_status as versionStatus,
+        A.type as type,
+        A.create_time as createTime
+        FROM
+        mes_upload_terminal_page A
+        left join mes_sop B on A.sop_id = B.sop_id
+        left join mes_model C on A.model_id = C.model_id
+        left join mes_material_info D on A.material_id = D.id
+        left join mes_line E on A.line_id = E.line_id
+        left join mes_stage F on A.stage_id = F.stage_id
+        left join mes_process G on A.process_id = G.process_id
+<!--        left join mes_mac H on A.terminal_id = H.mac_id-->
+        <where>
+<!--            <if test="sopId != null "> and A.sop_id = #{sopId}</if>-->
+<!--            <if test="version != null "> and B.version = #{version}</if>-->
+            <if test="modelId != null "> and A.model_id = #{modelId}</if>
+            <if test="materialId != null "> and A.material_id = #{materialId}</if>
+            <if test="lineId != null "> and A.line_id = #{lineId}</if>
+            <if test="stageId != null "> and A.stage_id = #{stageId}</if>
+            <if test="processId != null "> and A.process_id = #{processId}</if>
+<!--            <if test="terminalId != null "> and A.terminal_id = #{macId}</if>-->
+            <if test="sopName != null "> and B.sop_name like concat('%', #{lineName}, '%')</if>
+            <if test="lineName != null "> and E.line_name like concat('%', #{lineName}, '%')</if>
+            <if test="stageName != null "> and F.stage_name like concat('%', #{stageName}, '%')</if>
+            <if test="processName != null "> and G.process_name like concat('%', #{processName}, '%')</if>
+            AND A.`status` = '2'
+        </where>
+        ORDER BY A.create_time DESC
+    </select>
+
+    <select id="selectVersionByIds" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage" resultType="Map">
+        SELECT DISTINCT
+        A.line_id as lineId,
+        E.line_name as lineName,
+        A.stage_id as stageId,
+        F.stage_name as stageName,
+        A.process_id as processId,
+        G.process_name as processName
+        FROM
+        mes_upload_terminal_page A
+        left join mes_sop B on A.sop_id = B.sop_id
+        left join mes_model C on A.model_id = C.model_id
+        left join mes_material_info D on A.material_id = D.id
+        left join mes_line E on A.line_id = E.line_id
+        left join mes_stage F on A.stage_id = F.stage_id
+        left join mes_process G on A.process_id = G.process_id
+        <where>
+            <if test="lineId != null "> and A.line_id = #{lineId}</if>
+            <if test="stageId != null "> and A.stage_id = #{stageId}</if>
+            <if test="processId != null "> and A.process_id = #{processId}</if>
+            <if test="lineName != null "> and E.line_name like concat('%', #{lineName}, '%')</if>
+            <if test="stageName != null "> and F.stage_name like concat('%', #{stageName}, '%')</if>
+            <if test="processName != null "> and G.process_name like concat('%', #{processName}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectHistoricalVersionByTerminalId" parameterType="Long" resultMap="MesUploadTerminalPageResult">
+        SELECT DISTINCT
+        A.sop_id,
+        B.sop_name,
+        A.material_id,
+        D.material_name,
+        A.model_id,
+        C.model_name,
+        A.line_id,
+        E.line_name,
+        A.stage_id,
+        F.stage_name,
+        A.process_id,
+        G.process_name,
+        A.terminal_id,
+        H.terminal_name,
+        B.version,
+        A.version_status,
+        A.type,
+        A.create_time
+        FROM
+        mes_upload_terminal_page A
+        left join mes_sop B on A.sop_id = B.sop_id
+        left join mes_model C on A.model_id = C.model_id
+        left join mes_material_info D on A.material_id = D.id
+        left join mes_line E on A.line_id = E.line_id
+        left join mes_stage F on A.stage_id = F.stage_id
+        left join mes_process G on A.process_id = G.process_id
+        left join mes_terminal H on A.terminal_id = H.terminal_id
+        <where>
+            <if test="lineId != null "> and A.line_id = #{lineId}</if>
+            <if test="stageId != null "> and A.stage_id = #{stageId}</if>
+            <if test="processId != null "> and A.process_id = #{processId}</if>
+            <if test="terminalId != null "> and A.terminal_id = #{terminalId}</if>
+            AND A.`status` = '2'
+            AND A.type = #{type}
+        </where>
+        ORDER BY A.create_time DESC
+    </select>
+
+    <select id="selectHistoricalVersionByProcess" parameterType="com.ruoyi.product.domain.MesUploadTerminalPage" resultMap="MesUploadTerminalPageResult">
+        SELECT DISTINCT
+        A.sop_id,
+        B.sop_name,
+<!--        A.material_id,-->
+<!--        D.material_name,-->
+<!--        A.model_id,-->
+<!--        C.model_name,-->
+        A.line_id,
+        E.line_name,
+        A.stage_id,
+        F.stage_name,
+        A.process_id,
+        G.process_name,
+        A.terminal_id,
+        H.mac_name,
+        B.version,
+        A.version_status,
+        A.type,
+        A.create_time
+        FROM
+        mes_upload_terminal_page A
+        left join mes_sop B on A.sop_id = B.sop_id
+<!--        left join mes_model C on A.model_id = C.model_id-->
+<!--        left join mes_material_info D on A.material_id = D.id-->
+        left join mes_line E on A.line_id = E.line_id
+        left join mes_stage F on A.stage_id = F.stage_id
+        left join mes_process G on A.process_id = G.process_id
+        left join mes_mac H on A.terminal_id = H.mac_id
+        <where>
+            <if test="lineId != null "> and A.line_id = #{lineId}</if>
+            <if test="stageId != null "> and A.stage_id = #{stageId}</if>
+            <if test="processId != null "> and A.process_id = #{processId}</if>
+            <if test="sopId != null "> and A.sop_id = #{sopId}</if>
+            AND A.`status` = '2'
+        </where>
+        ORDER BY A.create_time DESC
+    </select>
+
+
+    <select id="selectSopVersionByProcess"  parameterType="Long" resultMap="MesUploadTerminalPageResult">
+        SELECT DISTINCT
+        mutp.sop_id,
+        mutp.version_status,
+        ms.version,
+        ms.sop_name,
+        ms.type
+        FROM
+        mes_upload_terminal_page mutp,
+        mes_sop ms
+        <where>
+            mutp.sop_id = ms.sop_id
+            AND mutp.version_status = 0
+            AND mutp.status = 2
+            <if test="processId != null "> and mutp.process_id = #{processId}</if>
+        </where>
+    </select>
+
+    <select id="selectUploadPageByIds"  parameterType="com.ruoyi.product.domain.MesUploadTerminalPage" resultMap="MesUploadTerminalPageResult">
+        SELECT *
+        FROM
+        mes_upload_terminal_page
+        <where>
+            <if test="modelId != null and modelId != ''"> and model_id = #{modelId}</if>
+            <if test="materialId != null and materialId != ''"> and material_id = #{materialId}</if>
+            and line_id = #{lineId}
+            and stage_id = #{stageId}
+            and process_id = #{processId}
+            <if test="terminalId != null and terminalId != ''"> and terminal_id = #{terminalId}</if>
+            and sop_id = #{sopId}
+            and version_status = 0
+        </where>
+    </select>
+</mapper>

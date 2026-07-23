@@ -1,0 +1,319 @@
+/*大屏*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*, body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "微软雅黑";
+}
+
+html, body {
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+    line-height: 1.15;
+    font-size: 0.5rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.allnav {
+    width: 100%;
+    height: 100%;
+}
+/*谷哥滚动条样式*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5bc0de
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+头部*/
+.header {
+    width: 100%;
+    height: 1.5rem;
+}
+
+    .header .header-left {
+        width: 25%;
+        height: 1.05rem;
+        color: white;
+        text-align: center;
+        line-height: 1.05rem;
+        font-size: .25rem;
+    }
+
+    .header .header-center {
+        width: 50%;
+        height: 1.05rem;
+        position: relative;
+    }
+
+        .header .header-center .header-title {
+            text-align: center;
+            color: #ffffff;
+            font-size: .4rem;
+            text-shadow: 0 0 .3rem #00d8ff;
+            line-height: 1.05rem;
+        }
+
+    .header .header-img {
+        background: url("../images/head.gif") no-repeat center center;
+        background-size: 100%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: .4rem;
+    }
+
+    .header .header-right {
+        width: 25%;
+        height: 1.05rem;
+        color: white;
+        text-align: center;
+        line-height: 1.05rem;
+        font-size: .25rem;
+        background: url("/images/lux.png") no-repeat;
+        background-repeat: round;
+    }
+
+    .header .header-bottom {
+        width: calc(100% - .4rem);
+        height: .16rem;
+        background: url("../images/header.png") no-repeat;
+        background-size: calc(100% - .2rem) 100%;
+        padding: 0 .2rem;
+        margin-left: .3rem;
+    }
+
+
+/*通用*/
+.title {
+    width: 90%;
+    height: 0.3rem;
+    position: relative;
+    top: .1rem;
+    left: .25rem;
+    color: white;
+    padding-left: 0.12rem;
+    line-height: 0.3rem;
+    font-size: 0.20rem;
+}
+
+    .title:before {
+        width: 0.05rem;
+        height: 0.25rem;
+        top: 0.02rem;
+        position: absolute;
+        content: "";
+        background: #59ebe8;
+        border-radius: 0.02rem;
+        left: 0;
+    }
+
+
+/*内容*/
+.center {
+    flex: 1;
+    display: flex;
+    padding: .1rem .2rem 0.5rem .2rem;
+    overflow: hidden;
+}
+
+    /*左边*/
+    .center .center-left {
+        width: 25%;
+        padding: 0rem .1rem;
+        border-right: 1px dashed aqua;
+    }
+
+        .center .center-left .list-container {
+            width: calc(100% - .2rem);
+            height: calc(100% - 0.5rem);
+            margin-top: .2rem;
+            margin-left: .1rem;
+            padding: .1rem;
+            font-size: 0.2rem;
+            overflow-y: auto;
+        }
+
+    /*中间*/
+    .center .center-cen {
+        width: 75%;
+        padding: 0rem .1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+/*业务工单列表*/
+.list-container ul li {
+    border-left: 3px solid aqua !important;
+    border-left-width: 3px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.3rem;
+    box-shadow: -3px 0px 3px #034c6a inset; /*左边阴影*/
+    /*,3px 0px 3px #034c6a inset;*/
+    background-color: transparent;
+    height: 1.2rem;
+    color: white;
+    margin-bottom: 0.05rem;
+}
+
+    .list-container ul li label {
+        align-content: center;
+        text-align: left;
+    }
+
+.list-container .list-group-item {
+    padding: 0.2rem;
+}
+
+.info {
+    padding: 0 0.2rem;
+}
+/*基本信息*/
+.info .row {
+    display: flex;
+    flex-direction: row;
+    height: 0.8rem;
+}
+
+    .info .row label:nth-child(2) {
+        width: 2.9rem;
+    }
+
+    .info .row label:nth-child(4) {
+        width: 2.9rem;
+    }
+
+    .info .row label:nth-child(6) {
+        width: 1.8rem;
+    }
+
+    .info .row label:last-child {
+        flex: 1;
+    }
+
+    .info .row .info-title {
+        width: 1.5rem;
+        height: 100%;
+        text-align: right;
+        font-size: 0.3rem;
+        align-content: center;
+        border: 1px solid darkcyan;
+        padding-right: 0.1rem;
+        background-color: #0d6efd;
+    }
+
+    .info .row .info-value {
+        text-align: left;
+        align-content: center;
+        font-size: 0.25rem;
+        border: 1px solid darkcyan;
+        padding-left: 0.1rem;
+    }
+
+
+/*设备*治具列表*/
+.item-container {
+    width: 100%;
+    height: calc(100% - 1.6rem);
+    margin-top: .1rem;
+    font-size: 0.3rem;
+    display: flex;
+    padding:0 0.2rem;
+    flex-direction: column;
+}
+
+    .item-container .row {
+        height: 0.8rem;
+        box-shadow: -10px 0px 15px #034c6a inset, /*左边阴影*/
+        10px 0px 15px #034c6a inset;
+        margin-bottom: 0.1rem;
+    }
+
+    .item-container .item-title {
+        height: 100%;
+        border: 1px solid darkcyan;
+        text-align: center;
+        align-content: center;
+        font-size: 0.3rem;
+        font-family: "黑体";
+        color: aqua;
+        padding: 0.1rem;
+    }
+
+    .item-container .item-name {
+        /*border: 1px solid gray;*/
+        height: 100%;
+        text-align: center;
+        align-content: center;
+        overflow-y: hidden;
+        overflow-wrap: anywhere;
+        overflow: hidden;
+        padding: 0.1rem;
+    }
+
+    .item-container .item-qty {
+        height: 100%;
+        border-right: 1px solid gray;
+        text-align: center;
+        align-content: center;
+        font-weight: bold;
+        padding: 0.1rem;
+        overflow-wrap: anywhere;
+        overflow: hidden;
+        color: palegreen;
+    }
+
+    .item-container .itemList {
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+    }
+
+.item-not-ready {
+    color: red;
+}

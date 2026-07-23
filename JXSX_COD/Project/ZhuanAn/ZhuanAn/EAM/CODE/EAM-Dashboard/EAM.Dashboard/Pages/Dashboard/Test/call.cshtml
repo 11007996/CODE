@@ -1,0 +1,172 @@
+﻿@page
+@{
+    Layout = ""; //禁用默认布局
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>呼叫看板</title>
+    @await Html.PartialAsync("_DashboardScriptsPartial")
+    <link rel="stylesheet" href="~/dashboard/Test/call/css/index.css">
+    <script>
+        $(function () {
+            $('.myscroll').myScroll({
+                speed: 80, //数值越大，速度越慢
+                rowHeight: 45 //li的高度
+            });
+        });
+
+        //窗体缩放调整html字体大小
+        $(document).ready(function () {
+            var whei = $(window).width()
+            $("html").css({ fontSize: whei / 22 });
+            $(window).resize(function () {
+                var whei = $(window).width();
+                $("html").css({ fontSize: whei / 22 })
+            });
+        });
+
+    </script>
+</head>
+<body eam-hasPermi="dashboard:Test:call" eam-loginFactory="Test">
+
+    <div class="main">
+        <!--头部标题-->
+        <div class="header">
+            <div class="header-left fl" id="time"></div>
+            <div class="header-center fl">
+                <div class="header-title">
+                    测试工厂呼叫看板
+                </div>
+                <div class="header-img"></div>
+            </div>
+            <div class="header-right fl" id="area">
+                区域:
+                <select id="AreaSelect">
+                    <option value="0">全局</option>
+                </select>
+                间隔(分):
+                <input id="SpeechInterval" type="number" value="1"/>
+                <span id="SpeechStatus" class="voice-close"></span>
+            </div>
+            <div class="header-bottom fl"></div>
+        </div>
+
+        <div class="center">
+
+            <div class="center-left fl">
+                <div class="left-top">
+                    <div class="title">月次数同比</div>
+                    <div class="chat">
+                        <div id="monthContrastChart" class="allnav"></div>
+                    </div>
+                    <div id="monthContrastArrow" class="arrow-container">
+                        <div class="arrow-down"></div>
+                        <p>0%</p>
+                    </div>
+                </div>
+                <div class="left-cen">
+                    <div class="title">周次数同比</div>
+                    <div class="chat">
+                        <div id="weekContrastChart" class="allnav"></div>
+                    </div>
+                    <div id="weekContrastArrow" class="arrow-container">
+                        <div class="arrow-up"></div>
+                        <p>0%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-cen">
+                <div class="call-head">
+                    <span>产线</span>
+                    <span>机台/工站</span>
+                    <span>呼叫原因</span>
+                    <span>呼叫目标</span>
+                    <span>开始时间</span>
+                    <span>到场时间</span>
+                    <span>总计时长</span>
+                    <span>处理人</span>
+                    <span>支援人</span>
+                    <span>状态</span>
+                </div>
+                <div id="CallList" class="myscroll">
+                    <ul>
+                        @*  <li>
+                        <div class="call-item">
+                        <span>A1-01线</span>
+                        <span>测试机台名称123</span>
+                        <span>99:99</span>
+                        <span>99:99</span>
+                        <span>120</span>
+                        <span>120</span>
+                        <span>处理人A</span>
+                        <span>支援人B</span>
+                        <span>待处理</span>
+                        <span>机台故障</span>
+                        </div>
+                        </li> *@
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center-right fr">
+                <div class="right-top">
+                    <div class="title">人员维修时间(本周)</div>
+                    <div class="chat">
+                        <div id="empTimeChart" class="allnav"></div>
+                    </div>
+                </div>
+                <div class="right-cen">
+                    <div class="title">设备维修次数(本周)</div>
+                    <div class="chat">
+                        <div id="equipmentCountChart" class="allnav"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="footer">
+            <div class="footer-left">
+                <div class="title">月故障</div>
+                <div class="chat">
+                    <div id="monthStatChart" class="allnav"></div>
+                </div>
+            </div>
+
+            <div class="footer-cen">
+                <div class="title">周故障</div>
+                <div class="chat">
+                    <div id="weekStatChart" class="allnav"></div>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="title">故障类型排行(本周)</div>
+                <div class="chat">
+                    <div id="faultTypeChart" class="allnav"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @await Html.PartialAsync("_Copyright")
+
+    <script src="~/js/ttsUtil.js"></script>
+    <script src="~/js/audioPlayer.js"></script>
+    <script src="~/dashboard/Test/call/js/fontscroll.js"></script>
+    <script src="~/api/call.js"></script>
+    <script src="~/api/common.js"></script>
+    <script src="~/dashboard/Test/call/js/index.js"></script>  
+    <script>
+        setInterval(function () {
+            var nowTime = getTime();
+            $('#time').html(nowTime);
+        }, 1000);
+    </script>
+
+</body>
+</html>

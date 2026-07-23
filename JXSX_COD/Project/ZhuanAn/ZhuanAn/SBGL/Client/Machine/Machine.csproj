@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DA782C7-1E3D-42F5-81EB-3706687D8562}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Machine</RootNamespace>
+    <AssemblyName>Machine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\ShareFile\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\ShareFile\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Machine128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Local_Packages\qrcode.net.0.4.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Local_Packages\sharpziplib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Local_Packages\newtonsoft.json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Local_Packages\npoi.2.5.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Local_Packages\npoi.2.5.1\lib\net45\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Local_Packages\npoi.2.5.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Local_Packages\npoi.2.5.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAssetFileBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssetFileBind.Designer.cs">
+      <DependentUpon>FrmAssetFileBind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssetReceiveRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssetReceiveRecord.Designer.cs">
+      <DependentUpon>FrmAssetReceiveRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGlobalCreateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGlobalCreateReport.Designer.cs">
+      <DependentUpon>FrmGlobalCreateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLineMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLineMaintenance.Designer.cs">
+      <DependentUpon>FrmLineMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssetQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssetQRCode.Designer.cs">
+      <DependentUpon>FrmAssetQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssetReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssetReceive.Designer.cs">
+      <DependentUpon>FrmAssetReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaintenaceItemValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaintenaceItemValue.Designer.cs">
+      <DependentUpon>FrmMaintenaceItemValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaintenanceItemSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaintenanceItemSync.Designer.cs">
+      <DependentUpon>FrmMaintenanceItemSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGlobalMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGlobalMaintenance.Designer.cs">
+      <DependentUpon>FrmGlobalMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaintenanceTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaintenanceTip.Designer.cs">
+      <DependentUpon>FrmMaintenanceTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResumeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResumeReport.designer.cs">
+      <DependentUpon>FrmResumeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseMaintenance.designer.cs">
+      <DependentUpon>FrmBaseMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaintenanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaintenanceReport.designer.cs">
+      <DependentUpon>FrmMaintenanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseMachine.designer.cs">
+      <DependentUpon>FrmBaseMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseAsset.Designer.cs">
+      <DependentUpon>FrmBaseAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaintenanceItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaintenanceItem.Designer.cs">
+      <DependentUpon>FrmMaintenanceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMachineState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMachineState.Designer.cs">
+      <DependentUpon>FrmMachineState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMachineReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMachineReport.Designer.cs">
+      <DependentUpon>FrmMachineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMachineWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMachineWatch.Designer.cs">
+      <DependentUpon>FrmMachineWatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMachineWatchOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMachineWatchOne.Designer.cs">
+      <DependentUpon>FrmMachineWatchOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMachineDistribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMachineDistribute.Designer.cs">
+      <DependentUpon>FrmMachineDistribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHolidayDicData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHolidayDicData.Designer.cs">
+      <DependentUpon>FrmHolidayDicData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipDicData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipDicData.Designer.cs">
+      <DependentUpon>FrmTipDicData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWarnCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWarnCode.Designer.cs">
+      <DependentUpon>FrmWarnCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\MaintenanceExcel.cs" />
+    <Compile Include="Util\ResumeWord.cs" />
+    <EmbeddedResource Include="FrmAssetQRCode.resx">
+      <DependentUpon>FrmAssetQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssetFileBind.resx">
+      <DependentUpon>FrmAssetFileBind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssetReceive.resx">
+      <DependentUpon>FrmAssetReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssetReceiveRecord.resx">
+      <DependentUpon>FrmAssetReceiveRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGlobalCreateReport.resx">
+      <DependentUpon>FrmGlobalCreateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLineMaintenance.resx">
+      <DependentUpon>FrmLineMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaintenaceItemValue.resx">
+      <DependentUpon>FrmMaintenaceItemValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaintenanceItemSync.resx">
+      <DependentUpon>FrmMaintenanceItemSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGlobalMaintenance.resx">
+      <DependentUpon>FrmGlobalMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaintenanceTip.resx">
+      <DependentUpon>FrmMaintenanceTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResumeReport.resx">
+      <DependentUpon>FrmResumeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseMaintenance.resx">
+      <DependentUpon>FrmBaseMaintenance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaintenanceReport.resx">
+      <DependentUpon>FrmMaintenanceReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseMachine.resx">
+      <DependentUpon>FrmBaseMachine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseAsset.resx">
+      <DependentUpon>FrmBaseAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaintenanceItem.resx">
+      <DependentUpon>FrmMaintenanceItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMachineState.resx">
+      <DependentUpon>FrmMachineState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMachineReport.resx">
+      <DependentUpon>FrmMachineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMachineWatch.resx">
+      <DependentUpon>FrmMachineWatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMachineWatchOne.resx">
+      <DependentUpon>FrmMachineWatchOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMachineDistribute.resx">
+      <DependentUpon>FrmMachineDistribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHolidayDicData.resx">
+      <DependentUpon>FrmHolidayDicData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipDicData.resx">
+      <DependentUpon>FrmTipDicData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWarnCode.resx">
+      <DependentUpon>FrmWarnCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\Basic.csproj">
+      <Project>{b5dac884-e0f6-48d4-a8da-8da41d4dba65}</Project>
+      <Name>Basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{96a23b23-4a87-4756-a836-eb5b6d83e7f8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Machine128.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\固定资产履历表模板.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

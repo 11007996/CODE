@@ -1,0 +1,34 @@
+----------------------------------------------------------- 
+记录时间：2023-06-06 10:50:02 线程名：[9] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 列名 'QCName' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:49ab8957-c81d-4b26-b8ba-2a1aff30cd9f
+Error Number:207,State:1,Class:16
+
+记录时间：2023-06-06 10:50:41 线程名：[9] 级别：ERROR 类名：CallSys.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.Data.SqlClient.SqlException (0x80131904): 列名 'QCName' 无效。
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 256
+   在 CallSys.FrmFaultSolution.btnConfirm_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\CallSys\FrmFaultSolution.cs:行号 81
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+ClientConnectionId:49ab8957-c81d-4b26-b8ba-2a1aff30cd9f
+Error Number:207,State:1,Class:16
+----------------------------------------------------------- 
+记录时间：2023-06-06 11:26:16 线程名：[9] 级别：ERROR 类名：CallSys.FrmBaseError 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 CallSys.FrmBaseError.dgvError_CellClick(Object sender, DataGridViewCellEventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\CallSys\FrmBaseError.cs:行号 434

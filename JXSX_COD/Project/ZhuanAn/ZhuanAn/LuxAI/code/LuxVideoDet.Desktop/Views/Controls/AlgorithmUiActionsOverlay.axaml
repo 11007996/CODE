@@ -1,0 +1,168 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:LuxVideoDet.Desktop.ViewModels"
+             x:Class="LuxVideoDet.Desktop.Views.Controls.AlgorithmUiActionsOverlay"
+             x:DataType="vm:MainWindowViewModel"
+             IsVisible="{Binding HasPreviewUiActions}">
+    <UserControl.Resources>
+        <DataTemplate x:Key="AlgoUiChipTemplate" DataType="vm:AlgorithmUiActionItemVm">
+            <!-- 外圈固定 5px，NG 时红、否则透明，避免 Thickness 变化导致右下角叠放漂移 -->
+            <Border BorderBrush="{Binding NgOutlineBorderBrush}"
+                    BorderThickness="5"
+                    CornerRadius="29"
+                    Background="Transparent"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <Button Classes="algorithmUiChip"
+                        Width="48" Height="48"
+                        CornerRadius="24"
+                        Command="{Binding ExecuteCommand}"
+                        IsEnabled="{Binding IsActionEnabled}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Padding="4"
+                        ClipToBounds="True">
+                    <ToolTip.Tip>
+                        <TextBlock Text="{Binding TooltipText}"
+                                   TextWrapping="Wrap"
+                                   MaxWidth="320"
+                                   Foreground="Black"/>
+                    </ToolTip.Tip>
+                    <TextBlock Text="{Binding DisplayName}"
+                               TextTrimming="CharacterEllipsis"
+                               TextAlignment="Center"
+                               MaxWidth="36"
+                               FontSize="11"
+                               LineHeight="14"/>
+                </Button>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row 0 -->
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="8"
+                    HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsTopLeft}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="8"
+                    HorizontalAlignment="Center" VerticalAlignment="Top"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsTopCenter}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2" Margin="8"
+                    HorizontalAlignment="Right" VerticalAlignment="Top"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsTopRight}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+
+        <!-- Row 1 -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="8"
+                    HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsMiddleLeft}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="8"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsCenter}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="8"
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsMiddleRight}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+
+        <!-- Row 2 -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="8"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsBottomLeft}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsBottomCenter}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2" Margin="8"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                    Orientation="Horizontal" Spacing="8">
+            <ItemsControl ItemsSource="{Binding PreviewUiActionsBottomRight}"
+                          ItemTemplate="{StaticResource AlgoUiChipTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="8"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</UserControl>

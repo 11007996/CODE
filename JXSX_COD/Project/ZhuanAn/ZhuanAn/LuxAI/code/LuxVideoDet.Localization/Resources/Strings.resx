@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="App_WindowTitle" xml:space="preserve"><value>LuxVideoDet - LuxShare Video Recognition System</value></data>
+  <data name="Btn_NewConfig" xml:space="preserve"><value>New configuration</value></data>
+  <data name="Btn_ImportConfig" xml:space="preserve"><value>Import configuration</value></data>
+  <data name="Btn_StartAll" xml:space="preserve"><value>Start all</value></data>
+  <data name="Btn_StopAll" xml:space="preserve"><value>Stop all</value></data>
+  <data name="Tooltip_ToggleTheme" xml:space="preserve"><value>Toggle theme</value></data>
+  <data name="Tooltip_Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>Settings</value></data>
+  <data name="Settings_Header" xml:space="preserve"><value>LuxVideoDet - LuxShare Video Recognition System</value></data>
+  <data name="Settings_RunMode" xml:space="preserve"><value>Run mode</value></data>
+  <data name="Settings_RunModeValue" xml:space="preserve"><value>Desktop (Avalonia)</value></data>
+  <data name="Settings_Framework" xml:space="preserve"><value>Framework</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>App version</value></data>
+  <data name="Settings_OS" xml:space="preserve"><value>Operating system</value></data>
+  <data name="Settings_CPU" xml:space="preserve"><value>CPU cores</value></data>
+  <data name="Settings_Memory" xml:space="preserve"><value>Working memory</value></data>
+  <data name="Settings_GPURow" xml:space="preserve"><value>GPU acceleration</value></data>
+  <data name="Settings_GPUAvailable" xml:space="preserve"><value>Available</value></data>
+  <data name="Settings_GPUNotAvailable" xml:space="preserve"><value>Not available</value></data>
+  <data name="Settings_ConfigDir" xml:space="preserve"><value>Configuration directory</value></data>
+  <data name="Settings_Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Language</value></data>
+  <data name="Lang_zh_CN" xml:space="preserve"><value>中文 (简体)</value></data>
+  <data name="Lang_en_US" xml:space="preserve"><value>English (US)</value></data>
+  <data name="Lang_vi_VN" xml:space="preserve"><value>Tiếng Việt (Việt Nam)</value></data>
+  <data name="Web_PageTitle" xml:space="preserve"><value>LuxVideoDet - LuxShare Video Recognition System · Web</value></data>
+  <data name="Web_BrandSub" xml:space="preserve"><value>Web console</value></data>
+  <data name="Web_ImportConfig" xml:space="preserve"><value>Import</value></data>
+  <data name="Web_ExportAll" xml:space="preserve"><value>Export all</value></data>
+  <data name="Web_StartAll" xml:space="preserve"><value>Start all</value></data>
+  <data name="Web_StopAll" xml:space="preserve"><value>Stop all</value></data>
+  <data name="Web_NewConfig" xml:space="preserve"><value>New configuration</value></data>
+  <data name="Web_StatTotal" xml:space="preserve"><value>Configurations</value></data>
+  <data name="Web_StatRunning" xml:space="preserve"><value>Running</value></data>
+  <data name="Web_StatStopped" xml:space="preserve"><value>Stopped</value></data>
+  <data name="Web_StatAlgos" xml:space="preserve"><value>Algorithms</value></data>
+  <data name="Web_PanelConfigs" xml:space="preserve"><value>Detection configurations</value></data>
+  <data name="Web_Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Web_ThName" xml:space="preserve"><value>Name</value></data>
+  <data name="Web_ThVideoSource" xml:space="preserve"><value>Video source</value></data>
+  <data name="Web_ThAlgorithms" xml:space="preserve"><value>Algorithms</value></data>
+  <data name="Web_ThStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="Web_ThFrameMs" xml:space="preserve"><value>Frame time</value></data>
+  <data name="Web_ThActions" xml:space="preserve"><value>Actions</value></data>
+  <data name="Web_Loading" xml:space="preserve"><value>Loading…</value></data>
+  <data name="Web_LangLabel" xml:space="preserve"><value>Language</value></data>
+  <data name="WebView_Title" xml:space="preserve"><value>LuxVideoDet - LuxShare Live Monitoring</value></data>
+  <data name="WebView_LoadingTitle" xml:space="preserve"><value>Loading…</value></data>
+  <data name="WebView_StartDetection" xml:space="preserve"><value>Start detection</value></data>
+  <data name="WebView_StopDetection" xml:space="preserve"><value>Stop detection</value></data>
+  <data name="WebView_BrowserTts" xml:space="preserve"><value>Browser TTS</value></data>
+  <data name="WebView_TtsUnlock" xml:space="preserve"><value>Enable speech</value></data>
+  <data name="WebView_Fullscreen" xml:space="preserve"><value>Fullscreen</value></data>
+  <data name="WebView_BackToConsole" xml:space="preserve"><value>Back to console</value></data>
+  <data name="WebView_Connecting" xml:space="preserve"><value>Connecting to stream…</value></data>
+  <data name="WebView_ErrorTitle" xml:space="preserve"><value>Connection failed</value></data>
+  <data name="Main_ToolbarLanguage" xml:space="preserve"><value>Language</value></data>
+  <data name="Main_SearchConfigWatermark" xml:space="preserve"><value>Search configurations…</value></data>
+  <data name="Main_SourcePrefix" xml:space="preserve"><value>Source:</value></data>
+  <data name="Main_BtnEdit" xml:space="preserve"><value>Edit</value></data>
+  <data name="Main_BtnDelete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Main_BtnNgReplay" xml:space="preserve"><value>NG replay</value></data>
+  <data name="Main_NgReplayTooltip" xml:space="preserve"><value>View historical NG video replay</value></data>
+  <data name="Main_LivePreview" xml:space="preserve"><value>Live preview</value></data>
+  <data name="Main_PreviewPlaceholder" xml:space="preserve"><value>Not selected</value></data>
+  <data name="Main_TooltipShowBoxes" xml:space="preserve"><value>Show detection boxes</value></data>
+  <data name="Main_TooltipShowRegions" xml:space="preserve"><value>Show regions</value></data>
+  <data name="Main_TooltipShowLabels" xml:space="preserve"><value>Show labels</value></data>
+  <data name="Main_TooltipPopOutPreview" xml:space="preserve"><value>Pop out preview window</value></data>
+  <data name="Main_TooltipFullscreen" xml:space="preserve"><value>Fullscreen</value></data>
+  <data name="Main_TooltipSnapshot" xml:space="preserve"><value>Save snapshot</value></data>
+  <data name="Main_YieldLabel" xml:space="preserve"><value>Yield</value></data>
+  <data name="Main_PreviewEmptyTitle" xml:space="preserve"><value>No preview</value></data>
+  <data name="Main_PreviewEmptySubtitle" xml:space="preserve"><value>Start a configuration to see live detection</value></data>
+  <data name="Main_SystemStatusTitle" xml:space="preserve"><value>System status</value></data>
+  <data name="Main_StatusHealthy" xml:space="preserve"><value>Running normally</value></data>
+  <data name="Main_LabelRunningConfigs" xml:space="preserve"><value>Running:</value></data>
+  <data name="Main_LabelTotalConfigs" xml:space="preserve"><value>Total:</value></data>
+  <data name="Main_LabelUptime" xml:space="preserve"><value>Uptime:</value></data>
+  <data name="Main_Format_RunningConfigsCount" xml:space="preserve"><value>{0} configuration(s)</value></data>
+  <data name="Main_Format_TotalConfigsCount" xml:space="preserve"><value>{0} total</value></data>
+  <data name="Main_PerformanceTitle" xml:space="preserve"><value>Performance</value></data>
+  <data name="Main_CpuUsage" xml:space="preserve"><value>CPU usage</value></data>
+  <data name="Main_MemoryUsage" xml:space="preserve"><value>Memory</value></data>
+  <data name="Main_GpuUsage" xml:space="preserve"><value>GPU usage</value></data>
+  <data name="Main_AvgFrameTime" xml:space="preserve"><value>Avg. frame time</value></data>
+  <data name="Main_RecentDetectionsTitle" xml:space="preserve"><value>Recent detections</value></data>
+  <data name="Main_ProductionStatsTitle" xml:space="preserve"><value>Production stats</value></data>
+	<data name="Main_StatTotalCaption" xml:space="preserve"><value>Total</value></data>
+	<data name="Main_StatTotalCaption2" xml:space="preserve"><value>Production Total</value></data>
+  <data name="Main_LogsTitle" xml:space="preserve"><value>Logs</value></data>
+  <data name="Main_LogFilterDebug" xml:space="preserve"><value>Debug</value></data>
+  <data name="Main_LogFilterInfo" xml:space="preserve"><value>Info</value></data>
+  <data name="Main_LogFilterWarning" xml:space="preserve"><value>Warning</value></data>
+  <data name="Main_LogFilterError" xml:space="preserve"><value>Error</value></data>
+  <data name="Main_LogSearchWatermark" xml:space="preserve"><value>Search logs…</value></data>
+  <data name="Main_LogBtnClear" xml:space="preserve"><value>Clear</value></data>
+  <data name="Main_LogBtnExport" xml:space="preserve"><value>Export</value></data>
+  <data name="Main_TimeJustNow" xml:space="preserve"><value>Just now</value></data>
+  <data name="Config_Status_Stopped" xml:space="preserve"><value>Stopped</value></data>
+  <data name="Config_Status_Running" xml:space="preserve"><value>Running</value></data>
+  <data name="Config_Status_Error" xml:space="preserve"><value>Error</value></data>
+  <data name="Config_Btn_Start" xml:space="preserve"><value>Start</value></data>
+  <data name="Config_Btn_Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Editor_WindowTitleNew" xml:space="preserve"><value>New configuration</value></data>
+  <data name="Editor_WindowTitleEdit" xml:space="preserve"><value>Edit configuration — {0}</value></data>
+  <data name="Editor_SectionBasic" xml:space="preserve"><value>Basic information</value></data>
+  <data name="Editor_LblConfigName" xml:space="preserve"><value>Configuration name:</value></data>
+  <data name="Editor_WatermarkConfigName" xml:space="preserve"><value>e.g. Line 1 inspection</value></data>
+  <data name="Editor_SectionVideo" xml:space="preserve"><value>Video source</value></data>
+  <data name="Editor_LblVideoType" xml:space="preserve"><value>Source type:</value></data>
+  <data name="Editor_LblVideoPath" xml:space="preserve"><value>Source path:</value></data>
+  <data name="Editor_WatermarkVideoPath" xml:space="preserve"><value>File path, RTSP URL, or camera index</value></data>
+  <data name="Editor_BtnBrowseVideo" xml:space="preserve"><value>Browse video…</value></data>
+  <data name="Editor_ChkLoopLocal" xml:space="preserve"><value>Loop (local video only)</value></data>
+  <data name="Editor_SectionAlgoPool" xml:space="preserve"><value>Algorithm pool</value></data>
+  <data name="Editor_LblPickAlgo" xml:space="preserve"><value>Add algorithm type:</value></data>
+  <data name="Editor_PlaceholderPickAlgo" xml:space="preserve"><value>Select an algorithm…</value></data>
+  <data name="Editor_LblAddedAlgos" xml:space="preserve"><value>Added algorithms:</value></data>
+  <data name="Editor_BtnRemoveSelected" xml:space="preserve"><value>Remove selected</value></data>
+  <data name="Editor_SectionInference" xml:space="preserve"><value>Inference</value></data>
+  <data name="Editor_LblModelPath" xml:space="preserve"><value>Model path:</value></data>
+  <data name="Editor_WatermarkModelPath" xml:space="preserve"><value>Path to .onnx model</value></data>
+  <data name="Editor_BtnBrowseModel" xml:space="preserve"><value>Browse model…</value></data>
+  <data name="Editor_LblInferenceDevice" xml:space="preserve"><value>Inference device:</value></data>
+  <data name="Editor_LblModelType" xml:space="preserve"><value>Model type:</value></data>
+  <data name="Editor_LblConfidence" xml:space="preserve"><value>Confidence threshold:</value></data>
+  <data name="Editor_LblIou" xml:space="preserve"><value>IOU threshold:</value></data>
+  <data name="Editor_LblInputSize" xml:space="preserve"><value>Input size:</value></data>
+  <data name="Editor_LblClassesReadonly" xml:space="preserve"><value>Classes (read-only):</value></data>
+  <data name="Editor_WatermarkClasses" xml:space="preserve"><value>From algorithm descriptor</value></data>
+  <data name="Editor_ClassesHint" xml:space="preserve"><value>Classes are fixed by the algorithm type and map to model output indices.</value></data>
+  <data name="Editor_SectionRegions" xml:space="preserve"><value>Regions</value></data>
+  <data name="Editor_BtnVisualRegions" xml:space="preserve"><value>Visual region editor…</value></data>
+  <data name="Editor_LblRegionsJson" xml:space="preserve"><value>Region data (JSON):</value></data>
+  <data name="Editor_SectionAoi" xml:space="preserve"><value>AOI</value></data>
+  <data name="Editor_HintAoiArgs" xml:space="preserve"><value>Parameters are stored in algorithm args (JSON). Empty optional fields are omitted.</value></data>
+  <data name="Editor_SectionAlgorithmParameters" xml:space="preserve"><value>Algorithm parameters</value></data>
+  <data name="Editor_HintAlgorithmParameters" xml:space="preserve"><value>Values are stored in each algorithm&apos;s args (JSON). Keys not listed here can still be edited in the config file. Empty optional fields are omitted.</value></data>
+  <data name="Editor_SectionStorage" xml:space="preserve"><value>Storage</value></data>
+  <data name="Editor_ChkSaveErrorImage" xml:space="preserve"><value>Save error images</value></data>
+  <data name="Editor_ChkSaveVideo" xml:space="preserve"><value>Save video</value></data>
+  <data name="Editor_ChkNgVideoSourceRes" xml:space="preserve"><value>NG video at source resolution (no scale)</value></data>
+  <data name="Editor_HintRecordingMaxWidth" xml:space="preserve"><value>When off, auto ≤2K; advanced users can set recordingMaxWidth in JSON.</value></data>
+  <data name="Editor_LblVideoDuration" xml:space="preserve"><value>Video duration (seconds):</value></data>
+  <data name="Editor_HintNgFps" xml:space="preserve"><value>NG recording frame rate follows capture; no need to set.</value></data>
+  <data name="Editor_SectionNotification" xml:space="preserve"><value>Notifications</value></data>
+  <data name="Editor_ChkNotifyEnable" xml:space="preserve"><value>Enable notifications (channels below)</value></data>
+  <data name="Editor_HintNotifyChannels" xml:space="preserve"><value>Channel types are the intersection of algorithm descriptor and registered channels.</value></data>
+  <data name="Editor_BtnAddNotifier" xml:space="preserve"><value>Add channel</value></data>
+  <data name="Editor_NotifierEnableTooltip" xml:space="preserve"><value>Enable this channel</value></data>
+  <data name="Editor_BtnDeleteNotifier" xml:space="preserve"><value>Remove</value></data>
+  <data name="Editor_StatusNewHint" xml:space="preserve"><value>Fill in the form and add algorithms from the dropdown.</value></data>
+  <data name="Editor_BtnSave" xml:space="preserve"><value>Save</value></data>
+  <data name="Editor_BtnCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Editor_DefaultConfigName" xml:space="preserve"><value>New configuration</value></data>
+  <data name="Editor_SourceLocalVideo" xml:space="preserve"><value>Local video</value></data>
+  <data name="Editor_SourceRtsp" xml:space="preserve"><value>RTSP stream</value></data>
+  <data name="Editor_SourceCamera" xml:space="preserve"><value>Camera</value></data>
+  <data name="Editor_ModelType_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Editor_ModelType_Detection" xml:space="preserve"><value>Detection</value></data>
+  <data name="Editor_ModelType_Segmentation" xml:space="preserve"><value>Segmentation</value></data>
+  <data name="Editor_ModelType_Classification" xml:space="preserve"><value>Classification</value></data>
+  <data name="Editor_ModelType_Pose" xml:space="preserve"><value>Pose</value></data>
+  <data name="Editor_ModelType_Obb" xml:space="preserve"><value>Rotated</value></data>
+  <data name="Editor_ModelType_Track" xml:space="preserve"><value>Native tracking (reserved)</value></data>
+  <data name="Editor_ModelType_SegmentationTracking" xml:space="preserve"><value>Segmentation + tracking</value></data>
+  <data name="Editor_ModelType_DetectionTracking" xml:space="preserve"><value>Detection + MOT</value></data>
+  <data name="Editor_StatusSelectAlgoFirst" xml:space="preserve"><value>Select an algorithm first.</value></data>
+  <data name="Editor_StatusEnterName" xml:space="preserve"><value>Enter a configuration name.</value></data>
+  <data name="Editor_StatusSetVideoPath" xml:space="preserve"><value>Set the video source path.</value></data>
+  <data name="Editor_StatusAddOneAlgo" xml:space="preserve"><value>Add at least one algorithm.</value></data>
+  <data name="Editor_StatusAlgoAdded" xml:space="preserve"><value>Added algorithm: {0} {1}</value></data>
+  <data name="Editor_StatusAlgoRemoved" xml:space="preserve"><value>Removed algorithm: {0}</value></data>
+  <data name="Editor_PickerTitleVideo" xml:space="preserve"><value>Select video file</value></data>
+  <data name="Editor_PickerFilterVideo" xml:space="preserve"><value>Video files</value></data>
+  <data name="Editor_PickerTitleModel" xml:space="preserve"><value>Select model file</value></data>
+  <data name="Editor_PickerFilterOnnx" xml:space="preserve"><value>ONNX model</value></data>
+  <data name="Editor_StatusAlgoAddedSuffixClasses" xml:space="preserve"><value>(classes fixed by algorithm)</value></data>
+  <data name="Editor_StatusAlgoAddedSuffixNoClasses" xml:space="preserve"><value>(no default classes in descriptor)</value></data>
+  <data name="Editor_StatusRegionsUpdated" xml:space="preserve"><value>Updated {0} region(s).</value></data>
+  <data name="WebEditor_TitleNew" xml:space="preserve"><value>New configuration</value></data>
+  <data name="WebEditor_SectionBasic" xml:space="preserve"><value>Basic information</value></data>
+  <data name="WebEditor_LblConfigName" xml:space="preserve"><value>Configuration name</value></data>
+  <data name="WebEditor_PlaceholderName" xml:space="preserve"><value>e.g. Line 1 tear-off tab</value></data>
+  <data name="WebEditor_SectionVideo" xml:space="preserve"><value>Video source</value></data>
+  <data name="WebEditor_LblVideoType" xml:space="preserve"><value>Source type</value></data>
+  <data name="WebEditor_OptRtsp" xml:space="preserve"><value>RTSP stream</value></data>
+  <data name="WebEditor_OptLocal" xml:space="preserve"><value>Local video</value></data>
+  <data name="WebEditor_OptCamera" xml:space="preserve"><value>Camera</value></data>
+  <data name="WebEditor_LblVideoPath" xml:space="preserve"><value>Source path</value></data>
+  <data name="WebEditor_PlaceholderVideoPath" xml:space="preserve"><value>rtsp://192.168.1.100:554/stream</value></data>
+  <data name="WebEditor_ChkLoop" xml:space="preserve"><value>Loop playback (local video only)</value></data>
+  <data name="WebEditor_SectionAlgo" xml:space="preserve"><value>Algorithm pool</value></data>
+  <data name="WebEditor_PlaceholderAlgoSelect" xml:space="preserve"><value>Select algorithm to add…</value></data>
+  <data name="WebEditor_NoAlgoHint1" xml:space="preserve"><value>Select an algorithm from the list on the left to add to the pool.</value></data>
+  <data name="WebEditor_NoAlgoHint2" xml:space="preserve"><value>Then edit parameters on the right.</value></data>
+  <data name="WebEditor_BtnCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="WebEditor_BtnSave" xml:space="preserve"><value>Save</value></data>
+  <data name="Ng_WindowTitle" xml:space="preserve"><value>NG replay — {0}</value></data>
+  <data name="Ng_PanelVideoFiles" xml:space="preserve"><value>NG video files</value></data>
+  <data name="Ng_BtnRefresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Ng_LblDate" xml:space="preserve"><value>Date</value></data>
+  <data name="Ng_LblFileList" xml:space="preserve"><value>Files</value></data>
+  <data name="Ng_PlaceholderSelect" xml:space="preserve"><value>Select a file on the left to play</value></data>
+  <data name="Ng_TooltipPrev" xml:space="preserve"><value>Previous frame</value></data>
+  <data name="Ng_TooltipNext" xml:space="preserve"><value>Next frame</value></data>
+  <data name="Ng_TooltipStop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Ng_LblSpeed" xml:space="preserve"><value>Speed:</value></data>
+  <data name="Ng_Play" xml:space="preserve"><value>Play</value></data>
+  <data name="Ng_Pause" xml:space="preserve"><value>Pause</value></data>
+  <data name="Region_WindowTitle" xml:space="preserve"><value>Region editor</value></data>
+  <data name="Region_SectionTarget" xml:space="preserve"><value>Target region</value></data>
+  <data name="Region_SectionDraw" xml:space="preserve"><value>Drawing tools</value></data>
+  <data name="Region_BtnRect" xml:space="preserve"><value>Rectangle</value></data>
+  <data name="Region_BtnPolygon" xml:space="preserve"><value>Polygon</value></data>
+  <data name="Region_BtnClearCurrent" xml:space="preserve"><value>Clear current</value></data>
+  <data name="Region_BtnDeleteSelected" xml:space="preserve"><value>Delete selected</value></data>
+  <data name="Region_LblDrawn" xml:space="preserve"><value>Drawn regions:</value></data>
+  <data name="Region_BtnSave" xml:space="preserve"><value>Save</value></data>
+  <data name="Region_BtnCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Region_WatermarkCustomName" xml:space="preserve"><value>Custom region name</value></data>
+  <data name="Region_CustomDisplayName" xml:space="preserve"><value>Custom region…</value></data>
+  <data name="Region_CustomDescription" xml:space="preserve"><value>User-defined named region</value></data>
+  <data name="Main_FullscreenTitle" xml:space="preserve"><value>Full screen preview</value></data>
+  <data name="Main_FullscreenEscHint" xml:space="preserve"><value>Press ESC to exit</value></data>
+  <data name="Main_FullscreenAvgPipelineFmt" xml:space="preserve"><value>Average frame time: {0:F1} ms</value></data>
+  <data name="Main_FloatingTitleFmt" xml:space="preserve"><value>Preview — {0}</value></data>
+  <data name="Main_FloatingFullscreenTooltip" xml:space="preserve"><value>Toggle fullscreen</value></data>
+  <data name="Main_FloatingMsPerFrameFmt" xml:space="preserve"><value>{0:F1} ms/frame</value></data>
+  <data name="Ng_DateFolderFmt" xml:space="preserve"><value>{0} ({1} videos)</value></data>
+  <data name="Ng_LblVideoFilesColumn" xml:space="preserve"><value>Video files</value></data>
+  <data name="Region_StatusPickTargetMode" xml:space="preserve"><value>Select a target region, then a draw mode.</value></data>
+  <data name="Region_StatusTargetRedrawFmt" xml:space="preserve"><value>Target: {0} (drawn — redraw to replace)</value></data>
+  <data name="Region_StatusTargetPickModeFmt" xml:space="preserve"><value>Target: {0} — choose a draw mode</value></data>
+  <data name="Region_StatusCustomTargetDesc" xml:space="preserve"><value>Enter a name, then choose a draw mode.</value></data>
+  <data name="Region_StatusCustomEnterName" xml:space="preserve"><value>Custom region — enter a name</value></data>
+  <data name="Region_StatusLoadingImage" xml:space="preserve"><value>Loading image…</value></data>
+  <data name="Region_StatusCannotOpenVideo" xml:space="preserve"><value>Cannot open video source</value></data>
+  <data name="Region_StatusVideoReadFailed" xml:space="preserve"><value>Cannot read a valid frame from video (file may be corrupt)</value></data>
+  <data name="Region_StatusInvalidCameraId" xml:space="preserve"><value>Invalid camera ID</value></data>
+  <data name="Region_StatusCannotOpenCamera" xml:space="preserve"><value>Cannot open camera — see logs</value></data>
+  <data name="Region_StatusCameraReadFailed" xml:space="preserve"><value>Cannot read a valid frame from camera</value></data>
+  <data name="Region_StatusCannotReadImage" xml:space="preserve"><value>Cannot read image</value></data>
+  <data name="Region_StatusLoadedFmt" xml:space="preserve"><value>Loaded {0}×{1} — select a target region</value></data>
+  <data name="Region_StatusLoadFailedFmt" xml:space="preserve"><value>Load failed: {0}</value></data>
+  <data name="Region_StatusBitmapFailed" xml:space="preserve"><value>Cannot convert image to bitmap</value></data>
+  <data name="Region_StatusUpdateFailedFmt" xml:space="preserve"><value>Display update failed: {0}</value></data>
+  <data name="Region_StatusPolygonPointsFmt" xml:space="preserve"><value>Polygon: {0} points (right-click to finish)</value></data>
+  <data name="Region_StatusSelectTargetFirst" xml:space="preserve"><value>Select a target region first</value></data>
+  <data name="Region_StatusEnterCustomName" xml:space="preserve"><value>Enter a custom region name</value></data>
+  <data name="Region_StatusNameConflictFmt" xml:space="preserve"><value>Name '{0}' conflicts with a predefined region</value></data>
+  <data name="Region_StatusRectTooSmall" xml:space="preserve"><value>Rectangle too small — draw again</value></data>
+  <data name="Region_StatusPolygonMinPoints" xml:space="preserve"><value>Polygon needs at least 3 points</value></data>
+  <data name="Region_StatusAddedRectFmt" xml:space="preserve"><value>Rectangle added: {0}</value></data>
+  <data name="Region_StatusAddedPolygonFmt" xml:space="preserve"><value>Polygon added: {0}</value></data>
+  <data name="Region_StatusRectModeHint" xml:space="preserve"><value>Rectangle: click and drag</value></data>
+  <data name="Region_StatusPolyModeHint" xml:space="preserve"><value>Polygon: left-click vertices, right-click to finish</value></data>
+  <data name="Region_StatusClearedDraw" xml:space="preserve"><value>Cleared current drawing</value></data>
+  <data name="Region_StatusSelectDrawnToDelete" xml:space="preserve"><value>Select a region in the list to delete</value></data>
+  <data name="Region_StatusDeletedFmt" xml:space="preserve"><value>Deleted: {0}</value></data>
+  <data name="Region_StatusMissingRequiredFmt" xml:space="preserve"><value>Draw required regions: {0}</value></data>
+  <data name="Region_DescRectangle" xml:space="preserve"><value>Rectangle region</value></data>
+  <data name="Region_DescPolygon" xml:space="preserve"><value>Polygon region</value></data>
+  <data name="WebEditor_TitleEditFmt" xml:space="preserve"><value>Edit configuration — {0}</value></data>
+  <data name="Web_EmptyNoConfigs" xml:space="preserve"><value>No detection configurations</value></data>
+  <data name="Web_EmptyHintStart" xml:space="preserve"><value>Use “New configuration” or “Import” in the header to get started</value></data>
+  <data name="Web_AlgoCountFmt" xml:space="preserve"><value>{0} algorithm(s)</value></data>
+  <data name="Web_BadgeRunning" xml:space="preserve"><value>Running</value></data>
+  <data name="Web_BadgeStopped" xml:space="preserve"><value>Stopped</value></data>
+  <data name="Web_ActionStop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Web_ActionView" xml:space="preserve"><value>View</value></data>
+  <data name="Web_ActionCopyLink" xml:space="preserve"><value>Copy link</value></data>
+  <data name="Web_ActionStart" xml:space="preserve"><value>Start</value></data>
+  <data name="Web_ActionNgReplay" xml:space="preserve"><value>NG replay</value></data>
+  <data name="Web_ActionEdit" xml:space="preserve"><value>Edit</value></data>
+  <data name="Web_ActionDelete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Web_ConfirmDeleteConfig" xml:space="preserve"><value>Delete this configuration?</value></data>
+  <data name="Web_ImportTitle" xml:space="preserve"><value>Import configuration</value></data>
+  <data name="Web_ImportDropHint" xml:space="preserve"><value>Click or drag JSON configuration files here</value></data>
+  <data name="Web_ImportFormatHint" xml:space="preserve"><value>Single config, array, or { "configurations": [...] }</value></data>
+  <data name="Web_ImportOrPaste" xml:space="preserve"><value>— or paste JSON —</value></data>
+  <data name="Web_ImportPlaceholderJson" xml:space="preserve"><value>Paste JSON here…</value></data>
+  <data name="Web_NoAlgoInPool" xml:space="preserve"><value>No algorithms in pool yet</value></data>
+  <data name="Web_EditorPoolAlgoRemoved" xml:space="preserve"><value>Algorithm removed from pool</value></data>
+  <data name="Web_AlgoDisabledSuffix" xml:space="preserve"><value> (disabled)</value></data>
+  <data name="Web_RemoveAlgoTitle" xml:space="preserve"><value>Remove</value></data>
+  <data name="Web_AdDisplayName" xml:space="preserve"><value>Display name</value></data>
+  <data name="Web_AdEnableAlgo" xml:space="preserve"><value>Enable this algorithm</value></data>
+  <data name="Web_AdClassesReadonlyTag" xml:space="preserve"><value>(fixed by algorithm, read-only)</value></data>
+  <data name="Web_AdClassesFooter" xml:space="preserve"><value>Matches the algorithm descriptor; this list is always saved as above.</value></data>
+  <data name="Web_AdRegionsManualHint" xml:space="preserve"><value>— editable, or paste from Desktop</value></data>
+  <data name="Web_AdRetentionDays" xml:space="preserve"><value>Retention (days)</value></data>
+  <data name="Web_AdStorageFpsNote" xml:space="preserve"><value>NG recording frame rate follows capture automatically.</value></data>
+  <data name="Web_AdNotifyFooter" xml:space="preserve"><value>Notifier details are not edited here; imported/Desktop configs keep channels. Off disables only.</value></data>
+  <data name="Web_AdNotifyEnable" xml:space="preserve"><value>Enable notifications (server channels)</value></data>
+  <data name="Web_MT_Detection" xml:space="preserve"><value>Object detection</value></data>
+  <data name="Web_MT_Segmentation" xml:space="preserve"><value>Instance segmentation</value></data>
+  <data name="Web_MT_Classification" xml:space="preserve"><value>Image classification</value></data>
+  <data name="Web_MT_Pose" xml:space="preserve"><value>Pose estimation</value></data>
+  <data name="Web_MT_Obb" xml:space="preserve"><value>Rotated</value></data>
+  <data name="Web_MT_Track" xml:space="preserve"><value>Native tracking (reserved)</value></data>
+  <data name="Web_MT_SegmentationTracking" xml:space="preserve"><value>Segmentation + tracking</value></data>
+  <data name="Web_MT_DetectionTracking" xml:space="preserve"><value>Multi-object detection + MOT</value></data>
+  <data name="Web_NgEmptyDates" xml:space="preserve"><value>No NG recordings</value></data>
+  <data name="Web_NgSelectDateHint" xml:space="preserve"><value>Select a date to list files</value></data>
+  <data name="Web_NgFileCountFmt" xml:space="preserve"><value>{0} files</value></data>
+  <data name="Web_NgPlaybackRate" xml:space="preserve"><value>Playback rate:</value></data>
+  <data name="Web_OpenRegionDrawMode" xml:space="preserve"><value>Draw mode</value></data>
+  <data name="Web_RegionSaveBtn" xml:space="preserve"><value>Save regions</value></data>
+  <data name="WebRegion_LoadingFrame" xml:space="preserve"><value>Loading video frame…</value></data>
+  <data name="WebRegion_NoFrame" xml:space="preserve"><value>Cannot load frame — check video source</value></data>
+  <data name="WebRegion_LoadedFmt" xml:space="preserve"><value>Loaded {0}×{1} — select target and draw mode</value></data>
+  <data name="WebRegion_PolyPointsFmt" xml:space="preserve"><value>Polygon: {0} vertices — right-click to close</value></data>
+  <data name="WebRegion_RectTooSmall" xml:space="preserve"><value>Rectangle too small</value></data>
+  <data name="WebRegion_PolyMinPoints" xml:space="preserve"><value>Polygon needs at least 3 vertices</value></data>
+  <data name="WebRegion_SelectTargetFirst" xml:space="preserve"><value>Select a target region first</value></data>
+  <data name="WebRegion_EnterCustomName" xml:space="preserve"><value>Enter a custom region name</value></data>
+  <data name="WebRegion_AddedFmt" xml:space="preserve"><value>Added: {0} ({1} vertices)</value></data>
+  <data name="WebRegion_Deleted" xml:space="preserve"><value>Region removed</value></data>
+  <data name="WebRegion_ModeRect" xml:space="preserve"><value>Rectangle: drag to draw</value></data>
+  <data name="WebRegion_ModePoly" xml:space="preserve"><value>Polygon: left-click vertices, right-click to close</value></data>
+  <data name="WebRegion_ModeNone" xml:space="preserve"><value>Choose a draw mode</value></data>
+  <data name="WebRegion_Cleared" xml:space="preserve"><value>Cleared current drawing</value></data>
+  <data name="WebRegion_WmCustomName" xml:space="preserve"><value>Region name</value></data>
+  <data name="WebRegion_NoDrawnYet" xml:space="preserve"><value>No regions drawn yet</value></data>
+  <data name="WebRegion_CustomLabel" xml:space="preserve"><value>Custom</value></data>
+  <data name="WebRegion_MissingRequiredFmt" xml:space="preserve"><value>Draw required regions: {0}</value></data>
+</root>

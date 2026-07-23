@@ -1,0 +1,28 @@
+.container {
+    transform: translate(0%, 50%);
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+form button:last-child {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#loginForm {
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+
+
+.bg-am {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    overflow: hidden;
+    z-index: -1;
+}

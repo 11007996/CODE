@@ -1,0 +1,53 @@
+
+page {
+		background-color: aliceblue;
+}
+.container {
+		padding: 10rpx;
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+}
+.title {
+		padding-top: 20%;
+		font-size: 60rpx;
+		font-weight: bold;
+}
+.logo {
+		width: 150rpx;
+		height: 150rpx;
+		margin-bottom: 120rpx;
+		margin-top: 40rpx;
+		display: block;
+}
+.item {
+		width: 95%;
+		display: flex;
+		justify-content: center;
+		align-self: center;
+}
+.input {
+		height: 90rpx;
+		background-color: white;
+		border-bottom: 1rpx solid gray;
+		border-radius: 8rpx;
+		margin-bottom: 15rpx;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+.input text {
+		color: green;
+		font-size: 40rpx;
+		text-align: center;
+		padding: 0 20rpx;
+}
+.input input {
+		flex: 1;
+		font-size: 40rpx;
+}
+.item button {
+		width: 100%;
+		background-color: deepskyblue;
+		color: white;
+}

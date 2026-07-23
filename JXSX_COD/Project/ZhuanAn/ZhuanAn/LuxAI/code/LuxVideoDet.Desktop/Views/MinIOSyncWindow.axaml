@@ -1,0 +1,510 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:LuxVideoDet.Desktop.ViewModels"
+        xmlns:converters="using:LuxVideoDet.Desktop.Views.S3Storage.Converters"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
+        x:Class="LuxVideoDet.Desktop.Views.MinIOSyncWindow"
+        x:DataType="vm:MinIOSyncViewModel"
+        Title="算法插件与资源更新"
+        Width="1000" Height="700"
+        MinWidth="800" MinHeight="600"
+        WindowStartupLocation="CenterOwner">
+    
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background" Value="#F4F6FA"/>
+        </Style>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="MinHeight" Value="34"/>
+        </Style>
+        <Style Selector="Button.top-action">
+            <Setter Property="MinWidth" Value="120"/>
+        </Style>
+        <Style Selector="Button.section-action">
+            <Setter Property="MinWidth" Value="72"/>
+        </Style>
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="#2563EB"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.secondary">
+            <Setter Property="Background" Value="#E5E7EB"/>
+            <Setter Property="Foreground" Value="#111827"/>
+        </Style>
+        <Style Selector="Button.danger">
+            <Setter Property="Background" Value="#FEE2E2"/>
+            <Setter Property="Foreground" Value="#B91C1C"/>
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="10,7"/>
+        </Style>
+        <Style Selector="ComboBox">
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style Selector="CheckBox">
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style Selector="ProgressBar">
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Height" Value="12"/>
+            <Setter Property="CornerRadius" Value="99"/>
+        </Style>
+        <Style Selector="TabControl">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        <Style Selector="TabItem">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="14,8"/>
+            <Setter Property="Foreground" Value="#374151"/>
+        </Style>
+        <Style Selector="TabItem:selected">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#1D4ED8"/>
+        </Style>
+        <Style Selector="DataGrid">
+            <Setter Property="RowHeight" Value="34"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <!-- 让 Expander 的 Header 始终占满整宽（折叠/展开一致） -->
+        <Style Selector="Expander">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="Expander /template/ ToggleButton">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="Expander /template/ ToggleButton /template/ ContentPresenter">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+    </Window.Styles>
+    
+    <DockPanel Margin="10">
+        <!-- 顶部工具栏 -->
+        <Border DockPanel.Dock="Top" Background="White" CornerRadius="12" Padding="12" Margin="0,0,0,10" BorderBrush="#E5E7EB" BorderThickness="1">
+            <Grid ColumnDefinitions="Auto,*,Auto,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="8" RowSpacing="6">
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="算法插件与资源更新" FontSize="18" FontWeight="SemiBold" Foreground="#111827"/>
+                <Button Grid.Row="0" Grid.Column="2" Classes="secondary" Command="{Binding CheckConnectionCommand}" Content="检查连接" 
+                    VerticalAlignment="Center"
+                    IsEnabled="{Binding !IsSyncing}" ToolTip.Tip="检查 S3 对象存储连接状态"/>
+                <Border Grid.Row="0" Grid.Column="3" Background="#DCFCE7" BorderBrush="#86EFAC" BorderThickness="1" CornerRadius="99" Padding="10,4" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding ConnectionStatus}" 
+                               Foreground="{Binding IsConnected, Converter={x:Static converters:BoolToBrushConverters.TrueGreenFalseRed}}"
+                           FontWeight="SemiBold" VerticalAlignment="Center"/>
+                </Border>
+                <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="用于更新算法插件与模型资源，减少整包部署频率" FontSize="12" Foreground="#6B7280"/>
+            </Grid>
+        </Border>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="10" Margin="2,0,2,8">
+            <Button Classes="primary top-action" Command="{Binding SyncAllCommand}" Content="一键同步（覆盖本地）" 
+                    IsEnabled="{Binding !IsSyncing}" ToolTip.Tip="拉取远程并覆盖本地同名文件（插件/模型/视频/压缩包）"/>
+            <Button Classes="secondary top-action" Command="{Binding RefreshFileListsCommand}" Content="刷新列表" 
+                    IsEnabled="{Binding !IsSyncing}" ToolTip.Tip="仅刷新远程/本地状态，不下载不替换"/>
+        </StackPanel>
+        
+        <!-- 主内容区域 -->
+        <TabControl Margin="2">
+            <!-- 文件同步选项卡 -->
+            <TabItem Header="文件同步">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Margin="0,0,0,8" Spacing="8">
+                        <!-- 进度显示 -->
+                        <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Margin="4,0,4,2" Padding="10,8"
+                                IsVisible="{Binding IsSyncing}">
+                            <StackPanel Spacing="3">
+                                <TextBlock Text="{Binding ProgressMessage}" FontWeight="SemiBold" Foreground="#1F2937"/>
+                                <Grid>
+                                    <ProgressBar Value="{Binding ProgressPercentage}" Maximum="100" Height="16"/>
+                                </Grid>
+                                <TextBlock Text="{Binding CurrentFile}" TextTrimming="CharacterEllipsis" FontSize="12" Opacity="0.7"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#F8FAFC" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Margin="4,0,4,2" Padding="10,8">
+                            <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="#475569"
+                                       Text="同步范围：plugins/、models/、videos/、zips/（以配置为准）｜ 本地落盘：./plugins、resources/models、resources/videos、resources/zips。"/>
+                        </Border>
+
+                        <!-- 插件文件列表 -->
+                        <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Margin="4,0,4,2" Padding="8">
+                            <Expander IsExpanded="True" HorizontalContentAlignment="Stretch">
+                                <Expander.Header>
+                                    <Grid ColumnDefinitions="*,Auto" HorizontalAlignment="Stretch">
+                                        <TextBlock Grid.Column="0" Text="插件文件（.dll / .so）" VerticalAlignment="Center" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+                                        <Button Grid.Column="1" Classes="primary section-action" Content="同步" Command="{Binding SyncPluginsCommand}"
+                                                IsEnabled="{Binding !IsSyncing}" Margin="8,0,8,0"/>
+                                    </Grid>
+                                </Expander.Header>
+                                <Grid RowDefinitions="*" ColumnDefinitions="*">
+                                    <DataGrid Name="PluginDataGrid" Grid.Row="0" MinHeight="220"
+                                              ItemsSource="{Binding PluginFiles}" SelectedItem="{Binding SelectedPluginFile}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,2,0,0"
+                                              DoubleTapped="PluginDataGrid_OnDoubleTapped">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="文件名" Binding="{Binding FileName}" Width="*"/>
+                                            <DataGridTextColumn Header="大小" Binding="{Binding FileSize, Converter={x:Static converters:FileSizeConverters.BytesToMb}}" Width="100"/>
+                                            <DataGridTemplateColumn Header="本地状态" Width="110">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Border CornerRadius="10" Padding="6,2"
+                                                                Background="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusBackground}}">
+                                                            <TextBlock Text="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusText}}" HorizontalAlignment="Center"
+                                                                       Foreground="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusForeground}}"/>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+                            </Expander>
+                        </Border>
+
+                        <!-- 模型文件列表 -->
+                        <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Margin="4,0,4,2" Padding="8">
+                            <Expander IsExpanded="True" HorizontalContentAlignment="Stretch">
+                                <Expander.Header>
+                                    <Grid ColumnDefinitions="*,Auto" HorizontalAlignment="Stretch">
+                                        <TextBlock Grid.Column="0" Text="模型文件（.onnx / .pt）" VerticalAlignment="Center" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+                                        <Button Grid.Column="1" Classes="primary section-action" Content="同步" Command="{Binding SyncModelsCommand}"
+                                                IsEnabled="{Binding !IsSyncing}" Margin="8,0,8,0"/>
+                                    </Grid>
+                                </Expander.Header>
+                                <Grid RowDefinitions="*" ColumnDefinitions="*">
+                                    <DataGrid Name="ModelDataGrid" Grid.Row="0" MinHeight="220"
+                                              ItemsSource="{Binding ModelFiles}" SelectedItem="{Binding SelectedModelFile}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,2,0,0"
+                                              DoubleTapped="ModelDataGrid_OnDoubleTapped">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="文件名" Binding="{Binding FileName}" Width="*"/>
+                                            <DataGridTextColumn Header="大小" Binding="{Binding FileSize, Converter={x:Static converters:FileSizeConverters.BytesToMb}}" Width="100"/>
+                                            <DataGridTemplateColumn Header="本地状态" Width="110">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Border CornerRadius="10" Padding="6,2"
+                                                                Background="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusBackground}}">
+                                                            <TextBlock Text="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusText}}" HorizontalAlignment="Center"
+                                                                       Foreground="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusForeground}}"/>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+                            </Expander>
+                        </Border>
+
+                        <!-- 视频文件列表 -->
+                        <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Margin="4,0,4,2" Padding="8">
+                            <Expander IsExpanded="False" HorizontalContentAlignment="Stretch">
+                                <Expander.Header>
+                                    <Grid ColumnDefinitions="*,Auto" HorizontalAlignment="Stretch">
+                                        <TextBlock Grid.Column="0" Text="视频文件（常见格式）" VerticalAlignment="Center" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+                                        <Button Grid.Column="1" Classes="primary section-action" Content="同步" Command="{Binding SyncVideosCommand}"
+                                                IsEnabled="{Binding !IsSyncing}" Margin="8,0,8,0"/>
+                                    </Grid>
+                                </Expander.Header>
+                                <Grid RowDefinitions="*" ColumnDefinitions="*">
+                                    <DataGrid Name="VideoDataGrid" Grid.Row="0" MinHeight="220"
+                                              ItemsSource="{Binding VideoFiles}" SelectedItem="{Binding SelectedVideoFile}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,2,0,0"
+                                              DoubleTapped="VideoDataGrid_OnDoubleTapped">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="文件名" Binding="{Binding FileName}" Width="*"/>
+                                            <DataGridTextColumn Header="大小" Binding="{Binding FileSize, Converter={x:Static converters:FileSizeConverters.BytesToMb}}" Width="100"/>
+                                            <DataGridTemplateColumn Header="本地状态" Width="110">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Border CornerRadius="10" Padding="6,2"
+                                                                Background="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusBackground}}">
+                                                            <TextBlock Text="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusText}}" HorizontalAlignment="Center"
+                                                                       Foreground="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusForeground}}"/>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+                            </Expander>
+                        </Border>
+
+                        <!-- 压缩包文件列表 -->
+                        <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Margin="4,0,4,4" Padding="8">
+                            <Expander IsExpanded="False" HorizontalContentAlignment="Stretch">
+                                <Expander.Header>
+                                    <Grid ColumnDefinitions="*,Auto" HorizontalAlignment="Stretch">
+                                        <TextBlock Grid.Column="0" Text="压缩包文件（常见格式）" VerticalAlignment="Center" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+                                        <Button Grid.Column="1" Classes="primary section-action" Content="同步" Command="{Binding SyncZipsCommand}"
+                                                IsEnabled="{Binding !IsSyncing}" Margin="8,0,8,0"/>
+                                    </Grid>
+                                </Expander.Header>
+                                <Grid RowDefinitions="*" ColumnDefinitions="*">
+                                    <DataGrid Name="ZipDataGrid" Grid.Row="0" MinHeight="220"
+                                              ItemsSource="{Binding ZipFiles}" SelectedItem="{Binding SelectedZipFile}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,2,0,0"
+                                              DoubleTapped="ZipDataGrid_OnDoubleTapped">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="文件名" Binding="{Binding FileName}" Width="*"/>
+                                            <DataGridTextColumn Header="大小" Binding="{Binding FileSize, Converter={x:Static converters:FileSizeConverters.BytesToMb}}" Width="100"/>
+                                            <DataGridTemplateColumn Header="本地状态" Width="110">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Border CornerRadius="10" Padding="6,2"
+                                                                Background="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusBackground}}">
+                                                            <TextBlock Text="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusText}}" HorizontalAlignment="Center"
+                                                                       Foreground="{Binding Status, Converter={x:Static converters:SyncStatusBrushConverters.StatusForeground}}"/>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+                            </Expander>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            
+            <!-- 配置选项卡 -->
+            <TabItem Header="配置">
+                <ScrollViewer>
+                    <StackPanel Margin="12" Spacing="12">
+                        <TextBlock Text="连接" FontWeight="SemiBold" FontSize="15" Margin="0,4,0,0"/>
+                        <Grid ColumnSpacing="12" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="存储类型" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Row="0" Grid.Column="1"
+                                      ItemsSource="{Binding AvailableProviders}"
+                                      SelectedItem="{Binding SelectedProvider, Mode=TwoWay}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DisplayName}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="服务地址" VerticalAlignment="Center"/>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Spacing="4">
+                                <TextBox Text="{Binding MinioConfig.Endpoint, Mode=TwoWay}"
+                                         Watermark="例如 localhost:9000"/>
+                                <TextBlock FontSize="12" Opacity="0.65" TextWrapping="Wrap"
+                                           Text="只填 主机:端口，不要加 http:// 或 https://；适用于兼容 S3 API 的对象存储。"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="账号" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding MinioConfig.AccessKey, Mode=TwoWay}"
+                                     Watermark="S3 Access Key（例如 MINIO_ROOT_USER）"/>
+
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="密码" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding MinioConfig.SecretKey, Mode=TwoWay}"
+                                     Watermark="S3 Secret Key（例如 MINIO_ROOT_PASSWORD）"/>
+
+                            <TextBlock Grid.Row="4" Grid.Column="0" Text="存储桶" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding MinioConfig.BucketName, Mode=TwoWay}"/>
+
+                            <CheckBox Grid.Row="5" Grid.Column="1" IsChecked="{Binding MinioConfig.UseSsl, Mode=TwoWay}"
+                                      Content="使用 HTTPS（加密连接）"/>
+                        </Grid>
+
+                        <TextBlock Text="桶内路径" FontWeight="SemiBold" FontSize="15" Margin="0,4,0,0"/>
+                        <Grid ColumnSpacing="12" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="插件前缀" VerticalAlignment="Center"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Spacing="4">
+                                <TextBox Text="{Binding MinioConfig.RemotePluginPath, Mode=TwoWay}"/>
+                                <TextBlock FontSize="12" Opacity="0.65" Text="对象键前缀，默认 plugins/"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="模型前缀" VerticalAlignment="Center"/>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Spacing="4">
+                                <TextBox Text="{Binding MinioConfig.RemoteModelPath, Mode=TwoWay}"/>
+                                <TextBlock FontSize="12" Opacity="0.65" Text="对象键前缀，默认 models/"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Expander Header="高级选项（一般保持默认即可）" IsExpanded="False">
+                            <StackPanel Margin="0,10,0,0" Spacing="10">
+                                <CheckBox IsChecked="{Binding MinioConfig.SyncOnStartup, Mode=TwoWay}"
+                                          Content="启动时自动全量同步"/>
+                                <Grid ColumnSpacing="12" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="定时同步" VerticalAlignment="Center"/>
+                                    <StackPanel Grid.Row="0" Grid.Column="1" Spacing="4">
+                                        <TextBox Text="{Binding MinioConfig.AutoSyncIntervalMinutes, Mode=TwoWay}"/>
+                                        <TextBlock FontSize="12" Opacity="0.65" Text="间隔（分钟）；0 表示不自动定时同步"/>
+                                    </StackPanel>
+
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="下载超时" VerticalAlignment="Center"/>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Spacing="4">
+                                        <TextBox Text="{Binding MinioConfig.DownloadTimeoutSeconds, Mode=TwoWay}"/>
+                                        <TextBlock FontSize="12" Opacity="0.65" Text="单位：秒"/>
+                                    </StackPanel>
+
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="最大重试" VerticalAlignment="Center"/>
+                                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding MinioConfig.MaxRetryCount, Mode=TwoWay}"/>
+
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="重试间隔" VerticalAlignment="Center"/>
+                                    <StackPanel Grid.Row="3" Grid.Column="1" Spacing="4">
+                                        <TextBox Text="{Binding MinioConfig.RetryDelaySeconds, Mode=TwoWay}"/>
+                                        <TextBlock FontSize="12" Opacity="0.65" Text="单位：秒"/>
+                                    </StackPanel>
+                                </Grid>
+                                <CheckBox IsChecked="{Binding MinioConfig.UseETag, Mode=TwoWay}"
+                                          Content="用 ETag 判断文件是否变更（关闭后更易触发重复下载）"/>
+                            </StackPanel>
+                        </Expander>
+
+                        <Border BorderBrush="{Binding IsConfigValid, Converter={x:Static converters:BoolToBrushConverters.TrueGreenFalseRed}}"
+                                BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,4,0,0">
+                            <TextBlock Text="{Binding ConfigValidationMessage}" TextWrapping="Wrap"/>
+                        </Border>
+
+                        <Button Command="{Binding SaveConfigurationCommand}" Content="保存配置"
+                                HorizontalAlignment="Right" Margin="0,4,0,0"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            
+            <!-- 统计信息选项卡 -->
+            <TabItem Header="统计信息">
+                <ScrollViewer>
+                    <StackPanel Margin="10" Spacing="10">
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                            <Border Grid.Column="0" Background="#FEF3C7" BorderBrush="#FDE68A" BorderThickness="1" CornerRadius="10" Padding="10,8">
+                                <StackPanel Spacing="4">
+                                    <TextBlock Text="待下载/需更新" FontSize="12" Foreground="#92400E"/>
+                                    <TextBlock Text="{Binding PendingFileCount}" FontSize="24" FontWeight="Bold" Foreground="#78350F"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Column="1" Background="#DCFCE7" BorderBrush="#86EFAC" BorderThickness="1" CornerRadius="10" Padding="10,8">
+                                <StackPanel Spacing="4">
+                                    <TextBlock Text="本地已存在" FontSize="12" Foreground="#166534"/>
+                                    <TextBlock Text="{Binding ExistingFileCount}" FontSize="24" FontWeight="Bold" Foreground="#14532D"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Column="2" Background="#FEE2E2" BorderBrush="#FCA5A5" BorderThickness="1" CornerRadius="10" Padding="10,8">
+                                <StackPanel Spacing="4">
+                                    <TextBlock Text="失败文件数" FontSize="12" Foreground="#991B1B"/>
+                                    <TextBlock Text="{Binding FailedFileCount}" FontSize="24" FontWeight="Bold" Foreground="#7F1D1D"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid ColumnSpacing="12" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="总文件数:" FontWeight="Bold"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SyncStats.TotalFiles}"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="插件/模型/视频/压缩包:" FontWeight="Bold"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding FileTypeSummary}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="最后同步时间:" FontWeight="Bold"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SyncStats.LastSyncTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"/>
+                        </Grid>
+
+                        <Button Command="{Binding LoadStatsCommand}" Content="刷新统计" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            
+            <!-- 日志选项卡 -->
+            <TabItem Header="日志">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!-- 日志列表 -->
+                    <ListBox Grid.Row="0" ItemsSource="{Binding FilteredSyncLogs}" Margin="10" 
+                             ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="#E5E7EB" BorderThickness="0,0,0,1" Padding="0,6">
+                                    <Grid ColumnDefinitions="Auto,Auto,Auto,*" ColumnSpacing="8">
+                                        <TextBlock Grid.Column="0"
+                                                   Text="{Binding Time, StringFormat='[{0:HH:mm:ss}]'}"
+                                                   FontFamily="Consolas, Menlo, Monaco, monospace"
+                                                   Foreground="#6B7280"/>
+                                        <Border Grid.Column="1" CornerRadius="999" Padding="8,1"
+                                                Background="{Binding Level, Converter={x:Static converters:UiLogConverters.LevelBackground}}">
+                                            <TextBlock Text="{Binding Level, Converter={x:Static converters:UiLogConverters.LevelText}}"
+                                                       Foreground="{Binding Level, Converter={x:Static converters:UiLogConverters.LevelForeground}}"
+                                                       FontWeight="SemiBold" FontSize="11"/>
+                                        </Border>
+                                        <Border Grid.Column="2" CornerRadius="999" Padding="8,1" Background="#EEF2FF">
+                                            <TextBlock Text="{Binding Category}" Foreground="#3730A3" FontSize="11"/>
+                                        </Border>
+                                        <TextBlock Grid.Column="3" Text="{Binding Message}" TextWrapping="Wrap" Foreground="#111827"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    
+                    <!-- 日志控制 -->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10" Spacing="10">
+                        <CheckBox IsChecked="{Binding OnlyImportantLogs}" Content="仅显示警告/错误"/>
+                        <Button Command="{Binding ClearLogsCommand}" Content="清空日志"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

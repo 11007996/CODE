@@ -1,0 +1,74 @@
+----------------------------------------------------------- 
+记录时间：2023-04-27 09:40:58 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 PRIMARY KEY 约束“PK__M_AssetI__434A45B8149EAF20”。不能在对象“dbo.A_AssetInfo_T”中插入重复键。重复键值为 (1210-001609000009-0000)。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:e2ee9004-4e68-426c-a3a2-b83dd7545b6f
+Error Number:2627,State:1,Class:14
+
+记录时间：2023-04-27 09:46:54 线程名：[10] 级别：ERROR 类名：Machine.FrmBaseAsset 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 违反了 PRIMARY KEY 约束“PK__M_AssetI__434A45B8149EAF20”。不能在对象“dbo.A_AssetInfo_T”中插入重复键。重复键值为 (1210-001609000009-0000)。
+语句已终止。
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\DBUtil.cs:行号 256
+   在 Machine.FrmBaseAsset.tsmiImport_Click(Object sender, EventArgs e)
+ClientConnectionId:e2ee9004-4e68-426c-a3a2-b83dd7545b6f
+Error Number:2627,State:1,Class:14
+
+记录时间：2023-04-27 09:49:26 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'ELSE' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:e2ee9004-4e68-426c-a3a2-b83dd7545b6f
+Error Number:156,State:1,Class:15
+
+记录时间：2023-04-27 09:49:27 线程名：[10] 级别：ERROR 类名：Machine.FrmBaseAsset 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'ELSE' 附近有语法错误。
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\DBUtil.cs:行号 256
+   在 Machine.FrmBaseAsset.tsmiImport_Click(Object sender, EventArgs e)
+ClientConnectionId:e2ee9004-4e68-426c-a3a2-b83dd7545b6f
+Error Number:156,State:1,Class:15
+
+记录时间：2023-04-27 10:02:06 线程名：[10] 级别：ERROR 类名：Common.Utils.ExcelUtil 
+信息：文件“C:\Users\11011692\Desktop\资产清册（20230427）.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+
+记录时间：2023-04-27 10:02:07 线程名：[10] 级别：ERROR 类名：Machine.FrmBaseAsset 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Common.Utils.ExcelUtil.ReadFromExcelFile(String filePath) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\ExcelUtil.cs:行号 252
+   在 Machine.FrmBaseAsset.tsmiImport_Click(Object sender, EventArgs e)
+----------------------------------------------------------- 
+记录时间：2023-04-27 13:53:00 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 列名 'Handler' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:ce2fe04f-88c3-46ff-b46b-82e5f3558776
+Error Number:207,State:1,Class:16
+
+记录时间：2023-04-27 13:53:11 线程名：[10] 级别：ERROR 类名：CallSys.FrmBaseHandler 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 列名 'Handler' 无效。
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\Common\Utils\DBUtil.cs:行号 256
+   在 CallSys.FrmBaseHandler.tsmiImport_Click(Object sender, EventArgs e)
+ClientConnectionId:ce2fe04f-88c3-46ff-b46b-82e5f3558776
+Error Number:207,State:1,Class:16

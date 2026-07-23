@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>OnnxTensorRTDiag</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 与 LuxVideoDet.Core 中 OnnxRuntime 版本对齐 -->
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="1.19.2" />
+  </ItemGroup>
+</Project>

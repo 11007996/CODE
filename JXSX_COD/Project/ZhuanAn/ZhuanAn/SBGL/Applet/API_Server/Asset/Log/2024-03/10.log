@@ -1,0 +1,86 @@
+﻿
+日志时间：2024-03-10 13:35:15,897 [9] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-10 13:39:32,567 [24] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-10 15:19:27,067 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 15:41:45,450 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'S_PreviewFileInfo' 中的标识列插入显式值。","Data":null} 
+ 
+日志时间：2024-03-10 15:45:22,819 [9] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 15:51:31,461 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 15:51:39,116 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 16:39:42,145 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 16:40:26,534 [6] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 16:40:38,483 [17] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 16:48:36,425 [17] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 16:49:25,570 [25] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 17:09:44,664 [25] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：找不到方法:“Void Asset.DAL.FileDAL.DeletePreviewFile(Int32)”。","Data":null} 
+ 
+日志时间：2024-03-10 17:10:56,667 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 17:11:50,524 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 17:12:34,939 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-10 20:55:38,179 [9] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.product.mapper.MesUserRelateLineMapper">
+
+    <resultMap type="MesUserRelateLine" id="MesUserRelateLineResult">
+        <result property="lineId"    column="line_id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="userName"    column="user_name"    />
+    </resultMap>
+
+    <sql id="selectMesUserRelateLineVo">
+        select line_id, user_id, user_name from mes_user_relate_line
+    </sql>
+
+    <select id="selectMesUserRelateLineList" parameterType="MesUserRelateLine" resultMap="MesUserRelateLineResult">
+        <include refid="selectMesUserRelateLineVo"/>
+        <where>
+            <if test="lineId != null "> and line_id = #{lineId}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="userName != null  and userName != ''"> and user_name like concat('%', #{userName}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectMesUserRelateLineByLineId" parameterType="Long" resultMap="MesUserRelateLineResult">
+        <include refid="selectMesUserRelateLineVo"/>
+        where line_id = #{lineId}
+    </select>
+
+    <insert id="insertMesUserRelateLine" parameterType="MesUserRelateLine">
+        insert into mes_user_relate_line
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="lineId != null">line_id,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="userName != null">user_name,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="lineId != null">#{lineId},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="userName != null">#{userName},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMesUserRelateLine" parameterType="MesUserRelateLine">
+        update mes_user_relate_line
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="userName != null">user_name = #{userName},</if>
+        </trim>
+        where line_id = #{lineId}
+    </update>
+
+    <delete id="deleteMesUserRelateLineByLineId" parameterType="Long">
+        delete from mes_user_relate_line where line_id = #{lineId}
+    </delete>
+
+    <delete id="deleteMesUserRelateLineByLineIds" parameterType="String">
+        delete from mes_user_relate_line where line_id in
+        <foreach item="lineId" collection="array" open="(" separator="," close=")">
+            #{lineId}
+        </foreach>
+    </delete>
+</mapper>

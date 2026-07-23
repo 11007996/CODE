@@ -1,0 +1,399 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:inf="using:LuxVideoDet.Core.Inference"
+        xmlns:vm="using:LuxVideoDet.Desktop.ViewModels"
+        x:Class="LuxVideoDet.Desktop.Views.ConfigEditorWindow"
+        x:DataType="vm:ConfigEditorViewModel"
+        Title="{Binding WindowTitle}"
+        Width="1000" Height="750"
+        MinWidth="900" MinHeight="650"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid RowDefinitions="*,Auto">
+        <!-- 主内容区 -->
+        <Grid Grid.Row="0" ColumnDefinitions="300,*">
+            <!-- 左侧：基本信息 + 视频源 + 算法池 -->
+            <Border Grid.Column="0" Padding="16" 
+                    Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                    BorderThickness="0,0,1,0">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                              VerticalScrollBarVisibility="Auto">
+                    <StackPanel Spacing="0" Margin="0,0,20,0">
+                        <!-- 基本信息 -->
+                        <StackPanel Spacing="8" Margin="0,0,0,16">
+                            <TextBlock Text="{Binding LblSectionBasic}" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock Text="{Binding LblConfigName}" FontSize="12" Opacity="0.7"/>
+                            <TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                     Watermark="{Binding WmConfigName}"/>
+                        </StackPanel>
+
+                        <!-- 视频源配置 -->
+                        <StackPanel Spacing="8" Margin="0,0,0,16">
+                            <TextBlock Text="{Binding LblSectionVideo}" FontWeight="SemiBold" FontSize="16"/>
+
+                            <TextBlock Text="{Binding LblVideoType}" FontSize="12" Opacity="0.7"/>
+                            <ComboBox ItemsSource="{Binding SourceTypeNames}"
+                                      SelectedIndex="{Binding SourceTypeIndex}"
+                                      HorizontalAlignment="Stretch"/>
+
+                            <TextBlock Text="{Binding LblVideoPath}" FontSize="12" Opacity="0.7"/>
+                            <TextBox Text="{Binding SourcePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                     Watermark="{Binding WmVideoPath}"/>
+                            <Button Content="{Binding BtnBrowseVideoText}" Command="{Binding BrowseSourceCommand}" 
+                                    HorizontalAlignment="Stretch"/>
+
+                            <CheckBox IsChecked="{Binding Loop}" 
+                                      Content="{Binding ChkLoopText}"/>
+                        </StackPanel>
+
+                        <!-- 算法池 -->
+                        <StackPanel Spacing="8">
+                            <TextBlock Text="{Binding LblSectionAlgoPool}" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock Text="{Binding LblPickAlgo}" FontSize="12" Opacity="0.7"/>
+                            <ComboBox ItemsSource="{Binding AvailableAlgorithmTypes}"
+                                      SelectedIndex="{Binding SelectedAlgorithmToAddIndex}"
+                                      HorizontalAlignment="Stretch"
+                                      PlaceholderText="{Binding PhPickAlgo}"/>
+
+                            <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
+                                <TextBlock Grid.Column="0" Text="{Binding LblAddedAlgos}" FontSize="12" Opacity="0.7"
+                                           VerticalAlignment="Center"/>
+                                <Button Grid.Column="1" Content="{Binding BtnRemoveSelectedText}" Padding="8,4"
+                                        Command="{Binding RemoveAlgorithmCommand}"
+                                        IsEnabled="{Binding SelectedAlgorithm, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+                            </Grid>
+
+                            <ListBox ItemsSource="{Binding Algorithms}" 
+                                     SelectedItem="{Binding SelectedAlgorithm}"
+                                     Margin="0,4,0,0"
+                                     MinHeight="160">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:AlgorithmConfigViewModel">
+                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8" Margin="4">
+                                            <Border Grid.Column="0" Width="4" CornerRadius="2"
+                                                    Background="{DynamicResource SystemAccentColor}"/>
+                                            <StackPanel Grid.Column="1">
+                                                <TextBlock Text="{Binding DisplayName}" FontWeight="SemiBold" FontSize="13"/>
+                                                <TextBlock Text="{Binding AlgorithmType}" FontSize="11" Opacity="0.6"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <!-- 右侧：选中算法的详细配置 -->
+            <ScrollViewer Grid.Column="1">
+                <StackPanel Margin="24" Spacing="20" 
+                            IsVisible="{Binding SelectedAlgorithm, Converter={x:Static ObjectConverters.IsNotNull}}">
+                    
+                    <!-- 推理配置 -->
+                    <Border CornerRadius="8" Padding="16"
+                            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                            BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="1">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="{Binding LblSectionInference}" FontWeight="SemiBold" FontSize="16"/>
+                            
+                            <TextBlock Text="{Binding LblModelPath}" FontSize="12" Opacity="0.7"/>
+                            <TextBox Text="{Binding SelectedAlgorithm.ModelPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                     Watermark="{Binding WmModelPath}"/>
+                            <Button Content="{Binding BtnBrowseModelText}" Command="{Binding BrowseModelCommand}" 
+                                    HorizontalAlignment="Stretch"/>
+                            
+                            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                                <StackPanel Grid.Column="0" Spacing="4">
+                                    <TextBlock Text="{Binding LblInferenceDevice}" FontSize="12" Opacity="0.7"/>
+                                    <ComboBox ItemsSource="{Binding SelectedAlgorithm.InferenceDeviceChoices}"
+                                              SelectedIndex="{Binding SelectedAlgorithm.InferenceDeviceSelectedIndex, Mode=TwoWay}"
+                                              DisplayMemberBinding="{Binding DisplayName}"
+                                              HorizontalAlignment="Stretch"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Spacing="4">
+                                    <TextBlock Text="{Binding LblModelType}" FontSize="12" Opacity="0.7"/>
+                                    <ComboBox ItemsSource="{Binding SelectedAlgorithm.ModelTypePickerItems}"
+                                              SelectedIndex="{Binding SelectedAlgorithm.ModelTypeIndex, Mode=TwoWay}"
+                                              HorizontalAlignment="Stretch">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate x:DataType="inf:ModelTypePickerItem">
+                                                <TextBlock Text="{Binding Label}" IsEnabled="{Binding IsSelectable}"/>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+                                </StackPanel>
+                            </Grid>
+                            
+                            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                                <StackPanel Grid.Column="0" Spacing="4">
+                                    <TextBlock Text="{Binding LblConfidence}" FontSize="12" Opacity="0.7"/>
+                                    <NumericUpDown Value="{Binding SelectedAlgorithm.ConfidenceThreshold}" 
+                                                   Minimum="0" Maximum="1" Increment="0.05" 
+                                                   FormatString="F2"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Spacing="4">
+                                    <TextBlock Text="{Binding LblIou}" FontSize="12" Opacity="0.7"/>
+                                    <NumericUpDown Value="{Binding SelectedAlgorithm.IouThreshold}" 
+                                                   Minimum="0" Maximum="1" Increment="0.05" 
+                                                   FormatString="F2"/>
+                                </StackPanel>
+                            </Grid>
+                            
+                            <TextBlock Text="{Binding LblInputSize}" FontSize="12" Opacity="0.7"/>
+                            <NumericUpDown Value="{Binding SelectedAlgorithm.InputSize}" 
+                                           Minimum="320" Maximum="1280" Increment="32"/>
+                            
+                            <TextBlock Text="{Binding LblClassesReadonly}" FontSize="12" Opacity="0.7"/>
+                            <TextBlock Text="{Binding SelectedAlgorithm.ClassesHint}" 
+                                       FontSize="11" Opacity="0.5" Margin="0,-4,0,0"/>
+                            <TextBox Text="{Binding SelectedAlgorithm.Classes, Mode=OneWay}"
+                                     Height="100"
+                                     AcceptsReturn="True"
+                                     TextWrapping="Wrap"
+                                     IsReadOnly="True"
+                                     Watermark="{Binding WmClasses}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- 区域配置 -->
+                    <Border CornerRadius="8" Padding="16"
+                            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                            BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="1">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="{Binding LblSectionRegions}" FontWeight="SemiBold" FontSize="16"/>
+                            
+                            <Button Content="{Binding BtnVisualRegionsText}" Command="{Binding EditRegionsCommand}" 
+                                    HorizontalAlignment="Stretch"/>
+                            
+                            <TextBlock Text="{Binding LblRegionsJson}" Opacity="0.7" FontSize="12"/>
+                            <TextBox Text="{Binding SelectedAlgorithm.RegionsJson}" 
+                                     Height="80" 
+                                     AcceptsReturn="True" 
+                                     TextWrapping="Wrap"
+                                     FontFamily="Consolas"
+                                     FontSize="11"
+                                     IsReadOnly="True"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- AOI 参数（U 型 / MediaPipe 等，写入 args） -->
+                    <Border CornerRadius="8" Padding="16"
+                            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                            BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="1"
+                            IsVisible="{Binding SelectedAlgorithm.HasAoiParameterSections}">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="{Binding SelectedAlgorithm.AoiSectionTitle}" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock Text="{Binding SelectedAlgorithm.AoiSectionHint}"
+                                       FontSize="11" Opacity="0.55" TextWrapping="Wrap"/>
+                            <ItemsControl ItemsSource="{Binding SelectedAlgorithm.AoiParameterGroups}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:AlgorithmArgsFormSectionViewModel">
+                                        <StackPanel Spacing="10" Margin="0,0,0,16">
+                                            <TextBlock Text="{Binding Title}" FontWeight="SemiBold" FontSize="14"/>
+                                            <TextBlock Text="{Binding Description}"
+                                                       FontSize="11" Opacity="0.75" TextWrapping="Wrap"
+                                                       IsVisible="{Binding Description, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+                                            <ItemsControl ItemsSource="{Binding ParameterRows}">
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate x:DataType="vm:NotifierParameterRowViewModel">
+                                                        <StackPanel Spacing="4" Margin="0,4,0,0">
+                                                            <TextBlock Text="{Binding Definition.DisplayName}"
+                                                                       FontSize="12" Opacity="0.85"/>
+                                                            <TextBlock Text="{Binding Definition.Description}"
+                                                                       FontSize="11" Opacity="0.55" TextWrapping="Wrap"
+                                                                       IsVisible="{Binding Definition.Description, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+                                                            <CheckBox IsVisible="{Binding IsBool}"
+                                                                      IsChecked="{Binding BoolEditor, Mode=TwoWay}"/>
+                                                            <NumericUpDown IsVisible="{Binding IsInt}"
+                                                                           Value="{Binding IntEditor, Mode=TwoWay}"
+                                                                           Minimum="-2147483648" Maximum="2147483647"
+                                                                           Increment="1" FormatString="0"/>
+                                                            <NumericUpDown IsVisible="{Binding IsDouble}"
+                                                                           Value="{Binding DoubleEditor, Mode=TwoWay}"
+                                                                           Minimum="-1000000" Maximum="1000000"
+                                                                           Increment="0.01" FormatString="F4"/>
+                                                            <TextBox IsVisible="{Binding IsString}"
+                                                                     Text="{Binding RawValue, Mode=TwoWay}"
+                                                                     Watermark="{Binding Definition.Example}"/>
+                                                        </StackPanel>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- 纯算法参数（如缠胶门控，写入 args） -->
+                    <Border CornerRadius="8" Padding="16"
+                            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                            BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="1"
+                            IsVisible="{Binding SelectedAlgorithm.HasAlgorithmParameterSections}">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="{Binding SelectedAlgorithm.AlgorithmParameterSectionTitle}" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock Text="{Binding SelectedAlgorithm.AlgorithmParameterSectionHint}"
+                                       FontSize="11" Opacity="0.55" TextWrapping="Wrap"/>
+                            <ItemsControl ItemsSource="{Binding SelectedAlgorithm.AlgorithmParameterGroups}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:AlgorithmArgsFormSectionViewModel">
+                                        <StackPanel Spacing="10" Margin="0,0,0,16">
+                                            <TextBlock Text="{Binding Title}" FontWeight="SemiBold" FontSize="14"/>
+                                            <TextBlock Text="{Binding Description}"
+                                                       FontSize="11" Opacity="0.75" TextWrapping="Wrap"
+                                                       IsVisible="{Binding Description, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+                                            <ItemsControl ItemsSource="{Binding ParameterRows}">
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate x:DataType="vm:NotifierParameterRowViewModel">
+                                                        <StackPanel Spacing="4" Margin="0,4,0,0">
+                                                            <TextBlock Text="{Binding Definition.DisplayName}"
+                                                                       FontSize="12" Opacity="0.85"/>
+                                                            <TextBlock Text="{Binding Definition.Description}"
+                                                                       FontSize="11" Opacity="0.55" TextWrapping="Wrap"
+                                                                       IsVisible="{Binding Definition.Description, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+                                                            <CheckBox IsVisible="{Binding IsBool}"
+                                                                      IsChecked="{Binding BoolEditor, Mode=TwoWay}"/>
+                                                            <NumericUpDown IsVisible="{Binding IsInt}"
+                                                                           Value="{Binding IntEditor, Mode=TwoWay}"
+                                                                           Minimum="-2147483648" Maximum="2147483647"
+                                                                           Increment="1" FormatString="0"/>
+                                                            <NumericUpDown IsVisible="{Binding IsDouble}"
+                                                                           Value="{Binding DoubleEditor, Mode=TwoWay}"
+                                                                           Minimum="-1000000" Maximum="1000000"
+                                                                           Increment="0.01" FormatString="F4"/>
+                                                            <TextBox IsVisible="{Binding IsString}"
+                                                                     Text="{Binding RawValue, Mode=TwoWay}"
+                                                                     Watermark="{Binding Definition.Example}"/>
+                                                        </StackPanel>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- 存储配置 -->
+                    <Border CornerRadius="8" Padding="16"
+                            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                            BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="1">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="{Binding LblSectionStorage}" FontWeight="SemiBold" FontSize="16"/>
+                            
+                            <CheckBox IsChecked="{Binding SelectedAlgorithm.SaveErrorImage}" 
+                                      Content="{Binding ChkSaveErrorImageText}"/>
+                            <CheckBox IsChecked="{Binding SelectedAlgorithm.SaveVideo}" 
+                                      Content="{Binding ChkSaveVideoText}"/>
+                            <CheckBox IsChecked="{Binding SelectedAlgorithm.NgVideoUseSourceResolution}"
+                                      IsEnabled="{Binding SelectedAlgorithm.SaveVideo}"
+                                      Content="{Binding ChkNgVideoSourceResText}"/>
+                            <TextBlock Text="{Binding HintRecordingMaxWidth}"
+                                       FontSize="11" Opacity="0.55" TextWrapping="Wrap"
+                                       IsVisible="{Binding SelectedAlgorithm.SaveVideo}"/>
+                            
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="{Binding LblVideoDuration}" FontSize="12" Opacity="0.7"/>
+                                <NumericUpDown Value="{Binding SelectedAlgorithm.VideoDuration}" 
+                                               Minimum="1" Maximum="60" Increment="1"/>
+                                <TextBlock Text="{Binding HintNgFps}"
+                                           FontSize="11" Opacity="0.55" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- 通知配置 -->
+                    <Border CornerRadius="8" Padding="16"
+                            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                            BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="1">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="{Binding LblSectionNotification}" FontWeight="SemiBold" FontSize="16"/>
+                            <CheckBox IsChecked="{Binding SelectedAlgorithm.NotificationEnabled}"
+                                      Content="{Binding ChkNotifyEnableText}"/>
+                            <TextBlock Text="{Binding HintNotifyChannels}"
+                                       FontSize="11" Opacity="0.55" TextWrapping="Wrap"/>
+                            <Button Content="{Binding BtnAddNotifierText}"
+                                    Command="{Binding SelectedAlgorithm.AddNotificationChannelCommand}"
+                                    HorizontalAlignment="Left"
+                                    IsEnabled="{Binding SelectedAlgorithm.NotificationEnabled}"/>
+                            <ItemsControl ItemsSource="{Binding SelectedAlgorithm.NotificationNotifiers}"
+                                          IsVisible="{Binding SelectedAlgorithm.NotificationEnabled}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:NotifierConfigItemViewModel">
+                                        <Border Margin="0,0,0,12" Padding="12" CornerRadius="6"
+                                                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                                                BorderThickness="1">
+                                            <StackPanel Spacing="10">
+                                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+                                                    <CheckBox Grid.Column="0" IsChecked="{Binding Enabled}"
+                                                              VerticalAlignment="Center"
+                                                              ToolTip.Tip="{Binding NotifierEnableChannelTooltip}"/>
+                                                    <ComboBox Grid.Column="1"
+                                                              ItemsSource="{Binding TypeChoices}"
+                                                              SelectedItem="{Binding SelectedTypePick, Mode=TwoWay}"
+                                                              HorizontalAlignment="Stretch"/>
+                                                    <Button Grid.Column="2" Content="{Binding NotifierDeleteButtonText}"
+                                                            Command="{Binding RemoveSelfCommand}"/>
+                                                </Grid>
+                                                <ItemsControl ItemsSource="{Binding ParameterRows}">
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate x:DataType="vm:NotifierParameterRowViewModel">
+                                                            <StackPanel Spacing="4" Margin="0,4,0,0">
+                                                                <TextBlock Text="{Binding Definition.DisplayName}"
+                                                                           FontSize="12" Opacity="0.85"/>
+                                                                <CheckBox IsVisible="{Binding IsBool}"
+                                                                          IsChecked="{Binding BoolEditor, Mode=TwoWay}"/>
+                                                                <NumericUpDown IsVisible="{Binding IsInt}"
+                                                                               Value="{Binding IntEditor, Mode=TwoWay}"
+                                                                               Minimum="-2147483648" Maximum="2147483647"
+                                                                               Increment="1" FormatString="0"/>
+                                                                <NumericUpDown IsVisible="{Binding IsDouble}"
+                                                                               Value="{Binding DoubleEditor, Mode=TwoWay}"
+                                                                               Minimum="-1000000" Maximum="1000000"
+                                                                               Increment="0.1" FormatString="F2"/>
+                                                                <TextBox IsVisible="{Binding IsString}"
+                                                                         Text="{Binding RawValue, Mode=TwoWay}"
+                                                                         Watermark="{Binding Definition.Example}"/>
+                                                            </StackPanel>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <!-- 底部按钮栏 -->
+        <Border Grid.Row="1" Padding="16" 
+                Background="{DynamicResource SystemControlBackgroundAltHighBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                BorderThickness="0,1,0,0">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Grid.Column="0" Text="{Binding StatusText}" 
+                           VerticalAlignment="Center" Opacity="0.7" FontSize="12"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8">
+                    <Button Content="{Binding BtnSaveText}" Command="{Binding SaveCommand}" 
+                            Width="100" Classes="accent"/>
+                    <Button Content="{Binding BtnCancelText}" Command="{Binding CancelCommand}" 
+                            Width="100"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

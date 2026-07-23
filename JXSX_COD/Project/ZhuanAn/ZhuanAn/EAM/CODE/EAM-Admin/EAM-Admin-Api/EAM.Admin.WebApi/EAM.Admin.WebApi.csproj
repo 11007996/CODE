@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AssemblyVersion>1.2.0.0</AssemblyVersion>
+		<FileVersion>1.2.0.0</FileVersion>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591,8603,8602,8604,8600,8618</NoWarn>
+	</PropertyGroup>
+	
+	<ItemGroup>
+	  <Compile Remove="wwwroot\avatar\**" />
+	  <Compile Remove="wwwroot\Drawing\**" />
+	  <Compile Remove="wwwroot\export\**" />
+	  <Compile Remove="wwwroot\ImportTemplate\**" />
+	  <Compile Remove="wwwroot\Upload\**" />
+	  <Content Remove="wwwroot\avatar\**" />
+	  <Content Remove="wwwroot\Drawing\**" />
+	  <Content Remove="wwwroot\export\**" />
+	  <Content Remove="wwwroot\ImportTemplate\**" />
+	  <Content Remove="wwwroot\Upload\**" />
+	  <EmbeddedResource Remove="wwwroot\avatar\**" />
+	  <EmbeddedResource Remove="wwwroot\Drawing\**" />
+	  <EmbeddedResource Remove="wwwroot\export\**" />
+	  <EmbeddedResource Remove="wwwroot\ImportTemplate\**" />
+	  <EmbeddedResource Remove="wwwroot\Upload\**" />
+	  <None Remove="wwwroot\avatar\**" />
+	  <None Remove="wwwroot\Drawing\**" />
+	  <None Remove="wwwroot\export\**" />
+	  <None Remove="wwwroot\ImportTemplate\**" />
+	  <None Remove="wwwroot\Upload\**" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Compile Remove="Controllers\Basic\StorageSpaceController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectConnConfigController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectDataController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectDataFormatController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectDataParserMappingController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectDataPointController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectDataStoragePolicyController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectEventActionController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectEventController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectEventGroupController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectEventLogController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectGatewayController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectSchedulePolicyController.cs" />
+	  <Compile Remove="Controllers\Equipment\CollectScheduleTaskController.cs" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Content Remove="wwwroot\%2a%2a" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\EAM.CodeGenerator\EAM.CodeGenerator.csproj" />
+		<ProjectReference Include="..\EAM.Service\EAM.Service.csproj" />
+		<ProjectReference Include="..\EAM.Tasks\EAM.Tasks.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Lazy.Captcha.Core" Version="2.0.7" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.12" />
+		<PackageReference Include="NLog.Web.AspNetCore" Version="5.3.8" />
+		<PackageReference Include="Mapster" Version="7.4.0" />
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="DataProtection\" />
+		<Folder Include="Properties\PublishProfiles\" />
+		<Folder Include="wwwroot\Generatecode\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="ip2region.db">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<Content Update="wwwroot\Generatecode\**\*">
+			<CopyToPublishDirectory>Never</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+</Project>

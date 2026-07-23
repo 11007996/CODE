@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <!-- 全解决方案统一版本：打包 / publish 时各程序集与文件版本均与此一致。发布前修改此处，或：dotnet publish -p:Version=1.2.3 -->
+    <!-- v1.3.0 功能摘要：完成算法插件化拆分（独立 DLL 热插拔）、S3/MinIO 远程同步（插件/模型/视频/压缩包）、Desktop 与 Web 端同步管理 UI 对齐。 -->
+    <!-- v1.4.0 功能摘要：TRACK/MOT 与原生 Track ONNX 管线预留；模型类型「Track（Reserved）」灰显不可选；Obb 展示为 Rotated（YOLO 习惯）；相关集成测试与本地化对齐。 -->
+    <!-- v1.4.1 功能摘要：算法插件改为从程序输出目录 plugins 加载；Desktop/Web/Headless 构建时从仓库 plugins 同步 LuxVideoDet.Algorithm.*.dll，不再依赖开发态扫描解决方案根目录 plugins。 -->
+    <!-- v1.4.2 功能摘要：Desktop 配置删除增加确认弹窗（支持深浅主题）；AOI UDet 算法优化（Cubic 插值放大、目标尺寸提升至384px、多缺陷聚类角度计算、中心椭圆蒙版过滤）。 -->
+    <Version>1.4.2</Version>
+  </PropertyGroup>
+</Project>

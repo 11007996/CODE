@@ -1,0 +1,31 @@
+﻿
+日志时间：2024-03-06 11:50:54,655 [12] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：输入字符串的格式不正确。","Data":null} 
+ 
+日志时间：2024-03-06 12:00:40,527 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-06 12:12:19,539 [9] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-06 12:13:19,030 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-06 17:10:11,336 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-06 18:51:36,617 [11] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 

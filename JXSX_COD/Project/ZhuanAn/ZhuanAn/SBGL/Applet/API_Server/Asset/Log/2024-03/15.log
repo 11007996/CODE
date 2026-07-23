@@ -1,0 +1,61 @@
+﻿
+日志时间：2024-03-15 16:58:04,963 [9] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：Error xml namespace http://purl.oclc.org/ooxml/spreadsheetml/main","Data":null} 
+ 
+日志时间：2024-03-15 16:58:30,220 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：Error xml namespace http://purl.oclc.org/ooxml/spreadsheetml/main","Data":null} 
+ 
+日志时间：2024-03-15 17:00:03,236 [36] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:04:18,147 [6] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:04:18,180 [44] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:05:08,617 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:13:30,606 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:19:13,613 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:20:37,407 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：可为空的对象必须具有一个值。","Data":null} 
+ 
+日志时间：2024-03-15 17:20:43,542 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"1","MsgInfo":"上传失败，异常原因：指定的参数已超出有效值的范围。\r\n参数名: Quality must be between 0 and 100","Data":null} 
+ 
+日志时间：2024-03-15 17:22:50,408 [8] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 
+日志时间：2024-03-15 17:26:00,610 [7] 
+日志级别：INFO  
+消息描述：Asset.Controllers.FileController [(null)] 
+上传文件，返回结果：{"MsgCode":"0","MsgInfo":"上传文件成功","Data":null} 
+ 

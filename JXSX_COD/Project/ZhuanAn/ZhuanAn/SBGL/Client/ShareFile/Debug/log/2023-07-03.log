@@ -1,0 +1,256 @@
+----------------------------------------------------------- 
+记录时间：2023-07-03 15:27:17 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:27:35 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:27:39 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:27:43 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:27:46 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:28:11 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:28:16 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:28:19 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:28:23 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:30:51 线程名：[10] 级别：ERROR 类名：Common.Utils.DBUtil 
+信息：
+System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+不能将值 NULL 插入列 'ItemName'，表 'HJDB.dbo.A_MaintenanceReportItem_T'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Common.Utils.DBUtil.ExecSQL(String strSQL) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Common\Utils\DBUtil.cs:行号 245
+ClientConnectionId:a09fb903-c117-46ad-886a-3951b7450c6d
+Error Number:515,State:2,Class:16
+
+记录时间：2023-07-03 15:32:39 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.IndexOutOfRangeException: 无法找到列 31。
+   在 System.Data.DataColumnCollection.get_Item(Int32 index)
+   在 System.Data.DataRow.get_Item(Int32 columnIndex)
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 223
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 737
+
+记录时间：2023-07-03 15:33:05 线程名：[10] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.IndexOutOfRangeException: 无法找到列 31。
+   在 System.Data.DataColumnCollection.get_Item(Int32 index)
+   在 System.Data.DataRow.get_Item(Int32 columnIndex)
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 223
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 737
+----------------------------------------------------------- 
+记录时间：2023-07-03 16:06:37 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.IndexOutOfRangeException: 无法找到列 31。
+   在 System.Data.DataColumnCollection.get_Item(Int32 index)
+   在 System.Data.DataRow.get_Item(Int32 columnIndex)
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 223
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 684
+----------------------------------------------------------- 
+记录时间：2023-07-03 16:37:31 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.MaintenanceExcel.SetCellValue(ICell cell, Object obj) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 478
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 230
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 684
+
+记录时间：2023-07-03 16:37:58 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.MaintenanceExcel.SetCellValue(ICell cell, Object obj) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 478
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 230
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 684
+
+记录时间：2023-07-03 16:38:17 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.MaintenanceExcel.SetCellValue(ICell cell, Object obj) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 478
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 230
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 684
+
+记录时间：2023-07-03 16:38:31 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.MaintenanceExcel.SetCellValue(ICell cell, Object obj) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 478
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 230
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 684
+
+记录时间：2023-07-03 16:40:08 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.MaintenanceExcel.SetCellValue(ICell cell, Object obj) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 478
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 230
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\Util\MaintenanceExcel.cs:行号 137
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\WinForm\Machine\FrmMaintenanceReport.cs:行号 684
+
+记录时间：2023-07-03 16:41:57 线程名：[9] 级别：ERROR 类名：Machine.FrmMaintenanceReport 
+信息：
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Machine.MaintenanceExcel.SetCellValue(ICell cell, Object obj)
+   在 Machine.MaintenanceExcel.CreateReprotDetail(ISheet sheet, Int32& rowStartIndex, Int32 columCount, Int32 colSpan, DataTable dt, String timeMark, ICellStyle dateTitleCS, ICellStyle itemNameCS, ICellStyle resultMarkCS, ICellStyle signNameCS)
+   在 Machine.MaintenanceExcel.WriteToExcel(String filePath, String reprotMark, String assetName, String info, DataTable dt1, DataTable dt2, DataTable dt3, String remark)
+   在 Machine.FrmMaintenanceReport.tsmiExport_Click(Object sender, EventArgs e)
+----------------------------------------------------------- 
+记录时间：2023-07-03 16:55:10 线程名：[10] 级别：ERROR 类名：Machine.MaintenanceExcel 
+信息：无法找到列 31。
+
+记录时间：2023-07-03 16:55:22 线程名：[10] 级别：ERROR 类名：Machine.MaintenanceExcel 
+信息：无法找到列 31。
+
+记录时间：2023-07-03 17:00:14 线程名：[10] 级别：ERROR 类名：Machine.MaintenanceExcel 
+信息：无法找到列 31。

@@ -1,0 +1,27 @@
+----------------------------------------------------------- 
+记录时间：2023-09-19 14:51:59 线程名：[8] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Call.FrmKanBan.RefreshMonthCountChart() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 319
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 170
+
+记录时间：2023-09-19 14:52:10 线程名：[8] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Call.FrmKanBan.RefreshMonthCountChart() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 319
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 170
+
+记录时间：2023-09-19 14:53:38 线程名：[8] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Call.FrmKanBan.RefreshMonthCountChart() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 319
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 170

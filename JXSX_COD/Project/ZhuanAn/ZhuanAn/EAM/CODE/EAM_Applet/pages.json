@@ -1,0 +1,99 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/asset/index",
+			"style": {
+				"navigationBarTitleText": "设备"
+			}
+		},
+		{
+			"path": "pages/asset/detail",
+			"style": {
+				"navigationBarTitleText": "设备详情"
+			}
+		},
+		{
+			"path": "pages/asset/showImg",
+			"style": {
+				"navigationBarTitleText": "文件预览"
+			}
+		},
+		{
+			"path": "pages/asset/maintenance",
+			"style": {
+				"navigationBarTitleText": "设备保养"
+			}
+		}, {
+			"path": "pages/consumable/index",
+			"style": {
+				"navigationBarTitleText": "耗品"
+			}
+		}, {
+			"path": "pages/consumable/storageRecored",
+			"style": {
+				"navigationBarTitleText": "耗品变更记录"
+			}
+		},
+		{
+			"path": "pages/user/person",
+			"style": {
+				"navigationBarTitleText": "个人"
+			}
+		},
+		{
+			"path": "pages/user/switchFactory",
+			"style": {
+				"navigationBarTitleText": "厂区切换"
+			}
+		},
+		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "用户登入"
+			}
+		},
+		{
+			"path": "pages/user/oaRegister",
+			"style": {
+				"navigationBarTitleText": "OA用户注册"
+			}
+		},
+		{
+			"path": "pages/error/wxopen",
+			"style": {
+				"navigationBarTitleText": "打开方式错误",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "设备系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#F0AD4E",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+			"pagePath": "pages/index",
+			"iconPath": "static/function.png",
+			"selectedIconPath": "static/function-selected.png",
+			"text": "功能"
+		}, {
+			"pagePath": "pages/user/person",
+			"iconPath": "static/person.png",
+			"selectedIconPath": "static/person-selected.png",
+			"text": "个人"
+		}]
+	},
+	"uniIdRouter": {}
+}

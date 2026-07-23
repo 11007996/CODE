@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.dpms.mapper.MesKpiFillMapper">
+
+    <resultMap type="com.ruoyi.dpms.domain.MesKpiFill" id="MesKpiFillResult">
+        <result property="id"    column="id"    />
+<!--        <result property="assignId"    column="assign_id"    />-->
+        <result property="kpiYear"    column="kpi_year"    />
+        <!--        <result property="personGroupId"    column="person_Group_Id"    />-->
+        <result property="kpiId"    column="kpi_id"    />
+        <result property="weightCoefficient"    column="weight_coefficient"    />
+        <result property="statisticalCycle"    column="statistical_cycle"    />
+<!--        <result property="remark"    column="remark"    />-->
+<!--        <result property="status"    column="status"    />-->
+<!--        <result property="thisYear"    column="this_year"    />-->
+<!--        <result property="thisYearValue"    column="this_year_value"    />-->
+<!--        <result property="lastYear"    column="last_year"    />-->
+<!--        <result property="lastYearValue"    column="last_year_value"    />-->
+<!--        <result property="createBy"    column="create_by"    />-->
+<!--        <result property="createTime"    column="create_time"    />-->
+<!--        <result property="updateBy"    column="update_by"    />-->
+<!--        <result property="updateTime"    column="update_time"    />-->
+        <result property="userAccount"    column="user_account"    />
+<!--        <result property="userName"    column="user_name"    />-->
+        <result property="deptId"    column="dept_id"    />
+<!--        <result property="deptName"    column="dept_name"    />-->
+        <result property="kpiIndex"    column="kpi_index"    />
+        <result property="units"    column="units"    />
+        <result property="calculationFormula"    column="calculation_formula"    />
+        <result property="targetStandard" column="target_standard"/>
+<!--        <result property="targetParam"    column="target_param"    />-->
+<!--        <result property="targetValue"    column="target_value"    />-->
+    </resultMap>
+
+
+    <select id="selectMesKpiFillList" parameterType="com.ruoyi.dpms.domain.MesKpiFill" resultMap="MesKpiFillResult">
+        SELECT DISTINCT a.id,
+        a.kpi_id,
+        a.weight_coefficient,
+        a.statistical_cycle,
+        a.kpi_year,
+        b.kpi_index,
+        b.units,
+        b.calculation_formula ,
+        c.target_standard,
+        f.user_name,
+        h.dept_id
+        FROM
+        mes_kpi_assign A,
+        mes_kpi_index B,
+        mes_kpi_dept_detail C,
+        mes_kpi_dept_group D,
+        sys_user F,
+        sys_dept H
+        WHERE
+        a.kpi_id = b.id
+        AND a.id = c.assign_id
+        AND f.user_name = #{userAccount}
+        AND h.dept_id = #{deptId}
+        AND d.user_account = #{userAccount}
+
+    </select>
+
+
+<!--    <update id="updateMesKpiFill" parameterType="com.ruoyi.dpms.domain.MesKpiAssign">-->
+<!--        update mes_kpi_dept_detail-->
+<!--        <trim prefix="SET" suffixOverrides=",">-->
+<!--            <if test="targetParam != null">target_param = #{targetParam},</if>-->
+<!--            <if test="actualValue != null">actual_value = #{actualValue},</if>-->
+<!--        </trim>-->
+<!--        where id = #{id}-->
+<!--    </update>-->
+
+
+</mapper>
+
+
+

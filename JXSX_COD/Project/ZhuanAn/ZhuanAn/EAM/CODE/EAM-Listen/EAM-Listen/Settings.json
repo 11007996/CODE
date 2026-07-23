@@ -1,0 +1,49 @@
+{
+  "EAMLoginConfig": {
+    "UserName": "system",
+    "Password": "system2026",
+    "Expire": 720
+  },
+  "CommonConfig": {
+    "EAMHost": "http://127.0.0.1:8888/"
+  },
+  "DbConfig": { //测试工厂
+    "ConfigId": "Test",
+    "Conn": "Data Source=172.18.20.78;User ID=cs;Password=bd'songyy;Initial Catalog=EAM_Test;",
+    "DbType": 1,
+    "IsAutoCloseConnection": true
+  },
+  "MqttConfig": {
+    "MqttSubFlag": true,
+    "Host": "172.18.20.78",
+    "Port": 1883,
+    "MqttProtocolVersion": 4,
+    "Username": "admin",
+    "Password": "moTyddcr999ad.",
+    "ClientId": "test_admin",
+    "CleanSession": false,
+    "KeepAliveSeconds": 60,
+    "SubTopicList": [
+      "/iot/Test/#"
+    ]
+  },
+  "HttpConfig": {
+    "HttpListenFlag": true,
+    "Port": 10480
+  },
+  "TCPConfig": {
+    "TCPListenFlag": true,
+    "ListenIP": "0.0.0.0",
+    "Port": 10409,
+    "ReceiveTimeout": 5,
+    "ListenLimit": 100
+  },
+  "SerialPortConfig": {
+    "SerialListenFlag": false,
+    "PortName": "COM3",
+    "BaudRate": 9600,
+    "DataBits": 8,
+    "StopBits": 1,
+    "Parity": 1
+  }
+}

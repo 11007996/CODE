@@ -1,0 +1,112 @@
+----------------------------------------------------------- 
+记录时间：2023-09-14 11:30:45 线程名：[10] 级别：ERROR 类名：LuxMMS.Utils.ExceptionHandle 
+信息：捕获到未处理的异常
+System.ArgumentOutOfRangeException: 数据点插入错误。只能为该数据序列设置 1 个 Y 值。
+参数名: dataSource
+   在 System.Windows.Forms.DataVisualization.Charting.ChartImage.DataBind(IEnumerable dataSource, ArrayList seriesList)
+   在 System.Windows.Forms.DataVisualization.Charting.ChartImage.DataBind()
+   在 System.Windows.Forms.DataVisualization.Charting.ChartPicture.Paint(Graphics graph, Boolean paintTopLevelElementOnly)
+   在 System.Windows.Forms.DataVisualization.Charting.Chart.OnPaint(PaintEventArgs e)
+   在 System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   在 System.Windows.Forms.Control.WmPaint(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+----------------------------------------------------------- 
+记录时间：2023-09-14 11:40:06 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:40:20 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:40:30 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:40:40 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+----------------------------------------------------------- 
+记录时间：2023-09-14 11:44:00 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:44:11 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:44:21 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:44:31 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:44:41 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:44:52 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167
+
+记录时间：2023-09-14 11:45:02 线程名：[10] 级别：ERROR 类名：Call.FrmKanBan 
+信息：看板数据刷新异常
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 Call.FrmKanBan.RefreshUserTime() 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 201
+   在 Call.FrmKanBan.timerRefreshData_Tick(Object sender, EventArgs e) 位置 d:\Work Projects\设备系统\SBGL\Client\Call\FrmKanBan.cs:行号 167

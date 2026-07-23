@@ -1,0 +1,31 @@
+<Project>
+  <!-- 算法项目仍输出到仓库根 plugins/；宿主在 Build/Publish 时复制到 $(TargetDir)/plugins，与 DetectionAlgorithmFactory 解析一致。 -->
+  <Target Name="LuxVideoDetCopyPluginsToOutput"
+          AfterTargets="Build"
+          Condition="'$(LuxVideoDetCopyPluginsToOutput)' == 'true' And Exists('$(MSBuildThisFileDirectory)plugins')">
+    <ItemGroup>
+      <_LuxPluginBuildFiles Include="$(MSBuildThisFileDirectory)plugins\LuxVideoDet.Algorithm.*.dll" />
+    </ItemGroup>
+    <MakeDir Directories="$(TargetDir)plugins" Condition="@(_LuxPluginBuildFiles->Count()) &gt; 0" />
+    <Copy SourceFiles="@(_LuxPluginBuildFiles)"
+          DestinationFolder="$(TargetDir)plugins"
+          SkipUnchangedFiles="true"
+          Condition="@(_LuxPluginBuildFiles->Count()) &gt; 0" />
+  </Target>
+
+  <Target Name="LuxVideoDetCopyPluginsOnPublish"
+          AfterTargets="Publish"
+          Condition="'$(LuxVideoDetCopyPluginsToOutput)' == 'true' And Exists('$(MSBuildThisFileDirectory)plugins')">
+    <ItemGroup>
+      <_LuxPluginPublishFiles Include="$(MSBuildThisFileDirectory)plugins\LuxVideoDet.Algorithm.*.dll" />
+    </ItemGroup>
+    <PropertyGroup>
+      <_LuxPublishDir>$([MSBuild]::EnsureTrailingSlash($([System.IO.Path]::GetFullPath('$(PublishDir)'))))</_LuxPublishDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(_LuxPublishDir)plugins" Condition="@(_LuxPluginPublishFiles->Count()) &gt; 0" />
+    <Copy SourceFiles="@(_LuxPluginPublishFiles)"
+          DestinationFolder="$(_LuxPublishDir)plugins"
+          SkipUnchangedFiles="true"
+          Condition="@(_LuxPluginPublishFiles->Count()) &gt; 0" />
+  </Target>
+</Project>

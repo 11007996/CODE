@@ -1,0 +1,58 @@
+
+.container.data-v-1cf27b2a {
+		padding: 10rpx;
+}
+
+	/* 搜索相关 */
+.search-container.data-v-1cf27b2a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+}
+.search.data-v-1cf27b2a {
+		display: flex;
+		justify-content: row;
+		flex: 1;
+		height: 60rpx;
+		border: 1px solid #007aff;
+		border-radius: 8rpx;
+}
+.search input.data-v-1cf27b2a {
+		flex: 1;
+		height: initial;
+		font-size: 36rpx;
+		padding-left: 10rpx;
+}
+.search-container image.data-v-1cf27b2a,
+	.search image.data-v-1cf27b2a {
+		height: initial;
+		width: 60rpx;
+		margin-top: 0rpx;
+		margin-left: 10rpx;
+		margin-right: auto;
+		margin-bottom: 0rpx;
+}
+
+	/* 资产列表相关 */
+.asset-container.data-v-1cf27b2a {
+		margin-top: 20rpx;
+}
+.asset-item.data-v-1cf27b2a {
+		background-color: palegoldenrod;
+		border-radius: 8rpx;
+		padding: 10rpx;
+		margin-bottom: 10rpx;
+}
+.asset-item .item-row.data-v-1cf27b2a {
+		display: flex;
+		justify-content: row;
+}
+.asset-item .title.data-v-1cf27b2a {
+		display: block;
+		color: green;
+		width: 100rpx;
+}
+.asset-item .value.data-v-1cf27b2a {
+		color: gray;
+}
