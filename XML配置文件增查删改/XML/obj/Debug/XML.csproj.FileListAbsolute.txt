@@ -1,0 +1,9 @@
+C:\Users\mh.guo\Desktop\XML\XML\bin\Debug\XML.exe.config
+C:\Users\mh.guo\Desktop\XML\XML\bin\Debug\XML.exe
+C:\Users\mh.guo\Desktop\XML\XML\bin\Debug\XML.pdb
+C:\Users\mh.guo\Desktop\XML\XML\obj\Debug\XML.csprojResolveAssemblyReference.cache
+C:\Users\mh.guo\Desktop\XML\XML\obj\Debug\XML.exe
+C:\Users\mh.guo\Desktop\XML\XML\obj\Debug\XML.pdb
+D:\zzzzzzzz\代码块\XML配置文件增查删改\XML\bin\Debug\XML.exe.config
+D:\zzzzzzzz\代码块\XML配置文件增查删改\XML\obj\Debug\XML.exe
+D:\zzzzzzzz\代码块\XML配置文件增查删改\XML\obj\Debug\XML.pdb

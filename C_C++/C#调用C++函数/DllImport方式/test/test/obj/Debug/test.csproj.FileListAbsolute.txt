@@ -1,0 +1,7 @@
+C:\Users\mh.guo\Desktop\test\test\bin\Debug\test.exe.config
+C:\Users\mh.guo\Desktop\test\test\bin\Debug\test.exe
+C:\Users\mh.guo\Desktop\test\test\bin\Debug\test.pdb
+C:\Users\mh.guo\Desktop\test\test\obj\Debug\test.exe
+C:\Users\mh.guo\Desktop\test\test\obj\Debug\test.pdb
+C:\Users\mh.guo\Desktop\test\test\bin\Debug\MyLib.dll
+C:\Users\mh.guo\Desktop\test\test\bin\Debug\MyLib.pdb

@@ -1,0 +1,5 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_2\bin\Debug\Singleton_2.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_2\bin\Debug\Singleton_2.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_2\bin\Debug\Singleton_2.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_2\obj\Debug\Singleton_2.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_2\obj\Debug\Singleton_2.pdb

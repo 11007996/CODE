@@ -1,0 +1,2 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\AbstractFactory\bin\Debug\AbstractFactory.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\AbstractFactory\obj\Debug\AbstractFactory.csprojResolveAssemblyReference.cache

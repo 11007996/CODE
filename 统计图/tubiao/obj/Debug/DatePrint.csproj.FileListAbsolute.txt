@@ -1,0 +1,10 @@
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\DatePrint.csprojResolveAssemblyReference.cache
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\tubiao.Form2.resources
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\tubiao.Properties.Resources.resources
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\DatePrint.csproj.GenerateResource.Cache
+C:\Users\mh.guo\Desktop\tubiao\tubiao\bin\Debug\tubiao.exe.config
+C:\Users\mh.guo\Desktop\tubiao\tubiao\bin\Debug\tubiao.exe
+C:\Users\mh.guo\Desktop\tubiao\tubiao\bin\Debug\tubiao.pdb
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\tubiao.exe
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\tubiao.pdb
+C:\Users\mh.guo\Desktop\tubiao\tubiao\obj\Debug\tubiao.Form1.resources

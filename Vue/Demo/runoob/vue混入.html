@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.net/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+<div id = "databinding"></div>
+<script type = "text/javascript">
+var vm = new Vue({
+	el: '#databinding',
+	data: {
+	},
+	methods : {
+	},
+});
+// 定义一个混入对象
+var myMixin = {
+	created: function () {
+		this.startmixin()
+	},
+	methods: {
+		startmixin: function () {
+			document.write("欢迎来到混入实例");
+		}
+	}
+};
+var Component = Vue.extend({
+	mixins: [myMixin]
+})
+var component = new Component();
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.net/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+<div id = "databinding"></div>
+<script type = "text/javascript">
+var mixin = {
+	created: function () {
+		document.write('混入调用' + '<br>')
+	}
+}
+new Vue({
+	mixins: [mixin],
+		created: function () {
+		document.write('组件调用' + '<br>')
+	}
+});
+</script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 如果 methods 选项中有相同的函数名，则 Vue 实例优先级会较高。如下实例，Vue 实例与混入对象的 methods 选项都包含了相同的函数 -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.net/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+<div id = "databinding"></div>
+<script type = "text/javascript">
+var mixin = {
+	methods: {
+		hellworld: function () {
+			document.write('HelloWorld 方法' + '<br>');
+		},
+		samemethod: function () {
+			document.write('Mixin：相同方法名' + '<br>');
+		}
+	}
+};
+var vm = new Vue({
+	mixins: [mixin],
+	methods: {
+		start: function () {
+			document.write('start 方法' + '<br>');
+		},
+		samemethod: function () {
+			document.write('Main：相同方法名' + '<br>');
+		}
+	}
+});
+vm.hellworld();
+vm.start();
+vm.samemethod();
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- 也可以全局注册混入对象。注意使用！ 一旦使用全局混入对象，将会影响到 所有 之后创建的 Vue 实例。使用恰当时，可以为自定义对象注入处理逻辑。 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.net/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+<script type = "text/javascript">
+// 为自定义的选项 'myOption' 注入一个处理器。
+Vue.mixin({
+  created: function () {
+    var myOption = this.$options.myOption
+    if (myOption) {
+      document.write(myOption)
+    }
+  }
+})
+
+new Vue({
+  myOption: 'hello!'
+})
+// => "hello!"
+</script>
+</body>
+</html>

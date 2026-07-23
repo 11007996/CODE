@@ -1,0 +1,40 @@
+-----------------------对称加密-------------------------------
+--加密
+CspParameters cp = new CspParameters();
+cp.ProviderType = 24;
+cp.KeyContainerName = string containerName;
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cp);
+byte[] bytes = Encoding.Unicode.GetBytes(text);
+byte[] encryptedData = rsa.Encrypt(bytes, true);
+return Convert.ToBase64String(encryptedData);
+
+--解密
+CspParameters cp = new CspParameters();
+cp.ProviderType = 24;
+cp.KeyContainerName = string containerName;
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cp);
+byte[] encryptedData = Convert.FromBase64String(text);
+byte[] decryptedData = rsa.Decrypt(encryptedData, true);
+return Encoding.Unicode.GetString(decryptedData);
+
+
+--导出密钥
+CspParameters cp = new CspParameters();
+cp.ProviderType = 24;
+cp.KeyContainerName = string containerName;
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cp);
+string rsaKeyInfo = rsa.ToXmlString(true);
+System.IO.File.WriteAllText("keyinfo.txt", rsaKeyInfo);
+
+--导入密钥
+CspParameters cp = new CspParameters();
+cp.ProviderType = 24;
+cp.KeyContainerName = containerName;
+string rsaKeyInfo = System.IO.File.ReadAllText("keyinfo.txt");
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cp);
+rsa.FromXmlString(rsaKeyInfo);
+//true表示将密钥永久驻留在CSP中，false表示从密钥容器中删除该密钥
+rsa.PersistKeyInCsp = true;
+-----------------------对称加密-------------------------------
+
+

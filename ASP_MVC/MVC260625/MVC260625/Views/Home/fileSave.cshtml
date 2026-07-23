@@ -1,0 +1,26 @@
+﻿@model System.Web.HttpPostedFileBase
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>fileSave</title>
+</head>
+<body>
+    <div> 
+        @using (@Html.BeginForm())
+        {
+            <div>
+                @Html.Label("文件");
+                @Html.EditorFor(x => x.fileName);
+                @Html.TextBoxFor(x => x.fileName, new { type = "file" });
+                <input type="submit" name="submit" value="提交" />
+            </div>
+        }
+    </div>
+</body>
+</html>

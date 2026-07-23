@@ -1,0 +1,78 @@
+﻿<Window x:Class="wpfToolkit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfToolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <WindowChrome.WindowChrome>
+        <WindowChrome UseAeroCaptionButtons="False"></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <!--<vm:bindViewModel x:Key="bindM"></vm:bindViewModel>-->
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="{Binding ElementName=txtBox, Path=Text}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="0,0,0,107" Grid.RowSpan="2">
+            <TextBox x:Name="txtBox" Text="{Binding Name,Mode=Default}" Height="50"/>
+            <Button x:Name="btnText" Content="文本" Height="30" Command="{Binding showText}" CommandParameter="HI"/>
+        </StackPanel>
+        <Button x:Name="showText" Content="显示" Grid.Column="2" Height="50" Width="80" Click="showText_Click" Margin="44,28,43,29">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="btnBor" Height="50" Width="80" BorderBrush="DeepPink" BorderThickness="3" CornerRadius="10">
+                        <TextBlock Foreground="DeepPink" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding ElementName=showText, Path=Content}" />
+                        </TextBlock>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="btnBor" Property="Background" Value="#50ed5050"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="btnBor" Property="BorderBrush" Value="#50ed5050"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <TextBlock x:Name="tB" Grid.Row="1" Text="{Binding Age}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="ForestGreen"/>
+        <Button x:Name="showText2" Content="增加" Grid.Row="1" Grid.Column="1" Height="50" Width="80" Command="{Binding showTextVoid}" Margin="43,28,43,29">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="btnBor" Height="50" Width="80" BorderBrush="DeepPink" BorderThickness="3" CornerRadius="10">
+                        <TextBlock Foreground="DeepPink" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding ElementName=showText, Path=Content}" />
+                        </TextBlock>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="btnBor" Property="Background" Value="#50ed5050"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="btnBor" Property="BorderBrush" Value="#50ed5050"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding ElementName=txtBox, Path=Text}" Value="张三">   <!--数据绑定，当txtBox的Text为张三时，btnBor的边框为黑色-->
+                            <Setter TargetName="btnBor" Property="BorderBrush" Value="black"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

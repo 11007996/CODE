@@ -1,0 +1,93 @@
+﻿@model MVC260625.Models.fileTextModels
+@{
+    Layout = null;
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>viewData</title>
+    <link href="~/Content/viewStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <p>名字：@Model.name</p>
+        <p>年龄：@Model.age</p>
+
+    </div>
+
+
+
+    @*@Html.TextBox("UserName", Model.name)*@
+    @*@Html.TextBoxFor(m => m.name, htmlAttributes: new { @class = "ae" })*@
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            @Html.ValidationSummary()   @*数据验证错误消息*@
+            @Html.LabelFor(m => m.name, htmlAttributes: new { @class = "ae" })
+            @Html.TextBoxFor(m => m.name, htmlAttributes: new { @class = "ae"})
+            @Html.LabelFor(m => m.age, htmlAttributes: new { @class = "ae" })
+            @Html.TextBoxFor(m => m.age, htmlAttributes: new { @class = "ae"})
+            <input type="submit" name="submit" value="提交" />
+        </div>
+    
+    @*<div>
+        @Html.LabelFor(m => m.pwd, htmlAttributes: new { @id = "label1" })
+        @Html.PasswordFor(m => m.pwd)
+        @Html.PasswordFor(m => m.pwd)
+        @Html.RadioButtonFor(m => m.check, 1)  @*（name，值）m.check字段相同表示为同一组*@
+        @*@Html.RadioButtonFor(m => m.check,2)*@
+
+    @*</div>*@
+    @*<div>*@
+        @*@Html.RadioButtonFor(m => m.check1, 1)
+        @Html.RadioButtonFor(m => m.check1, 2)*@
+    @*</div>*@
+
+    @*<div>*@
+        @*@Html.CheckBoxFor(m => m.check, 1)
+        @Html.CheckBoxFor(m => m.check1, new { @id = "123456" })*@
+        
+    @*</div>*@
+
+    }
+    <hr />
+    @using (Html.BeginForm("fileSave", "Home", FormMethod.Post))
+    {
+        <div>
+            @Html.Label("文件")
+            <input type="file" name="filePath"/>
+            <input type="submit" name="submit" value="提交" />
+        </div>
+    }
+
+    @{string code = "<p style=\"color: blue;\">原HTML文件代码</p>";}
+    @Html.Raw(@code)    @*渲染HTML源代码*@
+    <div>
+        @*同控制器方法跳转*@
+        @Html.ActionLink("index页面", "Index", new { @id = "link_01" })
+    </div>
+    <div>
+        @*跨控制器方法跳转*@
+        @Html.RouteLink("index页面", "Default", new { Controller = "Home", Action = "Index" }, new { @id = "link_02" })
+    </div>
+    <div>
+        @*跨区域控制器方法跳转*@
+        @Html.RouteLink("区域页面", "sport_default", new { Controller = "Home", Action = "Index" })
+    </div>
+
+    <div>
+        @*@Html.Partial("Index")*@  @*运行Index.cshtml页面直接渲染到当前页面*@
+        @Html.Action("Index")   @*运行此页面，并把结果渲染到当前页面*@
+    </div>
+    <div>
+        <a href=@Url.Action("Index")>Url帮助器生成一个链接地址</a>     @*生成一个地址*@
+        <br />
+        <a href=@Url.RouteUrl("sport_default", new { Controller="Home",Action="Index"})>Url帮助器跨路由生成一个链接地址</a>     @*跨路由生成一个地址*@
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Observer\bin\Debug\Observer.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Observer\bin\Debug\Observer.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Observer\bin\Debug\Observer.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Observer\obj\Debug\Observer.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Observer\obj\Debug\Observer.pdb

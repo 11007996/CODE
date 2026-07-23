@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\COMServer.Form1.resources
+obj\Debug\COMServer.Properties.Resources.resources
+obj\Debug\COMServer.csproj.GenerateResource.Cache
+bin\Debug\COMServer.exe
+bin\Debug\COMServer.pdb
+obj\Debug\COMServer.exe
+obj\Debug\COMServer.pdb

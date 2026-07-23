@@ -1,0 +1,12 @@
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\bin\Debug\ProcessMonitor.exe.config
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\bin\Debug\ProcessMonitor.exe
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\bin\Debug\ProcessMonitor.pdb
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\obj\Debug\ProcessMonitor.Form1.resources
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\obj\Debug\ProcessMonitor.Properties.Resources.resources
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\obj\Debug\ProcessMonitor.csproj.GenerateResource.Cache
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\obj\Debug\ProcessMonitor.exe
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\obj\Debug\ProcessMonitor.pdb
+C:\Users\mh.guo\Desktop\ProcessMonitor\ProcessMonitor\obj\Debug\ProcessMonitor.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\进程属性\ProcessMonitor\bin\Debug\ProcessMonitor.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\进程属性\ProcessMonitor\obj\Debug\ProcessMonitor.exe
+D:\zzzzzzzz\代码块\C#网络编程\进程属性\ProcessMonitor\obj\Debug\ProcessMonitor.pdb

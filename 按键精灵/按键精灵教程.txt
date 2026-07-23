@@ -1,0 +1,29 @@
+键盘命令
+    KeyPress 键盘虚拟码,次数    KeyPress 87,1
+                               KeyPress "W",1
+打开notepad
+Call RunApp("notepad")
+停顿1秒
+Delay 1000
+
+
+
+
+/* //打开记词本
+Call RunApp("notepad.exe")
+//延迟1秒
+Delay 1000
+//输入w字符
+KeyPress "w", 1
+*/
+
+
+/*   //替换快捷键功能
+Call RunApp("notepad.exe")
+Delay 1000
+//按下ctrl+h
+KeyDown "ctrl", 1
+//KeyDown 17,1
+KeyPress "H", 1
+KeyUp "ctrl", 1
+*/

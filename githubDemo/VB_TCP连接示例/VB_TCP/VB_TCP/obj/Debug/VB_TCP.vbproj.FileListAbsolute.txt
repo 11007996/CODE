@@ -1,0 +1,10 @@
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\bin\Debug\VB_TCP.exe.config
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\bin\Debug\VB_TCP.exe
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\bin\Debug\VB_TCP.pdb
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\bin\Debug\VB_TCP.xml
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\obj\Debug\VB_TCP.Form1.resources
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\obj\Debug\VB_TCP.Resources.resources
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\obj\Debug\VB_TCP.vbproj.GenerateResource.Cache
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\obj\Debug\VB_TCP.exe
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\obj\Debug\VB_TCP.xml
+D:\zzzzzzzz\CodeBlock\VB_TCP连接示例\VB_TCP\VB_TCP\obj\Debug\VB_TCP.pdb

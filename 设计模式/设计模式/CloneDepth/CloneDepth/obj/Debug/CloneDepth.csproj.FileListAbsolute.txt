@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\CloneDepth\CloneDepth\bin\Debug\CloneDepth.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\CloneDepth\CloneDepth\bin\Debug\CloneDepth.exe
+D:\zzzzzzzz\CodeBlock\设计模式\CloneDepth\CloneDepth\bin\Debug\CloneDepth.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\CloneDepth\CloneDepth\obj\Debug\CloneDepth.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\CloneDepth\CloneDepth\obj\Debug\CloneDepth.exe
+D:\zzzzzzzz\CodeBlock\设计模式\CloneDepth\CloneDepth\obj\Debug\CloneDepth.pdb

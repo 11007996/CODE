@@ -1,0 +1,13 @@
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\bin\Debug\CreenCutter.exe.config
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.Form1.resources
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.Properties.Resources.resources
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\bin\Debug\CreenCutter.exe
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\bin\Debug\CreenCutter.pdb
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.cutter.resources
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.exe
+D:\zzzzzzzz\代码块\CreenCutter\CreenCutter\obj\Debug\CreenCutter.pdb
+D:\zzzzzzzz\CodeBlock\CreenCutter\CreenCutter\bin\Debug\CreenCutter.exe.config
+D:\zzzzzzzz\CodeBlock\CreenCutter\CreenCutter\obj\Debug\CreenCutter.exe
+D:\zzzzzzzz\CodeBlock\CreenCutter\CreenCutter\obj\Debug\CreenCutter.pdb

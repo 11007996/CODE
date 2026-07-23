@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\interpreter\bin\Debug\interpreter.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\interpreter\bin\Debug\interpreter.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\interpreter\bin\Debug\interpreter.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\interpreter\obj\Debug\interpreter.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\interpreter\obj\Debug\interpreter.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\interpreter\obj\Debug\interpreter.pdb

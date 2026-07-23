@@ -1,0 +1,5 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Builder\bin\Debug\Builder.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Builder\bin\Debug\Builder.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Builder\bin\Debug\Builder.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Builder\obj\Debug\Builder.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Builder\obj\Debug\Builder.pdb

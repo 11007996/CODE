@@ -1,0 +1,34 @@
+预编译指令(将标准库、头文件合并)
+gcc -E main.c -o main.i
+编译指令(生成汇编语言文件)
+gcc -S main.i -o main.s
+汇编指令(生成二进制文件)
+gcc -c main.s -o main.o
+链接指令(生成可执行文件)
+gcc mian.o -o main
+
+
+
+main函数汇编示例：
+
+main:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	call	__main
+	leaq	.LC0(%rip), %rcx
+	call	puts
+	movl	$0, %eax
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.ident	"GCC: (x86_64-win32-sjlj-rev0, Built by MinGW-W64 project) 8.1.0"
+	.def	puts;	.scl	2;	.type	32;	.endef
+
+
+pushq指令表示应该将寄存器%rbp的内容压入程序栈中

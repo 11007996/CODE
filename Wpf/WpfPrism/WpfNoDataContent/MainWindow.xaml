@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfNoDataContent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfNoDataContent"
+        xmlns:p="http://prismlibrary.com/"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Height="50" Width="100" BorderBrush="#500000ff" BorderThickness="0.5" Background="White" CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Border.Effect>
+                <DropShadowEffect Color="Blue" BlurRadius="3" ShadowDepth="3" Opacity="0.3" Direction="90"></DropShadowEffect>
+            </Border.Effect>
+        </Border>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="txtA" Text="{Binding TxtMessage,UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="0" Width="100" Height="25" FontSize="20" TextAlignment="Center"></TextBox>
+            <Button x:Name="btn" Content="修改" Grid.Row="1" HorizontalAlignment="Left" Width="50" Height="20" Command="{Binding BtnCommand}"></Button>
+            <Button x:Name="btnShow" Content="显示" Grid.Row="1" HorizontalAlignment="Right" Width="50" Height="20" Command="{Binding BtnSCommand}"></Button>
+            <TextBox x:Name="txtB" Text="{Binding TxtMessage}" Grid.Row="2" Grid.Column="0" Width="100" Height="25" FontSize="20" TextAlignment="Center"></TextBox>
+        </Grid>
+
+        <Border Grid.Row="0" Grid.Column="2" BorderBrush="DarkOrange" BorderThickness="5" Width="auto" Height="auto" CornerRadius="65,10,65,10" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.Background>
+                <VisualBrush Viewport="0,0,5,5" ViewportUnits="Absolute" TileMode="Tile">
+                    <VisualBrush.Visual>
+                        <Grid Margin="0">
+                            <Line X1="0" Y1="100" X2="100" Y2="0" Stroke="DarkRed" StrokeThickness="2"></Line>
+                        </Grid>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+        </Border>
+    </Grid>
+</Window>

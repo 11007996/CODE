@@ -1,0 +1,13 @@
+{
+  "runtimeOptions": {
+    "tfm": "net9.0",
+    "additionalProbingPaths": [
+      "C:\\Users\\mh.guo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\mh.guo\\.nuget\\packages",
+      "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"
+    ],
+    "configProperties": {
+      "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
+    }
+  }
+}

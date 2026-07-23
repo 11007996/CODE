@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\Proxy\Proxy\bin\Debug\Proxy.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\Proxy\Proxy\bin\Debug\Proxy.exe
+D:\zzzzzzzz\CodeBlock\设计模式\Proxy\Proxy\bin\Debug\Proxy.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\Proxy\Proxy\obj\Debug\Proxy.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\Proxy\Proxy\obj\Debug\Proxy.exe
+D:\zzzzzzzz\CodeBlock\设计模式\Proxy\Proxy\obj\Debug\Proxy.pdb

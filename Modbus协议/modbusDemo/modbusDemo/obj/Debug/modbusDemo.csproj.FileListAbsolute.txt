@@ -1,0 +1,13 @@
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\bin\Debug\modbusDemo.exe.config
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\bin\Debug\modbusDemo.exe
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\bin\Debug\modbusDemo.pdb
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\bin\Debug\NModbus4.dll
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\bin\Debug\NModbus4.xml
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.csproj.AssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.Form1.resources
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.csproj.GenerateResource.cache
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.csproj.CoreCompileInputs.cache
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.exe
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.pdb
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusDemo\modbusDemo\obj\Debug\modbusDemo.csproj.Up2Date

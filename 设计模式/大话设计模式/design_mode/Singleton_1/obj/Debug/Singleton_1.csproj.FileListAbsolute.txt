@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_1\bin\Debug\Singleton_1.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_1\bin\Debug\Singleton_1.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_1\bin\Debug\Singleton_1.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_1\obj\Debug\Singleton_1.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_1\obj\Debug\Singleton_1.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Singleton_1\obj\Debug\Singleton_1.pdb

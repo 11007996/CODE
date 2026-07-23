@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\bin\Debug\StartStopProcess.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\bin\Debug\StartStopProcess.exe
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\bin\Debug\StartStopProcess.pdb
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\obj\Debug\StartStopProcess.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\obj\Debug\StartStopProcess.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\obj\Debug\StartStopProcess.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\obj\Debug\StartStopProcess.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\obj\Debug\StartStopProcess.exe
+D:\zzzzzzzz\代码块\C#网络编程\StartStopProcess\StartStopProcess\obj\Debug\StartStopProcess.pdb

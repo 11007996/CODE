@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Image x:Key="img" Source="C:\Users\mh.guo\Desktop\MSN.png"></Image>
+    <sys:String x:Key="str">hello world!</sys:String>
+    <sys:String x:Key="imgPath">C:\Users\mh.guo\Desktop\MSN.png</sys:String>
+    
+    <Style  x:Key="safe" TargetType="Button">
+        <Setter Property="Background" Value="SkyBlue"></Setter>
+        <Setter Property="Width" Value="50"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Foreground" Value="Red"></Setter>
+    </Style>
+
+    <Style x:Key="ImageButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource imgPath}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource imgPath}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource imgPath}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

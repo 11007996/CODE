@@ -1,0 +1,10 @@
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\bin\Debug\wsServer.exe.config
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\bin\Debug\wsServer.exe
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\bin\Debug\wsServer.pdb
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.csproj.AssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.Form1.resources
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.csproj.GenerateResource.cache
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.csproj.CoreCompileInputs.cache
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.exe
+D:\zzzzzzzz\CodeBlock\webSocket\wsServer\wsServer\obj\Debug\wsServer.pdb

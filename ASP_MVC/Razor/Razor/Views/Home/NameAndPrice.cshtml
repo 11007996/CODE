@@ -1,0 +1,9 @@
+﻿@model Razor.Models.Product
+
+@{
+    ViewBag.Title = "NameAndPrice";
+}
+
+The product name is @Model.Name and it costs @Model.Price
+<br />
+response:@Response.Headers["token"]

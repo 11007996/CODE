@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\bin\Debug\IPGlobalStatics.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\bin\Debug\IPGlobalStatics.exe
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\bin\Debug\IPGlobalStatics.pdb
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\obj\Debug\IPGlobalStatics.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\obj\Debug\IPGlobalStatics.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\obj\Debug\IPGlobalStatics.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\obj\Debug\IPGlobalStatics.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\obj\Debug\IPGlobalStatics.exe
+D:\zzzzzzzz\代码块\C#网络编程\IPGlobalStatics\IPGlobalStatics\obj\Debug\IPGlobalStatics.pdb

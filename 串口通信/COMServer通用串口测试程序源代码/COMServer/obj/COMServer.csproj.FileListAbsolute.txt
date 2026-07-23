@@ -1,0 +1,21 @@
+E:\c#Study\COMServer\obj\Debug\COMServer.exe
+E:\c#Study\COMServer\obj\Debug\COMServer.pdb
+E:\c#Study\COMServer\bin\Debug\COMServer.exe
+E:\c#Study\COMServer\bin\Debug\COMServer.pdb
+E:\c#Study\COMServer\obj\Debug\ResolveAssemblyReference.cache
+E:\c#Study\COMServer\obj\Debug\COMServer.Form1.resources
+E:\c#Study\COMServer\obj\Debug\COMServer.Properties.Resources.resources
+E:\c#Study\COMServer\obj\Debug\COMServer.csproj.GenerateResource.Cache
+E:\c#Study\COMServer\bin\Debug\SiXi.Logs.dll
+E:\c#Study\COMServer\bin\Debug\SiXi.Logs.pdb
+E:\c#Study\COMServer\obj\Debug\COMServer.AboutBox1.resources
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.exe
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.pdb
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\bin\Debug\SiXi.Logs.dll
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\bin\Debug\COMServer.exe
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\bin\Debug\COMServer.pdb
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.AboutBox1.resources
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.Form1.resources
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.Properties.Resources.resources
+D:\My Documents\下载\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.csproj.GenerateResource.Cache

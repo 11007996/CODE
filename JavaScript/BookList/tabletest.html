@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NewWindom</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<script src="jquery-1.10.2.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+	
+    <style>
+    	a{
+    		text-decoration: none;
+    	}
+    	div>table{
+    		border-style: solid;
+    		border: 1px;
+    	}
+
+    </style>
+</head>
+<body>
+<!-- <script language="JavaScript" type="text/javascript">
+
+$(document).ready(function(){
+  $(".button2").click(function(){
+    alert("rert");
+  });
+});
+
+</script> -->
+
+<p id="pp">页面</p>
+<form action="" class="fo user nin" id="fo1">    <!-- novalidate表示禁止對表單進行數據驗證 -->
+    <input type="button" class="but"  value="移动" id="but1"><br>
+    <input type="text" id="txtbox" placeholder="提示信息" pattern="\d+" required><br>    <!-- required表示必填 pattern正則規則限定輸入-->
+    <input type="file" id="fi">
+    <span>郵件：</span><input type="email" name="email" required ><br>
+		<span>網址:</span><input type="url" name="homepage">
+		<span>數字:</span><input type="number" min="0" max="100" step="5" name="count">
+		<span>範圍:</span><input type="range" min="0" max="100" step="5" name="count">
+		<span>時間:</span><input type="datetime" min="0" max="100" step="5" name="count">
+		<span>時間:</span><input type="datetime-local" min="0" max="100" step="5" name="count">
+		<span>時間:</span><input type="date" min="0" max="100" step="5" name="count">
+		<span>月:</span><input type="month" min="0" max="100" step="5" name="count">
+		<span>周:</span><input type="week" min="0" max="100" step="5" name="count">
+		<span>時間:</span><input type="time" min="0" max="100" step="5" name="count">
+		<select name="opti" id="sele">
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+		</select>
+    <input type="radio" name="rad" id="radio1" value="radio1">
+    <label for="radio1">radio_bbbbbbbbb</label><br>
+    <input type="radio" name="rad" id="radio2" data-aaa="userid" value="radio2">
+    <label for="radio2">radio_aaaaaaaaa</label>
+    <!-- <input type="button" class="button2" value="button2">
+    <input type="button" class="button3" value="button3"> -->
+    <input type="submit" id="sub" value="提交">
+</form>
+<div id="mydiv">
+	<!-- <ul id="ull" style="position:absolute;visibility:hidden;list-style:none;">
+	<li><a href="https://cn.bing.com/" target="_blank">百度1</a></li>
+	<li border="1px"><a href="https://cn.bing.com/">百度2</a></li>
+	<li><a href="https://cn.bing.com/">百度3</a></li>
+	</ul>  -->
+	<!-- <table id="ull" style="position:absolute;visibility:hidden;">
+		<tr>
+			<td><a href="https://cn.bing.com/" target="_blank">百度1</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://cn.bing.com/" target="_blank">百度2</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://cn.bing.com/" target="_blank">百度2</a></td>
+		</tr>
+	</table> -->
+	<ul id="ul1">
+		<li id="li1">111111</li>
+		<li id="li2">222222</li>
+		<li id="li3">333333</li>
+	</ul>
+</div>
+<div id="ppp"></div>
+<div id="status"></div>
+<canvas width="500" height="100" id="can">加载失败</canvas>
+<!-- <iframe name="ifr" style="height:100px; width:100px;background: red;">加载失败</iframe> -->
+<!-- <iframe src="./TEST测试.html" width="800px" height="400px" frameborder="1" scrolling="no" id="ifm"></iframe> -->
+<!-- <div class="editable" id="richedit" style="background: red;height: 100px;width: 100px;" contenteditable="true"></div>   contenteditable表示DIV元素是否可编辑 --> 
+<div id="output"></div>
+<div id="progress"></div>
+<div id="droptarget" style="height:100px; width:100px; background: red"></div>
+
+<div class="mediaplayer">
+<div class="video">
+<video id="player" src="movie.mp4" poster="0.jpg"
+width="300" height="200"  draggable="true">
+Video player not available.
+</video>
+</div>
+<div class="controls">
+<input type="button" value="Play" id="video-btn">
+<span id="curtime">0</span>/<span id="duration">0</span>
+</div>
+</div>
+
+
+<div id="foo"></div>
+
+
+</body>
+<script src="./testJs.js"></script>
+</html>

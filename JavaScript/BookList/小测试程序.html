@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Work Online Trivia Quiz</title>
+<script type="text/javascript">
+    function answerCorrect(questionNumber,answer)
+	{
+	    var correct = false;
+		if (answer == answers[questionNumber])
+		{
+			alert("true");
+		}
+		else
+		{
+			alert("false");
+		}
+		
+	}
+	
+    var questions = new Array();
+	var answers = new Array();
+	
+	questions[0] = new Array();
+	questions[0][0] = "The Beatles were";
+	questions[0][1] = "A sixties rock group from Liverpool";
+	questions[0][2] = "Four musically gifted insects";
+	questions[0][3] = "German cars";
+	questions[0][4] = "I don't know. Can I have the questions on baseball please?";
+	answers[0] = "A";
+
+    questions[1] = new Array();
+	questions[1][0] = "Homer Simpson's favorite food is";
+	questions[1][1] = "Fresh salad";
+	questions[1][2] = "Doughnuts";
+	questions[1][3] = "Bread and water";
+	questions[1][4] = "Apples";
+	answers[1] = "B";
+	
+	questions[2] = new Array();
+	questions[2][0] = "Lisa Simpson plays which musical instrument?";
+	questions[2][1] = "Clarinet";
+	questions[2][2] = "Oboe";
+	questions[2][3] = "Saxophone";
+	questions[2][4] = "Tubular bells";
+	answers[2] = "C";
+	
+</script>
+<script language = "JavaScript" type="text/javascript">
+        /*document.write("The Answer to Question 1 is " + answers[0] + "<br>");
+		document.write("The Answer to Question 2 is " + answers[1] + "<br>");
+		document.write("The Answer to Question 2 is " + answers[2]);*/
+        var an ="";
+		function question_onload()
+		{
+			var Qnum = Math.floor(Math.random() * 3);
+			document.form1.qname1.value = Qnum;
+			var docHTML = "<p>" + questions[Qnum][0] + "</p><br>";
+			for(var i =1;i<5;i++)
+			{
+				docHTML += "<input class='radios' type='radio' name='radioo' value='' onclick='SeAnswers()'>";
+				docHTML += "<label>" + questions[Qnum][i] + "</label><br>";
+			}
+			// docHTML += "<input type='button' name='myButton' value='Check Question'>"
+			return docHTML;
+		}
+		function SeAnswers()
+		{
+			var i = 0;
+			for(i=0;i<4;i++)
+			{
+				if(document.form1.radioo[i].checked == true)
+				{
+					break;
+				}
+			}
+
+			switch(i)
+			{
+				case 0: an="A"; break;
+				case 1: an="B"; break;
+				case 2: an="C"; break;
+				case 3: an="D"; break;
+			}
+			return an;
+		}
+	</script>
+</head>
+<body onload="question_onload()">
+	Question:
+	<form action="" name="form1">
+	
+	<input type="text" name="qname1" maxlength=1><br>
+	<!-- <p name="qsimple"></p>
+	<input class="radios" type="radio" name="radio1" value=""><br>
+	<input class="radios" type="radio" name="radio2" value=""><br>
+	<input class="radios" type="radio" name="radio3" value=""><br>
+	<input class="radios" type="radio" name="radio4" value=""><br>
+	<input type="button" name="myButton" value="Check Question"> -->
+	</form>
+    <script language="JavaScript" type="text/javascript">
+    	document.write(question_onload());
+    </script>
+    <input type='button' name='myButton' value='Check Question' onclick="answerCorrect(document.form1.qname1.value,an)">
+
+</body>
+</html>

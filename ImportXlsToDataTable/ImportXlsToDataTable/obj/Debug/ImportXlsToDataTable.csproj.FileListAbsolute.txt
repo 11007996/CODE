@@ -1,0 +1,4 @@
+D:\zzzzzzzz\代码块\ImportXlsToDataTable\ImportXlsToDataTable\obj\Debug\ResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\ImportXlsToDataTable\ImportXlsToDataTable\obj\Debug\ImportXlsToDataTable.Form1.resources
+D:\zzzzzzzz\代码块\ImportXlsToDataTable\ImportXlsToDataTable\obj\Debug\ImportXlsToDataTable.Properties.Resources.resources
+D:\zzzzzzzz\代码块\ImportXlsToDataTable\ImportXlsToDataTable\obj\Debug\ImportXlsToDataTable.csproj.GenerateResource.Cache

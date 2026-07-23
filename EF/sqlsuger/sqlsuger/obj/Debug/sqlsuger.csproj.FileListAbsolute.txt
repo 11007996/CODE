@@ -1,0 +1,7 @@
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\bin\Debug\sqlsuger.exe.config
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\bin\Debug\sqlsuger.exe
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\bin\Debug\sqlsuger.pdb
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\bin\Debug\SqlSugar.dll
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\obj\Debug\sqlsuger.exe
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\obj\Debug\sqlsuger.pdb
+D:\zzzzzzzz\CodeBlock\EF\sqlsuger\sqlsuger\obj\Debug\sqlsuger.csprojResolveAssemblyReference.cache

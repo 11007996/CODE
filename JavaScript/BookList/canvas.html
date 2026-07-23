@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+        <title>菜鸟教程(runoob.com)</title> 
+        <style>
+            img{
+                position: absolute;
+                left: 10;
+                top: 10;
+                overflow: left;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./2.png" alt="1234" width="100" height="100">
+        <canvas id="myCanvas" width="600" height="600">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+        <script>
+            // let c=document.getElementById("myCanvas");
+            // if(c.getContext)
+            // {
+                // let Context=c.getContext("2d"),
+                /*Context.moveTo(0,0);
+                Context.lineTo(200,100);
+                Context.stroke();*/
+
+                /*Context.fillStyle = "rgba(150,0,50,1)";
+                Context.fillRect(0,0,100,100,)
+                Context.strokeStyle = "rgba(20,200,0,0.5)";
+                Context.strokeRect(80,80,100,100);
+                Context.clearRect(70,70,30,30);*/
+
+                /*Context.moveTo(10,10);
+                Context.lineTo(100,0);
+                Context.strokeStyle="#dfbb00";
+                Context.stroke();*/
+
+                /*Context.beginPath();
+                Context.arc(150,150,100,0,2*Math.PI,false);
+                Context.moveTo(245,150);
+                Context.arc(150,150,95,0,2*Math.PI,false);
+                Context.moveTo(150,150);
+                Context.lineTo(150,90);
+                Context.moveTo(150,150);
+                Context.strokeStyle = "rgba(0,0,150,1)";
+                Context.lineTo(230,150);
+                Context.translate(150,150);
+                Context.rotate(1.5);
+                if(Context.isPointInPath(100,500))
+                {
+                    console.log("is path");
+                }
+                else
+                {
+                    console.log("is not path");
+                }*/
+
+                /*Context.font = "bold 14px Arial";
+                Context.fillStyle = "red";
+                Context.textAlign = "center";
+                // Context.textBaseLine = "middle";
+                // Context.textBaseLine = "bootom";
+                Context.fillText("12",150,70);
+                */
+                // Context.strokeText("12",150,70);
+
+
+                /*Context.fillStyle = "#ff0000";
+                Context.save();
+                Context.fillStyle = "#00ff00";
+                Context.translate(100, 100);
+                Context.save();
+                Context.fillStyle = "#0000ff";
+                Context.fillRect(0, 0, 100, 200); // 在(100, 100)绘制蓝色矩形
+                Context.restore();
+                Context.restore();
+                Context.fillRect(10, 10, 100, 200); // 在(100, 100)绘制绿色矩形
+                
+                Context.fillRect(0, 0, 100, 200); // 在(0, 0)绘制红色矩形
+
+                Context.stroke();*/
+
+
+                /*let fontSize = 100;
+                Context.font = fontSize + "px Arial";
+                while(Context.measureText("Hello world!").width > 100) {   //返回字体的总体宽度，以适应大小
+                    fontSize--;
+                    Context.font = fontSize + "px Arial";
+                }
+                Context.fillText("Hello world!", 10, 100,50);   //字符，坐标X，坐标Y,最大宽度
+                Context.fillText("Font size is " + fontSize + "px", 10, 50);
+                Context.stroke();*/
+
+                /*Context.shadowOffsetx = 10;
+                Context.shadowOffsety = 10;
+                Context.shadowBlur = 10;
+                Context.shadowColor = "rgb(0, 0, 0)";
+                Context.font = "100px Arial";
+                Context.fillStyle = "red";
+                Context.fillText("Hello world!", 10,150);
+                Context.stroke();*/
+
+                /*let grad = Context.createLinearGradient(10,10,100,50);
+                grad.addColorStop(0,"red");
+                // grad.addColorStop(0.5,'blue');
+                grad.addColorStop(1,"green");
+                Context.lineWidth = 10;
+                Context.fillStyle= grad;
+                Context.moveTo(11,11);
+                Context.lineTo(100,30);
+                Context.stroke();*/
+
+                //线性渐变
+                /*let gradient = Context.createLinearGradient(30, 30, 70, 70);
+                gradient.addColorStop(0, "white");
+                gradient.addColorStop(1, "black");
+                Context.fillStyle = "#ff0000";
+                Context.fillRect(10, 10, 50, 50);
+                // 绘制渐变矩形
+                Context.fillStyle = gradient;
+                Context.strokeStyle = gradient;
+                Context.fillRect(30, 30, 50, 50);
+                Context.moveTo(5,5);
+                Context.lineTo(50,50);
+                Context.lineWidth = 10;
+                Context.stroke();*/
+
+                //径向渐变
+                /*let grad = Context.createRadialGradient(50,50,2,50,50,50);
+                grad.addColorStop(0,"white");
+                grad.addColorStop(0.5,"rgb(50,50,200)");
+                grad.addColorStop(1,"blue");
+                Context.fillStyle = grad;
+                Context.fillRect(20,20,60,60);*/
+                // }
+
+
+
+
+                let drawing = document.getElementById("myCanvas");
+                // 确保浏览器支持<canvas>
+                if (drawing.getContext) {
+                    try {
+                        gl = drawing.getContext("webgl");
+                    } catch (ex) {
+                        alert("webgl error");
+                    }
+                    if (gl) {
+                // 使用WebGL
+                alert("WebGL context could be created.");
+            } else {
+                alert("WebGL context could not be created.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>要用到的图片：</p>
+<img src="/i/lamp.gif" id="lamp" />
+<p>Canvas:</p>
+
+<button onclick="draw('repeat')">Repeat</button> 
+<button onclick="draw('repeat-x')">Repeat-x</button> 
+<button onclick="draw('repeat-y')">Repeat-y</button> 
+<button onclick="draw('no-repeat')">No-repeat</button>     
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+function draw(direction)
+{
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.clearRect(0,0,c.width,c.height); 
+var img=document.getElementById("lamp")
+var pat=ctx.createPattern(img,direction);
+ctx.rect(0,0,150,100);
+ctx.fillStyle=pat;
+ctx.fill();
+}
+</script>
+
+</body>
+</html> -->

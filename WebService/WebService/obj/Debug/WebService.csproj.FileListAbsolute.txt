@@ -1,0 +1,11 @@
+C:\Users\mh.guo\Desktop\WebService\WebService\bin\WebService.dll.config
+C:\Users\mh.guo\Desktop\WebService\WebService\bin\WebService.dll
+C:\Users\mh.guo\Desktop\WebService\WebService\bin\WebService.pdb
+C:\Users\mh.guo\Desktop\WebService\WebService\obj\Debug\WebService.dll
+C:\Users\mh.guo\Desktop\WebService\WebService\obj\Debug\WebService.pdb
+D:\zzzzzzzz\CodeBlock\WebService\WebService\bin\WebService.dll.config
+D:\zzzzzzzz\CodeBlock\WebService\WebService\bin\WebService.dll
+D:\zzzzzzzz\CodeBlock\WebService\WebService\bin\WebService.pdb
+D:\zzzzzzzz\CodeBlock\WebService\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\WebService\WebService\obj\Debug\WebService.dll
+D:\zzzzzzzz\CodeBlock\WebService\WebService\obj\Debug\WebService.pdb

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="COMServer">
+</Property><Property Name="解决方案文件" Value="D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\COMServer.sln">
+</Property><Property Name="用户选项文件" Value="D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\COMServer.suo">
+</Property><Property Name="Date" Value="2023年9月13日">
+</Property><Property Name="Time" Value="9:32">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="COMServer.sln" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\COMServer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="COMServer.suo" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\COMServer.suo">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="COMServer.csproj" Description="项目文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\COMServer.csproj">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="COMServer.csproj.user" Description="项目用户文件成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\COMServer.csproj.user">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="AboutBox1.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\AboutBox1.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="AboutBox1.Designer.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\AboutBox1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Form1.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Form1.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Form1.Designer.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Program.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Properties\Resources.Designer.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Properties\Settings.Designer.cs" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Properties\Settings.settings" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="SiXi.Logs.dll" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\SiXi.Logs.dll">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="tt.ico" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\tt.ico">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="AboutBox1.resx" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\AboutBox1.resx">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Form1.resx" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="Properties\Resources.resx" Description="文件已成功备份为 D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="COMServer.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="COMServer" Source="COMServer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="COMServer.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="COMServer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="COMServer" Source="COMServer.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

@@ -1,0 +1,5 @@
+D:\zzzzzzzz\代码块\mvc\apiqian\apiqian\bin\Debug\apiqian.exe.config
+D:\zzzzzzzz\代码块\mvc\apiqian\apiqian\bin\Debug\apiqian.exe
+D:\zzzzzzzz\代码块\mvc\apiqian\apiqian\bin\Debug\apiqian.pdb
+D:\zzzzzzzz\代码块\mvc\apiqian\apiqian\obj\Debug\apiqian.exe
+D:\zzzzzzzz\代码块\mvc\apiqian\apiqian\obj\Debug\apiqian.pdb

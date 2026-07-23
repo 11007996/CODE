@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    #sn{
+        background-color:rgb(150,220,150);
+    }
+</style>
+<div class="jumbotron">
+    <h1>HELLO WORLD</h1>
+</div>
+<div>
+    @using (Html.BeginForm("report", "home",FormMethod.Post, new { @name="form",id="12"}))
+    {
+        
+        @*<label>产品条码:</label>*@
+        @Html.Label("产品条码:", new { name="label",id="label2",@for="sn"});
+        @Html.TextBox("sn",null, new { placeholder="产品条码"});
+    <label>工单:</label>
+        @Html.TextBox("work_order");
+    <label>线别:</label>
+        @Html.DropDownList("pdline_name", new SelectList(new string[] { "aa", "fg", "dfe" }));
+        <input type="submit" name="queryButtom" value="确定"/>
+    }
+</div>

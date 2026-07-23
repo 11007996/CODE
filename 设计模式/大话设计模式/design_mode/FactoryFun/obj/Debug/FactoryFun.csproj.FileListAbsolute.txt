@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\FactoryFun\bin\Debug\FactoryFun.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\FactoryFun\obj\Debug\FactoryFun.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\FactoryFun\bin\Debug\FactoryFun.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\FactoryFun\bin\Debug\FactoryFun.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\FactoryFun\obj\Debug\FactoryFun.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\FactoryFun\obj\Debug\FactoryFun.pdb

@@ -1,0 +1,5 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\obj\Debug\Status.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\obj\Debug\Status.pdb

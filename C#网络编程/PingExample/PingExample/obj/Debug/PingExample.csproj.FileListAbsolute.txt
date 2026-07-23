@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\bin\Debug\PingExample.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\bin\Debug\PingExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\bin\Debug\PingExample.pdb
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\obj\Debug\PingExample.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\obj\Debug\PingExample.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\obj\Debug\PingExample.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\obj\Debug\PingExample.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\obj\Debug\PingExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\PingExample\PingExample\obj\Debug\PingExample.pdb

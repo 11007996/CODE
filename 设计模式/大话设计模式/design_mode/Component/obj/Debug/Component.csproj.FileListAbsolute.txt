@@ -1,0 +1,5 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Component\bin\Debug\Component.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Component\bin\Debug\Component.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Component\bin\Debug\Component.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Component\obj\Debug\Component.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Component\obj\Debug\Component.pdb

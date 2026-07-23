@@ -1,0 +1,28 @@
+--LINE 1
+select distinct(moid) from M_AssysnD_T where Teamid IN ('SX-A02','SX-A06')  and  intime > '2023-02-01'
+select MOID,dcpartid,dccode,intime from m_dc_loginfo WHERE dcpartid='093-020H-0004' AND MOID IN ('1001943014','1002038150','1002076895','1002085737','1002092399','1002103135')  and  intime > '2023-02-01'
+
+--LINE 2
+select distinct(moid) from M_AssysnD_T where Teamid IN ('SX-A07','SX-A01','SX-A09','SX-A11')  and  intime > '2023-02-01'
+select MOID,dcpartid,dccode,intime from m_dc_loginfo WHERE dcpartid='093-020H-0004' AND MOID IN ('1002048689','1002067804','1002092120','1002101994')  and  intime > '2023-02-01'
+
+
+--LINE 3
+select distinct(moid) from M_AssysnD_T where Teamid IN ('SX-A05','SX-A04','SX-A09')  and  intime > '2023-02-01'
+select MOID,dcpartid,dccode,intime from m_dc_loginfo WHERE dcpartid='093-020H-0004' AND MOID IN ('1001790661','1002087964')  and  intime > '2023-02-01'
+
+
+--LINE 4
+select distinct(moid) from M_AssysnD_T where Teamid IN ('SX-A09','SX-A03','SX-A08')  and  intime > '2023-02-01'
+select MOID,dcpartid,dccode,intime from m_dc_loginfo WHERE dcpartid='093-020H-0004' AND MOID IN ('1002055680','1002075997','1002087303','1002087964')  and  intime > '2023-02-01'
+
+
+
+--LINE 5
+select distinct(moid) from M_AssysnD_T where Teamid IN ('SX-C01','SX-C14','SX-C03')  and  intime > '2023-02-01'
+select MOID,dcpartid,dccode,intime from m_dc_loginfo WHERE dcpartid='093-020H-0004' AND MOID IN ('1001572910','1002067773','1002085738')  and  intime > '2023-02-01'
+
+
+--LINE 6
+select distinct(moid) from M_AssysnD_T where Teamid IN ('SX-C04','SX-C02','SX-A10')  and  intime > '2023-02-01'
+select MOID,dcpartid,dccode,intime from m_dc_loginfo WHERE dcpartid='093-020H-0004' AND MOID IN ('1001572910','1002075995','1002075996','1002086937','1002093440','1002101514')  and  intime > '2023-02-01'

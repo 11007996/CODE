@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Facade\bin\Debug\Facade.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Facade\bin\Debug\Facade.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Facade\bin\Debug\Facade.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Facade\obj\Debug\Facade.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Facade\obj\Debug\Facade.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Facade\obj\Debug\Facade.pdb

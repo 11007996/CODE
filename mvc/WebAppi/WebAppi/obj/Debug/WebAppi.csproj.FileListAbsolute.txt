@@ -1,0 +1,17 @@
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\WebAppi.dll.config
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\WebAppi.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\WebAppi.pdb
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\Newtonsoft.Json.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\System.Net.Http.Formatting.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\System.Web.Http.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\System.Web.Http.WebHost.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\Newtonsoft.Json.xml
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\System.Net.Http.Formatting.xml
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\System.Web.Http.xml
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\System.Web.Http.WebHost.xml
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\zh-Hans\System.Web.Http.resources.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\obj\Debug\WebAppi.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\obj\Debug\WebAppi.dll
+D:\zzzzzzzz\代码块\mvc\WebAppi\WebAppi\obj\Debug\WebAppi.pdb

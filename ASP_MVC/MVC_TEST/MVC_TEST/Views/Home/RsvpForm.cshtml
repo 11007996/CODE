@@ -1,0 +1,35 @@
+﻿@model MVC_TEST.Models.GuestRespon
+
+@{
+    ViewBag.Title = "RsvpForm";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC_TEST</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!--生成一个Form表单，默认以POST方式请求-->
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()   //显示表单验证错误信息 系统生成input元素
+        <p>Your name:@Html.TextBoxFor(x => x.Name, new { @class="name"})</p>
+        <p>Your Email:@Html.TextBoxFor(x=>x.Email)</p>
+        <p>Your phone:@Html.TextBoxFor(x=>x.Phone)</p>
+        <p>
+            will you attend?
+
+           <!--生成一个下拉列表-->
+            @Html.DropDownListFor(x => x.WillAttend, new[] { 
+           new SelectListItem(){Text="Yes,I'll be there",Value = bool.TrueString},
+           new SelectListItem(){Text = "No,I can't come",Value = bool.FalseString}},
+           "Choose an option")
+        </p>
+        <input class="sub" type="submit" value="Submit RSVP" />
+    }
+</body>
+</html>

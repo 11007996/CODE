@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Flyweight\bin\Debug\Flyweight.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Flyweight\bin\Debug\Flyweight.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Flyweight\bin\Debug\Flyweight.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Flyweight\obj\Debug\Flyweight.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Flyweight\obj\Debug\Flyweight.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Flyweight\obj\Debug\Flyweight.pdb

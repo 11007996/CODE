@@ -1,0 +1,24 @@
+E:\MES跟进\MES系统功能代码\chromaBU7\chromaBU7\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.fMain.resources
+E:\MES跟进\MES系统功能代码\chromaBU7\chromaBU7\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.GenerateResource.Cache
+E:\MES跟进\MES系统功能代码\MES Files\MES_CLIENT\Query\ProcessOutputDetialReport.dll
+E:\MES跟进\MES系统功能代码\MES Files\MES_CLIENT\Query\ProcessOutputDetialReport.pdb
+E:\MES跟进\MES系统功能代码\chromaBU7\chromaBU7\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.dll
+E:\MES跟进\MES系统功能代码\chromaBU7\chromaBU7\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.pdb
+D:\MES2-TEST\Query\ProcessOutputDetialReport.dll
+D:\MES2-TEST\Query\ProcessOutputDetialReport.pdb
+E:\MES跟进\MES系统功能代码\chromaBU7\chromaBU7\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.FrmChart.resources
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.fMain.resources
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.FrmChart.resources
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.GenerateResource.cache
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.CoreCompileInputs.cache
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.CopyComplete
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.dll
+E:\MESSourceCode\BU12-CHORMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.pdb
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.AssemblyReference.cache
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.fMain.resources
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.FrmChart.resources
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.GenerateResource.cache
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.CoreCompileInputs.cache
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.csproj.CopyComplete
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.dll
+E:\BU12MES-CHROMA\Query\ProcessOutputDetialReport(1.0.0.0)\ProcessOutputDetialReport\obj\Debug\ProcessOutputDetialReport.pdb

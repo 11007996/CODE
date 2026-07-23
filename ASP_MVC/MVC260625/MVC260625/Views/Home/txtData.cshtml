@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+    string path = Request.MapPath("~/Media/"+ViewBag.path);
+    string[] a = File.ReadAllLines(path);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>txtData</title>
+</head>
+<body>
+    <div>
+        @{
+            foreach (string b in a)
+            {
+                <p>@b</p>
+            }
+        }
+    </div>
+</body>
+</html>

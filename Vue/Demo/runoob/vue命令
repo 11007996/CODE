@@ -1,0 +1,39 @@
+--创建项目
+npm create vue@latest
+--切换到项目文件夹
+cd vueName
+--安装依赖
+npm install
+--安装路由插件
+npm install vue-router@4
+--运行vue项目
+npm run dev
+--打包
+npm run build
+--创建运行服务器
+npm i -g serve
+--启动服务
+serve
+
+
+
+
+
+
+
+
+
+
+
+
+--创建vue-cli
+npm install --global vue-cli
+--选择想要安装的模板
+vue init webpack
+
+
+
+--安装连接服务端依赖
+npm i vue vue-resource -save-dev
+--安装axios连接服务端依赖(取代vue-resource)
+npm install axios --save

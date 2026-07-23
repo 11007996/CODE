@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\bin\Debug\lockExample.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\obj\Debug\lockExample.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\obj\Debug\lockExample.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\obj\Debug\lockExample.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\obj\Debug\lockExample.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\bin\Debug\lockExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\bin\Debug\lockExample.pdb
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\obj\Debug\lockExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\lockExample\lockExample\obj\Debug\lockExample.pdb

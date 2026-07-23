@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.net/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.net/vue-resource/1.5.1/vue-resource.min.js"></script>
+</head>
+<body>
+<div id="box">
+    <input type="button" @click="get()" value="点我异步获取数据(Get)">
+</div>
+<script type = "text/javascript">
+window.onload = function(){
+var vm = new Vue({
+    el:'#box',
+    data:{
+        msg:'Hello World!',
+    },
+    methods:{
+        get:function(){
+            //发送get请求
+            this.$http.get('/try/ajax/ajax_info.txt').then(function(res){
+                document.write(res.body);    
+            },function(){
+                console.log('请求失败处理');
+            });
+        }
+    }
+});
+}
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- post 发送数据到后端，需要第三个参数 {emulateJSON:true}。
+emulateJSON 的作用： 如果Web服务器无法处理编码为 application/json 的请求，你可以启用 emulateJSON 选项。 -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.net/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.net/vue-resource/1.5.1/vue-resource.min.js"></script>
+</head>
+<body>
+<div id="box">
+    <input type="button" @click="post()" value="点我异步获取数据(Post)">
+</div>
+<script type = "text/javascript">
+window.onload = function(){
+    var vm = new Vue({
+        el:'#box',
+        data:{
+            msg:'Hello World!',
+        },
+        methods:{
+            post:function(){
+                //发送 post 请求
+                this.$http.post('/try/ajax/demo_test_post.php',{name:"菜鸟教程",url:"https://www.runoob.com"},{emulateJSON:true}).then(function(res){
+                    document.write(res.body);    
+                },function(res){
+                    console.log(res.status);
+                });
+            }
+        }
+    });
+}
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- 请求方式 -->
+<!-- // 基于全局Vue对象使用http
+Vue.http.get('/someUrl', [options]).then(successCallback, errorCallback);
+Vue.http.post('/someUrl', [body], [options]).then(successCallback, errorCallback);
+
+// 在一个Vue实例内使用$http
+this.$http.get('/someUrl', [options]).then(successCallback, errorCallback);
+this.$http.post('/someUrl', [body], [options]).then(successCallback, errorCallback);
+
+
+get(url, [options])
+head(url, [options])
+delete(url, [options])
+jsonp(url, [options])
+post(url, [body], [options])
+put(url, [body], [options])
+patch(url, [body], [options]) -->

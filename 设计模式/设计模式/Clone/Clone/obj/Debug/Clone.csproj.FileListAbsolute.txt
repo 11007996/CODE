@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\Clone\Clone\bin\Debug\Clone.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\Clone\Clone\obj\Debug\Clone.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\Clone\Clone\bin\Debug\Clone.exe
+D:\zzzzzzzz\CodeBlock\设计模式\Clone\Clone\bin\Debug\Clone.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\Clone\Clone\obj\Debug\Clone.exe
+D:\zzzzzzzz\CodeBlock\设计模式\Clone\Clone\obj\Debug\Clone.pdb

@@ -1,0 +1,14 @@
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\mh.guo\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\zzzzzzzz\代码块\C#连接Orcle\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

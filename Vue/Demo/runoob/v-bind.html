@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="D:\zzzzzzzz\CodeBlock\Vue\vue.min.js"></script>
+</head>
+<style>
+	#list-1{color: red;}
+</style>
+<body>
+<div id="app">
+	{{5+5}}<br>       <!-- VUE表达式 -->
+	{{ ok ? 'YES' : 'NO' }}<br>
+	{{ message.split('').reverse().join('') }}
+	<!-- <div v-bind:id="'list-' + id">菜鸟教程</div> -->
+	<div :id="'list-' + id">菜鸟教程</div>     <!-- v-bind可缩写省略 -->
+</div>
+	
+<script>
+new Vue({
+  el: '#app',
+  data: {
+	ok: true,
+    message: 'RUNOOB',
+	id : 1
+  }
+})
+</script>
+</body>
+</html>

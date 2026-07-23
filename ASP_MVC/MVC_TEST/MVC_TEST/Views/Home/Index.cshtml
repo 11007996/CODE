@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC_TEST</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Geeting World (From the view)<br />
+        <p class="date">
+            we're going to have an exciting party.<br />
+            (To Do:sell it better.Add pictrues or something.)
+        </p>
+        @Html.ActionLink("RSVP Now", "RsvpForm")
+    </div>
+</body>
+</html>
+

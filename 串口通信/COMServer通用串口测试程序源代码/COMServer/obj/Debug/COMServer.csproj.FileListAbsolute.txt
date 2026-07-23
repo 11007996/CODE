@@ -1,0 +1,12 @@
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.exe
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.pdb
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\bin\Debug\SiXi.Logs.dll
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\bin\Debug\COMServer.exe
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\bin\Debug\COMServer.pdb
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\ResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.AboutBox1.resources
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.Form1.resources
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.Properties.Resources.resources
+D:\zzzzzzzz\代码块\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.csproj.GenerateResource.Cache
+D:\zzzzzzzz\CodeBlock\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.exe
+D:\zzzzzzzz\CodeBlock\串口通信\COMServer通用串口测试程序源代码\COMServer\obj\Debug\COMServer.pdb

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "GPRMSvhZQ4N12HexBtiGeZBHeesEVyQR4ck1yC/smKoipVaAv3SYWDl+Syfrq/lAeANy2ogi/l5VkaWSHhk3Pg==",
+  "success": true,
+  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\wpfToolkit\\wpfToolkit\\wpfToolkit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mh.guo\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
+    "C:\\Users\\mh.guo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\mh.guo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.1.2\\system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

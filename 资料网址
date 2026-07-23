@@ -1,0 +1,120 @@
+#资料网址
+####MVC  
+- [HTML帮助生成器](https://www.cnblogs.com/lau-4/p/10529426.html)
+- [MVC面试问题与答案](https://www.cnblogs.com/Hackson/p/7055695.html)
+- [Asp.Net MVC - Htmlhelper 总结](https://www.cnblogs.com/JoeSnail/p/7724341.html)
+
+<br>
+
+####SQLserver
+- [多表查询迪卡尔积](https://www.cnblogs.com/leibao/p/8471630.html)
+- [SQLServer数据库之SQL Server 获取本周，本月，本年等时间内记录](https://www.cnblogs.com/guohu/p/11809415.html)
+- [SQLServer 复制表结构](https://www.cnblogs.com/superfeeling/p/16737461.html)
+- [sql server 字符串转成日期格式](https://www.cnblogs.com/keepdoit/p/11769659.html)
+- [SQL Server大表如何快速删除数据](https://www.cnblogs.com/kerrycode/p/12448322.html)
+- [深入浅出SQL Server中的死锁](https://www.cnblogs.com/tianguook/p/5537096.html)
+- [看懂SqlServer执行计划](https://www.cnblogs.com/firstdream/p/7274205.html)
+- [SQL Server锁](https://www.cnblogs.com/zhaoyl9/p/10856170.html)
+- [sql server利用trace实现阻塞跟踪和慢查询跟踪](https://www.cnblogs.com/gered/p/10998090.html)
+- [SQL Server 运行状况监控SQL语句](https://www.cnblogs.com/MuNet/p/6781708.html)
+- [SQLSERVER查询语句执行计划](https://www.cnblogs.com/james23-lin/p/16954660.html#:~:text=%E7%9C%8BSQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C,%E5%87%BA%E7%9B%B8%E5%BA%94%E7%9A%84%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92)
+
+<br>
+
+####ORACLE
+- [ORACL语法](https://www.cnblogs.com/xiaohouye/p/11152181.html)  
+- [ORACLE常用SQL语句](https://www.cnblogs.com/xrhou12326/p/4094737.html)
+- [ORACLE会话连接进程三者总结](https://www.cnblogs.com/kerrycode/p/4100865.html)
+- [dbms_obfuscation_toolkit加密解密](https://www.cnblogs.com/champaign/p/9468640.html)
+- [锁表操作](https://www.cnblogs.com/maweiwei/p/10359311.html)
+- [PL/SQL编程急速上手](https://www.cnblogs.com/ruhaoren/p/13032799.html)
+- [ORACLE日期时间格式化参数详解](https://www.cnblogs.com/xinxihua/p/13982586.html)
+
+<br>
+
+####C#语法
+- [C#操作EXCEL](https://www.cnblogs.com/Brambling/p/6854731.html)
+- [C#操作Office](https://www.cnblogs.com/joean/p/4661056.html#:~:text=NPOI.HSSF%E6%98%AF%E4%B8%93%E9%97%A8%E8%B4%9F%E8%B4%A3Excel,BIFF%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%8C%E4%BE%9B%E5%BC%80%E5%8F%91%E8%80%85%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AF%B9%E8%B1%A1%E4%B8%BB%E8%A6%81%E4%BD%8D%E4%BA%8ENPOI.HSSF.UserModel%E5%92%8CNPOI.HSSF.Util%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E4%B8%8B%EF%BC%8C%E4%B8%8B%E9%9D%A2%E6%88%91%E4%BB%AC%E8%A6%81%E8%AE%B2%E5%88%B0%E7%9A%84Workbook%E7%9A%84%E5%88%9B%E5%BB%BA%E7%94%A8%E7%9A%84%E5%B0%B1%E6%98%AFNPOI.HSSF.UserModel.HSSFWorkbook%E7%B1%BB%EF%BC%8C%E8%BF%99%E4%B8%AA%E7%B1%BB%E8%B4%9F%E8%B4%A3%E5%88%9B%E5%BB%BA.xls%E6%96%87%E6%A1%A3%E3%80%82)
+- [Newtonsoft.Json高级用法](https://www.cnblogs.com/yanweidie/p/4605212.html)
+- [C#关键字之internal详解](https://blog.csdn.net/yiyelanxin/article/details/70887822)
+- [lambda表达式](https://www.w3cschool.cn/csharp/csharp-lambda-expressions.html)
+- [定时器使用](https://www.bbsmax.com/A/RnJWr2XOzq/)
+- [C#之Chart控件系列教程](https://blog.csdn.net/qq_27825451/article/details/81305387)
+- [Tasks详解](https://www.cnblogs.com/zhaoshujie/p/11082753.html)
+- [C# Tostring 格式化输出字符串全解](https://www.cnblogs.com/yoolonet/archive/2010/03/29/1699986.html)
+- [C#读写局域网共享文件夹文件](https://www.cnblogs.com/netserver/p/14214828.html)
+- [C#访问远程主机资源的方法](https://www.cnblogs.com/h2appy/articles/1204277.html)
+- [NUnit使用详解](https://www.cnblogs.com/zhaox583132460/p/3442957.html)
+- [C#反射(Reflection)详解](https://www.cnblogs.com/wangshenhe/p/3256657.html)
+- [最全的 .NET(C#) 反射使用总结](https://www.zhihu.com/tardis/zm/art/493738261)
+- [Socket异步编程](https://www.cnblogs.com/aqyl/p/11254104.html)
+- [base64编码](https://www.cnblogs.com/caoyc/p/5794727.html)
+- [邮件开发](https://www.cnblogs.com/peterYong/p/13343997.html)
+
+<br>
+
+####JavaScript
+- [console.log的高级用法](https://www.cnblogs.com/chris-oil/p/11988903.html)
+- [大白话讲解Promise](https://www.cnblogs.com/lvdabao/p/es6-promise-1.html)
+
+
+<br>
+
+####杂项
+- [curl命令详解](https://cloud.tencent.com/developer/news/359375#:~:text=curl%E6%98%AF%E4%B8%80%E4%B8%AA%E5%88%A9,tp%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E3%80%82)
+- [curl 的用法指南](https://zhuanlan.zhihu.com/p/336945420)
+- [curl命令详解](https://www.cnblogs.com/duhuo/p/5695256.html#:~:text=%E5%91%BD%E4%BB%A4%EF%BC%9Acurl.%20%E5%9C%A8Linux%E4%B8%ADcurl%E6%98%AF%E4%B8%80%E4%B8%AA%E5%88%A9%E7%94%A8URL%E8%A7%84%E5%88%99%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%AF%B4%E6%98%AF%E4%B8%80%E6%AC%BE%E5%BE%88%E5%BC%BA%E5%A4%A7%E7%9A%84http%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E3%80%82.%20%E5%AE%83%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%98%AF%E7%BB%BC%E5%90%88%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%BD%86%E6%8C%89%E4%BC%A0%E7%BB%9F%EF%BC%8C%E4%B9%A0%E6%83%AF%E7%A7%B0url%E4%B8%BA%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7%E3%80%82.%20%E8%AF%AD%E6%B3%95%EF%BC%9A%23%20curl%20%5Boption%5D%20%5Burl%5D%20%E5%B8%B8%E8%A7%81%E5%8F%82%E6%95%B0%EF%BC%9A.,-at%20%3Coffset%3E%20%E6%96%AD%E7%82%B9%E7%BB%AD%E8%BD%AC%20-D%2F--dump-header%20%3Cfile%3E%20%E6%8A%8Aheader%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5%E5%88%B0%E8%AF%A5%E6%96%87%E4%BB%B6%E4%B8%AD%20-e%2F--%20)
+- [XML命名空间详解](https://www.cnblogs.com/xiaomaomao/p/13968976.html)
+- [正则表达式](https://www.cnblogs.com/fozero/p/7868687.html)
+- [Wireshark 的抓包和分析](https://zhuanlan.zhihu.com/p/439358139)
+- [wireshark抓包新手使用教程](https://www.cnblogs.com/linyfeng/p/9496126.html)
+- [CMD命令入门教程 与 Windows常见维护问题](https://www.cnblogs.com/johnnyzen/p/13763210.html)
+- [ASCII码对照表](https://blog.csdn.net/yueyueniaolzp/article/details/82178954)
+- [ASCII码在线转换](https://www.rapidtables.org/zh-CN/convert/number/ascii-hex-bin-dec-converter.html)
+- [远程管理协议](https://zhuanlan.zhihu.com/p/84280468)
+- [论坛及工具](https://stackoverflow.org.cn/)
+- [工具类网站](https://xx.ciding.cc/ip/172.27.112.1.html)
+- [工具类网站](https://www.json.cn/format/#google_vignette)
+
+<br>
+
+####工具网址
+- [ASCII码](http://172.18.20.4/disable/disable.htm?url_type=%E8%AE%BF%E9%97%AE%E7%BD%91%E7%AB%99/%E6%9C%AA%E5%88%86%E7%B1%BB&plc_name=%42%6C%6F%63%6B%73%20%61%6C%6C)
+- [base64](https://tool.jisuapi.com/base642pic.html)
+- [W3School](https://www.w3school.com.cn/tiy/t.asp?f=eg_html5_canvas_createpattern)
+- [网络rfcs](https://www.ietf.org/standards/rfcs/)
+- [办公小工具](https://www.toolnb.com/)
+- [图库](https://c.runoob.com/imglibs/)
+
+<br>
+
+####powershell
+- [powershell命令大全](https://zhuanlan.zhihu.com/p/586554147)
+
+<br>
+
+####C语言
+- [字符串函数](https://www.cnblogs.com/jixiaohua/p/11330096.html)
+- [文件输入输出函数](https://www.cnblogs.com/cxgang/p/15207625.html)
+- [C语言IO函数](https://www.cnblogs.com/liwei0526vip/p/8992792.html)
+- [makefile介绍](https://blog.csdn.net/weixin_38391755/article/details/80380786)
+- [编译指令](https://mp.weixin.qq.com/s/PfA9YCONfMECPLtL4iAVHQ)
+- [操作系统寄存器介绍](https://mp.weixin.qq.com/s/wv7wWdkckJ5thaLmSQ7cIQ)
+
+####C++语言
+- [STL库用法总结](https://mp.weixin.qq.com/s/-VJokOs568z8WADcxfTXUQ)
+
+####linux系统
+- [linux命令手册](https://www.linuxcool.com/)
+- [Vim自动补全](https://zhuanlan.zhihu.com/p/106309525)
+- [Make编译命令](https://mp.weixin.qq.com/s/tYoUCFp7LNu6j-VdzKk-dw)
+
+
+
+####娱乐
+- [可以和全球朋友聊天的公共聊天室](https://drrr.com/)
+- [一起听歌吧](https://music.alang.run/#/)
+- [听蛙](https://www.itingwa.com/)
+- [天气](https://www.windy.com/27.094/114.961?19.541,113.906,4)
+- [二次元新番无广告免费看](https://www.agefans.net)
+- [高德地图实时交通报告](https://report.amap.com/sanjiyisu.do)

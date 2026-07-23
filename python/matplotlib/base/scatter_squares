@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+
+# 散点图
+x_value = list(range(1,10))
+y_value = [x**2 for x in x_value]  # 列表解析语法
+# plt.scatter(x_value,y_value,c="red",edgecolor="none",s=100)   # 设置一个坐标点并点的图形大小,点的颜色和描边颜色
+plt.scatter(x_value,y_value,c=y_value,cmap=plt.cm.Blues,edgecolor="none",s=100)   # 设置颜色映射，根据点Y值大小改变颜色
+plt.title("Square Numbers",fontsize=24)
+plt.xlabel("Value",fontsize=14)
+plt.ylabel("Square of Value",fontsize=14)
+plt.tick_params(axis="both",which="major",labelsize=14)
+# plt.show()
+plt.savefig("squares_plot.png",bbox_inches="tight")   # 自动保存图片

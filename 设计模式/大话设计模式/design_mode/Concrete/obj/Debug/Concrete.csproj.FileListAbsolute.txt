@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Concrete\obj\Debug\Concrete.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Concrete\bin\Debug\Concrete.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Concrete\bin\Debug\Concrete.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Concrete\bin\Debug\Concrete.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Concrete\obj\Debug\Concrete.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Concrete\obj\Debug\Concrete.pdb

@@ -1,0 +1,13 @@
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\bin\Debug\modbusSlaveDemo.exe.config
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\bin\Debug\modbusSlaveDemo.exe
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\bin\Debug\modbusSlaveDemo.pdb
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\bin\Debug\NModbus4.dll
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\bin\Debug\NModbus4.xml
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.csproj.AssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.Form1.resources
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.csproj.GenerateResource.cache
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.csproj.CoreCompileInputs.cache
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.exe
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSlaveDemo.pdb
+D:\zzzzzzzz\CodeBlock\Modbus协议\modbusSlaveDemo\obj\Debug\modbusSl.413CFB01.Up2Date

@@ -1,0 +1,14 @@
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\bin\Debug\WPFCode.exe.config
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\MainWindow.baml
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\MainWindow.g.cs
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\App.g.cs
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode_MarkupCompile.cache
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode.g.resources
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode.csproj.GenerateResource.Cache
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\bin\Debug\WPFCode.exe
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\bin\Debug\WPFCode.pdb
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode.exe
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\WPFCode.pdb
+D:\zzzzzzzz\CodeBlock\Wpf\WPFCode\WPFCode\obj\Debug\mySource.baml

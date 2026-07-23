@@ -1,0 +1,9 @@
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\bin\Debug\sockte客户端.exe.config
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\bin\Debug\sockte客户端.exe
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\bin\Debug\sockte客户端.pdb
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\obj\Debug\sockte客户端.csprojResolveAssemblyReference.cache
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\obj\Debug\sockte客户端.Form1.resources
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\obj\Debug\sockte客户端.Properties.Resources.resources
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\obj\Debug\sockte客户端.csproj.GenerateResource.Cache
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\obj\Debug\sockte客户端.exe
+C:\Users\mh.guo\Desktop\sockte客户端\sockte客户端\obj\Debug\sockte客户端.pdb

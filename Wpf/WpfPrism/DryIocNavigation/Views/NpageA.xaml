@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="DryIocNavigation.Views.NpageA"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DryIocNavigation.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="500"
+             xmlns:p="http://prismlibrary.com/"
+             p:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="NpageA" FontSize="50" Foreground="Red"></TextBlock>
+        <TextBlock Grid.Row="1" Text="{Binding Page1Text}" FontSize="50" Foreground="Red"></TextBlock>
+    </Grid>
+</UserControl>

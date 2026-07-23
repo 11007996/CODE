@@ -1,0 +1,25 @@
+--------配置文件，数据库有改变可直接修改配置文件连接字符串，而不用重新编译代码，使更加灵活和便于维护。
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSetting>
+    <add key = "DB" value = "SqlServer"/>
+	<add key ="strCN" value ="Data Source=charge_wyj;Initial Catalog=wyj-pc;Persist Securty Info=Ture;User ID=sa;Password=123456"/>
+  </appSetting>
+ </configuration>
+ 
+ 
+ 
+ 
+--------数据库连接
+ Public Function DBopen() As Boolean '打开数据库
+    Dim con As String, cnn As SqlClient.SqlConnection
+    con = System.Configuration.ConfigurationManager.AppSettings("strCN")
+    Try
+        cnn = New SqlClient.SqlConnection(con)
+        cnn.Open()
+        Return True
+    Catch ex As Exception
+        MsgBox(ex.Message, MsgBoxStyle.Exclamation, "警告 ")
+        Return False
+    End Try
+End Function

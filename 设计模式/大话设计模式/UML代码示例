@@ -1,0 +1,47 @@
+//类继承
+class Bird:Animal
+{
+
+}
+
+
+//接口继承
+class Bird:Lfly
+{
+
+}
+
+
+
+//关联关系
+class Penguin:Bird
+{
+	private Climate climate;   //Penguin和Climate是关联关系
+}
+
+//聚合关系
+class WideGooseAggregate
+{
+	private WideGoose[] arrayWideGoose;    //WideGooseAggregate和arrayWideGoose是聚合关系
+}
+
+
+//组合(合成)关系
+class Bird
+{
+	private Wing wing;
+	public Bird()
+	{
+		wing = new Wing();      //Bird和Wing是组合关系
+	}
+}
+
+
+//依赖关系
+abstract class Animal
+{
+	public Metabolism(Oxygen oxygen,Water water)  //Oxygen、Water和Animal是依赖关系
+	{
+
+	}
+}

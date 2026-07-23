@@ -1,0 +1,6 @@
+﻿#label1 + input{
+    background-color:red
+}
+label[class="ae"]{
+    color:aqua
+}

@@ -1,0 +1,17 @@
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\bin\Debug\TCPclient.exe.config
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\bin\Debug\TCPclient.exe
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\bin\Debug\TCPclient.pdb
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\obj\Debug\TCPclient.Form1.resources
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\obj\Debug\TCPclient.Properties.Resources.resources
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\obj\Debug\TCPclient.csproj.GenerateResource.Cache
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\obj\Debug\TCPclient.exe
+C:\Users\mh.guo\Desktop\TCPclient\TCPclient\obj\Debug\TCPclient.pdb
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\bin\Debug\TCPclient.exe.config
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\obj\Debug\TCPclient.exe
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\obj\Debug\TCPclient.pdb
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\bin\Debug\TCPclient.exe
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\bin\Debug\TCPclient.pdb
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\obj\Debug\TCPclient.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\obj\Debug\TCPclient.Form1.resources
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\obj\Debug\TCPclient.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\C#网络编程\TCPclient异步执行\TCPclient\obj\Debug\TCPclient.csproj.GenerateResource.Cache

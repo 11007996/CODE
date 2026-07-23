@@ -1,0 +1,13 @@
+ private static string GetIP()
+ {
+    	//将本机名通过DNS服务器解析为IP地址
+    System.Net.IPHostEntry IpEntry = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
+    for (int i = 0; i != IpEntry.AddressList.Length; i++)
+    {
+        if (IpEntry.AddressList[i].AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+        {
+            return IpEntry.AddressList[i].ToString();
+        }
+    }
+    return "未成功获取IP";
+}

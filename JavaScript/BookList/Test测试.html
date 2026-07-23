@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>TEST测试</title>
+  <!-- <link rel="stylesheet" href="test.css"> -->
+  <script src="./jquery-1.10.2.min.js"></script>
+  <style>
+     a:hover{
+      color: red;
+     }
+  </style>
+</head>
+<body>
+   <canvas width="300" height="300" id="can"></canvas>
+   <div id="ppp" class="div1">
+      <!-- 在肝一有有 -->
+      <p id="p1">段落</p>
+      <input type="text" id = "num" placeholder="输入数字" value = "1" title="文本框" style="height: 24px;">
+      <input type="button" class="but" value="移动">
+   </div>
+   <a href="http://www.wrox.com" target="blank">空白页</a>
+   <ul id="myList">
+      
+   </ul>
+   <script src="testJs.js"></script>
+</body>
+<script>
+   window.addEventListener('message',function(e){
+                if(e.source!=window.parent) return;
+                var color=container.style.backgroundColor;
+                window.parent.postMessage(color,'*');
+            },false);
+</script>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" value=1 id="qq" value="qwe">
+
+<script>
+document.getElementById("qq").value = "landscape";
+</script>
+
+</body>
+</html> -->
+

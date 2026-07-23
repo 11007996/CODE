@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Cloneable\bin\Debug\Cloneable.exe.config
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Cloneable\bin\Debug\Cloneable.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Cloneable\bin\Debug\Cloneable.pdb
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Cloneable\obj\Debug\Cloneable.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Cloneable\obj\Debug\Cloneable.exe
+D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Cloneable\obj\Debug\Cloneable.pdb

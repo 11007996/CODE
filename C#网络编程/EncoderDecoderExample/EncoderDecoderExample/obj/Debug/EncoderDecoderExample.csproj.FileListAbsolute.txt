@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\bin\Debug\EncoderDecoderExample.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\bin\Debug\EncoderDecoderExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\bin\Debug\EncoderDecoderExample.pdb
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\obj\Debug\EncoderDecoderExample.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\obj\Debug\EncoderDecoderExample.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\obj\Debug\EncoderDecoderExample.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\obj\Debug\EncoderDecoderExample.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\obj\Debug\EncoderDecoderExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\EncoderDecoderExample\EncoderDecoderExample\obj\Debug\EncoderDecoderExample.pdb

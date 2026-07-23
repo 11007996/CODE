@@ -1,0 +1,26 @@
+
+条码A版开始时间
+select * from m_EqeTestRecord_t where IASN in (select Ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H')and SUBSTRING(ppid,16,1)='B')
+包装站
+select * from M_AssysnD_T where ppid in(select Ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H') and usey = 's' and SUBSTRING(ppid,16,1)='B') and Stationid='P00001'
+过打印标签站
+select distinct(ppid) from M_AssysnD_T where ppid in(select Ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H') and usey = 's' and SUBSTRING(ppid,16,1)='B') and Stationid='A00035'
+绑定站
+select * from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H') and usey = 's' and SUBSTRING(ppid,16,1)='B'order by intime desc
+包装站
+SELECT distinct(cartonid) from m_Cartonsn_t WHERE ppid in(select distinct(IASN) from m_EqeTestRecord_t where IASN in (select Ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H'))) and SUBSTRING(ppid,16,1)='B'
+SELECT distinct(cartonid) from m_Cartonsn_t WHERE ppid in(select Ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H') and usey = 's' and SUBSTRING(ppid,16,1)='B')
+
+SELECT top 50 * from m_WhOutD_t where CartonID in (SELECT CartonID from m_Mainmo_t where PartID='LA06UC194-1H')
+
+
+未进包装
+select ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H') and usey = 's' and SUBSTRING(ppid,16,1)='B'
+except
+select ppid from M_AssysnD_T where ppid in(select Ppid from M_InteriorPpid_t where MOID IN (SELECT MOID from m_Mainmo_t where PartID='LA06UC194-1H') and usey = 's' and SUBSTRING(ppid,16,1)='B') and Stationid='P00001'
+
+
+
+11580包装
+11617标签
+11979绑定

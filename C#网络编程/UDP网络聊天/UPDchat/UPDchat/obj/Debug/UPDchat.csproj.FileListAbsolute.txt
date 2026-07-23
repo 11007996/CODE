@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\bin\Debug\UPDchat.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\obj\Debug\UPDchat.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\obj\Debug\UPDchat.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\obj\Debug\UPDchat.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\obj\Debug\UPDchat.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\bin\Debug\UPDchat.exe
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\bin\Debug\UPDchat.pdb
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\obj\Debug\UPDchat.exe
+D:\zzzzzzzz\代码块\C#网络编程\UDP网络聊天\UPDchat\UPDchat\obj\Debug\UPDchat.pdb

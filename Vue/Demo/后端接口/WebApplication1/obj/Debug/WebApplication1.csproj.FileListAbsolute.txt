@@ -1,0 +1,16 @@
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\System.Web.Http.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.xml
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\System.Web.Http.xml
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.xml
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\zh-Hans\System.Web.Http.resources.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\work\Chroma\02C1\code\QualityControl\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb

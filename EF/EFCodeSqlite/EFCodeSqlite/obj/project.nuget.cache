@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xD6m1KZFGD0=",
+  "success": true,
+  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\EF\\EFCodeSqlite\\EFCodeSqlite\\EFCodeSqlite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mh.guo\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\3.50.3\\sqlitepclraw.lib.e_sqlite3.3.50.3.nupkg.sha512",
+    "C:\\Users\\mh.guo\\.nuget\\packages\\system.data.sqlite\\2.0.3\\system.data.sqlite.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

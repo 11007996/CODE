@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\bin\Debug\NetworkInterfaceExample.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\bin\Debug\NetworkInterfaceExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\bin\Debug\NetworkInterfaceExample.pdb
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\obj\Debug\NetworkInterfaceExample.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\obj\Debug\NetworkInterfaceExample.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\obj\Debug\NetworkInterfaceExample.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\obj\Debug\NetworkInterfaceExample.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\obj\Debug\NetworkInterfaceExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\NetworkInterfaceExample\NetworkInterfaceExample\obj\Debug\NetworkInterfaceExample.pdb

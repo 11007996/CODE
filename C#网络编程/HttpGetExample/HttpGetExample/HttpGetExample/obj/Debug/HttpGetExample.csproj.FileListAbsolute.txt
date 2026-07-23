@@ -1,0 +1,9 @@
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\bin\Debug\HttpGetExample.exe.config
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\bin\Debug\HttpGetExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\bin\Debug\HttpGetExample.pdb
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\obj\Debug\HttpGetExample.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\obj\Debug\HttpGetExample.Form1.resources
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\obj\Debug\HttpGetExample.Properties.Resources.resources
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\obj\Debug\HttpGetExample.csproj.GenerateResource.Cache
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\obj\Debug\HttpGetExample.exe
+D:\zzzzzzzz\代码块\C#网络编程\HttpGetExample\HttpGetExample\HttpGetExample\obj\Debug\HttpGetExample.pdb
