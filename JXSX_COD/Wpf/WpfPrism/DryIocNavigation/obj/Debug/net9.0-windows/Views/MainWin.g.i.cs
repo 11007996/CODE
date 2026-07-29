@@ -60,7 +60,7 @@ namespace DryIocNavigation.ViewModels {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DryIocNavigation;V1.0.0.0;component/views/mainwin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DryIocNavigation;component/views/mainwin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\MainWin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

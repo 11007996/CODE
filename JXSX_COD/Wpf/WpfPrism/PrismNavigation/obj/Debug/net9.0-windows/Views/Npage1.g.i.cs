@@ -53,7 +53,7 @@ namespace PrismNavigation.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PrismNavigation;component/views/npage1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PrismNavigation;V1.0.0.0;component/views/npage1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\Npage1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

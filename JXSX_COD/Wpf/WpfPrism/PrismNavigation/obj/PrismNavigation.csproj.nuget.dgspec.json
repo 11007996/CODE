@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj": {}
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj": {}
   },
   "projects": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj": {
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj",
+        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj",
         "projectName": "PrismNavigation",
-        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj",
+        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj",
         "packagesPath": "C:\\Users\\mh.guo\\.nuget\\packages\\",
-        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\PrismNavigation\\obj\\",
+        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"

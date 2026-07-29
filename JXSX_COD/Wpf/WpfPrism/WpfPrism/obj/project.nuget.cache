@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lhiOgEarF5k=",
+  "dgSpecHash": "0jwj2xrJHjI=",
   "success": true,
-  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
+  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mh.guo\\.nuget\\packages\\dryioc.dll\\5.2.1\\dryioc.dll.5.2.1.nupkg.sha512",
     "C:\\Users\\mh.guo\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
@@ -15,9 +15,9 @@
       "code": "NU1603",
       "level": "Warning",
       "message": "Prism.DryIoc 8.1.97 依赖于 DryIoc.dll (>= 4.7.7)，但没有找到 DryIoc.dll 4.7.7。已改为解析 DryIoc.dll 5.2.1。",
-      "projectPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
+      "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
+      "filePath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
       "libraryId": "DryIoc.dll",
       "targetGraphs": [
         "net9.0-windows7.0"

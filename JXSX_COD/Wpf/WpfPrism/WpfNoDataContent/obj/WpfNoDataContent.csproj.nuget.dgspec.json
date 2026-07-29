@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj": {}
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj": {}
   },
   "projects": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj": {
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj",
+        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj",
         "projectName": "WpfNoDataContent",
-        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj",
+        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\WpfNoDataContent.csproj",
         "packagesPath": "C:\\Users\\mh.guo\\.nuget\\packages\\",
-        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\obj\\",
+        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"

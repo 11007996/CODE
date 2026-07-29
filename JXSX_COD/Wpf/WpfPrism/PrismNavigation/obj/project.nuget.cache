@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eaa+U55cApQ=",
+  "dgSpecHash": "ldiZdaV1nyc=",
   "success": true,
-  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj",
+  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\PrismNavigation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mh.guo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\mh.guo\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.122\\microsoft.xaml.behaviors.wpf.1.1.122.nupkg.sha512",

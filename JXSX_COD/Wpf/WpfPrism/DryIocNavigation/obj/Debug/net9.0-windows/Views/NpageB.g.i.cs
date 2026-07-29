@@ -60,7 +60,7 @@ namespace DryIocNavigation.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DryIocNavigation;V1.0.0.0;component/views/npageb.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DryIocNavigation;component/views/npageb.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\NpageB.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj": {}
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj": {}
   },
   "projects": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj": {
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
+        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
         "projectName": "WpfPrism",
-        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
+        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\WpfPrism.csproj",
         "packagesPath": "C:\\Users\\mh.guo\\.nuget\\packages\\",
-        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfPrism\\obj\\",
+        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfPrism\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"

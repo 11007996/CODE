@@ -85,7 +85,7 @@ namespace WpfNoDataContent.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfNoDataContent;component/views/startpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfNoDataContent;V1.0.0.0;component/views/startpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\StartPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

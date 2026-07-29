@@ -1,0 +1,8 @@
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\bin\Debug\BartenderPrint.exe.config
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\bin\Debug\BartenderPrint.exe
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\bin\Debug\BartenderPrint.pdb
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\obj\Debug\BartenderPrint.csprojResolveAssemblyReference.cache
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\obj\Debug\Interop.BarTender.dll
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\obj\Debug\BartenderPrint.csproj.ResolveComReference.cache
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\obj\Debug\BartenderPrint.exe
+C:\Users\mh.guo\Desktop\BartenderPrint\BartenderPrint\obj\Debug\BartenderPrint.pdb

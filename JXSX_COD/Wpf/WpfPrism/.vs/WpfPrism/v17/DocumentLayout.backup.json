@@ -1,33 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\",
+  "WorkspaceRootPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\prisminnitialize\\appstarta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\prisminnitialize\\appstarta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\viewmodels\\mainwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\viewmodels\\mainwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\viewmodels\\npageaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\viewmodels\\npageaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{09277EB8-E553-4AA8-87B6-D6CFF6E3FDAB}|PrismNavigation\\PrismNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\prismnavigation\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09277EB8-E553-4AA8-87B6-D6CFF6E3FDAB}|PrismNavigation\\PrismNavigation.csproj|solutionrelative:prismnavigation\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\views\\startpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\views\\startpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{09277EB8-E553-4AA8-87B6-D6CFF6E3FDAB}|PrismNavigation\\PrismNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\prismnavigation\\viewmodels\\fwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09277EB8-E553-4AA8-87B6-D6CFF6E3FDAB}|PrismNavigation\\PrismNavigation.csproj|solutionrelative:prismnavigation\\viewmodels\\fwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\views\\startpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\views\\startpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\npagea.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\npagea.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\services\\registerserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\mainwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\mainwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\mainwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\mainwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\models\\eventmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\models\\eventmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\services\\registerserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\services\\registerserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\wpf\\wpfprism\\wpfnodatacontent\\viewmodels\\startpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\prisminnitialize\\appstarta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\prisminnitialize\\appstarta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\views\\startpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\views\\startpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\views\\startpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\views\\startpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpfnodatacontent\\viewmodels\\startpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91A6C6AC-3EA3-48E2-932B-E7ECE53132F9}|WpfNoDataContent\\WpfNoDataContent.csproj|solutionrelative:wpfnodatacontent\\viewmodels\\startpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,96 +78,212 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppStartA.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
-              "RelativeToolTip": "WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T02:18:26.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\App.xaml",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml",
-              "RelativeToolTip": "WpfNoDataContent\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-21T02:14:05.487Z",
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "PrismNavigation\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "PrismNavigation\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T10:40:14.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StartPage.xaml",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\Views\\StartPage.xaml",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml",
-              "RelativeToolTip": "WpfNoDataContent\\Views\\StartPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-21T02:13:55.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StartPage.xaml.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml.cs",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\Views\\StartPage.xaml.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml.cs",
-              "RelativeToolTip": "WpfNoDataContent\\Views\\StartPage.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAzwC0AAAAKAAAAAAAAAA==",
+              "Title": "fWinViewModel.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\ViewModels\\fWinViewModel.cs",
+              "RelativeDocumentMoniker": "PrismNavigation\\ViewModels\\fWinViewModel.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\PrismNavigation\\ViewModels\\fWinViewModel.cs",
+              "RelativeToolTip": "PrismNavigation\\ViewModels\\fWinViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T01:49:52.472Z",
+              "WhenOpened": "2026-07-24T10:40:08.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "RegisterServer.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\Services\\RegisterServer.cs",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\Services\\RegisterServer.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\Services\\RegisterServer.cs",
-              "RelativeToolTip": "WpfNoDataContent\\Services\\RegisterServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T01:45:17.618Z",
-              "EditorCaption": ""
+              "Title": "MainWin.xaml",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml",
+              "RelativeDocumentMoniker": "DryIocNavigation\\Views\\MainWin.xaml",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml",
+              "RelativeToolTip": "DryIocNavigation\\Views\\MainWin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-24T07:11:27.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml.cs",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\App.xaml.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml.cs",
-              "RelativeToolTip": "WpfNoDataContent\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainWinViewModel.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
+              "RelativeDocumentMoniker": "DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
+              "RelativeToolTip": "DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T01:44:01.52Z",
+              "WhenOpened": "2026-07-24T07:09:16.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "StartPageViewModel.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
-              "RelativeDocumentMoniker": "WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
-              "RelativeToolTip": "WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MainWin.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "RelativeDocumentMoniker": "DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "RelativeToolTip": "DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T01:43:58.754Z",
+              "WhenOpened": "2026-07-24T07:09:13.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\App.xaml.cs",
+              "RelativeDocumentMoniker": "DryIocNavigation\\App.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\App.xaml.cs",
+              "RelativeToolTip": "DryIocNavigation\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T07:09:02.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NpageAViewModel.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\NpageAViewModel.cs",
+              "RelativeDocumentMoniker": "DryIocNavigation\\ViewModels\\NpageAViewModel.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\NpageAViewModel.cs",
+              "RelativeToolTip": "DryIocNavigation\\ViewModels\\NpageAViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T07:07:57.772Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NpageA.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\NpageA.xaml.cs",
+              "RelativeDocumentMoniker": "DryIocNavigation\\Views\\NpageA.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\NpageA.xaml.cs",
+              "RelativeToolTip": "DryIocNavigation\\Views\\NpageA.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T07:07:51.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventMessage.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Models\\EventMessage.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\Models\\EventMessage.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Models\\EventMessage.cs",
+              "RelativeToolTip": "WpfNoDataContent\\Models\\EventMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T07:07:32.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfNoDataContent\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T07:07:13.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppStartA.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
+              "RelativeToolTip": "WpfNoDataContent\\PrismInnitialize\\AppStartA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T02:18:26.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\App.xaml",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml",
+              "RelativeToolTip": "WpfNoDataContent\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-21T02:14:05.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StartPage.xaml",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\Views\\StartPage.xaml",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml",
+              "RelativeToolTip": "WpfNoDataContent\\Views\\StartPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-21T02:13:55.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StartPage.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\Views\\StartPage.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Views\\StartPage.xaml.cs",
+              "RelativeToolTip": "WpfNoDataContent\\Views\\StartPage.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAzwC0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:49:52.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterServer.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Services\\RegisterServer.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\Services\\RegisterServer.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\Services\\RegisterServer.cs",
+              "RelativeToolTip": "WpfNoDataContent\\Services\\RegisterServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:45:17.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\App.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\App.xaml.cs",
+              "RelativeToolTip": "WpfNoDataContent\\App.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:44:01.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StartPageViewModel.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
+              "RelativeDocumentMoniker": "WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
+              "RelativeToolTip": "WpfNoDataContent\\ViewModels\\StartPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:43:58.754Z"
             }
           ]
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UYHPQ2KWV3g=",
+  "dgSpecHash": "7fAH2ktHMK8=",
   "success": true,
-  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfPrism\\WpfAppTest\\WpfAppTest.csproj",
+  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfAppTest\\WpfAppTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mh.guo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\mh.guo\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.122\\microsoft.xaml.behaviors.wpf.1.1.122.nupkg.sha512",
