@@ -1,0 +1,5 @@
+C:\Users\mh.guo\Desktop\thisFunction\thisFunction\bin\Debug\thisFunction.exe.config
+C:\Users\mh.guo\Desktop\thisFunction\thisFunction\bin\Debug\thisFunction.exe
+C:\Users\mh.guo\Desktop\thisFunction\thisFunction\bin\Debug\thisFunction.pdb
+C:\Users\mh.guo\Desktop\thisFunction\thisFunction\obj\Debug\thisFunction.exe
+C:\Users\mh.guo\Desktop\thisFunction\thisFunction\obj\Debug\thisFunction.pdb
