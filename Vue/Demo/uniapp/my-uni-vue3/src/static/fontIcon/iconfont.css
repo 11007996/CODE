@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 5220476 */
+  src: url('../fontIcon/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AUTO:before {
+  content: "\e605";
+}
+
+.icon-tiaoshi:before {
+  content: "\e606";
+}
+
+.icon-zhenduan:before {
+  content: "\e607";
+}
+
+.icon-kuaisujingei:before {
+  content: "\e608";
+}
+
