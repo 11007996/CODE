@@ -1,0 +1,12 @@
+﻿<Window x:Class="DryIocEvent.Views.TCwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DryIocEvent.Views"
+        mc:Ignorable="d"
+        Title="TCwindow" Height="450" Width="500">
+    <Grid>
+        <TextBlock Text="弹窗窗口" FontSize="30" Foreground="DarkCyan"></TextBlock>
+    </Grid>
+</Window>

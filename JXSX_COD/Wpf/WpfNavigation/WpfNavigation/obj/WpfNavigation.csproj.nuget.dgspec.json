@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj": {}
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj": {}
   },
   "projects": {
-    "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj": {
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj",
+        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj",
         "projectName": "WpfNavigation",
-        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj",
+        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj",
         "packagesPath": "C:\\Users\\mh.guo\\.nuget\\packages\\",
-        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfNavigation\\WpfNavigation\\obj\\",
+        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfNavigation\\WpfNavigation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"

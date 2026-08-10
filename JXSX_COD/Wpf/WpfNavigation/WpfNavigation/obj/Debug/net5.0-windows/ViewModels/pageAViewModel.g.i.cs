@@ -53,7 +53,7 @@ namespace WpfNavigation.ViewModels {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfNavigation;component/viewmodels/pageaviewmodel.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfNavigation;V1.0.0.0;component/viewmodels/pageaviewmodel.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ViewModels\pageAViewModel.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

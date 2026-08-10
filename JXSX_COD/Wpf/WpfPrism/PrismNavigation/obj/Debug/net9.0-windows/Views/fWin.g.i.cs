@@ -60,7 +60,7 @@ namespace PrismNavigation.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PrismNavigation;V1.0.0.0;component/views/fwin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PrismNavigation;component/views/fwin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\fWin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

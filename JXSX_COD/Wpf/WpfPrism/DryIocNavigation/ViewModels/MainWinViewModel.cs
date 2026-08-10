@@ -24,7 +24,8 @@ namespace DryIocNavigation.ViewModels
             r.RemoveAll();
 
             NavigationParameters ns = new NavigationParameters();
-            ns.Add("page1Text", "Navigation_Text");
+            ns.Add("page1Text", "Navigation_Text1");
+            ns.Add("page2Text", "Navigation_Text2");
             RegionManager.RequestNavigate(region, obj.ToString(), ns);
         }
     }

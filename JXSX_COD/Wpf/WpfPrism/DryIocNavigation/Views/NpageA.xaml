@@ -12,8 +12,16 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="NpageA" FontSize="50" Foreground="Red"></TextBlock>
-        <TextBlock Grid.Row="1" Text="{Binding Page1Text}" FontSize="50" Foreground="Red"></TextBlock>
+         </Grid.RowDefinitions>
+        <TextBlock Text="NpageA" FontSize="30" Foreground="Red"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="{Binding Page1Text}" FontSize="30" Foreground="Red"></TextBlock>
+            <TextBlock Grid.Row="1" Text="{Binding Page2Text}" FontSize="30" Foreground="Red"></TextBlock>
+        </Grid>
     </Grid>
+    
 </UserControl>

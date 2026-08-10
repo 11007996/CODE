@@ -18,6 +18,16 @@ namespace DryIocNavigation.ViewModels
             }
         }
 
+        private string _page2Text = "page2";
+        public string Page2Text
+        {
+            get { return _page2Text; }
+            set
+            {
+                SetProperty(ref _page2Text, value);
+            }
+        }
+
         public bool IsNavigationTarget(NavigationContext navigationContext)
         {
             // 决定是否重用当前视图
@@ -33,6 +43,7 @@ namespace DryIocNavigation.ViewModels
         {
             // 获取导航参数并更新数据
             Page1Text = navigationContext.Parameters.GetValue<string>("page1Text");
+            Page2Text = navigationContext.Parameters.GetValue<string>("page2Text");
         }
     }
 }

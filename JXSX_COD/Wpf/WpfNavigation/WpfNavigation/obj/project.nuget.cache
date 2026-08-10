@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Jiv+WgrXVbxXcMAUiSnQuX0KqH79r9O+JG25Rpl1tm27B5xAfwVHXRixZm5o5cYyzOLct6hS5b27cBpgTZnjA==",
+  "dgSpecHash": "l2z/P+eHJo0a1V4KPI9UgLK1Xly5ZwQfnhxNMyVqAbwVjmJ1qCTxyrRBhe1/osZLfCz0RjDFhQYSX6ArbFyG/w==",
   "success": true,
-  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj",
+  "projectFilePath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfNavigation\\WpfNavigation\\WpfNavigation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mh.guo\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
     "C:\\Users\\mh.guo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
