@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -21,9 +22,11 @@
             <Button Content="page1" Width="100" Height="50" FontSize="20" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding BtnCommand}" CommandParameter="NpageA"></Button>
             <!--<TextBlock Text="{Binding TestText}" FontSize="50" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left"></TextBlock>-->
             <Button Content="page2" Width="100" Height="50" FontSize="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding BtnCommand}" CommandParameter="NpageB"></Button>
+            <Button Content="page3" Width="100" Height="50" FontSize="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding regionPage}"></Button>
         </Grid>
         <!--<TabControl Grid.Row="1" p:RegionManager.RegionName="pageNavigate"></TabControl>-->
         <ContentControl Grid.Row="1" p:RegionManager.RegionName="pageNavigate"></ContentControl>
+        <ContentControl Grid.Row="2" p:RegionManager.RegionName="pageNavigate1"></ContentControl>
         <!--<ItemsControl Grid.Row="1" p:RegionManager.RegionName="pageNavigate"></ItemsControl>-->
     </Grid>
 </Window>

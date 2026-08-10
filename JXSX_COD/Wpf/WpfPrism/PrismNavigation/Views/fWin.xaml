@@ -23,6 +23,7 @@
             <Button Content="page2" Width="100" Height="50" FontSize="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding BtnCommand}" CommandParameter="Npage1"></Button>
             <Button Content="page2" Width="100" Height="50" FontSize="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding BtnCommand}" CommandParameter="Npage1"></Button>
         </Grid>
-        <TabControl Grid.Row="1" p:RegionManager.RegionName="mainContainer"></TabControl>
+        <!--<TabControl Grid.Row="1" p:RegionManager.RegionName="mainContainer"></TabControl>-->
+        <ItemsControl Grid.Row="1" p:RegionManager.RegionName="mainContainer"></ItemsControl>
     </Grid>
 </Window>

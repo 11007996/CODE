@@ -37,6 +37,7 @@ namespace DryIocNavigation.ViewModels
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
             // 导航离开时的逻辑
+            //若有事件订阅产，在离开时要取消订阅，防止内存泄漏
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)

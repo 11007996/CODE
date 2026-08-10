@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DryIocEvent.ViewModels
 {
@@ -43,7 +44,16 @@ namespace DryIocEvent.ViewModels
             //在ViewMdoel中发布事件消息,在窗口xaml中订阅此消息
             _eventAggregator.GetEvent<CommonEvent>().Publish(new EventParamer { message="事件消息"});
             //触发弹窗
-            _dialogService.ShowDialog("TCWin");
+            _dialogService.ShowDialog("TCWin",null,dialogResut);
+            //_dialogService.Show("TCWin");
+        }
+        //弹窗关闭后的回调数据
+        private void dialogResut(IDialogResult dialogResult)
+        {
+            if ((bool)dialogResult.Parameters["result"])
+            {
+                MessageBox.Show("弹窗回调函数");
+            }
         }
     }
 }

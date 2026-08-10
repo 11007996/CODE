@@ -19,9 +19,21 @@ namespace DryIocNavigation.ViewModels
     /// </summary>
     public partial class MainWin : Window
     {
-        public MainWin()
+        public MainWin(IRegionManager regionManager)
         {
             InitializeComponent();
+
+            //区域加载，也可以放到viewmodel中再加载
+            regionManager.RegisterViewWithRegion("pageNavigate1", "NpageA");
+            regionManager.RegisterViewWithRegion("pageNavigate1", "NpageB");
+            /*
+            this.Loaded += (se, ev) =>
+            {
+                var region = regionManager.Regions["pageNavigate1"];
+                var view = region.Views.FirstOrDefault(v => v.GetType().Name == "NpageB");
+                region.Activate(view);
+            };
+            */
         }
     }
 }

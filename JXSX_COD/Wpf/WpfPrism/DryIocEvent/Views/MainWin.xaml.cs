@@ -26,7 +26,7 @@ namespace DryIocEvent.Views
             InitializeComponent();
             //订阅ViewModel发布的事件消息
             this.eventAggregator = eventAggregator;
-            //this.eventAggregator.GetEvent<CommonEvent>().Subscribe(show);
+            this.eventAggregator.GetEvent<CommonEvent>().Subscribe(show);
 
             //手动绑定事件
             this.eventButton.AddHandler(Button.ClickEvent, new RoutedEventHandler(this.ButtonCliked));
@@ -45,7 +45,7 @@ namespace DryIocEvent.Views
         {
             MessageBox.Show("事件参数：" + ep.message);
             //在适当时机取消订阅，全局事件总线，否则容易造成内存泄漏
-            //eventAggregator.GetEvent<CommonEvent>().Unsubscribe(show);
+            eventAggregator.GetEvent<CommonEvent>().Unsubscribe(show);
         }
     }
 }

@@ -22,12 +22,13 @@ namespace DryIocEvent.ViewModels
         //关闭弹窗时触发
         public void OnDialogClosed()
         {
-            
+            IDialogResult dialogResult= new DialogResult();
+            dialogResult.Parameters.Add("result", true);
+            RequestClose.Invoke(dialogResult);
         }
         //打开弹窗时触发
         public void OnDialogOpened(IDialogParameters parameters)
         {
         }
-
     }
 }
