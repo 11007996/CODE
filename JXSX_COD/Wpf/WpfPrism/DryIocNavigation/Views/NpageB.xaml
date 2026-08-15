@@ -9,6 +9,6 @@
              xmlns:p="http://prismlibrary.com/"
              p:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <TextBlock Text="NpageB" FontSize="50" Foreground="Red"></TextBlock>
+        <TextBlock Text="{Binding PagecText}" FontSize="50" Foreground="Red"></TextBlock>
     </Grid>
 </UserControl>

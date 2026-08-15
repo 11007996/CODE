@@ -1,0 +1,17 @@
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\bin\Debug\net9.0-windows\WpfLibrary.deps.json
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\bin\Debug\net9.0-windows\WpfLibrary.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\bin\Debug\net9.0-windows\WpfLibrary.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\UserControl1.g.cs
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary_MarkupCompile.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary_MarkupCompile.lref
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\UserControl1.baml
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.g.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.AssemblyInfoInputs.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.AssemblyInfo.cs
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.csproj.CoreCompileInputs.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.sourcelink.json
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\refint\WpfLibrary.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\WpfLibrary.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfLibrary\obj\Debug\net9.0-windows\ref\WpfLibrary.dll

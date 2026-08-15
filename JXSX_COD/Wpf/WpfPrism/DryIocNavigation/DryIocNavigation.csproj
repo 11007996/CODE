@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WpfLibrary\WpfLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\NpageA.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

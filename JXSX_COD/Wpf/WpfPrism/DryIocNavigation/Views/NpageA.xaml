@@ -13,7 +13,15 @@
             <RowDefinition/>
             <RowDefinition/>
          </Grid.RowDefinitions>
-        <TextBlock Text="NpageA" FontSize="30" Foreground="Red"></TextBlock>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="NpageA" FontSize="30" Foreground="Red"></TextBlock>
+            <!--<Button Grid.Column="1" x:Name="toPageC" Width="100" Height="50" Command="{Binding tiaozhuan}">跳转到C</Button>-->
+        </Grid>
+        
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>

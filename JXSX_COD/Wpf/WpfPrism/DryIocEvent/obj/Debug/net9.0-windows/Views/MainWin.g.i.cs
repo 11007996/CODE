@@ -97,7 +97,7 @@ namespace DryIocEvent.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DryIocEvent;component/views/mainwin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DryIocEvent;V1.0.0.0;component/views/mainwin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\MainWin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

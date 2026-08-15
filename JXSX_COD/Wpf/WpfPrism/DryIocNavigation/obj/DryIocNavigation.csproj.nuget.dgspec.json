@@ -31,7 +31,11 @@
         "frameworks": {
           "net9.0-windows7.0": {
             "targetAlias": "net9.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj": {
+                "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -55,6 +59,74 @@
               "version": "[9.0.537, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj",
+        "projectName": "WpfLibrary",
+        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj",
+        "packagesPath": "C:\\Users\\mh.guo\\.nuget\\packages\\",
+        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mh.guo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://mirrors.cloud.tencent.com/nuget/": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "imports": [
             "net461",
             "net462",

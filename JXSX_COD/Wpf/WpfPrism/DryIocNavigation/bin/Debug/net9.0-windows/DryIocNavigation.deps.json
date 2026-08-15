@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "DryIocNavigation/1.0.0": {
         "dependencies": {
-          "Prism.DryIoc": "9.0.537"
+          "Prism.DryIoc": "9.0.537",
+          "DllModel": "1.0.0.0"
         },
         "runtime": {
           "DryIocNavigation.dll": {}
@@ -104,6 +105,14 @@
             "fileVersion": "9.0.537.60525"
           }
         }
+      },
+      "DllModel/1.0.0.0": {
+        "runtime": {
+          "DllModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -175,6 +184,11 @@
       "sha512": "sha512-srsXhi7FRUFawsNoRkY67duMEGjZo3ff0FpqpkjeWkkAuLazlH1UmNVrvwnpaLQCBboexH/z6oGrLvpeocxgdw==",
       "path": "prism.wpf/9.0.537",
       "hashPath": "prism.wpf.9.0.537.nupkg.sha512"
+    },
+    "DllModel/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\viewmodels\\mainwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\viewmodels\\mainwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88DA3A39-6A8F-4B4F-B8E0-3D41B49FB6E0}|WpfLibrary\\WpfLibrary.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpflibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88DA3A39-6A8F-4B4F-B8E0-3D41B49FB6E0}|WpfLibrary\\WpfLibrary.csproj|solutionrelative:wpflibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\mainwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\mainwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\viewmodels\\mainwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\viewmodels\\mainwinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\mainwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\mainwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88DA3A39-6A8F-4B4F-B8E0-3D41B49FB6E0}|WpfLibrary\\WpfLibrary.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\wpflibrary\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88DA3A39-6A8F-4B4F-B8E0-3D41B49FB6E0}|WpfLibrary\\WpfLibrary.csproj|solutionrelative:wpflibrary\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\npageb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\npageb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|d:\\zzzzzzzz\\codeblock\\jxsx_cod\\wpf\\wpfprism\\dryiocnavigation\\views\\mainwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA5E1FF-CF46-4B81-A386-2E5D80936DA3}|DryIocNavigation\\DryIocNavigation.csproj|solutionrelative:dryiocnavigation\\views\\mainwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,44 +30,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NpageB.xaml",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\NpageB.xaml",
-              "RelativeDocumentMoniker": "DryIocNavigation\\Views\\NpageB.xaml",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\NpageB.xaml",
-              "RelativeToolTip": "DryIocNavigation\\Views\\NpageB.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-10T04:03:07.039Z",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\Class1.cs",
+              "RelativeDocumentMoniker": "WpfLibrary\\Class1.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\Class1.cs",
+              "RelativeToolTip": "WpfLibrary\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T09:20:08.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\App.xaml.cs",
-              "RelativeDocumentMoniker": "DryIocNavigation\\App.xaml.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\App.xaml.cs",
-              "RelativeToolTip": "DryIocNavigation\\App.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvxYAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T03:57:09.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWin.xaml.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml.cs",
-              "RelativeDocumentMoniker": "DryIocNavigation\\Views\\MainWin.xaml.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml.cs",
-              "RelativeToolTip": "DryIocNavigation\\Views\\MainWin.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvx0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T03:56:10.536Z",
+              "Title": "UserControl1.xaml",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\UserControl1.xaml",
+              "RelativeDocumentMoniker": "WpfLibrary\\UserControl1.xaml",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\UserControl1.xaml",
+              "RelativeToolTip": "WpfLibrary\\UserControl1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-08-15T09:17:51.393Z",
               "EditorCaption": ""
             },
             {
@@ -79,20 +66,33 @@
               "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml",
               "RelativeToolTip": "DryIocNavigation\\Views\\MainWin.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-10T03:54:34.057Z",
+              "WhenOpened": "2026-08-14T00:49:52.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWinViewModel.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
               "RelativeDocumentMoniker": "DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\MainWinViewModel.cs*",
-              "RelativeToolTip": "DryIocNavigation\\ViewModels\\MainWinViewModel.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvxgAAABOAAAAAAAAAA==",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
+              "RelativeToolTip": "DryIocNavigation\\ViewModels\\MainWinViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T03:54:32.056Z",
+              "WhenOpened": "2026-08-13T04:20:42.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWin.xaml.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "RelativeDocumentMoniker": "DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "RelativeToolTip": "DryIocNavigation\\Views\\MainWin.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T08:39:52.715Z",
               "EditorCaption": ""
             }
           ]

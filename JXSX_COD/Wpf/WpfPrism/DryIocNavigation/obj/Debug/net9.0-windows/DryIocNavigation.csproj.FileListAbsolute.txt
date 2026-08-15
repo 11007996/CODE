@@ -73,3 +73,7 @@ D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\obj\Debug\net9.0-wi
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\obj\Debug\net9.0-windows\DryIocNavigation.pdb
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\obj\Debug\net9.0-windows\DryIocNavigation.genruntimeconfig.cache
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\obj\Debug\net9.0-windows\ref\DryIocNavigation.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\obj\Debug\net9.0-windows\Views\NpageC.g.cs
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\obj\Debug\net9.0-windows\Views\NpageC.baml
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\bin\Debug\net9.0-windows\DllModel.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\bin\Debug\net9.0-windows\DllModel.pdb

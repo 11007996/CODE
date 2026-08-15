@@ -164,6 +164,19 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
         ]
+      },
+      "WpfLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/WpfLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WpfLibrary.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -404,11 +417,17 @@
         "prism.wpf.9.0.537.nupkg.sha512",
         "prism.wpf.nuspec"
       ]
+    },
+    "WpfLibrary/1.0.0": {
+      "type": "project",
+      "path": "../WpfLibrary/WpfLibrary.csproj",
+      "msbuildProject": "../WpfLibrary/WpfLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
-      "Prism.DryIoc >= 9.0.537"
+      "Prism.DryIoc >= 9.0.537",
+      "WpfLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -442,7 +461,11 @@
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj": {
+              "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\Wpf\\WpfPrism\\WpfLibrary\\WpfLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

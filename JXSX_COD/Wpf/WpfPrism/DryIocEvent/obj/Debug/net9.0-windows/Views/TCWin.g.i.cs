@@ -53,7 +53,7 @@ namespace DryIocEvent.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DryIocEvent;component/views/tcwin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DryIocEvent;V1.0.0.0;component/views/tcwin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\TCWin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
