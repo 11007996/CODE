@@ -1,0 +1,5 @@
+C:\Users\mh.guo\Desktop\SSEServer\SSEClient\bin\Debug\SSEClient.exe.config
+C:\Users\mh.guo\Desktop\SSEServer\SSEClient\bin\Debug\SSEClient.exe
+C:\Users\mh.guo\Desktop\SSEServer\SSEClient\bin\Debug\SSEClient.pdb
+C:\Users\mh.guo\Desktop\SSEServer\SSEClient\obj\Debug\SSEClient.exe
+C:\Users\mh.guo\Desktop\SSEServer\SSEClient\obj\Debug\SSEClient.pdb

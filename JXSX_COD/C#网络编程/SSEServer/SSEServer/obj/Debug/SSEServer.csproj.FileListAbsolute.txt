@@ -1,0 +1,5 @@
+C:\Users\mh.guo\Desktop\SSEServer\SSEServer\bin\Debug\SSEServer.exe.config
+C:\Users\mh.guo\Desktop\SSEServer\SSEServer\bin\Debug\SSEServer.exe
+C:\Users\mh.guo\Desktop\SSEServer\SSEServer\bin\Debug\SSEServer.pdb
+C:\Users\mh.guo\Desktop\SSEServer\SSEServer\obj\Debug\SSEServer.exe
+C:\Users\mh.guo\Desktop\SSEServer\SSEServer\obj\Debug\SSEServer.pdb
