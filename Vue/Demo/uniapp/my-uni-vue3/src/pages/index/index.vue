@@ -1,5 +1,5 @@
 <template>
-  <Hpage>
+  <Hpage propMessage="prop从下到下传值" propEa="propEa值">   <!--propMessage是子组件的prop参数-->
     <template v-slot:slotname>    <!-- 也可以简写：<template #slotname></template> -->
       <p>插槽</p>
       <a href="https://cn.bing.com/" target="_blank">bing</a>
@@ -13,7 +13,7 @@
   
   <view class="textLink" @click="chooseFile('store')">选择文件</view>
 
-  <!-- <navigator open-type="reLaunch" class="textLink" url="../pages/pageto/pageA">跳转到pageA</navigator> -->
+  <navigator  class="textLink" url="../pageto/pageA">跳转到pageA</navigator>
  <scroll-view scroll-x class="scroll">
    <view id="scrolltext">qwert yui opas dfghjk lzx cvbnmq we rtyuio pasdfghjkl zxcvbn masdfghjk lqwe rtyuiopa sdfgh jklzxcvb nmqwer tyuiopa sdfghjklzxcv bnmas dfghjkl</view>
  </scroll-view>
@@ -26,20 +26,74 @@
     <view  class="icon iconfont">&#xe605;</view>
     <view  class="icon iconfont icon-zhenduan"></view>
   </view>
+  <!-- emitE:子组件事件  exports:子组件暴露的参数和方法 -->
+<mycom title="提交2" @emitE="emitE" ref="exports"></mycom> <!-- uni-app默认开启easycom，组件路径：components/组件名称/组件名称.(vue|uvue)-->
+<button @click="onExports">exports传值</button>
+
+<!-- 动态类名，动态变更样式 -->
+<view class="classC">
+  <view :class="{ b: isb, a: isa }">hello uni-app</view>
+  <view :style="{'font-size':fontsize + 'rpx'}">字体大小</view>
+  <button class="styleify" @click="changeClass">动态样式修改</button>
+  <!-- 多事件处理器 触发多个方法，方法可以作为参数传入，类似与委托，也可以用$event访问事件BOM对象 -->
+  <button class="styleify" @click="eventFun(changeClass),eventE($event)">动态传入方法</button>
+</view>
+
 
 
 </template>
 
 <script setup>
+
+
 import Hpage from '../../components/mypage/Hpage.vue'
-
-import {defineAsyncComponent, ref} from 'vue'
-
-
+import {defineAsyncComponent, onMounted, ref} from 'vue'
+import { onPullDownRefresh } from '@dcloudio/uni-app'
 
 const title = ref('Hello')
 const Storage = ref()
 const StorageKey = ref()
+const isa = ref(false);
+const isb = ref(true);
+const fontsize = ref(20);
+const exports = ref(null);
+
+// exports子组件暴露的参数和方法
+function onExports()
+{
+  console.log(exports.value.name);
+  exports.value.callbackFun();
+}
+
+// 子组件事件
+function emitE(e)
+{
+  console.log(e);
+}
+
+function eventFun(event){
+  // console.log("运行方法");
+  event();
+}
+
+//动态类名
+function changeClass(){
+  isa.value=!isa.value;
+  isb.value=!isb.value;
+  fontsize.value += 5;
+  // console.log(isa.value);
+}
+
+//下拉刷新
+onPullDownRefresh(()=>{
+  console.log('触发下拉刷新')
+  // 业务逻辑
+  
+  // 无论成功失败必须关闭动画
+  setTimeout(() => {
+    uni.stopPullDownRefresh();
+  }, 2000);
+})
 
 function getData()
 {
@@ -106,7 +160,7 @@ function chooseFile()
   text-decoration: underline;
 }
 .scroll{
-  width: 100%;
+  width: 300rpx;
   -webkit-scrollbar-thumb:hover {
   background: #999;
 }
@@ -114,6 +168,9 @@ function chooseFile()
   {
     padding: 5rpx;
     white-space: nowrap;
+    color: #ad453d;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
   }
 }
 .sizeview
@@ -131,5 +188,23 @@ function chooseFile()
   font-size: 100rpx;
   color: rebeccapurple;
 }
+
+.classC{
+  .b{
+    color: aqua;
+    font-size:35rpx;
+  }
+  .a{
+    color:#ad453d;
+    font-size:35rpx;
+  }
+  .styleify{
+    width: 500rpx;
+    height: 100rpx;
+    border-radius: 15rpx;
+    box-shadow:inset 0px 0px 2rpx #666; /*内阴影(外阴影不写此参数) 水平偏移量 | 垂直偏移量 | 模糊半径 | 阴影颜色 */
+  }
+}
+
 
 </style>
