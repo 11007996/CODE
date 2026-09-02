@@ -39,9 +39,9 @@ namespace aa
 
             // string a = "111222333444-1234-1234";
             // string a = "FC9111ASDFDF";
-            string a = "1406-00400-0001H260602000111";
-            a = a.Substring(0, 16);
-            Console.WriteLine(a);
+            string ipAddress = "172.18.129.118";
+            byte b = Convert.ToByte(Convert.ToInt32((ipAddress.Substring(ipAddress.Length - 1, 1))));
+            Console.WriteLine(b);
             Console.Read();
 
 
