@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.jia{
+			width: 300px;
+			height: 300px;
+			background-image: linear-gradient(30deg, #555,#eee 45%,#fff 50%,#eee 55%,#555 100%);
+			transform: translate(-50%, -50%);
+			position: fixed;
+			top: 50%;
+			left: 50%;
+		}
+		.parent {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative; /*  关键：父元素需要定位 */
+  transform: translate3d(0, 0, 0); /* 关键：触发新的 containing block */
+  /* 其他样式，例如背景颜色、边框等等 */
+  background-color: lightgray;
+}
+
+.child {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background-color: lightblue;
+  padding: 10px;
+}
+body {
+  counter-reset: section;
+}
+h3::after {
+  counter-increment: section;
+  content: "sqt:" counter(section);
+}
+	</style>
+</head>
+<body>
+	<div class="jia">
+
+	</div>
+	<div class="parent">
+	  <div class="child">Fixed Element</div>
+	</div>
+
+		<h3 class="ll">数量：</h3>
+		<h3 class="ll">数量：</h3>
+		<h3 class="ll">数量：</h3>
+</body>
+</html>
