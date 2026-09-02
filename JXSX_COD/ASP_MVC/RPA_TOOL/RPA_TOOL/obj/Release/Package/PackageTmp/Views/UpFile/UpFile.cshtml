@@ -1,0 +1,96 @@
+﻿@model RPA_TOOL.Models.uploadfileModel
+
+@{
+    ViewBag.Title = "UpFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/Content/UpFileStyle.css" />
+}
+@section scripts{
+    <script src="@Url.Content("~/Scripts/Upload/Upload.js")"></script>
+}
+<div class="tool">
+    <div class="tool-left">
+        <div class="tool-left-upload">
+            <p class="tool-title">文件上传</p>
+            <div class="tool-body">
+                <form class="upload-form" action="@Url.Action("SaveFile")" method="post" enctype="multipart/form-data">
+                    <input type="file" id="uploadFile" name="uploadFile" style="opacity:0;position:absolute;width:0;height:0;">
+                    <label class="upload-txt1">文件:</label>
+                    <input class="upload-txt" id="upload-txt" type="text" name="fileNmae" />
+                    <label for="uploadFile" class="upload-Lbl">...</label>
+                    <div class="upload-btns">
+                        <input class="upload-btn" type="submit" value="上传" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="tool-left-download">
+            <p class="tool-title">文件下载</p>
+            <div class="tool-body">
+                <table border="1" class="download-table">
+                    <thead>
+                        <tr>
+                            <th class="table-h-file">文件</th>
+                            <th class="table-h-down">下载</th>
+                            <th class="table-h-up">删除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            string folder = Server.MapPath("~/UploadFiles/download");
+                            string[] fileNames = Directory.Exists(folder) ? Directory.GetFiles(folder).Select(Path.GetFileName).ToArray() : new string[0];
+                            if (fileNames.Length == 0)
+                            {
+                            }
+                            else
+                            {
+                                foreach (string path in fileNames)
+                                {
+                                    <tr>
+                                        <td class="table-td-file">@path</td>
+                                        <td class="download-path">
+                                            @*<a href="@Url.Action("DownloadInner", "Upfile", new { fileName = Path.Combine(Server.MapPath("~/UploadFiles"), path) })">@path</a>*@
+                                            <a href="@Url.Action("DownloadInner", "Upfile", new { fileName =  path })">下载</a>
+                                        </td>
+                                        <td class="download-path">
+                                            <a href="@Url.Action("DeleteInner", "Upfile", new { fileName = path })">删除</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="tool-right">
+        <div class="tool-right-upload">
+            <p class="tool-title">功能</p>
+            <div class="tool-body">
+                <div class="tool-description">
+                    <p class="txt">内容：RPA文件上传与下载,BOM.xlsx比对SOP.xlsx</p>
+                </div>
+                <div class="uploadResult">
+                    @{
+    if (Model.flag == "NG")
+                        {
+                            <p class="txt">结果:</p>
+                            <p class="txtResultNG">@Model.msg</p>
+                        }
+                        else if (Model.flag == "OK")
+                        {
+                            <p class="txt">结果:</p>
+                            <p class="txtResultOK">@Model.msg</p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,47 @@
+﻿html{
+    font-size:2vw;
+}
+
+body{
+    margin-left:10vw;
+    margin-right:10vw;
+}
+
+
+.container-title{
+    height:5vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:var(--color-primary);
+}
+.container-left{
+    width:50%;
+    height:5vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing: border-box;
+    border-width:1px 0px 1px 1px;
+    border-color:var(--color-primary);
+    border-style:solid;
+}
+.container-right{
+    width:50%;
+    height:5vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing: border-box;
+    border:1px solid var(--color-primary);
+}
+
+.container-left > p{
+    font-size:1rem;
+    color:#FFF;
+}
+
+.container-right > p{
+    font-size:1rem;
+    color:#FFF;
+}

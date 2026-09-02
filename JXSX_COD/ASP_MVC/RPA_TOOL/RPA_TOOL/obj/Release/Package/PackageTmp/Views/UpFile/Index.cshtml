@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>导航页</title>
+    <style>
+        :root{
+            --color-primary:#3B0470;
+            --color-border:#e2d0f4;
+            --color-hover:#c4a9e9;
+        }
+        body{
+            margin-left:10vw;
+            margin-right:10vw;
+        }
+        .header{
+            background-color:var(--color-primary);
+            color:white;
+            height:1.5rem;
+            padding:1vw;
+        }
+
+        .a-navigator{
+            display:block;
+            padding:0.5vw 1vw;
+            border:1px solid var(--color-primary);
+            border-radius:8px;
+            background-color:var(--color-border);
+            text-decoration:none;
+            margin-bottom:0.5vw;
+        }
+        .a-navigator:hover{
+            color:var(--color-hover);
+        }
+    </style>
+</head>
+<body>
+    <h3 class="header">导航页</h3>
+    <div class="fun-type">
+        <a class="a-navigator" href="@Url.Action("UpFile", "Upfile", new { fileName = "" })">SOPBOM比对</a>
+    </div>
+    
+    
+
+</body>
+</html>

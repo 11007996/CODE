@@ -1,0 +1,152 @@
+﻿:root {
+    --color-primary:#3B0470;
+    --color-hover:#A03333;
+    --color-OK:#6B4;
+    --color-NG:#F00;
+    --color_btnBackground:#EFEFEF;
+}
+
+.tool{
+    width:100%;
+    box-sizing: border-box;
+    border:1px solid var(--color-primary);
+    display:flex;
+    align-content:center;
+    margin:2px 0 0 0;
+}
+.tool-left
+{
+    width:50%;
+    border-width:0 1px 0 0;
+    border-style:solid;
+    border-color:var(--color-primary);
+}
+.tool-right
+{
+    width:50%;
+}
+.tool-left-upload{
+    width:100%;
+    height:20vw;
+}
+.tool-right-upload{
+    width:100%;
+}
+
+.tool-right-upload > .tool-title{
+    border-width:0px 0px 0px 1px;
+    border-style:solid;
+    border-color:#fff;
+}
+.tool-title{
+    box-sizing: border-box;
+    color:#fff;
+    font-size:0.7rem;
+    height:2vw;
+    width:100%;
+    display:block;
+    align-content:center;
+    justify-content:flex-start;
+    background-color:var(--color-primary);
+    margin:0;
+    padding:0 0 0 1vw;
+}
+.upload-form{
+    padding:0 0 0 1vw;
+}
+.upload-form > .upload-Lbl:hover{
+    color:var(--color-primary);
+    
+}
+.upload-form > .upload-txt{
+    width:75%;
+    height:1vw;
+    font-size:1vw;
+}
+.upload-form > .upload-txt1{
+    font-size:0.5rem;
+    
+}
+.upload-form > .upload-btns{
+    display:flex;
+    align-content:center;
+    margin:1vw 1vw;
+}
+.upload-form > .upload-Lbl{
+    font-size:0.7rem;
+    margin-left:1px;
+    /*text-decoration:underline;*/
+    border:1px solid black;
+    font-size:0.4rem;
+    background-color:var(--color_btnBackground);
+}
+.upload-btns > .upload-btn{
+    font-size:0.5rem;
+    margin-left:1.8vw;
+    padding:0.1vw 0.2vw;
+}
+
+.uploadResult > .txt{
+    font-size:1rem;
+    margin-bottom:0;
+}
+.uploadResult > .txtResultNG{
+    font-size:0.7rem;
+    color:var(--color-NG);
+    margin-left:1vw;
+    margin-top:0;
+}
+.uploadResult > .txtResultOK{
+    font-size:0.7rem;
+    color:var(--color-OK);
+    margin-left:1vw;
+    margin-top:0;
+}
+
+
+.tool-description > .txt{
+    font-size:0.5rem;
+    margin:0 0 0 1vw;
+    margin-left:1vw;
+}
+.uploadResult > .txt{
+    font-size:0.7rem;
+    margin-left:1vw;
+}
+
+
+
+.tool-left-download{
+    width:100%;
+}
+
+.download-table{
+    border-collapse: collapse;
+    font-size:0.5rem;
+    border:1px solid black;
+    margin:1vw 1vw 5vw 1vw;
+    width:95%;
+    position:relative;
+}
+
+.download-table .table-td-file{
+    padding-left:0.5vw;
+}
+
+.download-path{
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+.download-path>a:hover{
+    color:var(--color-hover);
+}
+.download-table .table-h-down,.download-table .table-h-up{
+    width:5vw;
+}
+
+footer > p{
+    font-size:1vw;
+}
