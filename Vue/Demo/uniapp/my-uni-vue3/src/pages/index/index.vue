@@ -34,14 +34,12 @@
 <view class="classC">
   <view :class="{ b: isb, a: isa }">hello uni-app</view>
   <view :style="{'font-size':fontsize + 'rpx'}">字体大小</view>
-  <button class="styleify" @click="changeClass">动态样式修改</button>
+  <button class="styleify" @click="changeClass">动态样式修改</button> 
   <!-- 多事件处理器 触发多个方法，方法可以作为参数传入，类似与委托，也可以用$event访问事件BOM对象 -->
-  <button class="styleify" @click="eventFun(changeClass),eventE($event)">动态传入方法</button>
-</view>
+ <button class="styleify" @click="eventFun(changeClass),eventE($event)">动态传入方法</button>
+</view> 
 
-
-
-</template>
+<iframe src="https://www.baidu.com" width="100%" height="300px"></iframe></template>
 
 <script setup>
 
