@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style  type="text/css">
+		:root{
+			--width-a:100px;
+			--width-b:100px;
+			--width-c:100px;
+			--width-z:100px;
+			--back-a:#eee;
+			--back-b:#eee;
+			--back-c:#eee;
+			--back-z:#eee;
+		}
+		.div{
+			position: absolute;
+			top:250px;
+			left: 250px;
+		}
+		.div>div{
+			height: 100px;
+			display: inline-block;
+			margin: 2px;
+			transition:width 1s, background 1s,transform 0.5s;
+			/*transition:transform 1s,background 1s;*/
+		}
+		.c{
+			width: var(--width-c);
+			background:var(--back-c);
+		}
+		.b{
+			width: var(--width-b);
+			background:var(--back-b);
+		}
+		.a{
+			width: var(--width-a);
+			background:var(--back-a);
+		}
+		.z{
+			width: var(--width-z);
+			background:var(--back-z);
+		}
+
+		.z:hover{
+			--width-c:100px;
+			--width-b:125px;
+			--width-a:150px;
+			--width-z:125px;   /*只对本身z标签及后代标签有效，其它标签读取不到这处修改的参数*/
+			--back-a:#a76;
+			--back-b:#986;
+			--back-c:#896;
+			--back-z:#b66;
+			transform: scale(1.2);
+		}
+		.a:hover{
+			--width-c:100px;
+			--width-b:125px;
+			--width-a:150px;
+			--width-z:125px;
+			--back-a:#a76;
+			--back-b:#986;
+			--back-c:#896;
+			--back-z:#b66;
+			transform: scale(1.2);
+		}
+		.b:hover{
+			--width-c:75px;
+			--width-b:100px;
+			--width-a:125px;
+			--width-z:150px;
+			--back-a:#a76;
+			--back-b:#986;
+			--back-c:#896;
+			--back-z:#b66;
+			transform: scale(1.2);
+		}
+		.c:hover{
+			--width-c:75px;
+			--width-b:100px;
+			--width-a:125px;
+			--width-z:150px;
+			--back-a:#a76;
+			--back-b:#986;
+			--back-c:#896;
+			--back-z:#b66;
+			transform: scale(1.2);
+		}
+	p:nth-of-type(n+3){
+		color: #a17823;
+		font-size: 2rem;
+	}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<div class="c"></div>
+		<div class="b"></div>
+		<div class="a"></div>
+		<div class="z"></div>
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+	<div class="nth">
+		<p>1111111</p>
+		<p>2222222</p>
+		<p>3333333</p>
+		<text>4444444</text>
+		<p>5555555</p>
+		<p>6666666</p>
+	</div>
+	
+</body>
+</html>
