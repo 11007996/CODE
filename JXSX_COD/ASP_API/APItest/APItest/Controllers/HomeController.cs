@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Net.Http.Headers;
+using APItest.Models;
+using System.Threading.Tasks;
 namespace APItest.Controllers
 {
 
@@ -41,6 +43,47 @@ namespace APItest.Controllers
         {
             int c = a + b;
             return c;
+        }
+
+        [HttpGet]
+        public HttpResponseMessage strShow(HttpRequestMessage request)
+        {
+            requClass req = new requClass();
+            HttpResponseMessage response;
+
+            IEnumerable<string> li;
+            bool b =request.Headers.TryGetValues("token", out  li);
+            if (!b)
+            {
+                req.msg = "token null";
+                response = Request.CreateResponse(HttpStatusCode.Unauthorized, req);
+                return response;
+            }
+            else
+            {
+                string token = li.FirstOrDefault();
+                if (token != "aaa")
+                {
+                    req.msg = "token error";
+                    response = Request.CreateResponse(HttpStatusCode.Unauthorized, req);
+                    return response;
+                }
+            }
+            
+            req.msg = "request OK";
+            response = Request.CreateResponse(HttpStatusCode.OK, req);
+            response.Headers.Add("header-quto", "qwertyuio");
+            return response;
+        }
+
+        [HttpGet]
+        public async Task<string> str(string msg)
+        {
+            return await strA(msg);
+        }
+        private async Task<string> strA(string msg)
+        {
+            return msg + " async";
         }
     }
 }

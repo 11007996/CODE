@@ -145,6 +145,7 @@
     </Compile>
     <Compile Include="Models\postForm.cs" />
     <Compile Include="Models\postForms.cs" />
+    <Compile Include="Models\RepClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
