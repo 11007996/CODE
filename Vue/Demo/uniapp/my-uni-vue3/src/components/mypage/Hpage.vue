@@ -1,6 +1,6 @@
 <template>
         <view class="aa">
-                <h1 class="bb">{{h1text}}</h1>
+                <h3 class="bb">{{h1text}}</h3>
                 <slot name="slotname"></slot>
                 <p>{{ props.propMessage}} - {{ props.propEa }}</p>
         </view>
@@ -8,7 +8,7 @@
 
 <script setup>
 import {ref} from 'vue'
-const h1text = ref("qqq");
+const h1text = ref("子组件参数绑定");
 
 const props = defineProps({
         propMessage:{

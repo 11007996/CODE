@@ -37,9 +37,11 @@
   <button class="styleify" @click="changeClass">动态样式修改</button> 
   <!-- 多事件处理器 触发多个方法，方法可以作为参数传入，类似与委托，也可以用$event访问事件BOM对象 -->
  <button class="styleify" @click="eventFun(changeClass),eventE($event)">动态传入方法</button>
+ <requestPage></requestPage>
 </view> 
 
-<iframe src="https://www.baidu.com" width="100%" height="300px"></iframe></template>
+<!-- <iframe src="https://www.baidu.com" width="100%" height="300px"></iframe> -->
+</template>
 
 <script setup>
 
@@ -97,7 +99,7 @@ function getData()
 {
   //解决跨域问题，在响应头中加入Access-Control-Allow-Origin字段
   uni.request({
-    url:"http://localhost:6054/api/home",
+    url:"http://localhost:6054/api/home/index",
     method:"GET",
     //success:(res)=>{console.log(res);}
   }).then((res)=>{
