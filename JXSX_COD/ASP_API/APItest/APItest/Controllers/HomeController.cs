@@ -15,6 +15,7 @@ namespace APItest.Controllers
 
     public class HomeController : ApiController
     {
+        #region 后端设置跨域请求
         [HttpGet]
         public HttpResponseMessage index()
         {
@@ -36,15 +37,10 @@ namespace APItest.Controllers
 
             //return c;
         }
+        #endregion
 
 
-        [HttpGet]
-        public int intt(int a, int b)
-        {
-            int c = a + b;
-            return c;
-        }
-
+        #region HTTP请求
         [HttpGet]
         public HttpResponseMessage strShow(HttpRequestMessage request)
         {
@@ -69,13 +65,15 @@ namespace APItest.Controllers
                     return response;
                 }
             }
-            
             req.msg = "request OK";
             response = Request.CreateResponse(HttpStatusCode.OK, req);
             response.Headers.Add("header-quto", "qwertyuio");
             return response;
         }
+        #endregion
 
+
+        #region  异步接口
         [HttpGet]
         public async Task<string> str(string msg)
         {
@@ -85,5 +83,15 @@ namespace APItest.Controllers
         {
             return msg + " async";
         }
+        #endregion
+
+        #region 返回图片地址给前端
+        [HttpGet]
+        public string getPic(string path)
+        {
+            return Url.Content("~/pic/" + path);
+        }
+        #endregion
+
     }
 }
