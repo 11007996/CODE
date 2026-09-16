@@ -3,11 +3,44 @@
   <button @click="requestClick" class="btnre">同步API</button>
   <button @click="requestClickAsync" class="btnre">前端异步API</button>
   <button @click="requestClickHouAsync" class="btnre">后端异步API</button>
+  <view  @click="getPicPath">
+    <image class="requestPic"
+      :src="picPath"
+      mode="aspectFill"
+    />
+  </view>
 </template>
 
 <script setup>
   import {http} from '../../utils/http'
   import {ref} from 'vue';
+
+  const picPath = ref("");
+  const picexist = ref(false);
+  
+  function getPicPath()
+  {
+    if(picexist.value==false)
+    {
+      http({
+      url:"/api/Home/getPic",
+      method:"GET",
+      data:{
+        path:"1.png"
+      },
+      success:((res)=>{
+        picPath.value = res.data;
+        picexist.value=true;
+      })
+    })
+    }
+    else
+    {
+      picPath.value = null;
+      picexist.value=false;
+    }
+    
+  }
 
   const txtContent = ref("初始值");
   function requestClick()
@@ -80,5 +113,11 @@
     width: 500rpx;
     height: 80rpx;
     border: 1px solid #aaa;
+  }
+
+  .requestPic{
+    width: 100%;
+    height: 300px;
+    background: #aaa;
   }
 </style>
