@@ -11,6 +11,7 @@
         </uni-forms-item>
         <button @click="toast">提交</button>
         <button @click="toast">重置</button>
+        <view>{{gname}}</view>
     </uni-forms>
     </view>
 
@@ -23,11 +24,17 @@
 <script setup>
     import { errorMessages } from '@vue/compiler-core';
     import {ref,defineExpose} from 'vue';
-    const formData= ref({
-        name:"",
-        age:""
-    });
+    
 
+    //获取全局变量
+    const gname = ref('')
+    function getGloabl()
+    {
+        const app = getApp()
+        gname.value = app.globalData.name
+    }
+    getGloabl()
+    
     const emits = defineEmits(["emitE"]);
     defineExpose({
         name:"nameExpose",
