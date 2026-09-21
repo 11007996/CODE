@@ -1,0 +1,11 @@
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\bin\Debug\ControlTest.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\bin\Debug\ControlTest.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\bin\Debug\ControlTest.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\bin\Debug\myControl.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\bin\Debug\myControl.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\obj\Debug\ControlTest.Form1.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\obj\Debug\ControlTest.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\obj\Debug\ControlTest.csproj.GenerateResource.Cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\obj\Debug\ControlTest.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\obj\Debug\ControlTest.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\ControlTest\obj\Debug\ControlTest.csprojResolveAssemblyReference.cache

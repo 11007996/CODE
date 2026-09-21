@@ -1,0 +1,7 @@
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\bin\Debug\myControl.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\bin\Debug\myControl.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\obj\Debug\myControl.dll
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\obj\Debug\myControl.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\obj\Debug\myControl.myControlA.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\obj\Debug\myControl.csproj.GenerateResource.Cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\myControl\obj\Debug\myControl.csprojResolveAssemblyReference.cache
