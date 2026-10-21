@@ -10,7 +10,7 @@ function aaa()
 
 	try
 	{
-			console.log(a);
+		console.log(a);
 	}
 	catch(error)
 	{
@@ -26,6 +26,20 @@ console.log(typeof 11);
 console.log(typeof true);
 console.log(typeof null);*/
 
+//时间格式化
+/* let timer = new Date();
+console.log(timer.toLocaleString()); // 日期+时间 2023/5/28 23:07:35
+console.log(timer.toLocaleDateString()); // 日期 2023/5/28
+console.log(timer.toLocaleTimeString()); // 时间 23:10:31
+// 使用参数进行格式化
+console.log(timer.toLocaleString('en-US', { timeZone: 'America/New_York' })); // 5/28/2023, 11:08:39 AM
+console.log(timer.getFullYear().toString().padStart(4, '0')); // 年 2023
+console.log((timer.getMonth() + 1).toString().padStart(2, '0')); // 月 05
+console.log(timer.getDate().toString().padStart(2, '0')); // 日 29
+console.log('星期' + (timer.getDay() === 0 ? 7 : timer.getDay())); // 周 星期1
+console.log(timer.getHours().toString().padStart(2, '0')); // 时 01
+console.log(timer.getMinutes().toString().padStart(2, '0')); // 分 19
+console.log(timer.getSeconds().toString().padStart(2, '0')); // 秒 55 */
 
 /*let s1 = new String("some text");
 let s2 = s1.substring(0,2);
@@ -157,6 +171,11 @@ return "&quot;";
 console.log(htmlEscape("<p class=\"greeting\">Hello world!</p>"));
 // "&lt;p class=&quot;greeting&quot;&gt;Hello world!</p>"*/
 
+
+/* //匿名函数，这种函数在定义的地方就直接执行了。
+!function(){
+  console.log("hello world1");
+}(); */
 
 /*let colorText = "red,blue,green,yellow";
 let colors1 = colorText.split(","); // ["red", "blue", "green", "yellow"]
@@ -395,13 +414,13 @@ removed = colors.splice(1, 1, "red", "purple"); // 插入两个值，删除一�
 console.log(colors); // green,red,purple,orange,blue
 console.log(removed);*/
 
-
+/*
 //find返回匹配到的第一个元素
-/*let a = [1,2,3,4,5,6,7,8,9,0];
+let a = [1,2,3,4,5,6,7,8,9,0];
 console.log(a.find(x => x > 6));
 //findIndex返回匹配到的第一个元素的索引
-console.log(a.findIndex(x => x > 6));*/
-
+console.log(a.findIndex(x => x > 6));
+*/
 
 /*
 let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
@@ -411,8 +430,8 @@ let filterResult = numbers.filter((item, index, array) => item > 2);    //返回
 let mapResult = numbers.map((item, index, array) => item * 2);          //执行增强方法后再返回数组
 numbers.forEach((item, index, array) => {return 111});              //执行方法返回数组
 console.log(everyResult); // false
-
 */
+
 
 
 
@@ -426,7 +445,7 @@ console.log(sum1);*/
 
 
 
-/*const buf = new ArrayBuffer(1);
+/* const buf = new ArrayBuffer(1);
 const view = new DataView(buf);
 view.setInt8(0, 2.8);
 alert(view.getInt8(0)); // 1
@@ -434,7 +453,7 @@ view.setInt8(0, [4]);
 alert(view.getInt8(0)); // 4
 view.setInt8(0, 'f');
 alert(view.getInt8(0)); // 0
-view.setInt8(0, Symbol())*/
+view.setInt8(0, Symbol()) */
 
 
 //Set集合
@@ -454,38 +473,44 @@ console.log(s.has("Matt")); // false
 console.log(s.has("Frisbie")); // false
 console.log(s.size);*/
 
-/*
-console.log('%d + %d = %d',1,1,2);
+
+/* console.log('%d + %d = %d',1,1,2);
 console.error('输出错误信息，会以红色显示');
 console.warn('打印警告信息，会以黄色显示');
 console.info('打印一般信息');
-
 console.assert(false,'判断为false才显示的信息');//console.assert(bool,”info”) 如果bool为false 打印出info 否则不打印
+console.table([['中国','美国'],['您好','hello']]);//传入的对象或数组以表格方式显示 */
 
-console.table([['中国','美国'],['好']]);//传入的对象或数组以表格方式显示
-
+/*
 function fn(){ console.trace(); }//打印 调用链 fn2()调用fn1()，fn1()调用fn()
 function fn1(){ fn(); }
 function fn2(){ fn1(); }
 fn2();
-
+*/
+/*
 console.log('%o',document.body);
 console.log('%O',document.body);
+ */
 
-
-//显示调用时间
+//显示调用时间,耗时
+/*
 console.time();
     for(var i=0;i<100000;i++){
         var j=i*i;
     }
-    console.timeEnd();
+console.timeEnd();
+*/
+
 
 //统计代码或函数被调用了多少次
-    var fn_ = function(){ console.count('hello world'); }
-    for(var i=0;i<5;i++){
-        fn_();
-    }
+/*
+var fn_ = function(){ console.count('hello world'); }
+for(var i=0;i<5;i++){
+    fn_();
+}
+*/
 
+/*
 console.group('分组1');
     console.log('语文');
     console.log('数学');
@@ -495,9 +520,10 @@ console.group('分组1');
         console.log('历史');
         console.groupEnd('其他科目');
     console.groupEnd('分组1');
-    */
+*/
 
-/*function drawDiagonal(){
+/*
+function drawDiagonal(){
     var canvas = document.getElementById("can");
     if(canvas.getContext)
     {
@@ -512,30 +538,32 @@ console.group('分组1');
         console.log(1111);
     }
 }
-window.addEventListener("load",drawDiagonal,true);*/
+window.addEventListener("load",drawDiagonal,true);
+*/
+/*
+let collection = ['foo', 'bar', 'baz'];
+collection.forEach((item) => console.log(item+"A"));
+*/
 
-
-/*let collection = ['foo', 'bar', 'baz'];
-collection.forEach((item) => console.log(item));*/
-
-
-/*let collection = ['foo', 'bar', 'baz'];
-collection.forEach((item) => console.log(item));
-let iter = arr[Symbol.iterator]();
+/*
+let arr = ["aaa","bbb"];
+//一个对象只要部署了 `[Symbol.iterator]` 方法 → 这个对象就变成**可迭代对象（iterable），就可以使用.next()方法
+let iter = arr[Symbol.iterator]();    
 console.log(iter); // ArrayIterator {}
 // 执行迭代
 console.log(iter.next()); // { done: false, value: 'foo' }
 console.log(iter.next()); // { done: false, value: 'bar' }
-console.log(iter.next()); // { done: true, value: undefined }*/
+console.log(iter.next()); // { done: true, value: undefined }
+*/
 
-/*
-let arr = ['foo','asght'];
+
+/*let arr = ['foo','asght'];
 let iter = arr[Symbol.iterator]();
 console.log(iter.next()); // { done: false, value: 'foo' }
 console.log(iter.next()); // { done: true, value: undefined }
 console.log(iter.next()); // { done: true, value: undefined }
-console.log(iter.next()); // { done: true, value: undefined }*/
-
+console.log(iter.next()); // { done: true, value: undefined }
+*/
 
 /*class Foo 
 {
@@ -559,18 +587,18 @@ let a = new Array();
 // 打印出ArrayIterator 的实例
 console.log(a[Symbol.iterator]()); // Array Iterator {}*/
 
-
-/*function* generatorFn() {
+/* function* generatorFn() {
 yield* [1, 2, 3];
 }
 let generatorObject = generatorFn();
+console.log(typeof generatorObject);
 for (const x of generatorFn()) {
 console.log(x);
-}*/
+} */
 
 
-/*//修改对象的属性
-let person = {};
+//修改对象的属性
+/*let person = {};
 person.name = "AAB";
 console.log(person.name); // "AAB"
 //3个参数：对象名，属性名，属性的对象特性(writable是否可写，value属性值，Enumerable是否可迭代，Configurable是否可删除再修改)
@@ -586,11 +614,11 @@ console.log(person.name); // "Nicholas"
 person.name = "Greg";
 console.log(person.name); // "Greg"
 person.age =18;
-console.log(person.age);  // "20"*/
+console.log(person.age);  // "20"
+*/
 
-
-/*//set get 访问器
-let book = {
+//set get 访问器
+/* let book = {
 year_: 2017,
 edition: 1
 };
@@ -606,7 +634,22 @@ this.edition += newValue - 2017;
 }
 });
 book.year = 2018;
-console.log(book.edition); // 2*/
+console.log(book.edition); // 2 */
+
+
+/* let per = {year_:200,age_:1}; // ✅ 底层存储叫 year_
+Object.defineProperty(per,"year",{   //与字段不同，外部赋值使用year
+  get(){
+    return this.year_;
+  },
+  set(newValue){
+    this.year_ = newValue; // ✅ 写到底层字段，不要再访问 year
+    this.age_ = newValue- 2;
+  }
+});
+per.year = 29;
+console.log(per.age_); // 27 */
+
 
 //访问器设置多个属性
 /*let book = {};
@@ -653,7 +696,7 @@ console.log(Object.is("abcc", "abc"));*/
 
 
 //动态属性赋值
-/*const nameKey = 'name';
+/* const nameKey = 'name';
 const ageKey = 'age';
 const jobKey = 'job';
 let uniqueToken = 0;
@@ -665,15 +708,28 @@ let person = {
 [getUniqueKey(ageKey)]: 27,
 [getUniqueKey(jobKey)]: 'Software engineer'
 };
-console.log(person);*/
+console.log(person); */
 
+/* const name = "张三";
+const age = 19;
+let person ={name,age};
+person.name = "李四";
+console.log(person); */
 
+/* let person ={
+  name:"张三",
+  age:19,
+  fun:function(name,age){
+    return `${name} ${age}`;
+  }
+}
+console.log(person.fun(person.name,person.age)); */
 
-/*let name = 'Matt';
+/* let name = 'Matt';
 let person = {
 name   //等价于name:name，属性名和变量名一致时可简写
 };
-console.log(person); // { name: 'Matt' }*/
+console.log(person); // { name: 'Matt' } */
 
 /*let person = {
 sayName: function(name) {          //对象内含方法
@@ -691,7 +747,7 @@ person.sayName('Matt');
 //变量作为方法名
 const methodKey = 'sayName';
 let person = {
-[methodKey](name) {
+[methodKey](name) {    //把成员值转换为成员名
 console.log(`My name is ${name}`);
 }
 }
@@ -714,7 +770,11 @@ age: 27
 let { name, age } = person;
 console.log(name); // Matt
 console.log(age); // 27
+*/
 
+
+
+/*
 let {length} ="abcde";
 console.log(length);  //解构toObject的length属性
 let { constructor: c } = 4;     //解构toObject的对象类型属性，constructor用来标识对象类型
@@ -726,7 +786,7 @@ name: 'Matt',
 age: 27
 };
 ({name: personName, age: personAge} = person);    //变量提前声明了必须用括号括起来
-console.log(personName, personAge); // Matt, 27*/
+console.log(personName, personAge); // Matt, 27
 
 //工厂模式创建对象
 /*function createPerson(name, age, job) {
@@ -784,7 +844,7 @@ console.log(Object.getPrototypeOf(person1).name);      //通过原型获取属�
 
 
 // 不能直接改变原型的属性值，但可以通过实例的属性值覆盖原型的属性值
-/*function Person() {}
+/* function Person() {}
 Person.prototype.name = "Nicholas";
 Person.prototype.age = 29;
 Person.prototype.job = "Software Engineer";
@@ -794,9 +854,11 @@ console.log(this.name);
 let person1 = new Person();
 let person2 = new Person();
 person1.name = "Greg";
+// person1.__proto__.name= "张三";  //修改原型属性
+// Object.getPrototypeOf(person1).name = "张三"   //修改原型属性
 console.log(person1.name); // "Greg"，来自实例
 console.log(person2.name); // "Nicholas"，来自原型
-console.log(person1.hasOwnProperty("name"));   //判断属性值是来自实例还是原型*/
+console.log(person1.hasOwnProperty("name"));   //判断属性值是来自实例还是原型 */
 
 
 /*function Person() {}
@@ -829,13 +891,13 @@ console.log(Object.getOwnPropertySymbols(o));
 // [Symbol(k1), Symbol(k2)]*/
 
 
-/*const o = {
+/* const o = {
 foo: 'bar',
 baz: 1,
 qux: {}
 };
 console.log(Object.values(o));  //返回对象的属性值组成一个数组
-console.log(Object.entries(o));  //返回对象的属性名及属性值组成一个二维数组*/
+console.log(Object.entries(o));  //返回对象的属性名及属性值组成一个二维数组 */
 
 
 //通过原型重写对象的原生
@@ -936,7 +998,7 @@ console.log(instance.age); // 29*/
 
 
 //call调用可控个数参数，apply调用不明个数参数
-/*let obj1 = {
+/* let obj1 = {
     name: "张三",
     age: 24,
     user(args) {
@@ -958,7 +1020,7 @@ console.log(instance.age); // 29*/
   obj1.user('我是参数');
   obj2.user('我是参数');
   obj1.user.call(obj2, "我是参数"); // 使用call方法改变
-  obj2.user.apply(obj1, ["我是参数"]);*/
+  obj2.user.apply(obj1, ["我是参数"]); */
 
 
 
@@ -1081,6 +1143,17 @@ console.log(v.color); // orange
 console.log(v.dd(1121));
 */
 
+/* class aa{
+  constructor(){
+    this.name = "张三";
+    this.age=19;
+    this.show=function(){
+      console.log(this.name +" "+ this.age);
+    }
+  }
+  }
+let a = new aa();
+a.show(); */
 
 //类可以在任何地方定义，此例在数组中定义
 /*let classList = 
@@ -1102,9 +1175,6 @@ function createInstance(classDefinition, id) {
 let foo = createInstance(classList[0], 3141); // instance 3141*/
 
 
-
-
-
 //两个实例的属性不一致
 /*class Person {
 constructor() {
@@ -1119,17 +1189,19 @@ let p1 = new Person(),
 p2 = new Person();
 p1.sayName(); // Jack
 p2.sayName(); // Jack
-console.log(p1.name === p2.name); // false
+
+console.log(p1.name===p2.name); // false
+console.log(p1.name.value===p2.name.value); // true
 console.log(p1.sayName === p2.sayName); // false
 console.log(p1.nicknames === p2.nicknames); // false
 p1.name = p1.nicknames[0];
 p2.name = p2.nicknames[1];
 p1.sayName(); // Jake
-p2.sayName(); // J-Dog*/
+p2.sayName(); // J-Dog */
 
 
 //类方法通过原型调用
-/*class Person {
+/* class Person {
 constructor() {
 // 添加到this 的所有内容都会存在于不同的实例上
 this.locate = () => console.log('instance');
@@ -1140,7 +1212,7 @@ console.log('prototype');
 }
 let p = new Person();
 p.locate(); // instance   //构造函数通过实例调用
-Person.prototype.locate(); // prototype，通过用原型进行调用*/
+Person.prototype.locate(); // prototype，通过用原型进行调用 */
 
 
 
@@ -1214,7 +1286,7 @@ console.log(e instanceof Person); // true*/
 
 
 //在派生类中使用super()表示引用父类的构造函数
-/*class Vehicle {
+/* class Vehicle {
 constructor() {
 this.hasEngine = true;
 }
@@ -1228,7 +1300,7 @@ console.log(this); // Bus { hasEngine: true }
 }
 }
 let bb = new Bus();
-console.log(bb.hasEngine);*/
+console.log(bb.hasEngine); */
 
 
 
@@ -1247,25 +1319,31 @@ Bus.identify(); // vehicle*/
 
 
 
-// 抽象基类，new.target关键字，抽象类只能继承不能实例
-/*class Vehicle {
+// 抽象基类，new.target关键字，通过条件语句限制实例化，抽象类只能继承不能实例
+/* class Vehicle {
 constructor() {
 console.log(new.target);
 if (new.target === Vehicle) {
 throw new Error('Vehicle cannot be directly instantiated');
+// console.log("抽象类");
+}
+this.show = function(){
+  console.log("抽象类方法");
 }
 }
 }
 // 派生类
 class Bus extends Vehicle {}
-new Bus(); // class Bus {}
-new Vehicle(); // class Vehicle {}
-// Error: Vehicle cannot be directly instantiated*/
+let b =new Bus(); // class Bus {}
+b.show();  //父类方法
+// let v =new Vehicle(); // class Vehicle {}
+// v.show();
+// Error: Vehicle cannot be directly instantiated */
 
 
 
 // 抽象基类,派生类必须实现某个方法
-/*class Vehicle {
+/* class Vehicle {
 constructor() {
 if (new.target === Vehicle) {
 throw new Error('Vehicle cannot be directly instantiated');
@@ -1278,16 +1356,16 @@ console.log('success!');
 }
 // 派生类
 class Bus extends Vehicle {
-foo() {}
+foo(valuestr) {}
 }
 // 派生类
 class Van extends Vehicle {}
 new Bus(); // success!
-new Van(); // Error: Inheriting class must define foo()*/
+new Van(); // Error: Inheriting class must define foo() */
 
 
 
-/*//多继承
+ /* //多继承
 class Vehicle {}
 let FooMixin = (Superclass) => class extends Superclass {
 foo() {
@@ -1304,36 +1382,38 @@ baz() {
 console.log('baz');
 }
 };
-class Bus extends FooMixin(BarMixin(BazMixin(Vehicle))) {}      //通过嵌套模拟实现多继承
-let b = new Bus();
+// class Bus extends FooMixin(BarMixin(BazMixin(Vehicle))) {}      //通过嵌套模拟实现多继承,嵌套顺序随意
+ let b = new Bus();
 b.foo(); // foo
 b.bar(); // bar
-b.baz(); // baz*/
+b.baz(); // baz */
 
-/*let ints = [1, 2, 3];
+
+
+/* let ints = [1, 2, 3];
 console.log(ints.map(function(i) { return i + 1; })); // [2, 3, 4]
-console.log(ints.map((i) => { return i + 1 }));
+console.log(ints.map((i) => { return i + 1 })); */
 
-console.log(ints.map((i) => { return i + 1 }));
-*/
 
-//Lambda表达式
-/*let double = (x) => { return 2 * x; };   //没有参数或多个参数时使用括号
+
+/* //Lambda表达式
+let double = (x) => { return 2 * x; };   //没有参数或多个参数时使用括号
 let triple = x => { return 3 * x; };    //一个参数时可省略括号
 let triplee = x =>  3 * x;   //大括号表示函数体，不用括号则只能有一条函数语句
 console.log(double(3));
 console.log(triple(4));
-console.log(triplee(5));*/
+console.log(triplee(5)); */
 
-//Lambda表达式赋值
-/*let value = {};
+/* //Lambda表达式赋值
+let value = {};
 let setName = (x) => {x.name = "Matt"; x.age = 13;}
 setName(value);
 console.log(value.name); // "Matt"
-console.log(value.age); // "Matt"*/
+console.log(value.age); // "Matt" */
 
-//Enter确认事件,递归函数
-/*function ass()
+/* //Enter确认事件,递归函数
+// 闭包指在函数体再定义函数，内部函数可以使用父函数中定义的变量，变量直到外部函数执行完才销毁
+function ass()
 {
     let i = document.getElementById("num").value;
     if(event.keyCode == 13)
@@ -1349,10 +1429,10 @@ function aqq(i)
         {
             aqq(i);
         }
-    }*/
+} */
 
-//...拓展操作符
-/*let values = [1, 2, 3, 4];
+/* //...拓展操作符
+let values = [1, 2, 3, 4];
 function getSum() {
 let sum = 0;
 for (let i = 0; i < arguments.length; ++i) {
@@ -1362,49 +1442,50 @@ return sum;
 }
 // console.log(getSum.apply(null, values)); // 10  数组元素一个一个依次引用
 console.log(getSum(...values)); // 10   ...拓展操作符，数组元素依次迭代引用
-console.log(getSum(-1,...values)); // 10   ...拓展操作符，数组元素依次迭代引用*/
+console.log(getSum(-1,...values)); // 9   ...拓展操作符，数组元素依次迭代引用 */
 
 
-//callSomeFunction将函数作为参数会传入另一个函数,可把函数看成是一个变量
-/*function add10(num) {
-return num + 10;
+/* //函数名也是个变量，实现函数指针
+function show1()
+{
+  console.log(1);
 }
-let result1 = callSomeFunction(add10, 10);
-console.log(result1); // 20
-function getGreeting(name) {
-return "Hello, " + name;
+function show2()
+{
+  console.log(2);
 }
-let result2 = callSomeFunction(getGreeting, "Nicholas");
-console.log(result2); // "Hello, Nicholas"*/
+let functionName = show1;
+functionName();
+functionName = show2;
+functionName(); */
 
 
-
-
-/*function factorial(num) {   //函数声明，可以代码提升
+/* function factorial(num) {   //函数声明，可以代码提升
 if (num <= 1) {
 return 1;
 } else {
 return num * arguments.callee(num - 1);    //arguments.callee指代factorial进行递归,即指代调用当前函数
+// return num * factorial(num - 1);    //正常情况下同上，但代码提升时执行的是最新的代码函数
 }
 }
 let trueFactorial = factorial;   //赋值第一个factorial函数
-factorial = function() {     //函数表达式，执行时才会编译
-return 0;
-};
+// factorial = function() {     //函数表达式，执行时才会编译
+// return 0;
+// };
 console.log(trueFactorial(5)); // 120
-console.log(factorial(5)); // 0*/
+console.log(factorial(5)); // 0 */
 
 
 
-//caller属性,指代调用当前函数的函数
-/*function outer() {
+/* //caller属性,指代调用当前函数的函数
+function outer() {
 inner();
 }
 function inner() {
 // console.log(inner.caller);
-console.log(arguments.callee.caller);
+console.log(arguments.callee.caller());
 }
-outer();*/
+outer(); */
 
 //new.target指代调用构造函数的对象
 /*function King() {
@@ -1433,7 +1514,6 @@ console.log(sum.length); // 2
 console.log(sayHi.length); // 0*/
 
 
-
 //apply/call调用函数，类似委托
 /*function sum(num1, num2) {
 return num1 + num2;
@@ -1451,8 +1531,8 @@ console.log(callSum1(10, 10)); // 20
 console.log(callSum2(10, 10)); // 20
 console.log(Sum3(10, 10)); // 20*/
 
-//this指代调用的上下文
-/*window.color = 'red';
+/* //this指代调用的上下文
+// window.color = 'red';
 let o = {
 color: 'blue'
 };
@@ -1462,7 +1542,7 @@ console.log(this.color);
 sayColor(); // red
 sayColor.call(this); // red
 sayColor.call(window); // red
-sayColor.call(o); // blue*/
+sayColor.call(o); // blue */
 
 
 
@@ -1489,7 +1569,6 @@ return this.identity;      //this表示window
 }
 };
 console.log(object.getIdentityFunc()()); // 'The Window'
-
 
 window.identity = 'The Window';
 let object = {
@@ -1598,16 +1677,15 @@ console.log(b[0].value);
 console.log(b.length);*/
 
 
-//setTimeout休眠1秒，1秒后将函数推入任务队列，但不代表立即执行
-/*let a = x => console.log(x + 4);
+/* //setTimeout休眠1秒，1秒后将函数推入任务队列，但不代表立即执行
+let a = x => console.log(x + 4);
 let b = setTimeout(a,1000,3);
+// clearTimeout(b);   //取消任务 */
 
-clearTimeout(b);   //取消任务*/
-
-// 定时器
-// let a = setInterval(() => console.log("Hello world!"), 1000);
-//取消定时器
-// clearInterval(a)
+ /* // 定时器
+ let a = setInterval(() => console.log("Hello world!"), 1000);
+// 取消定时器
+ // clearInterval(a) */
 
 //深度嵌套的回调函数（俗称“回调地狱”）,早期异步执行操作
 /*function double(value) {
@@ -1618,8 +1696,8 @@ setTimeout(console.log, 2000, value * 4);
 }
 double(3);*/
 
-//异常处理
-/*function double(value, success, failure) {
+/* //异常处理
+function double(value, success, failure) {
     setTimeout(() => {
         try {
             if (typeof value !== 'number') {
@@ -1635,8 +1713,8 @@ const successCallback = (x) => {
     double(x, (y) => console.log(`Success: ${y}`));
 };
 const failureCallback = (e) => console.log(`Failure: ${e}`);
-double("3", successCallback, failureCallback);
-// Success: 12（大约1000 毫秒之后）*/
+double(3, successCallback,failureCallback);
+// Success: 12（大约1000 毫秒之后) */
 
 
 //期约
@@ -1676,32 +1754,49 @@ setTimeout(console.log, 0, p); // Promise <rejected>: 3
 p.then((e) => setTimeout(null, (e) => setTimeout(console.log, 1000, e)); // 3*/
 
 
-//catch方法相当于p.then(null, onRejected);
-/*let p = Promise.reject();
+/* //catch方法相当于p.then(null, onRejected);
+// catch捕捉不到期约的异常，需要用onRejected方法处理异常
+let p = Promise.reject();
 let onRejected = function(e) {
 setTimeout(console.log, 0, 'rejected');
 };
 // 这两种添加拒绝处理程序的方式是一样的：
 p.then(null, onRejected); // rejected
 p.catch(onRejected); // rejected
-
-Promise.prototype.catch()   //返回一个新的期约实例：
+// Promise.prototype.catch()   //返回一个新的期约实例：
 let p1 = new Promise(() => {});
 let p2 = p1.catch();
 setTimeout(console.log, 0, p1); // Promise <pending>
 setTimeout(console.log, 0, p2); // Promise <pending>
-setTimeout(console.log, 0, p1 === p2); // false*/
+setTimeout(console.log, 0, p1 === p2); // false */
 
 
+/* //闭包，一个函数返回另一个函数，类似派生出多个函数实例
+// 同时其内部的变量不销毁，可以被其子函数引用
+// 闭包需要注意内存泄漏，只有所有实例全部不被使用时，内部变量才会被GC回收
+function makefunc(msg) {
+  const name = "mozilla";
+  function displayname() {
+    console.log(name+msg);
+  }
+  return displayname;
+}
+const myfunc1 = makefunc(1);
+const myfunc2 = makefunc(2);
+const myfunc3 = makefunc(3);
+myfunc1();
+myfunc2();
+myfunc3(); */
 
-//then为期约的后续处理程序，实现thenable接口，在期约状态改变后运行，需要实现onResolved和onRejected两个方法
-/*function onResolved(id) {
+
+/* //then为期约的后续处理程序，实现thenable接口，在期约状态改变后运行，需要实现onResolved和onRejected两个方法
+function onResolved(id) {
 setTimeout(console.log, 0, id, 'resolved');
 }
 function onRejected(id) {
 setTimeout(console.log, 0, id, 'rejected');
 }
-let p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000));
+let p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000));   //改变Promise状态，之后触发then处理程序
 let p2 = new Promise((resolve, reject) => setTimeout(reject, 3000));
 //期约的后续处理程序
 p1.then(() => onResolved('p1'),
@@ -1710,7 +1805,7 @@ p2.then(() => onResolved('p2'),
 () => onRejected('p2'));
 //（3 秒后）
 // p1 resolved
-// p2 rejected*/
+// p2 rejected */
 
 
 //期约拒绝错误不能被try捕获
@@ -1725,7 +1820,6 @@ Promise.reject(new Error('bar'));
 console.log(e);
 }
 // Uncaught (in promise) Error: bar*/
-
 //期约状态改变后运行，无论是完成还是拒绝最后都会执行此代码
 /*let p1 = Promise.resolve();
 let p2 = Promise.reject();
@@ -1748,17 +1842,6 @@ console.log('then() returns');
 // then() returns
 // onResolved handler
 */
-
-//期约拒绝的错误理由
-/*let p1 = new Promise((resolve, reject) => reject(Error('foo')));
-let p2 = new Promise((resolve, reject) => { throw Error('foo'); });
-let p3 = Promise.resolve().then(() => { throw Error('foo'); });
-let p4 = Promise.reject(Error('foo'));
-setTimeout(console.log, 0, p1); // Promise <rejected>: Error: foo
-setTimeout(console.log, 0, p2); // Promise <rejected>: Error: foo
-setTimeout(console.log, 0, p3); // Promise <rejected>: Error: foo
-setTimeout(console.log, 0, p4); // Promise <rejected>: Error: foo*/
-
 
 
 //BOM window窗口大小
@@ -1800,8 +1883,10 @@ if (wroxWin == null){
 }
 */
 
-//某些浏览器拦截弹出式窗口会引发错误，用catch捕获错误进行异常处理
-/*let blocked = false;
+
+
+/* //某些浏览器拦截弹出式窗口会引发错误，用catch捕获错误进行异常处理
+let blocked = false;
 try {
     let wroxWin = window.open("http://www.wrox.com", "_blank");
     if (wroxWin == null){
@@ -1812,11 +1897,11 @@ try {
 }
 if (blocked){
     alert("The popup was blocked!");
-}*/
+} */
 
 
-// 系统确认框
-/*let b =confirm("fjog");
+/* // 系统确认框
+let b =confirm("fjog");
 if(b)
 {
     console.log("OK");
@@ -1824,8 +1909,8 @@ if(b)
 else
 {
     console.log("NG");
-}
-*/
+} */
+
 
 //获取get请求问题之后的参数
 /*let getQueryStringArgs = function() {
@@ -1846,8 +1931,8 @@ return args;
 
 
 
-// URLSearchParams接口，用于检查和修改GET查询字符串
-/*let qs = "?q=javascript&num=10";
+/* // URLSearchParams接口，用于检查和修改GET查询字符串
+let qs = "?q=javascript&num=10";
 let searchParams = new URLSearchParams(qs);    //实例一个GET查询参数
 alert(searchParams.toString()); // " q=javascript&num=10"
 searchParams.has("num"); // true
@@ -1855,7 +1940,7 @@ searchParams.get("num"); // 10
 searchParams.set("page", "3");
 alert(searchParams.toString()); // " q=javascript&num=10&page=3"
 searchParams.delete("q");
-alert(searchParams.toString()); // " num=10&page=3"*/
+alert(searchParams.toString()); // " num=10&page=3" */
 
 
 // location.assign("https://cn.bing.com/");
@@ -2279,7 +2364,7 @@ let newNode = a.firstChild.splitText(5);     //一个文本节点拆分为两个
 
 
 /*$(function(){
-    $(".but").on({
+    // $(".but").on({
         "dblclick":function()
         {
             alert("hello");
@@ -2288,7 +2373,6 @@ let newNode = a.firstChild.splitText(5);     //一个文本节点拆分为两个
         {
             alert(document.doctype.name);      //doctype类型
         }
-
     })
 })
 */
@@ -2425,7 +2509,6 @@ document.addEventListener("click", (event) => {
 })*/
 
 
-
 // $(function(){
     // $(".but").click(function(){
         //window.open("http://www.baidu.com","newnew","resizable=no");
@@ -2542,6 +2625,7 @@ document.addEventListener("click", (event) => {
 /*let ele = document.getElementById("radio2").dataset["aaa"];   //data-aaa="userid"自定义属性
 console.log(ele);*/
 
+//设置标签内容
 // document.getElementsByTagName("p").innerHTML="hello world";
 
 /*let pp = document.getElementsByTagName("p")[0];
@@ -2639,7 +2723,6 @@ if (!/^\d*$/.test(text)){
 event.preventDefault();
 }
 })
-//
 function getClipboardText(event){
 var clipboardData = (event.clipboardData || window.clipboardData);    //clipboardData粘貼板對象
 return clipboardData.getData("text");   //獲得粘貼板的內容
@@ -2942,6 +3025,25 @@ console.log(value);
 }
 })();*/
 
+/* //生成器函数，也就是迭代器，可使用next方法
+function* foo() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+let f = foo();
+console.log(f.next().value);
+//yield关键字实际返回一个IteratorResult对象，它有两个属性，value和done。value属性是对yield表达式求值的结果，而done是false，表示生成器函数尚未完全完成
+console.log(f.next()); */
+      
+/* function* generate() {
+    let result = yield;
+    console.log(`result is ${result}`);
+}
+let g = generate();
+console.log(g.next()); 
+console.log(g.next(1000)); */
+
 
 //可写流
 /*async function* ints() {     //生成器
@@ -3180,11 +3282,11 @@ throw new ReferenceError("You didn't cite your references properly.");*/
 
 
 
-// 调试器
-/*console.log("dsdfgh");
-debugger;      // 调试器
+/* // 调试器
+console.log("dsdfgh");
+debugger;      // 调试器，相当于在浏览器的调试面板打断点
 console.log("dsffgbhtrht");
-console.log("12345678");*/
+console.log("12345678"); */
 
 
 
@@ -3212,14 +3314,27 @@ log("hello world");
 */
 
 
-// condition为FAIL时抛出异常消息
-/*function assert(condition, message) {
+/* // condition为FAIL时抛出异常消息
+function assert(condition, message) {
 if (!condition) {
 throw new Error(message);
 }
-}*/
-
-
+} */
+//异常处理
+/* function showError(num){
+  try{
+    if(num>10)
+      throw new Error("数字大于10");
+      else
+      {
+        console.log(num+"OK")
+      }
+  }
+  catch(e){
+    console.log(e);
+  }
+}
+showError(12); */
 
 
 /*let parser = new DOMParser();
@@ -3253,7 +3368,7 @@ node = result.iterateNext();
 
 
 
-/*let book = {
+/* let book = {
 title: "Professional JavaScript",
 authors: [
 "Nicholas C. Zakas",
@@ -3263,7 +3378,7 @@ edition: 4,
 year: 2017
 }; 
 let jsonText = JSON.stringify(book);     // 将javascript序列化为JSON字符串
-let jsonText = JSON.stringify(book, ["title", "edition"]);    // 将javascript序列化为JSON字符串，其中只包含title和edition两个属性
+// let jsonText = JSON.stringify(book, ["title", "edition"]);    // 将javascript列化为JSON字符串，其中只包含title和edition两个属性
 let jsonText = JSON.stringify(book, (key, value) => {      //将javascript序列化为JSON字符串，精细控制序列化时执行的动作
 switch(key) {
 case "authors":
@@ -3275,27 +3390,28 @@ return undefined;
 default:
 return value;
 }
-});
-let jsonText = JSON.stringify(book, null, 4);     // 将javascript序列化为JSON字符串，格式化数据结构每级缩进4个空格
-let bookCopy = JSON.parse(jsonText);     // 将JSON字符串解析为javascript值*/
+}); 
+// let jsonText = JSON.stringify(book, null,4);     // 将javascript序列化为JSON字符串，格式化数据结构每级缩进4个空格
+let bookCopy = JSON.parse(jsonText);     // 将JSON字符串解析为javascript值
+console.log(bookCopy); */
 
 
 
 
-/*let book = {
-title: "Professional JavaScript",
+/* let book = {
+title: "professional javascript",
 authors: [
-"Nicholas C. Zakas",
-"Matt Frisbie"
+"nicholas c. zakas",
+"matt frisbie"
 ],
 edition: 4,
 year: 2017,
-toJSON: function() {
+tojson: function() {
 return this.title;
 }
 };
-let jsonText = JSON.stringify(book);  //序列化之前先通过toJSON过滤字符
-console.log(jsonText);*/
+let jsontext = JSON.stringify(book.tojson());  //序列化之前先通过tojson过滤字符
+console.log(jsontext); */
 
 
 
@@ -3317,33 +3433,27 @@ let bookCopy = JSON.parse(jsonText,
 
 
 
-
 // 期约案例
 /*function red() {
   console.log('red');
 }
-
 function green() {
   console.log('green');
 }
-
 function yellow() {
   console.log('yellow');
 }
-
 let light = (fn, timer) => new Promise(resolve => {
   setTimeout(function() {
     fn()
     resolve()
   }, timer)
 })
-
 // times为交替次数
 function start(times) {
   if (!times) {
     return
   }
-
   times--
   Promise.resolve()
     .then(() => light(red, 3000))
@@ -3356,8 +3466,7 @@ start(3)*/
 
 
 
-// 网络请求
-/*let xhr = new XMLHttpRequest();
+/* // 网络请求
 xhr.onreadystatechange = function() {    //请求过程的阶段变化时触发
 if (xhr.readyState == 4) {       //0表示未初始化，1表示已打开，2表示已发送，3表示接收中，4表示已完成 
 if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
@@ -3367,12 +3476,13 @@ alert("Request was unsuccessful: " + xhr.status);
 }
 }
 };
+let xhr = new XMLHttpRequest();
 xhr.open("get", "example.php", true);   //向php页面发送异步get请求
 xhr.setRequestHeader("MyHeader", "MyValue");     //设置自定义请求头
 xhr.send(null);   //发送请求体
 let myHeader = xhr.getResponseHeader("MyHeader");    //获取指定的请求头
 let allHeaders xhr.getAllResponseHeaders();         //获取所有的请求头
-xhr.abort();    //取消请求*/
+xhr.abort();    //取消请求 */
 
 
 
@@ -3500,7 +3610,7 @@ img.src = "http://www.example.com/test?name=Nicholas";   */
 
 
 
-//网络请求
+//jquery网络请求
 /* $.get("http://169.254.200.238:8080/jsonp.do", function (data) {
      console.log(data);
  });*/
@@ -3543,6 +3653,22 @@ method: 'POST', // 发送请求体时必须使用一种HTTP 方法
 body: payload,
 headers: paramHeaders
 });*/
+
+/* // let payload = 'c=QUERY_HISTORY&p=Get_CurrStation&sn=FC9HWZ1VFK80001061';
+let payload = new FormData();
+payload.append("c","QUERY_HISTORY");
+payload.append("p","Get_CurrStation");
+payload.append("sn","FC9HWZ1VFK80001061");
+let paramHeaders = new Headers({
+  "Content-Type":"multipart/form-data;"
+});
+fetch('http://172.18.32.212/bobcat/sfc_response.aspx',{
+  method:'POST',
+  body:payload,
+  // headers:paramHeaders
+})
+.then((res)=>{return res.text()})
+.then((data)=>{console.log(data)}); */
 
 
 // 请求体发送文件
@@ -3656,17 +3782,32 @@ console.log(r);*/
 /*let request = new Request('https://foo.com',
 { method: 'POST', body: 'barbazqux' });
 request.text()
-.then(console.log);
+.then(console.log);    //打印出请求体
 // barbazqux
 */
 
 
-//json得到请求体json格式
-/*let request = new Request('https://foo.com',
+
+/* let bodyy = new FormData();
+bodyy.append("c","QUERY_HISTORY");
+bodyy.append("p","Get_CurrStation");
+bodyy.append("sn","FC9HWZ1VFK80001061");
+let request = new Request("http://172.18.32.212/bobcat/sfc_response.aspx",{
+  method:"POST",
+  body:bodyy
+});
+fetch(request)
+.then(res=>res.text())
+.then(data=>{console.log(data)}); */
+
+
+
+/* //json得到请求体json格式
+let request = new Request('https://foo.com',
 { method:'POST', body: JSON.stringify({ bar: 'baz' }) });
 request.json()
 .then(console.log);
-// {bar: 'baz'}*/
+// {bar: 'baz'} */
 
 
 
@@ -3699,20 +3840,20 @@ request.blob()
 // Blob(7) {size: 7, type: "text/plain;charset=utf-8"}*/
 
 
-
-/*function takeLongTime() {
+// 异步执行
+/* function takeLongTime() {
  return new Promise(resolve => {
  setTimeout(() => resolve("long_time_value"), 1000);
  });
-}*/
-/*function takeLongTime() {
+}
+function takeLongTime() {
  return new Promise(resolve => resolve("long_time_value"));
 }
 async function test() {
  const v = await takeLongTime();
  console.log(v);
 }
-test();*/
+test(); */
 
 
 
@@ -3775,6 +3916,20 @@ let data = event.data;
 // 对数据执行某些操作
 };*/
 
+
+/* // websocket连接并发送请求
+let socket = new WebSocket("ws://localhost:8080");
+let stringData = "Hello world!";
+let arrayBufferData = Uint8Array.from(['f', 'o', 'o']);
+let blobData = new Blob(['f', 'o', 'o']);
+socket.onopen = function () {   //打开连接再发送消息
+  console.log("连接打开");
+  socket.send("hello server"); // 发送消息，只能发 string / Blob / ArrayBuffer
+};
+setTimeout(()=>{socket.send(stringData)},2000);
+// socket.send(stringData);
+// socket.send(arrayBufferData.buffer);
+// socket.send(blobData); */
 
 
 // cookie辅助函数读写删除
@@ -3941,4 +4096,4 @@ var requestt = db.transaction(["user"], "readwrite")
 let url = window.location.href;
 let query = url.substring(url.indexOf("?"));*/
 
-console.log('数据写入失败');
+//console.log('数据写入失败');
