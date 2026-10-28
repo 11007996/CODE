@@ -1,0 +1,241 @@
+//第一步
+{
+    "compilerOptions": {
+        // 初始阶段：宽松配置
+        "target": "ES2020",
+        "module": "commonjs",
+        "strict": false,    //取消严格检查
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "skipLibCheck": true,
+
+        // 允许 JS 文件
+        "allowJs": true,
+        "checkJs": false,
+
+        // 输出目录
+        "outDir": "./dist",
+        "rootDir": "./src"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+}
+
+
+
+
+
+
+
+
+
+
+
+# tsconfig.json主项目配置文件
+{
+    // 继承基础配置
+    "extends": "./tsconfig.base.json",
+    // 编译器选项
+    "compilerOptions": {
+        // 输出目录
+        "outDir": "./dist",
+        // 声明文件目录
+        "declarationDir": "./dist/types",
+        // 生成声明文件
+        "declaration": true,
+        // 生成 sourcemap
+        "sourceMap": true
+    },
+    // 项目引用配置
+    "references": [
+        // 引用 utils 项目
+        { "path": "./packages/utils" },
+        // 引用 ui 项目
+        { "path": "./packages/ui" },
+        // 引用 types 项目
+        { "path": "./packages/types" }
+    ],
+    // 包含的文件
+    "include": ["src/**/*"],
+    // 依赖包含的节点模块
+    // "files": []
+}
+# 子项目配置文件
+{
+    // 继承基础配置
+    "extends": "../../tsconfig.base.json",
+    // 编译器选项
+    "compilerOptions": {
+        // 输出目录
+        "outDir": "./dist",
+        // 声明文件目录
+        "declarationDir": "./dist/types",
+        // 生成声明文件
+        "declaration": true,
+        // 生成 sourcemap
+        "sourceMap": true,
+        // 是否为库
+        "composite": true
+    },
+    // 包含的文件
+    "include": ["src/**/*"],
+    // 排除的文件
+    "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
+
+
+
+
+
+//基础配置
+{
+    "compilerOptions": {
+        // 基准路径：所有路径别名的根目录
+        "baseUrl": ".",
+
+        // 路径映射配置
+        "paths": {
+            // @/ 开头的别名，指向 src 目录
+            "@/*": ["src/*"],
+
+            // @components 开头的别名
+            "@components/*": ["src/components/*"],
+
+            // @utils 开头的别名
+            "@utils/*": ["src/utils/*"],
+
+            // @services 开头的别名
+            "@services/*": ["src/services/*"],
+
+            // @assets 开头的别名
+            "@assets/*": ["src/assets/*"],
+
+            // @types 开头的别名
+            "@types/*": ["src/types/*"]
+        }
+    }
+}
+
+
+
+
+
+
+
+// 导入 vite 模块 vite.config.ts配置路径别名
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+// Vite 配置
+export default defineConfig({
+    plugins: [react()],
+
+    // 路径别名配置
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+            '@components': path.resolve(__dirname, './src/components'),
+            '@utils': path.resolve(__dirname, './src/utils'),
+            '@services': path.resolve(__dirname, './src/services'),
+            '@types': path.resolve(__dirname, './src/types'),
+            '@assets': path.resolve(__dirname, './src/assets')
+        }
+    }
+});
+
+
+
+
+// 阶段 1: 基础迁移
+{
+    "compilerOptions": {
+        "strict": false,
+        "noImplicitAny": false
+    }
+}
+
+// 阶段 2: 启用类型检查
+{
+    "compilerOptions": {
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true
+    }
+}
+
+// 阶段 3: 完全严格
+{
+    "compilerOptions": {
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": true
+    }
+}
+
+
+
+
+//类型声明文件
+declare module "my-module" {
+    export function doSomething(param: string): void;
+    export class MyClass {
+        constructor(options: { name: string });
+        name: string;
+    }
+}
+
+// 声明全局变量
+declare var GLOBAL_CONFIG: {
+    apiUrl: string;
+    version: string;
+};
+
+// 声明全局函数
+declare function myFunction(param: string): void;
+
+// 声明命名空间
+declare namespace MyNamespace {
+    function doSomething(): void;
+}
+
+// 使用
+console.log(GLOBAL_CONFIG.apiUrl);
+myFunction("hello");
+MyNamespace.doSomething();
+
+
+
+
+
+
+
+
+
+//性能优化
+{
+    "compilerOptions": {
+        // 启用增量编译，保存上次编译信息
+        "incremental": true,
+        // 跳过 node_modules 的类型检查
+        // 大幅提升编译速度
+        "skipLibCheck": true,
+        // 跳过声明文件的生成（仅在最终构建时生成）
+        "noEmit": true,
+        // 启用快速增量构建
+        "assumeChangesOnlyAffectDirectDependencies": true,
+        // 并行执行
+        "parallel": true,
+        // 启用缓存
+        "tsBuildInfoFile": ".tsbuildinfo",
+        // 不需要解析的文件
+        "exclude": [
+            "node_modules",
+            "dist",
+            "build",
+            "**/*.test.ts"
+        ]
+    }
+}

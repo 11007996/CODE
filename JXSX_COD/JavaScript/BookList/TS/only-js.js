@@ -1,1 +1,4 @@
-console.log("hello world")
+export function show(res)
+{
+  console.log((res);
+}
