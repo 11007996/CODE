@@ -1,0 +1,4 @@
+{
+  "typescript.tsdk": "${workspaceFolder}/node_modules/typescript/lib",
+  "vue.server.hybridMode": true
+}

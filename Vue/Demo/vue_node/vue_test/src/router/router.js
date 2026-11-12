@@ -4,13 +4,11 @@ import page2 from '../components/page/vueroute/page2.vue'
 
 const routes = [
 	{
-		path:'/components/page/vueroute/page1.vue',
-		name:page1,
+		path:'/page1',
 		component:page1
 	},
 	{
-		path:'/components/page/vueroute/page2.vue',
-		name:page2,
+		path:'/page2',
 		component:page2
 	},
 ]

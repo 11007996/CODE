@@ -9,7 +9,7 @@
 	<!-- <ref /> -->
 	<!-- <von></von> -->
 	<!-- <directive /> -->
-	<transitions />
+	<!-- <transitions /> -->
 	<!-- <componentBase /> -->
 	<!-- <props /> -->
 	<!-- <emitt /> -->
@@ -23,8 +23,6 @@
 	    <router-link to="/page2">page2</router-link>
 	    <router-view></router-view>
 	</div> -->
-	
-
 </template>
 
 
@@ -40,7 +38,7 @@
 	// import ref from './components/page/ref.vue'
 	// import von from './components/page/v-on.vue'
 	// import directive from './components/page/directive.vue'
-	import transitions from './components/page/transition.vue'
+	// import transitions from './components/page/transition.vue'
 	// import componentBase from './components/page/component/component_base.vue'
 	// import props from './components/page/component/props/props.vue'
 	// import emitt from './components/page/component/emit/emit.vue'
@@ -63,7 +61,7 @@
 			// ref,
 			// von,
 			// directive,
-			transitions,
+			// transitions,
 			// componentBase,
 			// props,
 			// emitt,
@@ -72,10 +70,11 @@
 			// mixinn,
 			// classStyle,
 			// render,
-
 	    }
 	    
 	}
 
 		
 </script>
+
+<style></style>

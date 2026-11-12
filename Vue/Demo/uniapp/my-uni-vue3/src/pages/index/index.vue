@@ -65,7 +65,7 @@ function onExports()
   exports.value.callbackFun();
 }
 
-// 子组件事件
+// 子组件事件,参数由子组件传递
 function emitE(e)
 {
   console.log(e);
