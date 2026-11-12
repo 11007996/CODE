@@ -4,3 +4,9 @@ D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Adaptee\bin\De
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Adaptee\obj\Debug\Adaptee.exe
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Adaptee\obj\Debug\Adaptee.pdb
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Adaptee\obj\Debug\Adaptee.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Adaptee\bin\Debug\Adaptee.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Adaptee\obj\Debug\Adaptee.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Adaptee\obj\Debug\Adaptee.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Adaptee\bin\Debug\Adaptee.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Adaptee\bin\Debug\Adaptee.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Adaptee\obj\Debug\Adaptee.csprojResolveAssemblyReference.cache

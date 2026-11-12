@@ -38,6 +38,26 @@ namespace myControl
             }
         }
 
+        private nyControlBClass[] _items;
+        [Description("属性集合"), Category("自定义")]
+        public nyControlBClass[] Items    //集合类，在属性面板中自动使用集合编辑器
+        {
+            get{return _items;}
+            set
+            {
+                _items = value;
+                if(_items == null)
+                {
+                    _items = new nyControlBClass[0];
+                }
+                else
+                {
+                    _items = new nyControlBClass[value.Length];
+                }
+            }
+        
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

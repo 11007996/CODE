@@ -16,3 +16,12 @@ C:\Users\mh.guo\Desktop\编程动态增加界面控件\WindowsFormsApplication1\
 C:\Users\mh.guo\Desktop\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\mh.guo\Desktop\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\mh.guo\Desktop\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\编程动态增加界面控件\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

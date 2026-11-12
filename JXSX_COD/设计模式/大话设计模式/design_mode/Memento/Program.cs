@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Memento   //备忘录模式
+namespace Memento   //备忘录模式  用Caretaker备份Originator
 {
     class Program
     {

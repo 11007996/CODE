@@ -50,7 +50,6 @@ namespace PMS
                     this.menuStrip1.Items[i].Visible = false;
                 }
             }
-
                 //for (int i =0;i<this.menuStrip1.MdiWindowListItem.DropDownItems.Count;i++)
                 //{
                 //    //this.menuStrip1.MdiWindowListItem.DropDownItems[0].Visible

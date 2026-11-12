@@ -53,6 +53,7 @@
     <Compile Include="myControlA.Designer.cs">
       <DependentUpon>myControlA.cs</DependentUpon>
     </Compile>
+    <Compile Include="nyControlBClass.cs" />
     <Compile Include="nyCotrolB.cs">
       <SubType>Component</SubType>
     </Compile>

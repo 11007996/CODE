@@ -23,5 +23,10 @@ namespace Winform程序
            DialogResult r = p.ShowDialog();
            this.Text = r.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

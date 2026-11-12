@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EAM.Dashboard
+build_property.RootNamespace = EAM.Dashboard
+build_property.ProjectDir = D:\zzzzzzzz\CodeBlock\JXSX_COD\Project\ZhuanAn\ZhuanAn\EAM\CODE\EAM-Dashboard\EAM.Dashboard\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\zzzzzzzz\CodeBlock\JXSX_COD\Project\ZhuanAn\ZhuanAn\EAM\CODE\EAM-Dashboard\EAM.Dashboard
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/BackAm/jzlft.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFja0FtXGp6bGZ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/BackAm/xzwht.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFja0FtXHh6d2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/BackAm/ycahc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFja0FtXHljYWhjLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/BackAm/ycahc2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFja0FtXHljYWhjMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/BackAm/ywlr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFja0FtXHl3bHIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/0261/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDAyNjFcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/02C1/call.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDAyQzFcY2FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/02C1/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDAyQzFcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/02C1/onlineNotice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDAyQzFcb25saW5lTm90aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/02F1/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDAyRjFcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/1221/call.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDEyMjFcY2FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/1221/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDEyMjFcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/1616/call.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDE2MTZcY2FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/1616/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDE2MTZcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/1618/call.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDE2MThcY2FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/1618/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXDE2MThcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/Test/call.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFRlc3RcY2FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/Test/equipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFRlc3RcZXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Dashboard/Test/onlineNotice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFRlc3Rcb25saW5lTm90aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Shared/_Copyright.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Db3B5cmlnaHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Shared/_DashboardScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9EYXNoYm9hcmRTY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/zzzzzzzz/CodeBlock/JXSX_COD/Project/ZhuanAn/ZhuanAn/EAM/CODE/EAM-Dashboard/EAM.Dashboard/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-73o6bz7nuw

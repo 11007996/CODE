@@ -1,5 +1,5 @@
 ﻿DryIocNavigation
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\DryIocNavigation\App.xaml
 5-1951726269
 
-12-407654441
-210-302860318
+14-1370668259
+210959960315
 MainWindow.xaml;Views\MainWin.xaml;Views\NpageA.xaml;Views\NpageB.xaml;Views\NpageC.xaml;
 
-False
+True
 

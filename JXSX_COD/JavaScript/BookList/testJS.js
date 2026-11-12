@@ -872,7 +872,8 @@ let person1 = new Person();
 let person2 = new Person();
 console.log("name" in person1);    //in用于属性是否在对象内，即时是否可调用到对应属性*/
 
-
+//symbol是 JavaScript 中的一种原始数据类型，用于生成唯一且不可变的值，常用作对象属性的唯一标识符。
+// 每次调用 Symbol() 都会生成一个新的唯一 Symbol，即使描述相同也不相等
 /*let k1 = Symbol('k1'), k2 = Symbol('k2');
 let o = {
 1: 1,

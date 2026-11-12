@@ -4,3 +4,9 @@ D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Command\bin\De
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Command\obj\Debug\Command.csprojResolveAssemblyReference.cache
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Command\obj\Debug\Command.exe
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Command\obj\Debug\Command.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Command\bin\Debug\Command.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Command\obj\Debug\Command.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Command\obj\Debug\Command.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Command\bin\Debug\Command.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Command\bin\Debug\Command.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Command\obj\Debug\Command.csprojResolveAssemblyReference.cache

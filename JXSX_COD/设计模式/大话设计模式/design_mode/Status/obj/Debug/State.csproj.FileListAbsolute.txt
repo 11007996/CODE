@@ -3,3 +3,9 @@ D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\bin\Deb
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.pdb
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\obj\Debug\Status.exe
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Status\obj\Debug\Status.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Status\bin\Debug\Status.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Status\obj\Debug\State.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Status\obj\Debug\Status.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Status\obj\Debug\Status.pdb

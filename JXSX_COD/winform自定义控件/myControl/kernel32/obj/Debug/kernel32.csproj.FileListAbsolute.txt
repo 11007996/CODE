@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\kernel32\bin\Debug\kernel32.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\kernel32\bin\Debug\kernel32.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\kernel32\bin\Debug\kernel32.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\kernel32\obj\Debug\kernel32.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\kernel32\obj\Debug\kernel32.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\kernel32\obj\Debug\kernel32.pdb

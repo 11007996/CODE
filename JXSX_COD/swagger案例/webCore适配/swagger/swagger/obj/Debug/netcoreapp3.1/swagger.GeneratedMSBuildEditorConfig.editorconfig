@@ -1,3 +1,8 @@
 is_global = true
 build_property.RootNamespace = swagger
-build_property.ProjectDir = D:\zzzzzzzz\CodeBlock\swagger案例\webCore适配\swagger\swagger\
+build_property.ProjectDir = D:\zzzzzzzz\CodeBlock\JXSX_COD\swagger案例\webCore适配\swagger\swagger\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

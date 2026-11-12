@@ -1,0 +1,6 @@
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\user32\bin\Debug\user32.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\user32\bin\Debug\user32.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\user32\bin\Debug\user32.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\user32\obj\Debug\user32.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\user32\obj\Debug\user32.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\winform自定义控件\myControl\user32\obj\Debug\user32.csprojResolveAssemblyReference.cache

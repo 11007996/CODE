@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nyCotrolB1 = new myControl.nyCotrolB();
             this.userControl11 = new myControl.UserControl1();
             this.lTrackBar1 = new myControl.LTrackBar();
             this.myControlA1 = new myControl.myControlA();
-            this.nyCotrolB1 = new myControl.nyCotrolB();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,6 +48,29 @@
             this.panel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panel1.Size = new System.Drawing.Size(207, 90);
             this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(589, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 12);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "拖动移动整个窗体";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            // 
+            // nyCotrolB1
+            // 
+            this.nyCotrolB1.Items = null;
+            this.nyCotrolB1.Location = new System.Drawing.Point(339, 304);
+            this.nyCotrolB1.M_Height = 80;
+            this.nyCotrolB1.M_Width = 150;
+            this.nyCotrolB1.Name = "nyCotrolB1";
+            this.nyCotrolB1.Size = new System.Drawing.Size(313, 83);
+            this.nyCotrolB1.TabIndex = 4;
+            this.nyCotrolB1.Text = "nyCotrolB1";
+            this.nyCotrolB1.Click += new System.EventHandler(this.nyCotrolB1_Click);
             // 
             // userControl11
             // 
@@ -85,22 +109,12 @@
             this.myControlA1.Size = new System.Drawing.Size(236, 188);
             this.myControlA1.TabIndex = 0;
             // 
-            // nyCotrolB1
-            // 
-            this.nyCotrolB1.Location = new System.Drawing.Point(339, 304);
-            this.nyCotrolB1.M_Height = 80;
-            this.nyCotrolB1.M_Width = 150;
-            this.nyCotrolB1.Name = "nyCotrolB1";
-            this.nyCotrolB1.Size = new System.Drawing.Size(313, 83);
-            this.nyCotrolB1.TabIndex = 4;
-            this.nyCotrolB1.Text = "nyCotrolB1";
-            this.nyCotrolB1.Click += new System.EventHandler(this.nyCotrolB1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 467);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.nyCotrolB1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userControl11);
@@ -109,6 +123,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,6 +134,7 @@
         private myControl.UserControl1 userControl11;
         private System.Windows.Forms.TableLayoutPanel panel1;
         private myControl.nyCotrolB nyCotrolB1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

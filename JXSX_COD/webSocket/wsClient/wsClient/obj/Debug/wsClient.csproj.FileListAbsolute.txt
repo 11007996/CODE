@@ -17,3 +17,13 @@ D:\zzzzzzzz\CodeBlock\webSocket\wsClient\wsClient\obj\Debug\wsClient.csproj.Gene
 D:\zzzzzzzz\CodeBlock\webSocket\wsClient\wsClient\obj\Debug\wsClient.csproj.CoreCompileInputs.cache
 D:\zzzzzzzz\CodeBlock\webSocket\wsClient\wsClient\obj\Debug\wsClient.exe
 D:\zzzzzzzz\CodeBlock\webSocket\wsClient\wsClient\obj\Debug\wsClient.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\bin\Debug\wsClient.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\bin\Debug\wsClient.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\bin\Debug\wsClient.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.csproj.AssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.Form1.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.csproj.GenerateResource.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.csproj.CoreCompileInputs.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\webSocket\wsClient\wsClient\obj\Debug\wsClient.pdb

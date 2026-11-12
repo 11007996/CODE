@@ -1,0 +1,5 @@
+C:\Users\11007996\Desktop\Sort\QuickSort\bin\Debug\QuickSort.exe.config
+C:\Users\11007996\Desktop\Sort\QuickSort\bin\Debug\QuickSort.exe
+C:\Users\11007996\Desktop\Sort\QuickSort\bin\Debug\QuickSort.pdb
+C:\Users\11007996\Desktop\Sort\QuickSort\obj\Debug\QuickSort.exe
+C:\Users\11007996\Desktop\Sort\QuickSort\obj\Debug\QuickSort.pdb

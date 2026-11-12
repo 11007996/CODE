@@ -1,5 +1,5 @@
 ﻿WpfPrism
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfPrism\App.xaml
 11407045341
 
-5-1636147174
-2052111188188
+7-1952657578
+205-573257825
 MainWindow.xaml;
 
-False
+True
 

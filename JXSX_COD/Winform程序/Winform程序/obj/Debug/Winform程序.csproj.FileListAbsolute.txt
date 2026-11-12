@@ -10,3 +10,12 @@ C:\Users\mh.guo\Desktop\Winform程序\Winform程序\obj\Debug\Winform程序.pdb
 D:\zzzzzzzz\代码块\Winform程序\Winform程序\bin\Debug\Winform程序.exe.config
 D:\zzzzzzzz\代码块\Winform程序\Winform程序\obj\Debug\Winform程序.exe
 D:\zzzzzzzz\代码块\Winform程序\Winform程序\obj\Debug\Winform程序.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\bin\Debug\Winform程序.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\obj\Debug\Winform程序.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\obj\Debug\Winform程序.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\bin\Debug\Winform程序.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\bin\Debug\Winform程序.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\obj\Debug\Winform程序.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\obj\Debug\Winform程序.Form1.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\obj\Debug\Winform程序.Properties.Resources.resources
+D:\zzzzzzzz\CodeBlock\JXSX_COD\Winform程序\Winform程序\obj\Debug\Winform程序.csproj.GenerateResource.Cache

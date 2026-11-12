@@ -58,30 +58,30 @@ namespace WindowsFormsApplication2
             // graphics.DrawString("孤影'Blog 欢迎您！", font, new SolidBrush(Color.Black), 20, 60);
 
 
-            ////填充路径
-            //Graphics graphics = e.Graphics; // 创建当前窗体的Graphics对象
-            // graphics.FillRectangle(new SolidBrush(Color.White), this.ClientRectangle);  // 以白色画刷填充当前窗体
-            // // 创建线组
-            // GraphicsPath path = new GraphicsPath(new Point[] {
-            //     new Point(40,140),
-            //     new Point(275,200),
-            //     new Point(105,225),
-            //    new Point(190,300),
-            //     new Point(50,350),
-            //     new Point(20,180)
-            // }, new byte[] { 
-            //     (byte)PathPointType.Start,
-            //     (byte)PathPointType.Bezier,
-            //     (byte)PathPointType.Bezier,
-            //     (byte)PathPointType.Bezier,
-            //     (byte)PathPointType.Line,
-            //     (byte)PathPointType.Line
-            // });
-            // // 路径笔刷
-            // PathGradientBrush pathGradientBrush = new PathGradientBrush(path);
-            // // 设置路径中的点对应的颜色数组
-            // pathGradientBrush.SurroundColors = new Color[] { Color.Green, Color.Yellow, Color.Red, Color.Blue, Color.Orange, Color.White };
-            // graphics.FillPath(pathGradientBrush, path); // 填充路径
+            //填充路径
+            Graphics graphics = e.Graphics; // 创建当前窗体的Graphics对象
+            graphics.FillRectangle(new SolidBrush(Color.White), this.ClientRectangle);  // 以白色画刷填充当前窗体
+            // 创建线组
+            GraphicsPath path = new GraphicsPath(new Point[] {
+                 new Point(40,140),
+                 new Point(275,200),
+                 new Point(105,225),
+                new Point(190,300),
+                 new Point(50,350),
+                 new Point(20,180)
+             }, new byte[] { 
+                 (byte)PathPointType.Start,
+                 (byte)PathPointType.Bezier,
+                 (byte)PathPointType.Bezier,
+                 (byte)PathPointType.Bezier,
+                 (byte)PathPointType.Line,
+                 (byte)PathPointType.Line
+             });
+            // 路径笔刷
+            PathGradientBrush pathGradientBrush = new PathGradientBrush(path);
+            // 设置路径中的点对应的颜色数组
+            pathGradientBrush.SurroundColors = new Color[] { Color.Green, Color.Yellow, Color.Red, Color.Blue, Color.Orange, Color.White };
+            graphics.FillPath(pathGradientBrush, path); // 填充路径
 
 
             ////SolidBrush实体画刷
@@ -142,27 +142,27 @@ namespace WindowsFormsApplication2
 
 
             //路径渐变
-            Graphics graphics = e.Graphics; // 创建当前窗体的Graphics对象
-             Point centerPoint = new Point(150, 100);
-             int R = 60;
-             GraphicsPath path = new GraphicsPath();
-             path.AddEllipse(centerPoint.X - R, centerPoint.Y - R, R * 2, R * 2);
-             PathGradientBrush brush = new PathGradientBrush(path);
-             brush.CenterPoint = centerPoint;    // 指定路径中心点
-             brush.CenterColor = Color.Red;  // 指定路径中心的颜色
-             brush.SurroundColors = new Color[] { Color.Plum };
-             graphics.FillEllipse(brush, centerPoint.X - R, centerPoint.Y - R, R * 2, R * 2);
-             centerPoint = new Point(350, 100);
-             R = 20;
-             path = new GraphicsPath();
-             path.AddEllipse(centerPoint.X - R, centerPoint.Y - R, R * 2, R * 2);
-             path.AddEllipse(centerPoint.X - R * 2, centerPoint.Y - R * 2, R * 4, R * 4);
-             path.AddEllipse(centerPoint.X - R * 3, centerPoint.Y - R * 3, R * 6, R * 6);
-             brush = new PathGradientBrush(path);
-             brush.CenterPoint = centerPoint;
-             brush.CenterColor = Color.Red;
-             brush.SurroundColors = new Color[] { Color.Black, Color.Blue, Color.Green };
-             graphics.FillPath(brush, path);
+            //Graphics graphics = e.Graphics; // 创建当前窗体的Graphics对象
+            // Point centerPoint = new Point(150, 100);
+            // int R = 60;
+            // GraphicsPath path = new GraphicsPath();
+            // path.AddEllipse(centerPoint.X - R, centerPoint.Y - R, R * 2, R * 2);
+            // PathGradientBrush brush = new PathGradientBrush(path);
+            // brush.CenterPoint = centerPoint;    // 指定路径中心点
+            // brush.CenterColor = Color.Red;  // 指定路径中心的颜色
+            // brush.SurroundColors = new Color[] { Color.Plum };
+            // graphics.FillEllipse(brush, centerPoint.X - R, centerPoint.Y - R, R * 2, R * 2);
+            // centerPoint = new Point(350, 100);
+            // R = 20;
+            // path = new GraphicsPath();
+            // path.AddEllipse(centerPoint.X - R, centerPoint.Y - R, R * 2, R * 2);
+            // path.AddEllipse(centerPoint.X - R * 2, centerPoint.Y - R * 2, R * 4, R * 4);
+            // path.AddEllipse(centerPoint.X - R * 3, centerPoint.Y - R * 3, R * 6, R * 6);
+            // brush = new PathGradientBrush(path);
+            // brush.CenterPoint = centerPoint;
+            // brush.CenterColor = Color.Red;
+            // brush.SurroundColors = new Color[] { Color.Black, Color.Blue, Color.Green };
+            // graphics.FillPath(brush, path);
         }
     }
 }

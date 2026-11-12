@@ -4,3 +4,9 @@ D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Memento\bin\De
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Memento\obj\Debug\Memento.exe
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Memento\obj\Debug\Memento.pdb
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\Memento\obj\Debug\Memento.csprojResolveAssemblyReference.cache
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Memento\bin\Debug\Memento.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Memento\obj\Debug\Memento.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Memento\obj\Debug\Memento.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Memento\bin\Debug\Memento.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Memento\bin\Debug\Memento.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\Memento\obj\Debug\Memento.csprojResolveAssemblyReference.cache

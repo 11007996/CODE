@@ -1,5 +1,5 @@
 ﻿WpfNoDataContent
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfNoDataContent\App.xaml
 2363120295
 
-91733332235
-210843464490
+11-1411176554
+210-1840981523
 MainWindow.xaml;Views\StartPage.xaml;
 
-False
+True
 

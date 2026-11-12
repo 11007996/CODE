@@ -30,5 +30,11 @@ namespace Razor.Controllers
             return View(myProduct);
         }
         
+
+        public ActionResult viewBagData()
+        {
+            ViewBag.Msg = "aaaaaaaa";
+            return View();
+        }
     }
 }

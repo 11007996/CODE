@@ -1,0 +1,18 @@
+namespace HK.WebApi.Models
+{
+    /// <summary>
+    /// 登录请求模型
+    /// </summary>
+    public class LoginModel
+    {
+        /// <summary>
+        /// 用户名
+        /// </summary>
+        public string Username { get; set; }
+        
+        /// <summary>
+        /// 密码
+        /// </summary>
+        public string Password { get; set; }
+    }
+}    

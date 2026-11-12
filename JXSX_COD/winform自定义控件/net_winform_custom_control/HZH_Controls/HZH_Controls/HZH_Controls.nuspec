@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.5.240416</version>
+    <title>HZHControls</title>
+    <authors>HuangZhengHui</authors>
+    <owners>HuangZhengHui</owners>
+	<license type="expression">MPL-2.0</license>
+    <projectUrl>http://www.hzhcontrols.com</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>C# winfrom custom control, has better operation support for touch screen. The project is based on framework 4.0, completely native control development, without using any third-party control, you can rest assured that it is used in your project.</description>
+    <releaseNotes>New features are released in combination</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>c# winfrom custom control HZH_Controls HZHControls</tags>
+  </metadata>
+</package>

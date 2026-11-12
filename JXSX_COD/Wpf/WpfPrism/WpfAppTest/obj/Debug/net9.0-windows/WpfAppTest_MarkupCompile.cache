@@ -1,5 +1,5 @@
 ﻿WpfAppTest
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 D:\zzzzzzzz\CodeBlock\JXSX_COD\Wpf\WpfPrism\WpfAppTest\App.xaml
 3-1420325352
 
-7-621943570
-210843464490
+9-1843255292
+210-1840981523
 MainWindow.xaml;Views\StartPage.xaml;Views\StartWin.xaml;
 
-False
+True
 

@@ -4,3 +4,6 @@ D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\easyFactory\bi
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\easyFactory\obj\Debug\easyFactory.csprojResolveAssemblyReference.cache
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\easyFactory\obj\Debug\easyFactory.exe
 D:\zzzzzzzz\CodeBlock\设计模式\大话设计模式\design_mode\easyFactory\obj\Debug\easyFactory.pdb
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\easyFactory\bin\Debug\easyFactory.exe.config
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\easyFactory\obj\Debug\easyFactory.exe
+D:\zzzzzzzz\CodeBlock\JXSX_COD\设计模式\大话设计模式\design_mode\easyFactory\obj\Debug\easyFactory.pdb
