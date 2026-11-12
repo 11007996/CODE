@@ -55,14 +55,12 @@ dtype: 数据类型
 
 
 
-'''
-i = np.matrix('1,2;3,4')     # 创建矩阵
-print (i)
-j = np.asarray(i)   # 矩阵转换为二维数组
-print (j)
-k = np.asmatrix (j)     # 二维数组转换为矩阵
-print (k)
-'''
+# i = np.matrix('1,2;3,4')     # 创建矩阵
+# print (i)
+# j = np.asarray(i)   # 矩阵转换为二维数组
+# print (j)
+# k = np.asmatrix (j)     # 二维数组转换为矩阵
+# print (k)
 
 
 

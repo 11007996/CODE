@@ -13,6 +13,7 @@
 
 import cv2
 
+
 # 加载 Haar 特征分类器
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 # 读取图像
@@ -31,3 +32,4 @@ for (x, y, w, h) in faces:
 cv2.imshow('Detected Faces', image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+

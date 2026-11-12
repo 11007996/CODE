@@ -14,16 +14,18 @@ format ：参数指定了图像文件的格式，如果不指定，则默认根�
 import matplotlib.pyplot as plt
 
 '''
-img = plt.imread('D:\work\Chroma-MES数据备份\FA100图表导入\FA100资料图片\PixPin_2025-10-22_11-35-19.png')
+img = plt.imread('D:\work\Chroma-MES数据备份\FA100图表导入\FA100资料图片\PixPin_2025-10-22_11-35-19.png')   # 范围0-1之间
 # 显示图像
 plt.imshow(img)
 plt.show()
 '''
 
-'''  # 调整亮度
+
+'''
+# 调亮度整
 img_array = plt.imread('D:\work\Chroma-MES数据备份\FA100图表导入\FA100资料图片\PixPin_2025-10-22_11-35-19.png')
-tiger = img_array/255
-#print(tiger)
+tiger = img_array
+print(tiger)
 # 显示图像
 plt.figure(figsize=(10,6))
 for i in range(1,5):
@@ -35,13 +37,15 @@ for i in range(1,5):
 plt.show()
 '''
 
-''' # 裁剪图像
+
+'''
+# 裁剪图像
 img_array = plt.imread('D:\work\Chroma-MES数据备份\FA100图表导入\FA100资料图片\PixPin_2025-10-22_11-35-19.png')
-tiger = img_array/255
+tiger = img_array/2
 # 显示图像
-plt.figure(figsize=(6,6))
-plt.imshow(tiger[:300,100:400,:])
-plt.axis('off')
+plt.figure(figsize=(6,6))   # 创建一个6*6英寸的画布
+plt.imshow(tiger[:300,100:400,:])   # NumPy多维数组切片,x方向保留300，y方向保留300，颜色通道全部保留
+#plt.axis('off')   # **关闭坐标轴、刻度、坐标轴标签、边框**，只保留图像内容。
 plt.show()
 '''
 

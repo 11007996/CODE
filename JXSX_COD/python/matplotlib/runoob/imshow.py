@@ -23,6 +23,7 @@ url：用于指定图像链接。
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
+
 '''
 # 生成一个二维随机数组
 img = np.random.rand(10, 10)
@@ -31,20 +32,28 @@ plt.imshow(img, cmap='hot')   # 热力图像
 # 显示图像
 plt.show()
 '''
+
 '''
 # 生成一个三维随机数组
-img = np.random.rand(10, 10, 3)
+img = np.random.rand(5,5, 3)
 # 绘制彩色图像
 plt.imshow(img)
 # 显示图像
 plt.show()
 '''
 
+
+
+
+
 '''
 # 加载本地图片
 img = Image.open('D:\work\Chroma-MES数据备份\FA100图表导入\FA100资料图片\PixPin_2025-10-22_11-35-19.png')
 # 转换为数组
 data = np.array(img)
+data[:, :, 0] =200 # 红(范围是255)
+# data[:, :, 1] =200  # 绿
+# data[:, :, 2] =1  # 蓝
 # 绘制地图
 plt.imshow(data)
 # 隐藏坐标轴
@@ -54,7 +63,8 @@ plt.show()
 '''
 
 
-'''
+
+
 n = 5
 # 创建一个 n x n 的二维numpy数组
 a = np.reshape(np.linspace(0,1,n**2), (n,n))
@@ -81,4 +91,3 @@ plt.xticks(range(n))
 # Viridis 映射，双立方混合
 plt.title('Viridis color map, bicubic blending', y=1.02, fontsize=12)
 plt.show()
-'''

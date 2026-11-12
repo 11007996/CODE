@@ -113,10 +113,9 @@ print(res)
 
 # 在信息论中，两个等长字符串之间的汉明距离（英语：Hamming distance）是两个字符串对应位置的不同字符的个数。换句话说，它就是将一个字符串变换成另外一个字符串所需要替换的字符个数。
 # 汉明重量是字符串相对于同样长度的零字符串的汉明距离，也就是说，它是字符串中非零的元素个数：对于二进制字符串来说，就是 1 的个数，所以 11101 的汉明重量是 4。
-'''
-from scipy.spatial.distance import hamming
-p1 = (True, False, True)
-p2 = (False, True, True)
-res = hamming(p1, p2)
-print(res)
-'''
+# from scipy.spatial.distance import hamming
+# p1 = (True, False, True)
+# p2 = (False, True, True)
+# res = hamming(p1, p2)
+# print(res)
+

@@ -85,7 +85,7 @@ scale：缩放因子，默认为 1。
 delta：可选的 delta 值，默认为 0。
 borderType：边界填充类型，默认为 cv2.BORDER_DEFAULT。
 '''
-'''
+
 # 计算 x 方向的梯度
 sobel_x = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=13,scale=1)
 # 计算 y 方向的梯度
@@ -96,7 +96,7 @@ sobel_combined = np.sqrt(sobel_x**2 + sobel_y**2)
 cv2.imshow('Sobel X', sobel_x)
 # cv2.imshow('Sobel Y', sobel_y)
 # cv2.imshow('Sobel Combined', sobel_combined)
-'''
+
 
 
 

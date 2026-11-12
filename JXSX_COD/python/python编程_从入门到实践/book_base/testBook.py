@@ -438,7 +438,7 @@ print("0000")
 try:
   with open("read.txt", 'r', encoding='utf-8') as fileText:
     contents = fileText.read()   
-    print(contents)
+      print(contents)
     a = 5/0
 except FileNotFoundError:  #异常捕捉未找到此文件
   print("未找到此文件")
@@ -476,9 +476,3 @@ with open("jsonRead.json","r") as j_obj:
   num1 = json.load(j_obj)   #读取json文件
   print(num1)
 '''
-
-
-a = 23
-b = a.copy()
-b -= 1
-print(a)

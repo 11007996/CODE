@@ -19,7 +19,8 @@ import matplotlib
 
 
 # 画两条拆线
-'''  # X轴为默认值
+# X轴为默认值
+'''
 y1 = np.array([3, 7, 5, 9])
 y2 = np.array([6, 2, 13, 10])
 plt.plot(y1)
@@ -35,18 +36,20 @@ plt.plot(x1, y1, x2, y2)
 # plt.show()
 
 
-
-# 轴标签和标题
 '''
+# 轴标签和标题
 ypoints = np.array([1,3,4,5,8,9,6,1,3,4,5,2,4])
+xpoints = np.array([1,2,3,5,6,9,11,10,13,16,20,23,40])
 plt.title("RUNOOB TEST TITLE")
 plt.xlabel("x - label")
 # plt.ylabel("y - label")
 zhfont1 = matplotlib.font_manager.FontProperties(fname="C:\Windows\Fonts\simhei.ttf")    # matplotlib默认不支持中文，需手动设置中文字体
 plt.ylabel("y - 轴",fontproperties=zhfont1)  # 指定中文字体
-plt.plot(ypoints)
+plt.plot(xpoints,ypoints)
 plt.show()
 '''
+
+
 '''
 ypoints = np.array([1,3,4,5,8,9,6,1,3,4,5,2,4])
 zhfont1 = matplotlib.font_manager.FontProperties(fname="C:\Windows\Fonts\simhei.ttf", size=18)  # size 参数设置标题字体大小

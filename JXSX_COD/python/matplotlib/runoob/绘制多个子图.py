@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
 '''
 # subplot方法在绘图时需要指定位置
-# 子图表编号按从或到右，从上到下顺序排列
+# 子图表编号按从左到右，从上到下顺序排列
 #plot 1:
 xpoints = np.array([0,4, 6])
 ypoints = np.array([0,20, 100])
@@ -19,7 +20,9 @@ plt.suptitle("RUNOOB subplot Test")   # 总标题
 plt.show()
 '''
 
-'''
+
+
+
 # subplots方法可以一次生成多个，在调用时只需要调用生成对象的 ax 即可
 # 创建一些测试数据 -- 图1
 x = np.linspace(0, 2*np.pi, 400)   # 从0到2*np.pi均匀取400个值
@@ -30,7 +33,7 @@ ax.plot(x, y)
 ax.set_title('Simple plot')
 # 创建两个子图 -- 图3
 f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)  # 直接在返回值中解包，作用与ax[0]、ax[1]一样
-ax1.plot(x, y)
+ax1.plot(x, y)  # 用来绘制一组点，并且默认用线段把点依次连起来,画折线图
 ax1.set_title('Sharing Y axis')
 ax2.scatter(x, y)   # 散点图
 # 创建四个子图 -- 图4
@@ -49,7 +52,7 @@ axs[1, 1].scatter(x, y)
 # fig, ax = plt.subplots(num=10, clear=True)
 plt.tight_layout()  #自动调整子图之间的间距
 plt.show()
-'''
+
 
 
 '''

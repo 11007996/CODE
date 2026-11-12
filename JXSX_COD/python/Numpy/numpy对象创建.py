@@ -54,18 +54,15 @@ complex64	复数，表示双 32 位浮点数（实数部分和虚数部分）
 complex128	复数，表示双 64 位浮点数（实数部分和虚数部分）
 '''
 
-'''
-a = np.array([1,  2,  3], dtype = "i4")     # int8, int16, int32, int64 四种数据类型可以使用字符串 'i1', 'i2','i4','i8' 代替
-print (a.dtype)
-'''
+# a = np.array([1,  2,  3], dtype = "i4")     # int8, int16, int32, int64 四种数据类型可以使用字符串 'i1', 'i2','i4','i8' 代替
+# print (a.dtype)
 
 
- # <意味着小端法(最小值存储在最小的地址，即低位组放在最前面)。>意味着大端法(最重要的字节存储在最小的地址，即高位组放在最前面
- # 使用标量类型
+# <意味着小端法(最小值存储在最小的地址，即低位组放在最前面)。>意味着大端法(最重要的字节存储在最小的地址，即高位组放在最前面
+# 使用标量类型
 # dt = np.dtype('>i4')
 # dt = np.dtype('<i4')
 # print(dt)
-
 
 '''
 # 创建结构化数据类型,类似于结构体
@@ -106,10 +103,15 @@ shape   数组形状
 dtype   数据类型，可选
 order   有"C"和"F"两个选项,分别代表，行优先和列优先，在计算机内存中的存储元素的顺序。
 '''
+
 # x = np.empty([3,2], dtype = int) 
 # print (x)   # 未初始化，所以数组数据是随机的
-# x[0][0] = 1
-# x[1][0] = 2
+# x[0][0] = 10
+# x[0][1] = 11
+# x[1][0] = 20
+# x[1][1] = 21
+# x[2][0] = 30
+# x[2][1] = 31
 # print(x)
 
 
@@ -122,6 +124,8 @@ shape   数组形状
 dtype   数据类型，可选
 order   'C' 用于 C 的行数组，或者 'F' 用于 FORTRAN 的列数组
 '''
+
+
 '''
 # 默认为浮点数
 x = np.zeros(5) 
@@ -136,7 +140,6 @@ print(z)
 
 
 
-
 '''
 创建指定形状的数组，数组元素以 1 来填充：
 numpy.ones(shape, dtype = None, order = 'C')
@@ -146,6 +149,7 @@ shape   数组形状
 dtype   数据类型，可选
 order   'C' 用于 C 的行数组，或者 'F' 用于 FORTRAN 的列数组
 '''
+
 '''
 # 默认为浮点数
 x = np.ones(5) 
@@ -153,9 +157,9 @@ print(x)
 # 自定义类型
 x = np.ones([2,2], dtype = int)
 print(x)
+x[0][1] = 134
+print(x)
 '''
-
-
 
 
 '''
@@ -190,6 +194,8 @@ order   数组在内存中的存储顺序，可选值为 'C'（按行优先）�
 subok   是否允许返回子类，如果为 True，则返回一个子类对象，否则返回一个与 a 数组具有相同数据类型和存储顺序的数组
 shape   创建的数组的形状，如果不指定，则默认为 a 数组的形状。
 '''
+
+
 '''
 # 创建一个 3x3 的二维数组
 arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -211,23 +217,28 @@ a   任意形式的输入参数，可以是，列表, 列表的元组, 元组, �
 dtype   数据类型，可选
 order   可选，有"C"和"F"两个选项,分别代表，行优先和列优先，在计算机内存中的存储元素的顺序。
 '''
+
+
 '''
 x =  [1,2,3] 
 a = np.asarray(x)  
 print (a)
 '''
-'''
+
+'''hello
 x =  (1,2,3) 
 a = np.asarray(x)  # 将元组转换为 ndarray:
 print (a)
 '''
+
+
+
 '''
 x =  [(1,2,3),(4,5,6)] 
 # a = np.asarray(x)    # 将元组列表转换为 ndarray
 a = np.asarray(x, dtype =  float)   # 设置ndarray数据类型
 print(a)
 '''
-
 
 
 
@@ -240,12 +251,12 @@ dtype   返回数组的数据类型，可选
 count   读取的数据数量，默认为-1，读取所有数据。
 offset  读取的起始位置，默认为0。
 '''
+
 '''
 s =  b'Hello World'   # 字节流
 a = np.frombuffer(s, dtype =  'S1')  
 print (a)
 '''
-
 
 
 
@@ -257,12 +268,13 @@ iterable    可迭代对象
 dtype   返回数组的数据类型
 count   读取的数据数量，默认为-1，读取所有数据
 '''
+
 '''
 # 使用 range 函数创建列表对象  
 list=range(5)
 it=iter(list)
 # 使用迭代器创建 ndarray 
-x=np.fromiter(it, dtype=float)
+x=np.fromiter(it, dtype=int)
 print(x)
 '''
 
@@ -306,9 +318,10 @@ endpoint    该值为 true 时，数列中包含stop值，反之不包含，默�
 retstep 如果为 True 时，生成的数组中会显示间距，反之不显示。
 dtype   ndarray 的数据类型
 '''
+
 # a = np.linspace(1,10,20)
 # print(a)
-# a = np.linspace(10, 20,  5, endpoint =  False)   # 产生一个范围从10到20的等差数列，元素包含5个元素
+# a = np.linspace(10, 20,  5, endpoint = False)   # 产生一个范围从10到20的等差数列，元素包含5个元素
 # print(a)
 
 
@@ -317,7 +330,7 @@ dtype   ndarray 的数据类型
 
 
 '''
-numpy.logspace 函数用于创建一个于等比数列
+numpy.logspace 用于生成在对数刻度上均匀分布的数值序列
 np.logspace(start, stop, num=50, endpoint=True, base=10.0, dtype=None)
 参数  描述
 start   序列的起始值为：base ** start
@@ -327,7 +340,8 @@ endpoint    该值为 true 时，数列中中包含stop值，反之不包含，�
 base    对数 log 的底数。
 dtype   ndarray 的数据类型
 '''
+
 # 默认底数是 10
-# a = np.logspace(1.0,  2.0, num =  10)   # 产生一个范围从1到2的等比数列，元素包含10个元素
+# a = np.logspace(2,  16, num = 4,endpoint=True)  
 # print (a)
 

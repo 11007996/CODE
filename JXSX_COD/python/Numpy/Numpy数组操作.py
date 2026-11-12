@@ -1,6 +1,7 @@
 import numpy as np
  
 
+# 多维数组把它理解为一种数组嵌套，轴0表示最外层，依次以里向内，[0,0,1]表示第1层嵌套的第1层嵌套的第2个元素
 
 
 '''
@@ -14,6 +15,13 @@ print (b)
 '''
 
 
+'''
+# 修改数组
+zeros_arr = np.zeros_like(np.arange(27).reshape(3,3,3))
+zeros_arr[:, :, 0] =1
+print(zeros_arr)
+'''
+
 
 
 '''
@@ -26,6 +34,7 @@ print ('迭代后的数组：')
 for element in a.flat:    # 迭代铺平数据
     print (element)
 '''
+
 
 
 
@@ -45,8 +54,6 @@ print (a.flatten(order = 'F'))
 
 
 
-
-
 '''
 a = np.arange(8).reshape(2,4)
 print ('原数组：')
@@ -61,8 +68,6 @@ print (a.ravel(order = 'F'))
 
 
 
-
-
 '''
 a = np.arange(12).reshape(3,4)
 print ('原数组：')
@@ -71,7 +76,6 @@ print ('\n')
 print ('对换数组：')
 print (np.transpose(a))  # 用于对换数组的维度,行转列
 '''
-
 
 
 '''
@@ -92,6 +96,7 @@ arr：数组
 axis：要向后滚动的轴，其它轴的相对位置不会改变
 start：默认为零，表示完整的滚动。会滚动到特定位置。
 '''
+
 '''
 # 创建了三维的 ndarray
 a = np.arange(8).reshape(2,2,2)
@@ -112,11 +117,19 @@ print ('\n')
 # 将轴 2 滚动到轴 1：（宽度到高度）
 print ('调用 rollaxis 函数：')
 c = np.rollaxis(a,2,1)
+
 print (c)
 # 查看元素 a[1,1,0]，即 6 的坐标，变成 [1, 0, 1]
 # 最后的 0 和 它前面的 1 对换位置
 print(np.where(c==6))   
 print ('\n')
+'''
+
+
+'''
+a = np.arange(6).reshape(2,3)
+print(a)
+print(a[1,1])  #np生成的数组可用此语法
 '''
 
 
@@ -131,7 +144,6 @@ print ('\n')
 print ('调用 swapaxes 函数后的数组：')
 print (np.swapaxes(a, 2, 0))   # 用于交换数组的两个轴
 '''
-
 
 
 
@@ -174,7 +186,6 @@ print (x + y)
 
 
  
-'''
 x = np.array(([1,2],[3,4]))
 print ('数组 x：')
 print (x)
@@ -196,7 +207,6 @@ print (x.ndim,y.ndim)
 print ('\n')
 print ('x.shape 和 y.shape：')
 print (x.shape, y.shape)
-'''
 
 
 
