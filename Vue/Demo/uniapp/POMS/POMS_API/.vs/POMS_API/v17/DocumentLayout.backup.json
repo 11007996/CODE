@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\helper\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\helper\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\models\\baseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\models\\baseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\models\\basicdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\models\\basicdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\helper\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\helper\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BaseClass.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Models\\BaseClass.cs",
+              "RelativeDocumentMoniker": "POMS_API\\Models\\BaseClass.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Models\\BaseClass.cs",
+              "RelativeToolTip": "POMS_API\\Models\\BaseClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T01:18:06.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Program.cs",
               "RelativeDocumentMoniker": "POMS_API\\Program.cs",
@@ -47,52 +64,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BasicData.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Models\\BasicData.cs",
               "RelativeDocumentMoniker": "POMS_API\\Models\\BasicData.cs",
               "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Models\\BasicData.cs",
               "RelativeToolTip": "POMS_API\\Models\\BasicData.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA7wBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAMwCYAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-24T07:59:46.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BasicDataController.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BasicDataController.cs",
               "RelativeDocumentMoniker": "POMS_API\\Controllers\\BasicDataController.cs",
               "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BasicDataController.cs",
               "RelativeToolTip": "POMS_API\\Controllers\\BasicDataController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-24T07:55:05.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Helper\\UserService.cs",
               "RelativeDocumentMoniker": "POMS_API\\Helper\\UserService.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Helper\\UserService.cs",
-              "RelativeToolTip": "POMS_API\\Helper\\UserService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwMwAAAAQAAAAAAAAAA==",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Helper\\UserService.cs*",
+              "RelativeToolTip": "POMS_API\\Helper\\UserService.cs*",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAkwGkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-24T04:36:33.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "BaseController.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BaseController.cs",
               "RelativeDocumentMoniker": "POMS_API\\Controllers\\BaseController.cs",
               "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BaseController.cs",
               "RelativeToolTip": "POMS_API\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwC0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-24T04:36:22.603Z",
               "EditorCaption": ""
