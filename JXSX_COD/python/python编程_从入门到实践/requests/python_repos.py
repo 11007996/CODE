@@ -19,8 +19,8 @@ print(response_dict["rate"]["resource"])  # JSON键值
 '''
 
 
-# url = "https://hacker-news.firebaseio.com/v0/item/9884165.json"
-# r = requests.get(url)
-# response_dict = r.json()
-# print(response_dict["kids"][1])
-# print(r.text)    # 返回HTML页面
+url = "https://hacker-news.firebaseio.com/v0/item/9884165.json"
+r = requests.get(url)
+response_dict = r.json()
+print(response_dict["kids"][1])
+print(r.text)    # 返回HTML页面

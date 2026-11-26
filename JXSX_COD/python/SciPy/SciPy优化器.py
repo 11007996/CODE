@@ -6,15 +6,21 @@ def eqn(x):
 myroot = root(eqn, 0)
 print(myroot.x)
 # 查看更多信息
-#print(myroot)
+print("-----------")
+print(myroot)
 '''
+
 '''
+# 梯度下降法
 from scipy.optimize import minimize
 def eqn(x):
-  return x**2 + x + 2
+  return x**2+x+1
 mymin = minimize(eqn, 0, method='BFGS')   # 最小化函数， 在给定约束或无约束条件下，寻找目标函数最小值及对应输入值的数学工具
 print(mymin)
 '''
+
+
+
 '''
 最小化函数报告
 字段名 通俗含义  专业解读

@@ -30,6 +30,7 @@ values	[[1,2],[3,4]]	只返回数据，不包括索引和列名
 
 import pandas as pd
 import json
+from io import StringIO
 
 # df = pd.read_json('sites.json')   # 读取JSON文件
 # print(df.to_string())
@@ -49,31 +50,39 @@ import json
 # print(df)
 
 
+
+
 # JSON 字符串
 # 三个单引号不在行首表示字符串段落
-# json_data = '''
+# json_data ='''
 # [
 #   {"Name": "Alice", "Age": 25, "City": "New York"},
 #   {"Name": "Bob", "Age": 30, "City": "Los Angeles"},
 #   {"Name": "Charlie", "Age": 35, "City": "Chicago"}
 # ]'''
 
-# # 从 JSON 字符串读取数据
+# # 从 JSON 字符串读取数据,旧写法，逐渐废弃
 # df = pd.read_json(json_data)
 # df = pd.read_json(json_data, orient='records')
 # print(df)
 
-
+# read_json新写法，推荐StringIO
+# df = pd.read_json(StringIO(json_data)')
+# print(df)
 
 # 读取嵌套的JSON
 # df = pd.read_json('nested_list.json')
 # print(df)
+
+
 # 使用 Python JSON 模块载入数据
 # with open('nested_list.json','r') as f:
 #     data = json.loads(f.read())
-# # 展平数据
+    
+# 展平数据
 # df_nested_list = pd.json_normalize(data, record_path =['students'])   # 使用了参数 record_path 并设置为 ['students'] 用于展开内嵌的 JSON 数据 students
 # print(df_nested_list)
+
 # 展平数据
 # df_nested_list = pd.json_normalize(
 #     data,
@@ -131,10 +140,12 @@ encoding	输出文件的编码格式	'utf-8'
 #     'Age': [25, 30, 35],
 #     'City': ['New York', 'Los Angeles', 'Chicago']
 # })
+# df=df.set_index('Name')
+# print(df)
 # 将 DataFrame 转换为 JSON 字符串
 # json_str = df.to_json()
 # print(json_str)
-# df.to_json('data.json', orient='records', lines=True)
+# df.to_json('data.json', orient='index', lines=False)
 
 
 

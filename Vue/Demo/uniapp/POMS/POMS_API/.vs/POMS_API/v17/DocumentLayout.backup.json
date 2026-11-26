@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\models\\basicdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\models\\basicdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\controllers\\basicdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\controllers\\basicdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|d:\\zzzzzzzz\\codeblock\\vue\\demo\\uniapp\\poms\\poms_api\\poms_api\\helper\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AE1899-5F23-46A2-A845-CD32709BF909}|POMS_API\\POMS_API.csproj|solutionrelative:poms_api\\helper\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "homeController.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\homeController.cs",
-              "RelativeDocumentMoniker": "POMS_API\\Controllers\\homeController.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\homeController.cs*",
-              "RelativeToolTip": "POMS_API\\Controllers\\homeController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T03:44:14.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Program.cs",
               "RelativeDocumentMoniker": "POMS_API\\Program.cs",
               "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Program.cs",
               "RelativeToolTip": "POMS_API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwCQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T03:42:37.976Z",
+              "WhenOpened": "2026-11-25T04:34:21.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BasicData.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Models\\BasicData.cs",
+              "RelativeDocumentMoniker": "POMS_API\\Models\\BasicData.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Models\\BasicData.cs",
+              "RelativeToolTip": "POMS_API\\Models\\BasicData.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA7wBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T07:59:46.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "POMS_API\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "POMS_API\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxQAAAAsAAAAAAAAAA==",
+              "Title": "BasicDataController.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BasicDataController.cs",
+              "RelativeDocumentMoniker": "POMS_API\\Controllers\\BasicDataController.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BasicDataController.cs",
+              "RelativeToolTip": "POMS_API\\Controllers\\BasicDataController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T03:42:27.601Z",
+              "WhenOpened": "2026-11-24T07:55:05.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "POMS_API\\WeatherForecast.cs",
-              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\WeatherForecast.cs",
-              "RelativeToolTip": "POMS_API\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Helper\\UserService.cs",
+              "RelativeDocumentMoniker": "POMS_API\\Helper\\UserService.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Helper\\UserService.cs",
+              "RelativeToolTip": "POMS_API\\Helper\\UserService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwMwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T03:42:13.284Z",
+              "WhenOpened": "2026-11-24T04:36:33.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "POMS_API\\Controllers\\BaseController.cs",
+              "ToolTip": "D:\\zzzzzzzz\\CodeBlock\\Vue\\Demo\\uniapp\\POMS\\POMS_API\\POMS_API\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "POMS_API\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T04:36:22.603Z",
               "EditorCaption": ""
             }
           ]

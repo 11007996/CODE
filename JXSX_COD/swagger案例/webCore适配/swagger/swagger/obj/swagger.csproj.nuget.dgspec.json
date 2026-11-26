@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\zzzzzzzz\\CodeBlock\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj": {}
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj": {}
   },
   "projects": {
-    "D:\\zzzzzzzz\\CodeBlock\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj": {
+    "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj",
+        "projectUniqueName": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj",
         "projectName": "swagger",
-        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj",
-        "packagesPath": "C:\\Users\\mh.guo\\.nuget\\packages\\",
-        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\swagger案例\\webCore适配\\swagger\\swagger\\obj\\",
+        "projectPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\swagger案例\\webCore适配\\swagger\\swagger\\swagger.csproj",
+        "packagesPath": "C:\\Users\\11007996\\.nuget\\packages\\",
+        "outputPath": "D:\\zzzzzzzz\\CodeBlock\\JXSX_COD\\swagger案例\\webCore适配\\swagger\\swagger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ruanjian\\TOOL\\VS2019\\downloadTool\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mh.guo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\11007996\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://mirrors.cloud.tencent.com/nuget/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {

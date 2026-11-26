@@ -29,16 +29,17 @@ axis	合并的轴，0 表示按行合并，1 表示按列合并
 ignore_index	是否忽略索引，重新生成索引（默认为 False）
 keys	为合并的对象提供层次化索引
 '''
+
 '''
 # 示例数据
 df1 = pd.DataFrame({'A': [1, 2, 3]})
 df2 = pd.DataFrame({'A': [4, 5, 6]})
+df2 = pd.DataFrame({'B': [4, 5, 6]})
 # 行合并
 result = pd.concat([df1, df2], axis=0, ignore_index=True)
 print(result)
+
 '''
-
-
 
 
 '''
@@ -48,6 +49,7 @@ other	需要连接的另一个 DataFrame
 how	合并方式，支持 'left', 'right', 'outer', 'inner'
 on	使用的连接列，默认基于索引
 '''
+
 '''
 # 示例数据
 left = pd.DataFrame({'A': [1, 2, 3]}, index=[1, 2, 3])
@@ -159,7 +161,6 @@ print(df)
 
 
 
-
 '''
 groupby() — 数据分组
 参数	说明
@@ -184,17 +185,16 @@ print(grouped)
 
 # 聚合操作（agg()）
 # agg() 用于执行复杂的聚合操作，可以传入多个函数来同时计算多个聚合值。
-'''
 # 示例数据
+'''
 df = pd.DataFrame({
     'Category': ['A', 'B', 'A', 'B', 'A', 'B'],
     'Value': [10, 20, 30, 40, 50, 60]
 })
 # 使用 agg() 来进行多个聚合操作
-grouped = df.groupby('Category')['Value'].agg([sum, min, max])
+grouped = df.groupby('Category')['Value'].agg(['sum', 'min', 'max'])
 print(grouped)
 '''
-
 
 
 '''
@@ -230,7 +230,7 @@ print(df)
 
 
 # 多重索引
-'''
+
 # 创建元组
 index_tuples = [('A', 1), ('A', 2), ('B', 1), ('B', 2)]    # 使用元组来创建多重索引，每个元组对应一个索引层级。
 # 创建多重索引
@@ -238,7 +238,8 @@ multi_index = pd.MultiIndex.from_tuples(index_tuples, names=['Letter', 'Number']
 # 创建 DataFrame
 df = pd.DataFrame({'Value': [10, 20, 30, 40]}, index=multi_index)
 print(df)
-'''
+print(df.loc('A'))
+
 '''
 # 创建多个列表
 index_values = [['A', 'B'], [1, 2]]
@@ -249,7 +250,7 @@ df = pd.DataFrame({'Value': [10, 20, 30, 40]}, index=multi_index)
 print(df)
 '''
 
-# 示例数据
+''''# 示例数据
 data = {
     'Letter': ['A', 'A', 'B', 'B'],
     'Number': [1, 2, 1, 2],
@@ -264,3 +265,4 @@ print(df)
 # print(df.loc['A'])     # 选择 Letter 为 'A' 的所有数据
 # df_sorted = df.sort_index(level=['Letter', 'Number'], ascending=[True, False])  # 按照多重索引排序
 # print(df_sorted)
+'''

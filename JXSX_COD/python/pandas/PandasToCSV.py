@@ -4,7 +4,7 @@ import pandas as pd
 # 读取 CSV 文件，并自定义列名和分隔符
 # df = pd.read_csv('ba.csv', sep=';', header=0, names=['A', 'B', 'C'], dtype={'A': int, 'B': float})
 
-df = pd.read_csv('nba.csv')
+# df = pd.read_csv('nba.csv')
 # print(df.to_string())    # to_string() 用于返回 DataFrame 类型的数据，如果不使用该函数，则输出结果为数据的前面 5 行和末尾 5 行，中间部分以 ... 代替。
 # print(df.head(3))   # 返回前3行数据，默认为前5行
 # print(df.tail(10))    # 返回后10行数据，默认为后5行
@@ -36,14 +36,14 @@ encoding	文件的编码格式（如 utf-8，latin1 等）NONE
 
 
 # 三个字段 name, site, age
-# nme = ["Google", "Runoob", "Taobao", "Wiki"]
-# st = ["www.google.com", "www.runoob.com", "www.taobao.com", "www.wikipedia.org"]
-# ag = [90, 40, 80, 98]
+nme = ["Google", "Runoob", "Taobao", "Wiki"]
+st = ["www.google.com", "www.runoob.com", "www.taobao.com", "www.wikipedia.org"]
+ag = [90, 40, 80, 98]
 # 字典
-# dict = {'name': nme, 'site': st, 'age': ag}
-# df = pd.DataFrame(dict)
+dict = {'name': nme, 'site': st, 'age': ag}
+df = pd.DataFrame(dict)
 # 保存 dataframe
-# df.to_csv('site.csv',header=['n','s','a'])   # 指定列标题
+df.to_csv('site.csv',header=['n','s','a'])   # 指定列标题
 # df.to_csv('site.csv',header=None)    # 没有列标题
 # df.to_csv('site.csv')
 

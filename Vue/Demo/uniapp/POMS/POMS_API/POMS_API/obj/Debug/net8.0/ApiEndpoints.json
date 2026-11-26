@@ -1,84 +1,15 @@
 [
   {
-    "ContainingType": "POMS_API.Controllers.homeController",
-    "Method": "add",
-    "RelativePath": "home/add",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "a",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "\u65B9\u6CD5\u4E00"
-  },
-  {
-    "ContainingType": "POMS_API.Controllers.homeController",
-    "Method": "addd",
-    "RelativePath": "home/addd",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "a",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "c",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "\u65B9\u6CD5\u4E8C"
-  },
-  {
-    "ContainingType": "POMS_API.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "POMS_API.Controllers.BaseController",
+    "Method": "getAppVersion",
+    "RelativePath": "api/Base/getAppVersion",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[POMS_API.WeatherForecast, POMS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -87,6 +18,172 @@
         "StatusCode": 200
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "EndpointName": "getAppVersion"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BaseController",
+    "Method": "Login",
+    "RelativePath": "api/Base/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginInput",
+        "Type": "POMS_API.Models.BaseClass\u002BLoginInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "Login"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BaseController",
+    "Method": "test",
+    "RelativePath": "api/Base/test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "b",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "test"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "AddLine",
+    "RelativePath": "api/BasicData/AddLine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineData",
+        "Type": "POMS_API.Models.BasicData\u002BLine",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "AddLine"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "GetLineDetailsById",
+    "RelativePath": "api/BasicData/GetLineDetailsById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineid",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetLineDetailsById"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "GetShiftOverview",
+    "RelativePath": "api/BasicData/GetShiftOverview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetShiftOverview"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.homeController",
+    "Method": "add",
+    "RelativePath": "api/home/add",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "b",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "add"
   }
 ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POMS_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4062f5e1672910fd0b4f749f9fe1339de160f4ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37042543a6cd80256f368defe2f624361dc758ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("POMS_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POMS_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,10 @@
-export function show(res)
+const a = 12345;
+if(a.startsWith(a))
 {
-  console.log((res);
+    console.log("shi")
 }
+else
+{
+    console.log("fou")
+}
+

@@ -3,7 +3,7 @@
 namespace POMS_API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class homeController
     {
         [HttpGet("add",Name = "add")]

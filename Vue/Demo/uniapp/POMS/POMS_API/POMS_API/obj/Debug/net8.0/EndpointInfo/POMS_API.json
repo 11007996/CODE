@@ -5,12 +5,257 @@
     "version": "1.0"
   },
   "paths": {
-    "/home/add": {
+    "/api/Base/test": {
+      "post": {
+        "tags": [
+          "Base"
+        ],
+        "operationId": "test",
+        "parameters": [
+          {
+            "name": "a",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "b",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Base/Login": {
+      "post": {
+        "tags": [
+          "Base"
+        ],
+        "operationId": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Base/getAppVersion": {
+      "get": {
+        "tags": [
+          "Base"
+        ],
+        "operationId": "getAppVersion",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/AddLine": {
+      "post": {
+        "tags": [
+          "BasicData"
+        ],
+        "operationId": "AddLine",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Line"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Line"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Line"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/GetLineDetailsById": {
+      "get": {
+        "tags": [
+          "BasicData"
+        ],
+        "operationId": "GetLineDetailsById",
+        "parameters": [
+          {
+            "name": "lineid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/GetShiftOverview": {
+      "get": {
+        "tags": [
+          "BasicData"
+        ],
+        "operationId": "GetShiftOverview",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/home/add": {
       "get": {
         "tags": [
           "home"
         ],
-        "operationId": "方法一",
+        "operationId": "add",
         "parameters": [
           {
             "name": "a",
@@ -49,104 +294,6 @@
                 "schema": {
                   "type": "integer",
                   "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/home/addd": {
-      "get": {
-        "tags": [
-          "home"
-        ],
-        "operationId": "方法二",
-        "parameters": [
-          {
-            "name": "a",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "b",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "c",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
                 }
               }
             }
@@ -157,23 +304,79 @@
   },
   "components": {
     "schemas": {
-      "WeatherForecast": {
+      "APIReturn": {
         "type": "object",
         "properties": {
-          "date": {
+          "msg": {
             "type": "string",
-            "format": "date"
+            "nullable": true
           },
-          "temperatureC": {
+          "status": {
             "type": "integer",
             "format": "int32"
           },
-          "temperatureF": {
+          "data": {
+            "type": "array",
+            "items": { },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Line": {
+        "type": "object",
+        "properties": {
+          "lineId": {
             "type": "integer",
-            "format": "int32",
-            "readOnly": true
+            "format": "int32"
           },
-          "summary": {
+          "lineName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lineAlias": {
+            "type": "string",
+            "nullable": true
+          },
+          "lineDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "remark": {
+            "type": "string",
+            "nullable": true
+          },
+          "shiftid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shiftName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginInput": {
+        "required": [
+          "password",
+          "userNo"
+        ],
+        "type": "object",
+        "properties": {
+          "userNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
             "type": "string",
             "nullable": true
           }

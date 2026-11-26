@@ -137,7 +137,7 @@ to_sql()	将 DataFrame 导出为 SQL 数据库
 query()	使用 SQL 风格的语法查询 DataFrame
 duplicated()	返回布尔值 DataFrame，指示每行是否是重复的
 drop_duplicates()	删除重复的行
-set_index()	设置 DataFrame 的索引
+set_index()	设置 DataFrame 的索引,替代默认的1，2，3索引列
 reset_index()	重置 DataFrame 的索引
 transpose()	转置 DataFrame（行列交换）
 '''

@@ -25,6 +25,17 @@ namespace POMS_API
 
             app.UseAuthorization();
 
+            app.UseCors(options =>
+            {
+                //options.AllowAnyOrigin()  // 或者指定前端地址
+                //       .AllowAnyMethod()
+                //       .AllowAnyHeader();
+
+                options.WithOrigins("http://localhost:5173")  // 或者指定前端地址
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            });
+
 
             app.MapControllers();
 

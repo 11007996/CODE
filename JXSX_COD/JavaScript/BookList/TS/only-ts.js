@@ -1357,14 +1357,10 @@ interface Point {
 }
 // 对于联合类型，使用 type
 type Shape = Circle | Square | Triangle; */
-function gets() {
-    let a = [];
-    for (let i = 0; i < 10; i++) {
-        a.push(i);
-    }
-    return a;
+const a = 12345;
+if (a.startsWith(a)) {
+    console.log("shi");
 }
-console.time("运行时间");
-let a = gets();
-console.log(a);
-console.timeEnd("运行时间");
+else {
+    console.log("fou");
+}

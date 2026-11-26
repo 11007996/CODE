@@ -68,22 +68,19 @@ namespace aa
             }*/
 
 
-            string a = "111";
-            try{
-                string b = "sgdrerh" + "sddrhgsr";
-                a = b ;
-                Console.WriteLine(b);
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
-
-
-            
+            Li li = new Li();
+            li.msg="mmmm";
+            li.status = 12;
+            li.data.Add("qwer");
+            Console.WriteLine(li.data);
             Console.ReadKey();
         }
+    }
+
+    public class Li{
+        public string msg { get; set; }
+        public int status { get; set; }
+        public List<object> data { get; set; }
     }
 
 

@@ -35,7 +35,7 @@ engine_kwargs=None：传递给引擎的额外参数字典。
 
 
 import pandas as pd
-from datetime import date, datetime
+from datetime import date, datetime,timedelta
 import io
 import zipfile 
 
@@ -76,7 +76,7 @@ engine_kwargs=None：传递给引擎的额外参数字典。
 '''
 # 创建一个简单的 DataFrame
 df = pd.DataFrame({
-'Name': ['Alice', 'Bob', 'Charlie'],
+'Name': ['Alicee', 'Bob', 'Charlie'],
 'Age': [25, 30, 35],
 'City': ['New York', 'Los Angeles', 'Chicago']
 })
@@ -85,7 +85,7 @@ df = pd.DataFrame({
 # 写入多个表单，使用 ExcelWriter
 with pd.ExcelWriter('output.xlsx') as writer:
 	df.to_excel(writer, sheet_name='Sheet1', index=False)
-	df.to_excel(writer, sheet_name='Sheet2', index=False)
+	df.to_excel(writer, sheet_name='Sheet22', index=False)
 '''
 
 
@@ -114,6 +114,14 @@ excel_file.close()   # 关闭文件
 '''
 
 
+'''
+excel_file = pd.ExcelFile('output.xlsx')
+sh = excel_file.sheet_names
+for a in sh:
+    print(a)
+    df = excel_file.parse(a)   # 读取指定的表单
+    print(df)
+'''
 
 
 
@@ -131,18 +139,23 @@ if_sheet_exists：这是一个可选参数，默认为 'error'，指定如果工
 engine_kwargs：这是一个可选参数，用于传递给引擎的其他关键字参数。这些参数会传递给相应引擎的函数，例如 xlsxwriter.Workbook(file, **engine_kwargs) 或 openpyxl.Workbook(**engine_kwargs) 等。
 '''
 
+# 时间计算
+# print(datetime.now() + timedelta(days=3))
+# print(datetime.now() + timedelta(days=1, hours=2, minutes=10, seconds=30))
 
 
 
 
-df = pd.DataFrame(
-    [
-        [date(2018, 1, 31), date(1999, 9, 24)],
-        [datetime(1998, 5, 26, 23, 33, 4), datetime(2014, 2, 28, 13, 5, 13)],
-    ],
-    index=["Date", "Datetime"],
-    columns=["X", "Y"],
-)
+
+# df = pd.DataFrame(
+#     [
+#         [date(2018, 1, 31), date(1999, 9, 24)],
+#         [datetime(1998, 5, 26, 23, 33, 4), datetime(2014, 2, 28, 13, 5, 13)],
+#     ],
+#     index=["Date", "Datetime"],
+#     columns=["X", "Y"],
+# )
+
 # with pd.ExcelWriter(
 #     "path_to_file.xlsx",
 #     date_format="YYYY-MM-DD",
@@ -165,7 +178,7 @@ df = pd.DataFrame(
 #     if_sheet_exists="overlay",
 # ) as writer:
 #     df.to_excel(writer, sheet_name="Sheet1")
-#     df.to_excel(writer, sheet_name="Sheet1", startcol=3)    # 向同一个工作表写入多个 DataFrame
+#     df.to_excel(writer, sheet_name="Sheet1", startcol=3)    # 向同一个工作表写入多个 DataFrame，从excel表第3列开始写入
 
 
 # df = pd.DataFrame([["ABC", "XYZ"]], columns=["Foo", "Bar"])
@@ -173,7 +186,10 @@ df = pd.DataFrame(
 # with pd.ExcelWriter(buffer) as writer:
 #     df.to_excel(writer)   # 写入内存
 
+
+
 '''
+Excel写入压缩包
 df = pd.DataFrame([["ABC", "XYZ"]], columns=["Foo", "Bar"])
 with zipfile.ZipFile("path_to_file.zip", "w") as zf:
     with zf.open("filename.xlsx", "w") as buffer:   # 写入压缩包
