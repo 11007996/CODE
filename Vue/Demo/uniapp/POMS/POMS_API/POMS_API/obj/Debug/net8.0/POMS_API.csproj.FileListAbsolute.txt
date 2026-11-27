@@ -53,3 +53,4 @@ D:\zzzzzzzz\CodeBlock\Vue\Demo\uniapp\POMS\POMS_API\POMS_API\bin\Debug\net8.0\ru
 D:\zzzzzzzz\CodeBlock\Vue\Demo\uniapp\POMS\POMS_API\POMS_API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
 D:\zzzzzzzz\CodeBlock\Vue\Demo\uniapp\POMS\POMS_API\POMS_API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\zzzzzzzz\CodeBlock\Vue\Demo\uniapp\POMS\POMS_API\POMS_API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\zzzzzzzz\CodeBlock\Vue\Demo\uniapp\POMS\POMS_API\POMS_API\bin\Debug\net8.0\POMS_API.xml

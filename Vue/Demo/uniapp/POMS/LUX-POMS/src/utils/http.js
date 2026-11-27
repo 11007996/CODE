@@ -57,37 +57,6 @@ uni.addInterceptor('request', {
             },
           });
       }
-      switch (data?.status) {
-        case 103:
-          uni.showModal({
-            title: '登录失效提醒',
-            content: '当前登录已失效，需要重新登录',
-            success(res) {
-              if (res.confirm) {
-                uni.reLaunch({
-                  url: '/pages/login/login',
-                });
-              }
-            },
-          });
-          break;
-        default:
-		// if(showToast) {
-    //       uni.showToast({
-    //         title: msg,
-    //         duration: 5000,
-    //         icon: 'none',
-    //       });
-		// }
-        if(res.statusCode!=200) {
-              uni.showToast({
-                title: data.msg,
-                duration: 5000,
-                icon: 'none',
-              });
-		    }
-          break;
-      }
     }
   },
   fail(err) {

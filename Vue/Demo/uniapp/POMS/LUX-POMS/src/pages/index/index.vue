@@ -1,5 +1,4 @@
 <template>
-  <!-- <button @click="tot">首页</button> -->
    <view class="index">
     <view class="notice">
       <headline class="headline" :head="'消息公告'" :annex="'详情'" @onMore="showNotice"></headline>
@@ -33,7 +32,7 @@
 </template>
 
 <script setup>
-import { onNavigationBarButtonTap } from '@dcloudio/uni-app';
+import { onNavigationBarButtonTap,onLoad } from '@dcloudio/uni-app';
 import {test} from '../../api/base'
 import{ref,reactive,computed} from 'vue'
 const popup = ref(null);
@@ -57,17 +56,10 @@ const tasks = reactive(
     {"id":6,"title":"巡检","content":"你可能有很多次想要在一个组件的根元素上直接监听一个原生事件","publication_date":"2026-10-10","username":"郭明辉","level":3,"timespan":6},
   ]
 );
+  onLoad(()=>{
+    //验证JWT
+  })
 
-  // async function tot()
-  // {
-  //   try{
-  //       const res =await test({"a":12,"b":13})
-  //       console.log(res);
-  //       }catch(err)
-  //       {
-  //         console.log(err)
-  //       }
-  // }
 
   const popupNotice = computed(() => {
     let noticeStr="";

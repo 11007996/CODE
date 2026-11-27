@@ -44,8 +44,8 @@
                 <uni-data-select class="inputControl" v-model="lineEnabled" :localdata="lineData.enabled" :disabled=onlyRead @change="onEnabledChange"></uni-data-select>
             </uni-forms-item>
             <uni-forms-item class="btn">
-                <button class="lineBtn" type="primary" :loading="loading" @click="onConfirm" :disabled='onlyRead'>确定</button>
-                <button class="lineBtn" @click="onCancel">取消</button>
+                <button v-if="!onlyRead" class="lineBtn" type="primary" :loading="loading" @click="onConfirm">确定</button>
+                <button v-if="!onlyRead" class="lineBtn" @click="onCancel">取消</button>
             </uni-forms-item>
         </uni-forms>
     </view>
@@ -55,7 +55,8 @@
     import {ref,reactive,computed} from 'vue'
     import { getCurrentInstance} from 'vue'
     import { onLoad } from '@dcloudio/uni-app';
-    import {GetLineDetailsById,GetShiftOverview,AddLine} from '../../api/basedata'
+    import {CheckToken} from '../../api/base'
+    import {GetLineDetailsById,GetShiftOverview,AddLine,ModifyLine} from '../../api/basedata'
     const loading = ref(false)
     const onlyRead= ref(false)   //只读，页面不可修改
     const openTyle = ref("")   //新增Add 修改Modify
@@ -86,7 +87,9 @@
       ]}
     })
     const instance = getCurrentInstance()
-    onLoad(()=>{
+
+    onLoad(async ()=>{
+      await CheckToken();
       const channel = instance.proxy.getOpenerEventChannel()
       channel.on('sendData', data=>{
         if(data.lineid)
@@ -128,7 +131,7 @@
         }
         else
         {
-            showModal('提示',lineInfo.data.data[0].msg)
+            showModal('提示',lineInfo.data.msg)
         }
        return lineInfo;
     }
@@ -146,9 +149,8 @@
         }
         else
         {
-            showModal("提示",shifts.data.data[0].msg)
+            showModal("提示",shifts.data.msg)
         }
-        console.log(shifts)
     }
 
     //退出
@@ -166,14 +168,13 @@
         {
             if (!lineFrom.value) return;
             try{
-                await lineFrom.value.validate()                
+                await lineFrom.value.validate()
                 const res = await AddLine({
                     lineId:0,
                     lineName:lineData.linename,
                     lineAlias:lineData.linealias,
                     lineDesc:lineData.linedesc,
-                    // empId:lineData.empId,
-                    empId:0,
+                    empId:uni.getStorageSync('userId'),
                     enabled:lineEnabled.value,
                     remark:lineData.remark,
                     shiftid:lineShift.value,
@@ -185,7 +186,7 @@
                     uni.showToast({
                     title: '新增完成',
                     icon:'success',
-	                duration: 3000
+	                duration: 1000
                     });
                 }
                 else
@@ -204,11 +205,43 @@
         }
         else if(openTyle.value==='Modify')
         {
-            uni.showToast({
+            if (!lineFrom.value) return;
+            try
+            {
+                await lineFrom.value.validate()
+                const res = await ModifyLine({
+                    lineId:lineid.value,
+                    lineName:lineData.linename,
+                    lineAlias:lineData.linealias,
+                    lineDesc:lineData.linedesc,
+                    empId:uni.getStorageSync('userId'),
+                    enabled:lineEnabled.value,
+                    remark:lineData.remark,
+                    shiftid:lineShift.value,
+                    shiftName:""
+                })
+                if(res.data.status===0)
+                {
+                    onlyRead.value = true;
+                    uni.showToast({
                     title: '修改完成',
                     icon:'success',
-	                duration: 3000
+	                duration: 1000
                     });
+                }
+                else
+                {
+                    showModal("提示",res.data.msg);
+                }
+            }
+            catch(err)
+            {
+                uni.showToast({
+                    title: err,
+                    icon:'none',
+	                duration: 3000
+                });
+            }
         }
     }
 
@@ -231,7 +264,6 @@
 
     function onShiftChange(e)
     {
-        console.log()
         lineShift.value = e
     }
     function onEnabledChange(e)

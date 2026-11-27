@@ -100,9 +100,9 @@ namespace POMS_API.Helper.Services
         /// <param name="username">用户名</param>
         /// <param name="password">密码</param>
         /// <returns>认证成功返回用户对象，失败返回 null</returns>
-        public User Authenticate(string userno, string password,string version)
+        public User Authenticate(string userno, string password)
         {
-            var user = _users.SingleOrDefault(u => u.UserNo == userno);
+            //var user = _users.SingleOrDefault(u => u.UserNo == userno);
             User raw_uer = GetUserByName(userno);
 
             // 检查用户名和密码

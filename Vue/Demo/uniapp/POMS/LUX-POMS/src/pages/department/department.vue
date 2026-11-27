@@ -13,7 +13,7 @@
 	        	<uni-td class="depart-th" align="center">{{item.departCode}}</uni-td>
 	        	<uni-td class="depart-th" align="center">{{item.departName}}</uni-td>
 	        	<uni-td class="depart-th" align="center" v-if="authority>2"><uni-icons type="gear" size="20" @click="onModify(index)"></uni-icons></uni-td>
-	        	<uni-td class="depart-th" align="center" v-if="authority>3"><uni-icons type="trash" size="20" @click="onDelete(index)"></uni-icons></uni-td>
+	        	<uni-td class="depart-th" align="center" v-if="authority>3"><uni-icons type="trash" size="20" @click="onDelete(item.departId,index)"></uni-icons></uni-td>
 	        </uni-tr>
         </uni-table>
         <uni-popup class="departPopup" ref="departPopup" type="center" :mask-click="false">
@@ -28,6 +28,10 @@
                 <input class="departPopup-input" v-model="modifyDepart.departCode" placeholder="输入部门代码" />
                 <text class="departPopup-text">部门名称：</text>
                 <input class="departPopup-input" v-model="modifyDepart.departName" placeholder="输入部门名称" />
+                <view class="departPopup-enabled">
+                    <text class="departPopup-text">启用：</text>
+                    <switch checked="item.departEnabled=='Y'?true:false" style="transform:scale(0.7)" @change="enabledChange" />
+                </view>
               </view>
             </uni-popup-dialog>
         </uni-popup>
@@ -36,23 +40,41 @@
 
 <script setup>
     import {ref,reactive} from 'vue'
+    import {GetDepartAll,ModifyDepartById,AddDepart,DateleDepart} from '../../api/basedata'
+    import { onLoad } from '@dcloudio/uni-app';
     const departPopup = ref(null)
     const addOrModify = ref("");
     const popupTitle = ref("");
     //所有的部门
-    const departData = reactive([
-        {"departId":10001,"departCode":"IT1","departName":"资讯开发部1"},
-        {"departId":10002,"departCode":"IT2","departName":"资讯开发部2"},
-        {"departId":10003,"departCode":"IT3","departName":"资讯开发部3"},
-        {"departId":10004,"departCode":"IT4","departName":"资讯开发部4"}
-    ])
+    //{"departId":10004,"departCode":"IT4","departName":"资讯开发部4","departEnabled":"Y"}
+    const departData = reactive([])
     //要修改的部门
     const modifyDepart= reactive({
+        "departId":0,
         "departCode":"",
-        "departName":""
+        "departName":"",
+        "departEnabled":""
     })
     const authority = ref(4);  //权限大小
     const modifyDepartIndex=ref(null)
+
+    onLoad(async ()=>{
+        const res = await GetDepartAll("Y");
+        if(res.data.status===0)
+        {
+            const departments = res.data.data[0];
+            departData.length =0;
+            for(let i=0;i<departments.length;i++)
+            {
+                departData[i] = {
+                    departId:departments[i].departId,
+                    departCode:departments[i].departCode,
+                    departName:departments[i].departName,
+                    departEnabled:departments[i].enabled
+                }
+            }
+        }
+    })
 
     function onAddDepart()
     {
@@ -60,39 +82,132 @@
         popupTitle.value = "新增";
         departPopup.value.open('center');
     }
-    function onDelete(e)
+    async function onDelete(departid,index)
     {
-        departData.splice(e, 1);
+        uni.showModal({
+            titel:"提示",
+            content:"确定删除此部门？",
+            success:async function(res){
+                try
+                {
+                    const res =await DateleDepart(departid);
+                    if(res.data.status===0)
+                    {
+                        departData.splice(index, 1);
+                        uni.showToast({
+                            icon:'success',
+	                        title: res.data.msg,
+	                        duration: 1000
+                        });
+                    }
+                    else
+                    {
+                        uni.showModal({
+                                title:"错误",
+                                content:res.data.msg,
+                                showCancel:false
+                            })
+                    }
+                }
+                catch(err)
+                {
+                    uni.showModal({
+                        title:"错误",
+                        content:err,
+                        showCancel:false
+                    })
+                }
+            }
+        })
     }
     function onModify(e)
     {
         modifyDepartIndex.value = e;
         addOrModify.value = "Modify";
         popupTitle.value = "修改"
+        modifyDepart.departId = departData[e].departId;
         modifyDepart.departCode = departData[e].departCode;
         modifyDepart.departName = departData[e].departName;
+        modifyDepart.departEnabled = departData[e].departEnabled;
         departPopup.value.open('center');
     }
-    function onDepartPopupConfirm(e)
+    async function onDepartPopupConfirm(e)
     {
         if(addOrModify.value==="Modify")
         {
-            departData[modifyDepartIndex.value].departCode = e.departCode;
-            departData[modifyDepartIndex.value].departName = e.departName;
+            const res =await ModifyDepartById({
+                departId:e.departId,
+                departCode:e.departCode,
+                departName:e.departName,
+                enabled:e.departEnabled,
+                update_empid:uni.getStorageSync("userId")
+            })
+            if(res.data.status===0)
+            {
+                departData[modifyDepartIndex.value].departCode = e.departCode;
+                departData[modifyDepartIndex.value].departName = e.departName;
+                departData[modifyDepartIndex.value].departEnabled = e.departEnabled;
+                uni.showToast({
+                    icon:'success',
+	                title: res.data.msg,
+	                duration: 1000
+                });
+            }
+            else
+            {
+                uni.showModal({
+                    title:"错误",
+                    content:res.data.msg,
+                    showCancel:false
+                })
+            }
+            
         }
         else if(addOrModify.value==="Add")
         {
             if(departData.find(x => x.departCode === e.departCode))
             {
-                showToast("部门代码重复，请修改");
+                uni.showModal({
+                    title:"错误",
+                    content:"部门代码重复，请修改",
+                    showCancel:false
+                })
                 return;
             }
             else if(departData.find(x => x.departName === e.departName))
             {
-                showToast("部门名称重复，请修改");
+                uni.showModal({
+                    title:"错误",
+                    content:"部门名称重复，请修改",
+                    showCancel:false
+                })
                 return;
             }
-            departData.push({"departId":10004,"departCode":e.departCode,"departName":e.departName})
+            const res = await AddDepart({
+                departId:0,
+                departCode:e.departCode,
+                departName:e.departName,
+                enabled:e.departEnabled===""?"Y":e.departEnabled,
+                update_empid:uni.getStorageSync("userId")
+            })
+            if(res.data.status===0)
+            {
+                departData.push({"departId":res.data.data[0],"departCode":e.departCode,"departName":e.departName,"departEnabled":e.departEnabled});
+                uni.showToast({
+                    icon:'success',
+	                title: res.data.msg,
+	                duration: 1000
+                });
+            }
+            else
+            {
+                uni.showModal({
+                    title:"错误",
+                    content:res.data.msg,
+                    showCancel:false
+                })
+                return;
+            }
         }
         departPopup.value.close();
     }
@@ -104,12 +219,19 @@
     {
         uni.navigateBack()
     }
-    function showToast(str){
-        uni.showToast({
-            icon:'error',
-	        title: str,
-	        duration: 2000
-        });
+    function enabledChange()
+    {
+        if(modifyDepart.departEnabled === "Y")
+        {
+            modifyDepart.departEnabled = "N";
+        }
+        else if(modifyDepart.departEnabled === "N")
+        {
+            modifyDepart.departEnabled = "Y";
+        }
+        else if(modifyDepart.departEnabled === ""){
+            modifyDepart.departEnabled = "N";
+        }
     }
 </script>
 
@@ -134,6 +256,9 @@
                 .depart-th.depart-delete{
                     max-width: 100rpx;
                 }
+                .depart-th.depart-enabled{
+                    max-width: 100rpx;
+                }
             }
         }
         .departPopup{
@@ -149,6 +274,11 @@
         }
         .departPopup-input:hover{
             border:1px solid $lux-primary-l;
+        }
+        .departPopup-enabled{
+            margin-top: 10rpx;
+            display:inline-block;
+            align-items: center;
         }
     }
     }

@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "POMS_API.Controllers.BaseController",
+    "Method": "CheckToken",
+    "RelativePath": "api/Base/CheckToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CheckToken"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BaseController",
     "Method": "getAppVersion",
     "RelativePath": "api/Base/getAppVersion",
     "HttpMethod": "GET",
@@ -48,22 +69,17 @@
     "EndpointName": "Login"
   },
   {
-    "ContainingType": "POMS_API.Controllers.BaseController",
-    "Method": "test",
-    "RelativePath": "api/Base/test",
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "AddDepart",
+    "RelativePath": "api/BasicData/AddDepart",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "a",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "depart",
+        "Type": "POMS_API.Models.BasicData\u002BDepartmant",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -77,7 +93,7 @@
         "StatusCode": 200
       }
     ],
-    "EndpointName": "test"
+    "EndpointName": "AddDepart"
   },
   {
     "ContainingType": "POMS_API.Controllers.BasicDataController",
@@ -105,6 +121,119 @@
       }
     ],
     "EndpointName": "AddLine"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "DateleDepart",
+    "RelativePath": "api/BasicData/DateleDepart",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "DateleDepart"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "DeleteLine",
+    "RelativePath": "api/BasicData/DeleteLine",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "DeleteLine"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "GetDepartAll",
+    "RelativePath": "api/BasicData/GetDepartAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enabled",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetDepartAll"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "GetLineAll",
+    "RelativePath": "api/BasicData/GetLineAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lineEnabled",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetLineAll"
   },
   {
     "ContainingType": "POMS_API.Controllers.BasicDataController",
@@ -155,27 +284,22 @@
     "EndpointName": "GetShiftOverview"
   },
   {
-    "ContainingType": "POMS_API.Controllers.homeController",
-    "Method": "add",
-    "RelativePath": "api/home/add",
-    "HttpMethod": "GET",
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "ModifyDepartById",
+    "RelativePath": "api/BasicData/ModifyDepartById",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "a",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "depart",
+        "Type": "POMS_API.Models.BasicData\u002BDepartmant",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Int32",
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -184,6 +308,33 @@
         "StatusCode": 200
       }
     ],
-    "EndpointName": "add"
+    "EndpointName": "ModifyDepartById"
+  },
+  {
+    "ContainingType": "POMS_API.Controllers.BasicDataController",
+    "Method": "ModifyLine",
+    "RelativePath": "api/BasicData/ModifyLine",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineData",
+        "Type": "POMS_API.Models.BasicData\u002BLine",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "POMS_API.Models.BaseClass\u002BAPIReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ModifyLine"
   }
 ]

@@ -1,4 +1,7 @@
 
+using Microsoft.OpenApi.Models;
+using System.Reflection;
+
 namespace POMS_API
 {
     public class Program
@@ -12,7 +15,21 @@ namespace POMS_API
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            //builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "POMS API",
+                    Version = "v1",
+                    Description = "API接口文档"
+                });
+
+                // 添加XML注释文件
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+            });
 
             var app = builder.Build();
 

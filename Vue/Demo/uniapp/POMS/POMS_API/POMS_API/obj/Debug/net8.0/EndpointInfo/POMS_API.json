@@ -1,65 +1,20 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "POMS_API",
-    "version": "1.0"
+    "title": "POMS API",
+    "description": "API接口文档",
+    "version": "v1"
   },
   "paths": {
-    "/api/Base/test": {
-      "post": {
-        "tags": [
-          "Base"
-        ],
-        "operationId": "test",
-        "parameters": [
-          {
-            "name": "a",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "b",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIReturn"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIReturn"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIReturn"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Base/Login": {
       "post": {
         "tags": [
           "Base"
         ],
+        "summary": "登陆",
         "operationId": "Login",
         "requestBody": {
+          "description": "登陆实体类",
           "content": {
             "application/json": {
               "schema": {
@@ -107,7 +62,39 @@
         "tags": [
           "Base"
         ],
+        "summary": "从后台获取APP程序最新版本号及更新时间",
         "operationId": "getAppVersion",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Base/CheckToken": {
+      "get": {
+        "tags": [
+          "Base"
+        ],
+        "summary": "验证Token",
+        "operationId": "CheckToken",
         "responses": {
           "200": {
             "description": "OK",
@@ -137,8 +124,10 @@
         "tags": [
           "BasicData"
         ],
+        "summary": "新增线别",
         "operationId": "AddLine",
         "requestBody": {
+          "description": "线体实体类",
           "content": {
             "application/json": {
               "schema": {
@@ -186,11 +175,13 @@
         "tags": [
           "BasicData"
         ],
+        "summary": "获取单个线别详细信息",
         "operationId": "GetLineDetailsById",
         "parameters": [
           {
             "name": "lineid",
             "in": "query",
+            "description": "",
             "schema": {
               "type": "string"
             }
@@ -225,6 +216,7 @@
         "tags": [
           "BasicData"
         ],
+        "summary": "获取所有班别概况",
         "operationId": "GetShiftOverview",
         "responses": {
           "200": {
@@ -250,24 +242,69 @@
         }
       }
     },
-    "/api/home/add": {
-      "get": {
+    "/api/BasicData/ModifyLine": {
+      "put": {
         "tags": [
-          "home"
+          "BasicData"
         ],
-        "operationId": "add",
+        "summary": "修改线别资料",
+        "operationId": "ModifyLine",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Line"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Line"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Line"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/DeleteLine": {
+      "delete": {
+        "tags": [
+          "BasicData"
+        ],
+        "summary": "删除线别资料",
+        "operationId": "DeleteLine",
         "parameters": [
           {
-            "name": "a",
+            "name": "lineid",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "b",
-            "in": "query",
+            "description": "线别ID",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -280,20 +317,253 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/APIReturn"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/APIReturn"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/GetLineAll": {
+      "get": {
+        "tags": [
+          "BasicData"
+        ],
+        "summary": "查询所有线别",
+        "operationId": "GetLineAll",
+        "parameters": [
+          {
+            "name": "lineName",
+            "in": "query",
+            "description": "线别名称",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "lineEnabled",
+            "in": "query",
+            "description": "线别是否有效",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/GetDepartAll": {
+      "get": {
+        "tags": [
+          "BasicData"
+        ],
+        "summary": "查询所有部门",
+        "operationId": "GetDepartAll",
+        "parameters": [
+          {
+            "name": "enabled",
+            "in": "query",
+            "description": "是否有效",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/ModifyDepartById": {
+      "put": {
+        "tags": [
+          "BasicData"
+        ],
+        "summary": "修改部门资料",
+        "operationId": "ModifyDepartById",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departmant"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departmant"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departmant"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/AddDepart": {
+      "post": {
+        "tags": [
+          "BasicData"
+        ],
+        "summary": "新增部门",
+        "operationId": "AddDepart",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departmant"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departmant"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departmant"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasicData/DateleDepart": {
+      "delete": {
+        "tags": [
+          "BasicData"
+        ],
+        "summary": "删除部门资料",
+        "operationId": "DateleDepart",
+        "parameters": [
+          {
+            "name": "departid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIReturn"
                 }
               }
             }
@@ -321,7 +591,35 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "接口的返回信息"
+      },
+      "Departmant": {
+        "type": "object",
+        "properties": {
+          "departId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "departName": {
+            "type": "string",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "update_empid": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "部门资料"
       },
       "Line": {
         "type": "object",
@@ -363,10 +661,12 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "线体资料"
       },
       "LoginInput": {
         "required": [
+          "appversion",
           "password",
           "userNo"
         ],
@@ -379,9 +679,14 @@
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "appversion": {
+            "type": "string",
+            "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "登陆账号密码"
       }
     }
   }

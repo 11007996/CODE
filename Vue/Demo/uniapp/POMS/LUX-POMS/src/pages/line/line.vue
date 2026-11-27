@@ -17,7 +17,7 @@
 	        	<uni-td class="line-th" align="center">{{item.alias}}</uni-td>
 	        	<uni-td class="line-th" align="center">{{item.lineDesc}}</uni-td>
 	        	<uni-td class="line-th" align="center" v-if="authority>2"><uni-icons type="gear" size="20" @click="onModify(item.lineid)"></uni-icons></uni-td>
-	        	<uni-td class="line-th" align="center" v-if="authority>3"><uni-icons type="trash" size="20" @click="onDelete(index)"></uni-icons></uni-td>
+	        	<uni-td class="line-th" align="center" v-if="authority>3"><uni-icons type="trash" size="20" @click="onDelete(item.lineid,index)"></uni-icons></uni-td>
 	        </uni-tr>
         </uni-table>
     </view>
@@ -25,13 +25,30 @@
 
 <script setup>
 import {ref,reactive} from 'vue'
+import {DeleteLine,GetLineAll} from '../../api/basedata'
+import { onLoad } from '@dcloudio/uni-app';
     const authority = ref(4)
-    const lineData = reactive([
-        {"lineid":10001,"linename":"D01-1FT-01","alias":"L1","lineDesc":"生产1线","remark":"remark111"},
-        {"lineid":10002,"linename":"2线","alias":"L2","lineDesc":"生产2线生产2线","remark":"remark111"},
-        {"lineid":10003,"linename":"3线","alias":"L3","lineDesc":"生产3线","remark":"remark111"},
-        {"lineid":10004,"linename":"4线","alias":"L4","lineDesc":"生产4线","remark":"remark111"},
-    ])
+	const lineData = reactive([])
+	onLoad(async ()=>{
+		const res = await GetLineAll({lineEnabled:"Y"});
+		if(res.data.status===0)
+		{
+			// console.log(res.data.data[0]);
+			let lines = res.data.data[0]
+			lineData.length=0;
+			for(let i =0;i<lines.length;i++)
+			{
+				lineData[i]={
+					"lineid":lines[i].lineId,
+					"linename":lines[i].lineName,
+					"alias":lines[i].lineAlias,
+					"lineDesc":lines[i].lineDesc
+				}
+			}
+		}
+
+	})
+
 
 	function onAddLine()
 	{
@@ -51,11 +68,44 @@ import {ref,reactive} from 'vue'
   			}
 		})
 	}
-	function onDelete(e)
+	async function onDelete(lineid,index)
 	{
+		await uni.showModal({
+			title:"提示",
+			content: "确定删除此线别？",
+			success:async function(res)
+			{
+				if(res.confirm)
+				{
+					try
+					{
+						const res =await DeleteLine(lineid)
+						if(res.data.status===0)
+						{
+							lineData.splice(index, 1);
+						}
+						else
+						{
+							uni.showModal({
+								title:"错误",
+								content: res.data.msg
+							})
+						}
+					}
+					catch(err)
+					{
+						uni.showModal({
+							title:"错误",
+							content: err
+						})
+					}
+				}
+			}
+		})
 		
-		lineData.splice(e, 1);
+		
 	}
+
 	function onModify(e)
 	{
 		uni.navigateTo({

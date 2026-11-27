@@ -12,23 +12,6 @@ namespace POMS_API.Controllers
     [Route("api/[controller]")]
     public class BaseController : Controller
     {
-        #region 测试
-        [HttpPost("test", Name = "test")]
-        public APIReturn test(int a,int b)
-        {
-            TokenService.ReturnInfo returnInfo = new TokenService.ReturnInfo();
-            string aa = Request.Headers["Authorization"].ToString();
-            returnInfo = _tokenService.CheckToken(aa);
-            APIReturn apiReturn = new APIReturn();
-            //loginReturn.msg = "OK";
-            //loginReturn.status = 0;
-            apiReturn.msg = returnInfo.msg;
-            apiReturn.status = returnInfo.status;
-            apiReturn.data.Add("返回数据");
-            return apiReturn;
-        }
-        #endregion
-
         public BaseController()
         {
             IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Environment.CurrentDirectory).AddJsonFile("appsettings.json").Build();
@@ -39,11 +22,16 @@ namespace POMS_API.Controllers
         private readonly UserService _userService = new UserService();
         private readonly TokenService _tokenService= new TokenService();
 
+        /// <summary>
+        /// 登陆
+        /// </summary>
+        /// <param name="loginInput">登陆实体类</param>
+        /// <returns></returns>
         [HttpPost("Login", Name = "Login")]
         public APIReturn Login(LoginInput loginInput)
         {
             APIReturn apiReturn = new APIReturn();
-            User user = _userService.Authenticate(loginInput.UserNo, loginInput.Password);
+            var user = _userService.Authenticate(loginInput.UserNo, loginInput.Password);
             if (user == null)
             {
                 apiReturn.status = 101;
@@ -63,16 +51,21 @@ namespace POMS_API.Controllers
                 apiReturn.status = 0;
                 apiReturn.msg = "登陆成功";
                 apiReturn.data.Add(tokens);
+                apiReturn.data.Add(new Dictionary<string, int> { { "userId", user.UserId } });
                 return apiReturn;
             }
         }
         #endregion
 
         #region 获取APP程序最新版本号
+        /// <summary>
+        /// 从后台获取APP程序最新版本号及更新时间  
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("getAppVersion", Name = "getAppVersion")]
         public APIReturn getAppVersion()
         {
-            string sSql = "select PARAM_VALUE from poms.sys_base_param where PROGRAM='POMS' and PARAM_NAME='app-version' and ENABLED='Y'";
+            string sSql = "select PARAM_VALUE,UPDATE_TIME from poms.sys_base_param where PROGRAM='POMS' and PARAM_NAME='app-version' and ENABLED='Y'";
             DataTable dt = DBhelper.mesdbhelper.ExecuteDataTable(sSql);
             if (dt.Rows.Count>0)
             {
@@ -80,6 +73,7 @@ namespace POMS_API.Controllers
                 apiReturn.status = 0;
                 apiReturn.msg = "OK";
                 apiReturn.data.Add(dt.Rows[0][0].ToString());
+                apiReturn.data.Add(dt.Rows[0][1].ToString());
                 return apiReturn;
             }
             else
@@ -92,6 +86,25 @@ namespace POMS_API.Controllers
 
 
         }
+        #endregion
+
+        #region 验证Token
+        /// <summary>
+        /// 验证Token
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("CheckToken", Name = "CheckToken")]
+        public APIReturn CheckToken()
+        {
+            TokenService tokenService = new TokenService();
+            string jwt = HttpContext.Request.Headers["Authorization"];
+            TokenService.ReturnInfo returninfo = tokenService.CheckToken(jwt);
+            APIReturn apiReturn = new APIReturn();
+            apiReturn.status = returninfo.status;
+            apiReturn.msg = returninfo.msg;
+            return apiReturn;
+        }
+        
         #endregion
     }
 }
